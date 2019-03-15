@@ -1,4 +1,4 @@
-# the-craft-of-selfteaching
+# the-craft-of-selfteaching updated by jijun
 
 > One has no future if he couldn't teach himself.
 
