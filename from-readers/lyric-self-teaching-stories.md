@@ -44,7 +44,7 @@ date: 2019-03-03
 
 我读过一些画家的故事，他们是一群从内至外都保持自由乃至癫狂的人。我也想要这样，有自由的身体和灵魂，所以我临了萨尔瓦多达利的“记忆的永恒”（对，就是我们大家都看过的那幅）。
 
-![The Persistence of Memory](/lyric-self-teaching-stories/the-persistence-of-memory.jpg)
+![The Persistence of Memory](lyric-self-teaching-stories/the-persistence-of-memory.jpg)
 
 父亲看完后说：“你不懂达利”。
 
