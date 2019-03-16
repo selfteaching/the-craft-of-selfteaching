@@ -14,13 +14,14 @@
 
 ```python
 # psudo-code of selfteaching in Python
-def TeachYourSelf(anything):
+
+def teach_yourself(anything):
     while not create(something):
         learn()
         practice()
-    return TeachYourSelf(another)
+    return teach_yourself(another)
 
-TeachYourSelf(coding)
+teach_yourself(coding)
 ```
 
 请先行阅读 [T-appendix.jupyter-installation-and-setup](T-appendix.jupyter-installation-and-setup.ipynb) 以便在本地安装 [Jupyterlab](https://github.com/jupyterlab/jupyterlab) 而后用更好的体验阅读本书。
