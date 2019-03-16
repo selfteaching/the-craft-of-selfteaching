@@ -43,8 +43,11 @@ step 3、执行命令 `git remote add upstream https://github.com/selfteaching/t
 step 4、执行命令 `git status` 检查本地是否有未提交的修改。如果有，则把你本地的有效修改，先从本地仓库推送到你的github仓库。最后再执行一次 `git status` 检查本地已无未提交的修改。
 
 `git add -A` 或者 `git add filename` 
+
 `git commit -m "your note"`
+
 `git push origin master`
+
 `git status`
 
 注1：这一步作为新手，建议严格执行，是为了避免大量无效修改或文本冲突带来的更复杂局面。
@@ -78,3 +81,6 @@ step 8、执行命令 `git push ` 把本地仓库向github仓库（你fork到自
 
 现在你已经解决了fork的仓库和原仓库版本不一致的问题。可以放心向 xiaolai 发起 pull request 了。如果以上操作你花了不少时间，而 xiaolai 的仓库 又恰好更新了。很好，一次新的练习机会来了……
 
+----
+
+本文已在 [PRESS.one 签名](https://press.one/file/v?s=0d863b768a83a874b2ed27bf900df4f450643f9f950cbc0a2afd0e4d83f9b19551acc0f257cfd8a0acb117f5f0def316a3889eb074ae2e6d1a055e0489233c681&h=2e7140d95093a9f36b780a69b4649171b17b7b0552269b9c20101c4674c284c9&a=ed73e900e209def08ff03a2e3fadbac99af087c0&f=P1&v=3)。
