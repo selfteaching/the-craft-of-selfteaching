@@ -60,3 +60,75 @@
 通过练习搜索来精通搜索，通过练习编程来掌握编程。确实没什么新鲜秘诀。
 
 这就是我作为一个运营，编程初心者的切身经历。
+
+---
+
+本文的 [PRESS.one 签名](https://press.one/file/v?s=b54fadaeaa3f6dd3f1fb9eedc1a142b91f7b3271b2b81e2141d5243b49e6139531ad25694e973b22b1b9e6427b9adc4692d78604d7018d12d998d8719a551ea20&h=70e40ae7bfcdf876bade2b9c0c0174a6be8ed86fc47a11439270c65585a7ca09&a=ed73e900e209def08ff03a2e3fadbac99af087c0&f=P1&v=3)。
+
+
+另附：我当时写出来的代码。现在你或许还不会写码，但其实大致能读懂；更或者，你有更好的写法。
+
+```python
+
+import os
+import os.path
+
+"""
+题目：
+文章统计所有字符的出现次数，并按照次数倒序输出
+
+"""
+
+testFile ='D:/myfilepath/text_001.txt'
+
+def main():
+    with open(testFile,'rt',encoding='UTF-8') as f:
+        blines = f.readlines()
+
+    aList = get_chars(blines)
+    muchtimesDic = count_chars(aList,blines)
+
+    keys = muchtimesDic.keys()
+    vals = muchtimesDic.values()
+    rlist = [(key,val) for key,val in zip(keys,vals)]
+
+    Rlist = sorted(rlist,key = lambda x:x[1],reverse = True)
+    for i in Rlist:
+        print(i[0],i[1])
+    print(Rlist)
+
+def get_chars(blines):
+    """
+    功能：获取待检索的字符列表。通过遍历文本，把所有出现的字符列举出来。（大小写不敏感）
+    """
+    aList = []
+
+    for aline in blines:
+        aline = aline.lower()
+        bline = aline[:]
+        for i in bline:
+            if i not in aList :
+                aList.append(i)
+    return aList
+
+
+def count_chars(aList,blines):
+    """
+    功能：统计字符出现的次数，并返回字典。
+    """
+    muchtimesDic = {}
+
+    for i in aList:
+        howmanytimes = 0
+        for aline in blines:
+            aline = aline.lower()
+            bline = aline[:]
+            if i in bline:
+                howmanytimes = bline.count(i) + howmanytimes
+        muchtimesDic[i] = howmanytimes
+    return muchtimesDic
+
+
+main()
+
+```
