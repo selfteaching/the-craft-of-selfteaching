@@ -23,7 +23,9 @@ def TeachYourSelf(anything):
 TeachYourSelf(coding)
 ```
 
-请先行阅读 [T-appendix.jupyter-installation-and-setup](T-appendix.jupyter-installation-and-setup.ipynb) 以便在本地安装 [Jupyterlab](https://github.com/jupyterlab/jupyterlab) 而后用更好的体验阅读本书。
+请先行阅读 [T-appendix.jupyter-installation-and-setup](T-appendix.jupyter-installation-and-setup.ipynb) 以便在本地安装 [Jupyterlab](https://github.com/jupyterlab/jupyterlab) 而后用更好的体验阅读本书。同时，也可以快速开启 Binder 提供的线上 Jupyterlab 容器阅读本书。
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/selfteaching/the-craft-of-selfteaching/master?urlpath=lab)
 
 有兴趣帮忙的朋友，请先行阅读 [如何使用 Pull Request 为这本书校对](02.proof-of-work.ipynb)。
 
