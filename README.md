@@ -1,6 +1,7 @@
 # the-craft-of-selfteaching
 
 > One has no future if one couldn't teach themself.
+> 一个人是没有未来,如果那个人没有办法自学
 
 # 自学是门手艺
 
