@@ -2,6 +2,8 @@
 
 > One has no future if he couldn't teach himself.
 
+#修改
+
 # 自学是门手艺
 
 > 没有自学能力的人没有未来
