@@ -1,0 +1,566 @@
+---
+layout: post
+title: Git学习笔记（新）
+date: 2019-03-16
+category: 技术
+
+---
+
+## 1、Git简介
+
+Git是分布式版本控制系统。
+
+与之相对的是集中式版本控制。
+
+集中式版本控制，即所有版本都储存在一台服务器里，每次获取版本都要联网，效率低下。
+
+Git则在本地创建了版本库，联网与否无所谓。可以在本地多次修改版本，联网时再往远程仓库push。
+
+## 2、[安装Git](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00137396287703354d8c6c01c904c7d9ff056ae23da865a000)
+
+## 3、 [创建版本库](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013743256916071d599b3aed534aaab22a0db6c4e07fd0000)
+
+版本库，也叫仓库，英文即repository。Git会记录下版本库里每个文件的修改、删除情况。
+
+**创建一个版本库**：
+
+选择一个位置，比如C:/Users/peng，在gitbash中输入：
+
+```
+mkdir learngit
+cd learngit
+pwd
+```
+
+第二步，通过git init把目录初始化成Git可以管理的仓库：
+
+```
+git init
+```
+
+这样就在`C:/Users/peng`中创建了一个名为`learngit`的仓库，现在的位置为`C:/Users/peng/learngit`
+
+**把文件添加到版本库**：
+
+先编写一个文件，比如readme.txt，放入learngit文件夹中。一定要放在仓库所在文件夹，不然Git找不到。
+
+把文件放入Git仓库，分为两步：
+
+第一步：把文件添加到仓库
+
+```
+git add read.txt
+```
+
+第二步：把文件提交到仓库
+
+```
+git commit -m "wrote a readme file"
+```
+
+注：-m 后可以写任何内容，但最好是本次提交的说明，方便自己以后查阅及他人理解。
+
+`commit`可以一次提交多个内容，所以可以`add`多个文件后，一次性提交。
+
+## 4、[管理版本](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013743858312764dca7ad6d0754f76aa562e3789478044000)
+
+要掌握仓库当前的修改状态，可以输入
+
+```
+git status
+```
+
+若文件有改动，比如`readme.txt`有改动，会现实 `modified：readme.txt`
+
+要查看具体修改了什么内容，可以输入
+
+```
+git diff
+```
+
+git会标出哪行文字做了修改。
+
+### 4.1 [版本回退](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013744142037508cf42e51debf49668810645e02887691000)
+
+就像打游戏可以存档一样，Git每次的`commit`都是一个“存档”，如果文件改乱了，就可以“读档”，即从最近的一个`commit`恢复。
+
+要查看版本更改、提交的历史记录，可以输入
+
+```
+git log
+```
+
+想让输出信息简化美观，可以输入
+
+```
+git log --pretty=oneline
+```
+
+我们看到的一长串类似`1084ab5d`的是`commit id`（版本号）。
+
+**版本回退：**
+
+在Git中，用HEAD表示当前版本，上一个版本就是`HEAD^`，上上个版本就是`HEAD^^`，往上100个版本用`HEAD~100`，所以上一个版本也能用`HEAD~1`，上上个版本就是`HEAD~2`。
+
+```
+git reset --hard HEAD^
+
+```
+
+回退后，再用`git log`指令查看时，最新版本的历史记录会消失。如果想再次回到最新版本，怎么办？
+
+1）如果命令行没关掉，往上翻找，找到最新那个`commit id`是`1094adb`，就可以回到最新版本
+
+```
+git reset --hard 1094a
+
+```
+
+版本号没必要写全。
+
+2）如果关掉了命令行，想要恢复到最新版本，可以用
+
+```
+git reflog
+
+```
+
+`git reflog`记录了每一次的命令。找到`commit id`，用第一种方法回到版本。
+
+### 4.2 [工作区和暂存区](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013745374151782eb658c5a5ca454eaa451661275886c6000)
+
+**工作区**，即电脑里的目录，比如learngit就是一个工作区。
+
+**版本库**，工作区的一个隐藏目录`.git`，这个不算工作区，而是Git的版本库。
+
+![工作原理](https://github.com/penghaos/penghaos.github.io/blob/master/public/img/0.jpg?raw=true)
+
+版本库里最重要的东西有几个：
+
+1）名为`stage`（或者叫index）的**暂存区**
+
+2）自动创建的第一个分支`master`
+
+3）指向`master`的一个指针`HEAD`
+
+工作流程是，
+
+- `git add` 添加文件，实际是就是将文件放入暂存区stage，
+- `git commit`提交更改，实际就是把暂存区的所有内容提交到当前分支。
+
+### 4.3 [管理修改](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001374829472990293f16b45df14f35b94b3e8a026220c5000)
+
+Git是管理**修改**的，而非文件。
+
+如果先修改一次，然后`git add`，接着又修改一次，在`git commit`。
+
+​	即：第一次修改→`git add`→第二次修改→`git commit`
+
+结果是：只有第一次修改的内容会被commit，而第二次的修改还在工作区，没有add到暂存区，因此不会被commit。
+
+这就是Git的工作原理。
+
+### 4.4 [撤销修改](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001374831943254ee90db11b13d4ba9a73b9047f4fb968d000)
+
+要**丢弃工作区**的修改，可以
+
+```
+git  checkout -- readme.txt
+
+```
+
+两种情况：
+
+1. 文件read.txt修改后还**没放到暂存区**，撤销后就回到和版本库一模一样的状态；
+2. 文件read.txt已经**添加add到暂存区**，又做了修改，撤销后就回到添加到暂存区后的状态。
+
+即，回到最近一次git add或git commit的状态。
+
+注：`git checkout -- readme.txt` 中的`--`很重要，没有`--`，就变成了另一个命令。
+
+如果已经添加到暂存区，想撤销回到工作区，可以用：
+
+```
+git reset HEAD readme.txt
+
+```
+
+`git reset`即可以回退版本，也可以把暂存区的修改回退到工作区。HEAD表示最新版本。
+
+第三种情况是，已经 从暂存区**提交commit到版本库**，但是还没推送到远程仓库。
+
+这种情况下即用4.1的版本回退。
+
+```
+git reset --hard HEAD^
+
+```
+
+### 4.5 [删除文件](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013758392816224cafd33c44b4451887cc941e6716805c000)
+
+删除一个文件，有两种做法：
+
+1. 直接从文件管理器中删除
+2. 用rm命令删除
+
+```
+rm test.txt
+
+```
+
+Git删除了文件，工作区和版本库就不一致了。
+
+现在有两个选择：
+
+第一种是，你确实要**从版本库里删除**该文件，那就用git rm删除，然后git commit 
+
+```
+git rm test.txt
+git commit -m "remove test.txt"
+
+```
+
+第二种是，删错了，想要恢复误删的文件：
+
+```
+git checkout -- test.txt
+
+```
+
+git checkout 其实是用版本库里的版本替换工作区的版本。
+
+无论工作区是修改还是删除，都可以“一键还原”。
+
+注：如果已经git rm test.txt，即已删除工作区，也已将git rm添加到暂存区，这时要git reset HEAD test.txt，然后再git checkout -- test.txt
+
+## 5、[远程仓库](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001374385852170d9c7adf13c30429b9660d0eb689dd43a000)
+
+**第一步：创建SSH Key**：
+
+看主目录下有没有.ssh目录，
+
+1）如果有，看看目录下有没有`id_rsa`和`id_rsa.pub`这，有，直接下一步；
+
+2）如果无，则打开git bash，创建SSH Key：
+
+```
+ssh-keygen -t rsa -C "youremail@example.com"
+
+```
+
+一路回车。
+
+找到主目录下的.ssh目录，找到公钥`id_rsa.pub`。
+
+**第二步：在GitHub中粘贴SSH Key**。
+
+"Account settings"→"SSH Keys"→"Add SSH Key"→粘贴id_rsa.pub的内容。
+
+### 5.1 [添加远程库](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013752340242354807e192f02a44359908df8a5643103a000)
+
+1）在github建立一个远程库，空仓库：create a new repo。
+
+2）在本地的learngit仓库**关联远程仓库**：
+
+```
+git remote add origin git@github.com:michaelliao/learngit.git
+
+```
+
+注：michaelliao换成自己的账户名。
+
+3）第一次把本地库的所有内容推送到远程库：
+
+```
+git push -u origin master
+
+```
+
+注：第一次推送master分支时，加上了-u 参数。
+
+之后，从本地提交最新修改到GitHub，可以
+
+```
+git push origin master
+
+```
+
+### 5.2 [从远程库克隆](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001375233990231ac8cf32ef1b24887a5209f83e01cb94b000)
+
+一般是，先创建远程库，然后，从远程库克隆。
+
+知道仓库的地址后，用git clone克隆一个本地库：
+
+```
+git clone git@github.com:michaelliao/gitskills.git
+
+```
+
+Git支持多种协议，默认的git://使用ssh，也可以用https等协议。
+
+但是https速度较慢，而且每次推送都必须输入口令。
+
+## 6、 [分支管理](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013743862006503a1c5bf5a783434581661a3cc2084efa000)
+
+你开发一个新功能，要两周，第一周只完成50%。
+
+1）如果你只提交一半，代码不完整，别人没法干活；
+
+2）如果你全部写完再提交，又会丢失每天的进度。
+
+分支，让你从主线分离开来，在不影响主线的同时工作。
+
+### 6.1 [创建与合并分支](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001375840038939c291467cc7c747b1810aab2fb8863508000)
+
+首先，创建dev分支，并切换到dev分支：
+
+```
+git checkout -b dev
+
+```
+
+这条命令相当于以下两条命令：
+
+```
+git branch dev
+git checkout dev
+
+```
+
+即`git branch <name>`为创建名为name 的分支。
+
+然后，用`git branch`查看当前分支
+
+```
+git branch
+
+```
+
+会列出所有分支，当前分支前面有一个`*`号。
+
+在`dev`分支上，修改文件内容，`add`并且`commit`。
+
+![dev.jpg](https://github.com/penghaos/penghaos.github.io/blob/master/_posts/%E5%9B%BE%E7%89%87/dev.png?raw=true)
+
+现在，`dev`分支的工作完成，就可以切换到`master`分支：
+
+```
+git checkout master
+
+```
+
+回到`master`分支，发现文件的修改丢失了！因为该修改是在`dev`分支上的，而`master`分支的提交点并没有变。
+
+然后，我们把`dev`分支的工作成果合并到`master`分支：
+
+```
+git merge dev
+
+```
+
+`git merge` 是将指定分支合并到当前分支。
+
+注：默认是Fast-forward模式，即“快进模式”。还有其他方式，之后会讲。
+
+![dev1.jpg](https://github.com/penghaos/penghaos.github.io/blob/master/_posts/%E5%9B%BE%E7%89%87/dev1.png?raw=true)
+
+最后，合并完成后，可以删除`dev`分支：
+
+```
+git branch -d dev
+
+```
+
+![dev2.jpg](https://github.com/penghaos/penghaos.github.io/blob/master/_posts/%E5%9B%BE%E7%89%87/dev2.png?raw=true)
+
+使用分支完成任务，合并后再删除分支，这和直接在`master`分支上工作效果一样，但是更安全。
+
+### 6.2 [解决冲突](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001375840202368c74be33fbd884e71b570f2cc3c0d1dcf000)
+
+新建一个`feature1`分支，在该分支上开发，改动`readme.txt`文件后`add`并且`commit`；
+
+切换到`master`分支，在该分支上改动`readme.tx`t的内容，`add`并且`commit`，
+
+这样`master`和`feature1`各自都有新的提交，变成：
+
+![conflict.jpg](https://github.com/penghaos/penghaos.github.io/blob/master/_posts/%E5%9B%BE%E7%89%87/conflict.png?raw=true)
+
+此时Git无法执行“快速合并”，（见图，因为feature1和master都有修改），此时合并会有冲突。
+
+**必须手动解决冲突**后再提交。
+
+`git status`可以告诉我们冲突的文件，并且打开`read.txt`也能看到标记。
+
+手动修改文件内容，再`add`和`commit`。
+
+`maste`r和`feature1`分支变成下图所示：
+
+![conflict1.jpg](https://github.com/penghaos/penghaos.github.io/blob/master/_posts/%E5%9B%BE%E7%89%87/conflict1.png?raw=true)
+
+用带参数的git log可以看到分支的合并情况：
+
+```
+git log --graph --pretty=oneline --abbrev-commit
+
+```
+
+最后，删除feature1分支：
+
+```
+git branch -d feature1
+
+```
+
+### 6.3 [强制禁用Fast forward模式](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013758410364457b9e3d821f4244beb0fd69c61a185ae0000)
+
+Git默认使用`Fast forward`模式，但这种模式下，删除分支后，会丢掉分支信息。
+
+如果禁用`Fast forward`模式，Git就会在merge时生成一个新的commit，这样，从分支历史上就可以看出分支信息。
+
+> 创建并切换到dev分支→修改readme.txt→add并且commit→切换回到master
+
+准备合并`dev`分支：
+
+```
+git merge --no-ff -m "merge with no-ff" dev
+
+```
+
+注：`--no-ff`参数，表示禁用`Fast forward`
+
+此时，merge后的情况是：
+
+![No_Fastforward.jpg](https://github.com/penghaos/penghaos.github.io/blob/master/_posts/%E5%9B%BE%E7%89%87/No_Fastforward.png?raw=true)
+
+注：合并时，加上--no-ff参数，合并后的历史有分支，能看出来曾经做过合并，而fast forward合并后就看不出来曾经做过合并。
+
+### 6.4 [Bug分支，stash工作现场](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00137602359178794d966923e5c4134bc8bf98dfb03aea3000)
+
+有bug需要修复，可以新建临时分支修复，修复后合并分支，删除临时分支。
+
+有一个代号101的bug任务，可创建`issue-101`分支修复，但你的分支dev工作才进行到一半，还没法提交。怎么办？
+
+可以用stash功能，将当前**工作现场“藏”起来**，以后再恢复工作：
+
+```
+git stash
+
+```
+
+此时用`git status`查看工作区，就是干净的。
+
+> 假如要在master上修复bug，就从master创建临时分支issue-101，修改后add并且commit，在切换回master分支，merge后，删除临时分支issue-101。
+
+bug改完了，要回到dev分支继续工作。
+
+但回到`git checkout dev`后，发现工作区是干净的，刚才的工作现场去哪了？
+
+用`git stash list`查看：
+
+```
+git stash list
+
+```
+
+stash内容存在某个地方了，需要恢复，有两个方法：
+
+1）用`git stash apply`恢复，但恢复后，stash内容并不删除，需要用`git stash drop`来删除
+
+2）用`git stash pop`，恢复的同时把stash内容也删了。
+
+再用`git stash list`查看，就看不到任何内容了。
+
+你可以多次stash，恢复的时候，先用`git stash list` 查看，然后恢复指定的stash，即
+
+```
+git stash apply stash@{0}
+
+```
+
+注：当dev分支有新建文件hello.py时，假如你不会git stash 命令，dev分支的内容也没有commit，切换到mast分支，你会发现：master上也有hello.py！如果修改master上的bug，在master分支上commit，文件hello.py也会被commit！这当然不行。因此，切换到master分支前，要先用git stash隐藏hello.py。这样在master分支就不会commit它了。
+
+### 6.5 Feature分支，[强行删除分支](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001376026233004c47f22a16d1f4fa289ce45f14bbc8f11000)
+
+在`dev`分支上，新建一个`feature-vulcan`分支，修改内容后，add并且commit，切回dev准备合并。
+
+此时接到上级命令，就地销毁dev分支。
+
+```
+git branch -d feature-vulcan
+
+```
+
+销毁失败。`feature-vulcan`分支还没有被合并，需要强行删除，用`-D`参数：
+
+```
+git branch -D feature-vulcan
+
+```
+
+### 6.6 [多人协作](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013760174128707b935b0be6fc4fc6ace66c4f15618f8d000)
+
+要查看远程库的信息：
+
+```
+git remote
+
+```
+
+显示更详细的信息：
+
+```
+git remote -v
+
+```
+
+上面显示了可以抓取和推送的`origin`的地址。如果没有权限，就看不到地址。
+
+推送分支到远程库：
+
+```
+git push origin master
+
+```
+
+或
+
+```
+git push origin dev
+
+```
+
+`master`和`dev`分支要时刻与远程同步，而`bug`和`feature`分支没必要推送到远程。
+
+你的小伙伴clone仓库后，本地只会有`master`分支。
+
+若要在`dev`分支上开发，就必须创建远程origin的dev分支到本地，用下面的命令创建本地dev分支：
+
+```
+git checkout -b dev origin/dev
+
+```
+
+如果你和小伙伴修改了同一个文件，他已经想`origin/dev`分支推送了他的提交，你也试图推送，
+
+推送失败。两人的提交有冲突。
+
+解决方法是，先用`git pull`把最新的提交从`origin/dev`抓下来，然后在本地合并，解决冲突，再推送：
+
+```
+git pull
+
+```
+
+`git pull`也失败了，因为没有指定本地dev分支和远程`origin/dev`分支的链接，设置dev和origin/dev的链接：
+
+```
+git branch --set-upstream-to=origin/dev dev
+
+```
+
+git pull成功后，手动解决冲突，方法见6.2.
+
+解决后，commit，再git push origin dev。
+
+### 6.7 [rebase](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0015266568413773c73cdc8b4ab4f9aa9be10ef3078be3f000)
+
