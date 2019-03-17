@@ -4,7 +4,7 @@
 
 # 自学是门手艺
 
-> 没有自学能力的人没有未来
+> 修改示例
 
 **作者：李笑来**
 
@@ -22,6 +22,11 @@ def teach_yourself(anything):
     return teach_yourself(another)
 
 teach_yourself(coding)
+```
+```python
+def study(study1)
+    return study(study2)
+study(study3)
 ```
 
 请先行阅读 [T-appendix.jupyter-installation-and-setup](T-appendix.jupyter-installation-and-setup.ipynb) 以便在本地安装 [Jupyterlab](https://github.com/jupyterlab/jupyterlab) 而后用更好的体验阅读本书。
