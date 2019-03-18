@@ -3,7 +3,7 @@
 实在是……有太多人同时在帮忙修订错别字或优化 xiaolai 的 `the-craft-of-selfteaching` 了。如果你提交的 pull request 未被接受且得到回复说：“重新fork”，其实是你遇到一个问题：
 
 > * 在你 fork 之后， xiaolai 的仓库又更新了；
-> * 但 github 不会自动帮你把 xiaolai 的仓库 同步给你 fork 后的仓库；
+> * 但 github 不会自动帮你把 xiaolai 的仓库同步给你 fork 后的仓库；
 > * 导致你提交 pull request 时的版本和 xiaolai 的版本不一致。
 
 这个问题，用显得更“专业”的说法，叫做：`Github进行fork后如何与原仓库同步`。那到底怎么做呢？
@@ -76,5 +76,5 @@ step 8、执行命令 `git push ` 把本地仓库向github仓库（你fork到自
 ![image](https://user-images.githubusercontent.com/31027645/54449665-a07aba00-4789-11e9-9181-bdcc814fffe6.png)
 
 
-现在你已经解决了fork的仓库和原仓库版本不一致的问题。可以放心向 xiaolai 发起 pull request 了。如果以上操作你花了不少时间，而 xiaolai 的仓库 又恰好更新了。很好，一次新的练习机会来了……
+现在你已经解决了fork的仓库和原仓库版本不一致的问题。可以放心向 xiaolai 发起 pull request 了。如果以上操作你花了不少时间，而 xiaolai 的仓库又恰好更新了。很好，一次新的练习机会来了……
 
