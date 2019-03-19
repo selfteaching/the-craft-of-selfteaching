@@ -1,3 +1,4 @@
+test!
 # the-craft-of-selfteaching
 
 > One has no future if he couldn't teach himself.
