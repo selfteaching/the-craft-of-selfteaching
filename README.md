@@ -1,6 +1,6 @@
 # the-craft-of-selfteaching
 
-> One has no future if he couldn't teach himself.
+> One has no future if one couldn't teach themself<a href='#fn1' name='fn1b'><sup>[1]</sup></a>.
 
 # 自学是门手艺
 
@@ -14,16 +14,17 @@
 
 ```python
 # psudo-code of selfteaching in Python
-def TeachYourSelf(anything):
-    while not create(somthing):
+
+def teach_yourself(anything):
+    while not create(something):
         learn()
         practice()
-    return TeachYourSelf(another)
+    return teach_yourself(another)
 
-TeachYourSelf(coding)
+teach_yourself(coding)
 ```
 
-请先行阅读 [T-appendix.jupyter-installation-and-setup](T-appendix.jupyter-installation-and-setup.ipynb) 以便在本地安装 Jupyterlab 而后用更好的体验阅读本书。
+请先行阅读 [T-appendix.jupyter-installation-and-setup](T-appendix.jupyter-installation-and-setup.ipynb) 以便在本地安装 [Jupyterlab](https://github.com/jupyterlab/jupyterlab) 而后用更好的体验阅读本书。
 
 有兴趣帮忙的朋友，请先行阅读 [如何使用 Pull Request 为这本书校对](02.proof-of-work.ipynb)。
 
@@ -80,3 +81,10 @@ TeachYourSelf(coding)
 本书的版权协议为 [CC-BY-NC-ND license](https://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh)。
 
 ![CC-BY-NC-ND](images/CC-BY-NC-ND.png?raw=true "CC-BY-NC-ND")
+
+-----
+**脚注**
+
+<a name='fn1'>[1]</a>： [‘Themselves’ or 'themself’? -- Oxford Dictionary](https://en.oxforddictionaries.com/usage/themselves-or-themself)
+
+<a href='#fn1b'><small>↑Back to Content↑</small></a>

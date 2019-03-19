@@ -1,4 +1,4 @@
-#CC-BY-NC-ND license
+# CC-BY-NC-ND license
 
 ## Attribution-NonCommercial-NoDerivs 3.0 United States
 
