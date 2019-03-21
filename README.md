@@ -13,7 +13,7 @@
 ![](images/learning-curve-spiral.png)
 
 ```python
-# psudo-code of selfteaching in Python
+# pseudo-code of selfteaching in Python
 
 def teach_yourself(anything):
     while not create(something):
