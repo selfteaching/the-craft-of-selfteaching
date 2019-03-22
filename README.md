@@ -84,6 +84,7 @@ teach_yourself(coding)
 
 -----
 **脚注**
+Just Have a Try By Bingoren
 
 <a name='fn1'>[1]</a>： [‘Themselves’ or 'themself’? -- Oxford Dictionary](https://en.oxforddictionaries.com/usage/themselves-or-themself)
 
