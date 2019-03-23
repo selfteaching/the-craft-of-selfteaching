@@ -28,7 +28,7 @@ teach_yourself(coding)
 
 2019 年 3 月 23 日，新增 Markdown 版本：
 
-> https://github.com/selfteaching/the-craft-of-selfteaching/markdown/README.md
+> https://github.com/selfteaching/the-craft-of-selfteaching/tree/master/markdown
 
 ### 目录
 
