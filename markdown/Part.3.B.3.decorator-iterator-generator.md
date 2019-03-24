@@ -194,7 +194,7 @@ for e in even:
 
 **注意**
 
-仔细看 `even = (e for e in range(10) if not e % 2)`中最外面那层括号，用了圆括号，`even` 就是用生成器创造的迭代器（Iterator），若是用了方括号，那就是用生成器创造的列表（List）—— 当然用花括号 `{}` 生成的就是集合（Set）……
+仔细看 `even = (e for e in range(10) if not e % 2)` 中最外面那层括号，用了圆括号，`even` 就是用生成器创造的迭代器（Iterator），若是用了方括号，那就是用生成器创造的列表（List）—— 当然用花括号 `{}` 生成的就是集合（Set）……
 ```python
 # even = (e for e in range(10) if not e % 2)
 odd = [o for o in range(10) if o % 2]

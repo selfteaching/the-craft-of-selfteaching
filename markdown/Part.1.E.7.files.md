@@ -262,7 +262,7 @@ ord('a')
 
 
 
-那么，计算 `'knowledge'`这个字符串的代码很简单：
+那么，计算 `'knowledge'` 这个字符串的代码很简单：
 ```python
 word = 'knowledge'
 sum = 0
