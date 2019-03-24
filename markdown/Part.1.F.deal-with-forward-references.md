@@ -115,7 +115,8 @@ print(an_undefined_variable)
 > 7 is a prime number
 > 8 equals 2 * 4
 > 9 equals 3 * 3
-```
+> ```
+
 只有两种情况，
 
 > * 要么干脆就没读过，
@@ -272,3 +273,5 @@ Python 中有一个概念叫 PEP，Python Enhancement Proposals，必须找时�
 <a name='fn1'>[1]</a>：也可能真的会死…… 请看一篇 2018 年 9 月份的一则新闻，发生在旧金山的事情：[Developer goes rogue, shoots four colleagues at ERP code maker](https://www.theregister.co.uk/2018/09/20/developer_work_shooting/)
 
 <a href='#fn1b'><small>↑Back to Content↑</small></a>
+
+```
