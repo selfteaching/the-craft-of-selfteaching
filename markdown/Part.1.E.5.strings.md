@@ -135,7 +135,7 @@ else:
 
 
 要改成这样才可能行：
-为什么是可能行而不是一定行？如果用户 `input` 键盘输入的是`eighteen`或者`十八`等，依然会导致 `int()`失败并得到 `ValueError` 的报错。用户输入的不可控，可能会导致千奇百怪的报错。但在这里，我们先简化处理，在引导语中加入一个正确的示例并默认用户会按引导语正确输入。
+为什么是可能行而不是一定行？如果用户 `input` 键盘输入的是 `eighteen` 或者 ` 十八 ` 等，依然会导致 `int()` 失败并得到 `ValueError` 的报错。用户输入的不可控，可能会导致千奇百怪的报错。但在这里，我们先简化处理，在引导语中加入一个正确的示例并默认用户会按引导语正确输入。
 ```python
 age = int(input('Please tell me your age: 
  an int number , e.g: 22
@@ -170,7 +170,7 @@ else:
 
 
 
-上面这一行报错信息是 `SyntaxError: EOL while scanning string literal`。这是因为 `\'` 表示的是单引号字符 `'`（Literal） —— 是可被输出到屏幕的 `'`，而不是用来标示字符串的那个 `'` —— 别急，无论哪个初学者第一次读到前面的句子都觉得有点莫名其妙…… —— 于是，Python 编译器扫描这个 “字符串” 的时候，还没找到标示字符串末尾的另外一个`'`的时候就读到了 `EOL`（End Of Line）。
+上面这一行报错信息是 `SyntaxError: EOL while scanning string literal`。这是因为 `\'` 表示的是单引号字符 `'`（Literal） —— 是可被输出到屏幕的 `'`，而不是用来标示字符串的那个 `'` —— 别急，无论哪个初学者第一次读到前面的句子都觉得有点莫名其妙…… —— 于是，Python 编译器扫描这个 “字符串” 的时候，还没找到标示字符串末尾的另外一个 `'` 的时候就读到了 `EOL`（End Of Line）。
 
 如果你想输出这么个字符串，`He said, it's fine.`，如果用双引号扩起来 `"` 倒没啥问题，但是如果用单引号扩起来就麻烦了，因为编译器会把 `it` 后面的那个单引号 `'` 当作字符串结尾。
 ```python
@@ -304,10 +304,10 @@ for i in s:
 > * `s[index]` —— 返回索引值为 `index` 的那个字符
 > * `s[start:]` —— 返回从索引值为 `start` 开始一直到字符串末尾的所有字符
 > * `s[start:stop]` —— 返回从索引值为 `start` 开始一直到索引值为 `stop` 的那个字符_之前_的所有字符
-> * `s[:stop]` —— 返回从字符串开头一直到索引值为 `stop`的那个字符_之前_的所有字符
+> * `s[:stop]` —— 返回从字符串开头一直到索引值为 `stop` 的那个字符_之前_的所有字符
 > * `s[start:stop:step]` —— 返回从索引值为 `start` 开始一直到索引值为 `stop` 的那个字符_之前_的，以 `step` 为步长提取的所有字符
 
-提醒：无论是 `range(1,2)`，或者 `random.randrange(100, 1000)`又或者 `s[start:stop]` 都有一个相似的规律，包含左侧的 `1`, `100`, `start`，不包含右侧的`2`, `1000`, `stop`。
+提醒：无论是 `range(1,2)`，或者 `random.randrange(100, 1000)` 又或者 `s[start:stop]` 都有一个相似的规律，包含左侧的 `1`, `100`, `start`，不包含右侧的 `2`, `1000`, `stop`。
 
 ```python
 from IPython.core.interactiveshell import InteractiveShell
@@ -521,11 +521,11 @@ print()
 
 print('Example of str.index():')
 # str.index(sub[, start[, end]])
-# 作用与 find() 相同，但，如果没找到的话，会触发 ValueError 异常
+# 作用与 find() 相同，但如果没找到的话，会触发 ValueError 异常
 # https://docs.python.org/3/library/exceptions.html#ValueError
 s.lower().index('mpl')
 # str.rindex(sub[, start[, end]])
-# 作用与 rfind() 相同，但，如果没找到的话，会触发 ValueError 异常
+# 作用与 rfind() 相同，但如果没找到的话，会触发 ValueError 异常
 s.lower().rindex('mpl')
 print()
 ```
@@ -984,7 +984,7 @@ print("'for'.isidentifier():", \
 
 整理成表格之后，就会发现想要全部记住其实并没多难……
 
-> * 为了表格在一屏中可以正确显示，本来应该规规矩矩写 `str.xxx`，但，写成了 `s.xxx`……
+> * 为了表格在一屏中可以正确显示，本来应该规规矩矩写 `str.xxx`，但写成了 `s.xxx`……
 > * 另外，操作那一行，为了分类记忆方便，把 `len()` 和 `s.join()` 也放进去了……
 
 ![](../images/string-concepts.png)

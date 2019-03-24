@@ -6,7 +6,7 @@
 > * 但 github 不会自动帮你把 xiaolai 的仓库同步给你 fork 后的仓库；
 > * 导致你提交 pull request 时的版本和 xiaolai 的版本不一致。
 
-这个问题，用显得更“专业”的说法，叫做：`Github进行fork后如何与原仓库同步`。那到底怎么做呢？
+这个问题，用显得更“专业”的说法，叫做：`Github进行fork后如何与原仓库同步 `。那到底怎么做呢？
 
 最省事的办法可能是：
 
@@ -25,7 +25,7 @@
 
 step 1、进入到本地仓库的目录。
 
-下面所有操作，如无特别说明，都是在你的本地仓库的目录下操作。比如我的本地仓库为`/from-liujuanjuan-the-craft-of-selfteaching`
+下面所有操作，如无特别说明，都是在你的本地仓库的目录下操作。比如我的本地仓库为 `/from-liujuanjuan-the-craft-of-selfteaching`
 
 ![image](https://user-images.githubusercontent.com/31027645/54422899-6938e880-474a-11e9-8768-27ac24673e28.png)
 

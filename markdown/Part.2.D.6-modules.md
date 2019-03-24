@@ -259,7 +259,7 @@ for c in (65, 97):
 
 print("".join([d.get(c, c) for c in s]))
 ```
-这个 `this.py` 文件中也没有什么函数，但，这个文件里所定义的变量，我们都可以在 `import this` 之后触达：
+这个 `this.py` 文件中也没有什么函数，但这个文件里所定义的变量，我们都可以在 `import this` 之后触达：
 ```python
 from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = "all"

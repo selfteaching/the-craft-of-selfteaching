@@ -26,7 +26,7 @@ conda update anaconda
 conda install -c conda-forge nodejs
 conda install -c conda-forge jupyterlab # 这是用来升级 jupyter lab 到最新版的方法
 ```
-安装完毕之后，可以看看各个你将要用到的可执行命令都在什么地方，用 `which` 命令（windows下用`where`命令）：
+安装完毕之后，可以看看各个你将要用到的可执行命令都在什么地方，用 `which` 命令（windows下用 `where` 命令）：
 ```bash
 which python
 python --version
@@ -107,7 +107,7 @@ jupyter notebook stop                   # 停止 jupyter lab/notebook 服务
 ```bash
 code ~/Library/LaunchAgents/com.jupyter.lab.plist
 ```
-这条命令会让 Visual Studio Code 创建 `~/Library/LaunchAgents/com.jupyter.lab.plist`文件并打开。
+这条命令会让 Visual Studio Code 创建 `~/Library/LaunchAgents/com.jupyter.lab.plist` 文件并打开。
 
 在其中拷贝粘贴以下内容，注意，要把其中的 `your_username` 修改为你的用户名：
 ``` xml
@@ -133,7 +133,7 @@ code ~/Library/LaunchAgents/com.jupyter.lab.plist
 </dict>
 </plist>
 ```
-如果之前在`jupyter_notebook_config.py` 文件里已经设置过
+如果之前在 `jupyter_notebook_config.py` 文件里已经设置过
 ```json
 c.NotebookApp.open_browser = False
 c.NotebookApp.notebook_dir = '~/'
@@ -154,7 +154,7 @@ launchctl load ~/Library/LaunchAgents/com.jupyter.lab.plist
 ```
 ## 关于 Jupyter lab themes
 
-对中文用户来说，Jupyter 的默认字号有点过小，阅读起来不是很舒适。但，最佳的方案不是去寻找合适的 themes，而是直接使用支持 [Stylus](https://github.com/openstyles/stylus) 这类终端 CSS 定制插件的浏览器，Chrome/Firefox/Opera 都支持 Stylus 插件。
+对中文用户来说，Jupyter 的默认字号有点过小，阅读起来不是很舒适。但最佳的方案不是去寻找合适的 themes，而是直接使用支持 [Stylus](https://github.com/openstyles/stylus) 这类终端 CSS 定制插件的浏览器，Chrome/Firefox/Opera 都支持 Stylus 插件。
 
 我用的 Stylus 定制 CSS 是这样的：
 ```css
