@@ -521,11 +521,11 @@ print()
 
 print('Example of str.index():')
 # str.index(sub[, start[, end]])
-# 作用与 find() 相同，但，如果没找到的话，会触发 ValueError 异常
+# 作用与 find() 相同，但如果没找到的话，会触发 ValueError 异常
 # https://docs.python.org/3/library/exceptions.html#ValueError
 s.lower().index('mpl')
 # str.rindex(sub[, start[, end]])
-# 作用与 rfind() 相同，但，如果没找到的话，会触发 ValueError 异常
+# 作用与 rfind() 相同，但如果没找到的话，会触发 ValueError 异常
 s.lower().rindex('mpl')
 print()
 ```
@@ -984,7 +984,7 @@ print("'for'.isidentifier():", \
 
 整理成表格之后，就会发现想要全部记住其实并没多难……
 
-> * 为了表格在一屏中可以正确显示，本来应该规规矩矩写 `str.xxx`，但，写成了 `s.xxx`……
+> * 为了表格在一屏中可以正确显示，本来应该规规矩矩写 `str.xxx`，但写成了 `s.xxx`……
 > * 另外，操作那一行，为了分类记忆方便，把 `len()` 和 `s.join()` 也放进去了……
 
 ![](../images/string-concepts.png)

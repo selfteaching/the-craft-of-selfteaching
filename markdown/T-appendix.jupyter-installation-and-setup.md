@@ -154,7 +154,7 @@ launchctl load ~/Library/LaunchAgents/com.jupyter.lab.plist
 ```
 ## 关于 Jupyter lab themes
 
-对中文用户来说，Jupyter 的默认字号有点过小，阅读起来不是很舒适。但，最佳的方案不是去寻找合适的 themes，而是直接使用支持 [Stylus](https://github.com/openstyles/stylus) 这类终端 CSS 定制插件的浏览器，Chrome/Firefox/Opera 都支持 Stylus 插件。
+对中文用户来说，Jupyter 的默认字号有点过小，阅读起来不是很舒适。但最佳的方案不是去寻找合适的 themes，而是直接使用支持 [Stylus](https://github.com/openstyles/stylus) 这类终端 CSS 定制插件的浏览器，Chrome/Firefox/Opera 都支持 Stylus 插件。
 
 我用的 Stylus 定制 CSS 是这样的：
 ```css

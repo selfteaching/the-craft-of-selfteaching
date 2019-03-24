@@ -216,7 +216,7 @@ say_hi('Welcome', 'mike', 'john', 'zeo', capitalized=True)
     Welcome, Zeo!
 
 
-但，`greeting` 这个参数虽然有默认值，可这个函数在被调用的时候，还是必须要给出这个参数，否则输出结果出乎你的想象：
+但 `greeting` 这个参数虽然有默认值，可这个函数在被调用的时候，还是必须要给出这个参数，否则输出结果出乎你的想象：
 ```python
 def say_hi(greeting='Hello', *names, capitalized=False):
     for name in names:

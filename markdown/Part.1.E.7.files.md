@@ -246,7 +246,7 @@ else:
 
 那，具体的过程是什么样的呢？
 
-首先我得找到一个英文单词列表，很全的那种。这事儿用不着写程序，Google 一下就可以了。我搜索的关键字是 “[english word list](https://www.google.com/search?q=english+word+list)”，很直观吧？然后就找到一个：[https://github.com/dwyl/english-words](https://github.com/dwyl/english-words)；这个链接里有一个 [words-alpha.txt](https://raw.githubusercontent.com/dwyl/english-words/master/words_alpha.txt) 文件，其中包含接近 37,0101 个单词，应该够用了！下载下来用程序处理就可以了！
+首先我得找到一个英文单词列表，很全的那种。这事儿用不着写程序，Google 一下就可以了。我搜索的关键字是 “[english word list](https://www.google.com/search?q=english+word+list)”，很直观吧？然后就找到一个：[https://github.com/dwyl/english-words](https://github.com/dwyl/english-words)；这个链接里有一个 [words-alpha.txt](https://raw.githubusercontent.com/dwyl/english-words/master/words_alpha.txt) 文件，其中包含接近 370,101 个单词，应该够用了！下载下来用程序处理就可以了！
 
 因为文件里每行一个单词，所以，就让程序打开文件，将文件读入一个列表，而后迭代这个列表，逐一计算那个单词每个字母所代表的数字，并加起来看看是否等于 100？如果是，就将它们输出到屏幕…… 好像不是很难。
 ```python
