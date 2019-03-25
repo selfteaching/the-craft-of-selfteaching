@@ -84,10 +84,10 @@ Complex is better than complicated.
 # '\nSimple is better than complex.\nComplex is better than complicated.\n'
 # 其中的 \n 被打印出来的时候显示成换行
 ```
-    
+
     Simple is better than complex.
     Complex is better than complicated.
-    
+
 
 
 ## 字符串与数值之间的转换
@@ -133,9 +133,9 @@ else:
           5     print('Have a nice drink!')
     TypeError: '<' not supported between instances of 'str' and 'int'
 
-
 要改成这样才可能行：
 为什么是可能行而不是一定行？如果用户 `input` 键盘输入的是 `eighteen` 或者 ` 十八 ` 等，依然会导致 `int()` 失败并得到 `ValueError` 的报错。用户输入的不可控，可能会导致千奇百怪的报错。但在这里，我们先简化处理，在引导语中加入一个正确的示例并默认用户会按引导语正确输入。
+
 ```python
 age = int(input('Please tell me your age: 
  an int number , e.g: 22
@@ -445,7 +445,7 @@ s.title().swapcase()
 另外，还有个 `str.encode()` 在处理非英文字符串（比如中文）的时候，经常会用到：
 ```python
 # str.encode(encoding="utf-8", errors="strict")
-# 关于更多可能得 encoding list, 请参阅：
+# 关于更多可能的 encoding list, 请参阅：
 # https://docs.python.org/3/library/codecs.html#standard-encodings
 s = '简单优于复杂。'
 s.encode()
@@ -542,7 +542,7 @@ print()
     Example of str.index():
     2
     56
-    
+
 
 
 `str.startswith()` 和 `str.endswith()` 是用来判断一个_字符串_是否以某个_子字符串_起始或者结束的：
