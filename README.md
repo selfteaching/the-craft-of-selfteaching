@@ -31,7 +31,7 @@ teach_yourself(coding)
 ### 目录
 
 > - [01.preface（**前言**）](01.preface.ipynb)
-> - [02.proof-of-work（**如何证明你真的读过这本书？**）](02.proof-of-work.ipynb)
+> - [02.proof-of-work（**如何证明你真的读过这本书？？？**）](02.proof-of-work.ipynb)
 > - [Part.1.A.better.teachyourself（**为什么一定要掌握自学能力？**）](Part.1.A.better.teachyourself.ipynb)
 > - [Part.1.B.why.start.from.learning.coding（**为什么把编程当作自学的入口？**）](Part.1.B.why.start.from.learning.coding.ipynb)
 > - [Part.1.C.must.learn.sth.only.by.reading（**只靠阅读习得新技能**）](Part.1.C.must.learn.sth.only.by.reading.ipynb)
