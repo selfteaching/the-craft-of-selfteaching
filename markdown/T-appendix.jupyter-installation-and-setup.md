@@ -333,12 +333,12 @@ _ # 执行完上面的 Cell，试试这个 Cell; 而后执行完下面的 Cell �
 
 于是，为了显示最近 evaluate 的多个值，我们总是不得不使用很多的 `print()`……
 
-如果觉得这事儿比较烦的话，可以在 Cell 最上面写上：
+如果觉得这事比较烦的话，可以在 Cell 最上面写上：
 ```python
 from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = "all"
 ```
-如果还想更省事儿一点，就把这个设置写入配置文件：
+如果还想更省事一点，就把这个设置写入配置文件：
 ```python
 c.InteractiveShell.ast_node_interactivity = "all"
 ```
