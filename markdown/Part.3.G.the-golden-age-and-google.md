@@ -61,7 +61,7 @@ Google 还有更为强大的工具给你使用，叫做 Google Custom Search，�
 
 换个角度看，这个数字同时也是互联网上信息的积累 —— 世界上再没有比互联网更大更全的 “书” 了。并且，由于 Google 的存在，互联网这本大书，是可检索的！
 
-于是，**有事儿先问 Google** 就成了自学者的必备修养。
+于是，**有事先问 Google** 就成了自学者的必备修养。
 
 > 能 Google 出答案的问题，就不需要去麻烦别人。
 
@@ -75,6 +75,6 @@ Google 还有更为强大的工具给你使用，叫做 Google Custom Search，�
 
 > [How To Ask Questions The Smart Way](https://github.com/selfteaching/How-To-Ask-Questions-The-Smart-Way)
 
-这是大神 Eric S. Raymond 和 Rick Moen 于 2001 年在网上发布的文章，被人们奉为经典；迄今为止经历了很多次的修订，最后一次是在 2014 年，`Rivision 3.10` —— 前后被翻译成了许多种语言。
+这是大神 Eric S. Raymond 和 Rick Moen 于 2001 年在网上发布的文章，被人们奉为经典；迄今为止经历了很多次的修订，最后一次是在 2014 年，`Revision 3.10` —— 前后被翻译成了许多种语言。
 
 **不认真使用 Google，你就错过了整个人类历史上自学者最黄金的时代。**

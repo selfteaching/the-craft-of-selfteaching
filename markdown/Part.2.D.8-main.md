@@ -154,7 +154,7 @@ def main(wordlist, result):
 if __name__ == '__main__':
     main('words_alpha.txt', 'results.txt')
 ```
-至于以上代码中的第一行，`#!/usr/bin/env python` 是怎么回事儿，建议你自己动手解决一下，去 Google：
+至于以上代码中的第一行，`#!/usr/bin/env python` 是怎么回事，建议你自己动手解决一下，去 Google：
 
 > [`python3 script executable`](https://www.google.com/search?q=python3+script+executable)
 
