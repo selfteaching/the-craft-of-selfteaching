@@ -75,6 +75,6 @@ Google 还有更为强大的工具给你使用，叫做 Google Custom Search，�
 
 > [How To Ask Questions The Smart Way](https://github.com/selfteaching/How-To-Ask-Questions-The-Smart-Way)
 
-这是大神 Eric S. Raymond 和 Rick Moen 于 2001 年在网上发布的文章，被人们奉为经典；迄今为止经历了很多次的修订，最后一次是在 2014 年，`Rivision 3.10` —— 前后被翻译成了许多种语言。
+这是大神 Eric S. Raymond 和 Rick Moen 于 2001 年在网上发布的文章，被人们奉为经典；迄今为止经历了很多次的修订，最后一次是在 2014 年，`Revision 3.10` —— 前后被翻译成了许多种语言。
 
 **不认真使用 Google，你就错过了整个人类历史上自学者最黄金的时代。**
