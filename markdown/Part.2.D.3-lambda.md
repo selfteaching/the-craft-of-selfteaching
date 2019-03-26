@@ -69,7 +69,7 @@ lambda 的语法结构如下：
 
 > `lambda_expr ::= "lambda" [parameter_list] ":" expression`
 
-以上使用的是 BNF 标注。当然，BNF 是你目前并不熟悉的，所以，有疑惑别当回事儿。
+以上使用的是 BNF 标注。当然，BNF 是你目前并不熟悉的，所以，有疑惑别当回事。
 
 反正你已经见到示例了： 
 ```python

@@ -246,7 +246,7 @@ else:
 
 那，具体的过程是什么样的呢？
 
-首先我得找到一个英文单词列表，很全的那种。这事儿用不着写程序，Google 一下就可以了。我搜索的关键字是 “[english word list](https://www.google.com/search?q=english+word+list)”，很直观吧？然后就找到一个：[https://github.com/dwyl/english-words](https://github.com/dwyl/english-words)；这个链接里有一个 [words-alpha.txt](https://raw.githubusercontent.com/dwyl/english-words/master/words_alpha.txt) 文件，其中包含接近 370,101 个单词，应该够用了！下载下来用程序处理就可以了！
+首先我得找到一个英文单词列表，很全的那种。这事用不着写程序，Google 一下就可以了。我搜索的关键字是 “[english word list](https://www.google.com/search?q=english+word+list)”，很直观吧？然后就找到一个：[https://github.com/dwyl/english-words](https://github.com/dwyl/english-words)；这个链接里有一个 [words-alpha.txt](https://raw.githubusercontent.com/dwyl/english-words/master/words_alpha.txt) 文件，其中包含接近 370,101 个单词，应该够用了！下载下来用程序处理就可以了！
 
 因为文件里每行一个单词，所以，就让程序打开文件，将文件读入一个列表，而后迭代这个列表，逐一计算那个单词每个字母所代表的数字，并加起来看看是否等于 100？如果是，就将它们输出到屏幕…… 好像不是很难。
 ```python
@@ -254,7 +254,7 @@ with open('words_alpha.txt', 'r') as file:
     for word in file.readlines():
         pass # 先用 pass 占个位，一会儿再写计算过程
 ```
-按照上面那说法，把 `a` 记为 `1`，直至把 `z` 记为 `26`，这事儿并不难，因为有 `ord()` 函数啊 —— 这个函数返回字符的 Unicode 编码：`ord('a')` 的值是 `97`，那按上面的说法，用 `ord('a') - 96` 就相当于得到了 `1` 这个数值…… 而 `ord('z') - 96` 就会得到 `26` 这个数值。
+按照上面那说法，把 `a` 记为 `1`，直至把 `z` 记为 `26`，这事并不难，因为有 `ord()` 函数啊 —— 这个函数返回字符的 Unicode 编码：`ord('a')` 的值是 `97`，那按上面的说法，用 `ord('a') - 96` 就相当于得到了 `1` 这个数值…… 而 `ord('z') - 96` 就会得到 `26` 这个数值。
 ```python
 ord('a')
 ```
