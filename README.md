@@ -28,6 +28,10 @@ teach_yourself(coding)
 
 有兴趣帮忙的朋友，请先行阅读 [如何使用 Pull Request 为这本书校对](02.proof-of-work.ipynb)。
 
+2019 年 3 月 23 日，新增 Markdown 版本：
+
+> https://github.com/selfteaching/the-craft-of-selfteaching/tree/master/markdown
+
 ### 目录
 
 > - [01.preface（**前言**）](01.preface.ipynb)
