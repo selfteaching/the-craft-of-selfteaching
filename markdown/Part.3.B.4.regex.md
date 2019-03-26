@@ -295,7 +295,7 @@ re.findall(pttn, str)
 
 另外，`()` 这个操作符，有两个作用：**组合**（Grouping），就是我们刚刚讲到的作用；而另外一个作用是**捕获**（Capturing)，后面会讲到。
 
-注意区别， [`er`](https://regexper.com#er)、[`[er]`](https://regexper.com#[er]) 和 [`(er)`](https://regexper.com#(er)) 各不相同。
+注意区别， [`er`](https://regexper.com#er)、[`[er]`](https://regexper.com#[er]) 和 [`(er)`](https://regexper.com#(er) 各不相同。
 
 > * `er` 是两个原子，`'e'` 和紧随其后的 `'r'`
 > * `[er]` 是一个原子，或者 `'e'` 或者 `'r'`；
