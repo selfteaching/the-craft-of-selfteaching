@@ -740,7 +740,7 @@ plt.show()
 
 |   意义    | 操作符 | 方法                    | 方法相当于 |
 | :------: | :----: | :---------------------: | :--: |
-| 并集     | `\|`    | `set.union(*others)`         | `set \| other \| ...` |
+| 并集     | <code>&#124;</code>    | `set.union(*others)`         | <code>set &#124; other &#124; ...</code> |
 | 交集     | `&`    | `set.intersection(*others)` | `set & other & ...` |
 | 差集     | `-`    | `set.difference(*others)` | `set - other - ...` |
 | 对称差集 | `^`    | `set.symmetric_difference(other)` | `set ^ other` |
