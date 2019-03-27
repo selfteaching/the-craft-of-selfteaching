@@ -486,7 +486,7 @@ def trace(func):
         print(f"Trace: You've called a function: {func.__name__}(),",
               f"with args: {args}; kwargs: {kwargs}")
     
-        orginal_result = func(*args, *kwargs)
+        orginal_result = func(*args, **kwargs)
         print(f"Trace: {func.__name__}{args} returned: {orginal_result}")
         return orginal_result
     return wrapper

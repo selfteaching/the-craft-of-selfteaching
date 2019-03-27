@@ -15,7 +15,7 @@
 # pseudo-code of selfteaching in Python
 
 def teach_yourself(anything):
-    while not create(something):
+    while not create():
         learn()
         practice()
     return teach_yourself(another)
