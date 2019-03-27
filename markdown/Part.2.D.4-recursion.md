@@ -332,7 +332,7 @@ print(id(f(n))) # 局部变量 n 的内存地址。
 至此，封面上的那个 “伪代码” 应该很好理解了：
 ```python
 def teach_yourself(anything):
-    while not create(something):
+    while not create():
         learn()
         practice()
     return teach_yourself(another)
