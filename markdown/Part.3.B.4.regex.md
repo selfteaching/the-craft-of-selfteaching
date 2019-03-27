@@ -506,7 +506,7 @@ re.sub(pttn, repl, str)
 能匹配 `Windows2000` 中的 `Windows`，但不能匹配 `Windows3.1` 中的 `Windows`。预查不消耗字符，也就是说，在一个匹配发生后，在最后一次匹配之后立即开始下一次匹配的搜索，而不是从包含预查的字符之后开始。 
 
 `(?!pattern)`
-> 正向否定预查（negative assert），在任何不匹配规则的字符串开始处匹配查找字符串。这是一个非获取匹配，也就是说，该匹配不需要获取供以后使用。例如[`Windows(?=95|98|NT|2000)`](https://regexper.com#Windows(?=95%7C98%7CNT%7C2000))
+> 正向否定预查（negative assert），在任何不匹配规则的字符串开始处匹配查找字符串。这是一个非获取匹配，也就是说，该匹配不需要获取供以后使用。例如[`Windows(?!95|98|NT|2000)`](https://regexper.com#Windows(?!95%7C98%7CNT%7C2000))
 能匹配 `Windows3.1` 中的 `Windows`，但不能匹配 `Windows2000` 中的 `Windows`。预查不消耗字符，也就是说，在一个匹配发生后，在最后一次匹配之后立即开始下一次匹配的搜索，而不是从包含预查的字符之后开始。
 
 `(?<=pattern)`
