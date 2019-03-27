@@ -38,7 +38,7 @@
 自学这门手艺，很简单，就是不断地学：
 ```python
 def teach_yourself(anything):
-    while not create(something):
+    while not create():
         learn()
         practice()
     return teach_yourself(another)

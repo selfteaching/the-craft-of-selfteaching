@@ -288,17 +288,6 @@ print(n, m)
 
 
 函数开始执行的时候，`x` 的值，是由外部代码（即，函数被调用的那一句）传递进来的。即便函数内部的变量名称与外部的变量名称相同，它们也不是同一个变量。
-```python
-# 观察一下名称相同的一个全局变量和局部变量的不同内存地址
-def f(n):
-    return id(n)
-    
-n = 5
-print(id(n))    # 全局变量 n 的内存地址
-print(id(f(n))) # 局部变量 n 的内存地址。
-```
-    4430918896
-    4467206608
 
 
 ## 递归函数三原则
@@ -332,7 +321,7 @@ print(id(f(n))) # 局部变量 n 的内存地址。
 至此，封面上的那个 “伪代码” 应该很好理解了：
 ```python
 def teach_yourself(anything):
-    while not create(something):
+    while not create():
         learn()
         practice()
     return teach_yourself(another)
