@@ -286,7 +286,7 @@ print('X' not in b_list)
 
 ### Methods
 
-字符串常量和 range() 都是不可变的（Imutable）；而列表则是**可变类型**（Mutable type），所以，它最起码可以被排序 —— 使用 `sort()` Method：
+字符串常量和 range() 都是不可变的（Immutable）；而列表则是**可变类型**（Mutable type），所以，它最起码可以被排序 —— 使用 `sort()` Method：
 ```python
 import random
 n = 10 
