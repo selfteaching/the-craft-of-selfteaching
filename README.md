@@ -24,7 +24,7 @@ def teach_yourself(anything):
 teach_yourself(coding)
 ```
 
-请先行阅读 [T-appendix.jupyter-installation-and-setup](T-appendix.jupyter-installation-and-setup.ipynb) 以便在本地安装 [Jupyterlab](https://github.com/jupyterlab/jupyterlab) 而后用更好的体验阅读本书。
+请先行阅读 [T-appendix.jupyter-installation-and-setup](T-appendix.jupyter-installation-and-setup.ipynb) 以便在本地安装 [Jupyterlab](https://github.com/jupyterlab/jupyterlab) 而后在阅读本书时有更好的体验。
 
 有兴趣帮忙的朋友，请先行阅读 [如何使用 Pull Request 为这本书校对](02.proof-of-work.ipynb)。
 
@@ -53,7 +53,7 @@ teach_yourself(coding)
 > - [Part.2.B.deliberate-practicing（**刻意练习**）](Part.2.B.deliberate-practicing.ipynb)
 > - [Part.2.C.why-start-from-writing-functions（**为什么从函数开始？**）](Part.2.C.why-start-from-writing-functions.ipynb)
 > - [Part.2.D.1-args（**关于参数（上）**）](Part.2.D.1-args.ipynb)
-> - [Part.2.D.2-aargs（**关于参数（下）**）](Part.2.D.2-aargs.ipynb)
+> - [Part.2.D.2-args（**关于参数（下）**）](Part.2.D.2-aargs.ipynb)
 > - [Part.2.D.3-lambda（**化名与匿名**）](Part.2.D.3-lambda.ipynb)
 > - [Part.2.D.4-recursion（**递归函数**）](Part.2.D.4-recursion.ipynb)
 > - [Part.2.D.5-docstrings（**函数的文档**）](Part.2.D.5-docstrings.ipynb)
