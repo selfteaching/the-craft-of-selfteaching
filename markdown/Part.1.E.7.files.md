@@ -5,7 +5,7 @@
 
 ## 创建文件
 
-创建一个文件，最简单的方法就是用 Python 的内建函数 `open()` 。
+创建一个文件，最简单的方式就是用 Python 的内建函数 `open()` 。
 
 `open()` 函数的[官方文档](https://docs.python.org/3/library/functions.html#open)很长，以下是个简化版：
 
@@ -31,7 +31,7 @@ open('test-file.txt', 'w')
 
 
 
-当然，更多的时候，我们会把这个函数的返回值，一个所谓的 [file object](https://docs.python.org/3/glossary.html#term-file-object)，保存到一个变量中，以便后面调用这个 file object 的各种方法，比如获取文件名 `file.name`，比如关闭文件 `file.close()`：
+当然，更多的时候，我们会把这个函数的返回值，一个所谓的 [file object](https://docs.python.org/3/glossary.html#term-file-object)，保存到一个变量中，以便后面调用这个 file object 的各种 Methods，比如获取文件名 `file.name`，比如关闭文件 `file.close()`：
 ```python
 f = open('test-file.txt', 'w')
 print(f.name)
@@ -61,7 +61,7 @@ else:
 
 ## 读写文件
 
-创建文件之后，我们可以用 `f.write()` 方法把数据写入文件，也可以用 `f.read()` 方法读取文件。
+创建文件之后，我们可以用 `f.write()` 把数据写入文件，也可以用 `f.read()` 读取文件。
 ```python
 f = open('test-file.txt', 'w')
 f.write('first line\nsecond line\nthird line\n')
@@ -78,7 +78,7 @@ f.close()
 
 
 
-文件有很多行的时候，我们可以用 `file.readline()` 操作，这个方法每次调用，都会返回文件中的新一行。
+文件有很多行的时候，我们可以用 `file.readline()` 操作，这个 Method 每次调用，都会返回文件中的新一行。
 ```python
 f = open('test-file.txt', 'w')
 f.write('first line\nsecond line\nthird line\n')
@@ -224,7 +224,7 @@ else:
 
 结论虽然有道理 —— 可这论证过程实在是太过分了罢…… 
 
-我很高兴，觉得这就是个_好例子_！并且，加工一下，会让读者觉得很精彩 —— 如果能找到一些按照同样的计算方法能得到 100 的单词，并且还是那种一看就是 “反例” 的单词……
+我很高兴，觉得这就是个_好例子_！并且，加工一下，会让读者觉得很精彩 —— 如果能找到一些按照同样的计算方式能得到 100 的单词，并且还是那种一看就是 “反例” 的单词……
 
 凭直觉，英文单词几十万，如此这般等于 100 的单词岂不是数不胜数？并且，一定会有很多负面意义的单词如此计算也等于 100 罢？然而，这种事情凭直觉是不够的，手工计算又会被累死…… 于是，面对如此荒谬的论证过程，我们竟然 “无话可说”。
 
