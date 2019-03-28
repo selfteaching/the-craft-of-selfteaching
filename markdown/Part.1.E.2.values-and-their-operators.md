@@ -9,6 +9,8 @@
 没有流程控制的是计算器而已；有流程控制的才是可编程设备。
 
 看看之前我们见过的计算质数的程序：（按一下 `⎋`，即 `ESC`，确保已经进入命令模式，`⇧ L` 可以切换是否显示代码行号）
+
+
 ```python
 def is_prime(n):            # 定义 is_prime()，接收一个参数
     if n < 2:              # 开始使用接收到的那个参数（值）开始计算……
@@ -25,6 +27,7 @@ for i in range(80, 110):
     if is_prime(i):          # 调用 is_prime() 函数，
         print(i)            # 如果返回值为 True，则向屏幕输出 i
 ```
+
     83
     89
     97
@@ -47,11 +50,13 @@ for i in range(80, 110):
 从本质上看，程序里的绝大多数语句包含着**运算**（Evaluation），即，在对某个值进行**评价**。这里的 “评价”，不是 “判断某人某事的好坏”，而是 “_计算出某个值究竟是什么_” —— 所以，我们用中文的 “**运算**” 翻译这个 “_Evaluation_” 可能表达得更准确一些。
 
 在程序中，被运算的可分为**常量**（Literals）和**变量**（Variables）。
+
 ```python
 a = 1 + 2 * 3
 a += 1
 print(a)
 ```
+
 在以上代码中，
 
 `1`、`2`、`3`，都是**常量**。_Literal_ 的意思是是 “字面的”，顾名思义，常量的_值_就是它字面上的值。`1` 的值，就是 `1`。
@@ -72,6 +77,8 @@ _变量_必须先_赋值_才能使用，也就是说，要先把一个_值_保�
 
 在 Python 中每个函数都有_返回值_，即便你在定义一个函数的时候没有设定返回值，它也会加上默认的返回值 `None`……（请注意 `None` 的
 大小写！）
+
+
 ```python
 def f():
     pass
@@ -79,6 +86,7 @@ print(f())        # 输出 f() 这个函数被调用后的返回值，None
 print(print(f())) # 这一行最外围的 print() 调用了一次 print(f())，所以输出一个 None，
                   # 而后再输出这次调用的返回值，所以又输出一次 None
 ```
+
     None
     None
     None
@@ -89,6 +97,8 @@ print(print(f())) # 这一行最外围的 print() 调用了一次 print(f())，�
 > 我们把一个值交给某个函数，请函数根据它内部的运算和流程控制对其进行操作而后返回另外一个值。
 
 比如，`abs()` 函数，就会返回传递给它的_值_的*绝对值*；`int()` 函数，会将传递给它的值的小数部分砍掉；`float()` 接到整数参数之后，会返回这个整数的浮点数形式：
+
+
 ```python
 from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = "all"
@@ -97,9 +107,10 @@ abs(-3.14159)
 int(abs(-3.14159))
 float(int(abs(-3.14159)))
 ```
+
     3.14159
-
-
+    3
+    3.0
 
 ## 值的类型
 
@@ -114,6 +125,8 @@ float(int(abs(-3.14159)))
 运算的一个默认法则就是，通常情况下应该是_相同类型的值才能相互运算_。
 
 显然，数字与数字之间的运算是合理的，但你让 `+` 这个操作符对一个字符串和一个数字进行运算就不行：
+
+
 ```python
 from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = "all"
@@ -121,14 +134,16 @@ InteractiveShell.ast_node_interactivity = "all"
 11 + 10 - 9 * 8 / 7 // 6 % 5
 '3.14' + 3                  # 这一句会报错
 ```
+
     20.0
     ---------------------------------------------------------------------------
+    
     TypeError                                 Traceback (most recent call last)
-    <ipython-input-4-e922b7565e53> in <module>
+    
+    <ipython-input-18-e922b7565e53> in <module>
           3 
           4 11 + 10 - 9 * 8 / 7 // 6 % 5
     ----> 5 '3.14' + 3                  # 这一句会报错
-    
     TypeError: can only concatenate str (not "int") to str
 
 
@@ -142,6 +157,8 @@ InteractiveShell.ast_node_interactivity = "all"
 > * 将浮点数字转换成整数用 `int()`；
 
 有个函数，`type()` ，可以用来查看某个值属于什么类型：
+
+
 ```python
 from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = "all"
@@ -156,6 +173,19 @@ type((1,2,3))
 type({1,2,3})
 type({'a':1, 'b':2, 'c':3})
 ```
+
+    int
+    float
+    str
+    bool
+    range
+    list
+    tuple
+    set
+    dict
+
+
+
 ## 操作符
 
 针对不同类型的数据，有各自专用的**操作符**。
@@ -164,7 +194,7 @@ type({'a':1, 'b':2, 'c':3})
 
 针对数字进行计算的操作符有加减乘除商余幂：`+`、`-`、`*`、`/`、`//`、`%`、`**`。
 
-其中 `+` 和 `-` 可以对单个值进行操作，例如：`-3`；其它的操作符需要有两个值才能操作。
+其中 `+` 和 `-` 可以对单个值进行操作，`-3`；其它的操作符需要有两个值才能操作。
 
 从优先级来看，这些操作符中：
 
@@ -184,9 +214,14 @@ type({'a':1, 'b':2, 'c':3})
 针对布尔值，操作符有与或非： `and`、`or`、`not`。
 
 它们之中，优先级最低的是或 `or`，然后是与 `and`, 优先级最高的是非 `not`：
+
+
 ```python
 True and False or not True
 ```
+
+    False
+
 最先操作的是 `not`，因为它优先级最高。所以，上面的表达式相当于 `True and False or (not True)`， 即相当于 `True and False or False`；
 
 然后是 `and`，所以，`True and False or False` 相当于是 `(True and False) or False`，即相当于 `False or False`；
@@ -199,10 +234,15 @@ True and False or not True
 
 逻辑操作符的优先级，高于布尔值的操作符，低于数值计算的操作符。
 即：数值计算的操作符优先级最高，其次是逻辑操作符，布尔值的操作符优先级最低。
+
+
 ```python
 n = -95
 n < 0 and (n + 1) % 2 == 0
 ```
+
+    True
+
 ### 字符串操作符
 
 针对字符串，有三种操作：
@@ -210,6 +250,8 @@ n < 0 and (n + 1) % 2 == 0
 > * 拼接：`+` 和 `' '`（后者是空格）
 > * 拷贝：`*`
 > * 逻辑运算：`in`、 `not in`；以及， `<`、`<=`、`>`、`>=`、`!=`、`==` 
+
+
 ```python
 from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = "all"
@@ -219,11 +261,27 @@ InteractiveShell.ast_node_interactivity = "all"
 'Python, ' + 'Awesome! ' * 3
 'o' in 'Awesome' and 'o' not in 'Python'
 ```
+
+    'AwesomePython'
+    'AwesomePython'
+    'Python, Awesome! Awesome! Awesome! '
+    False
+
+
+
 字符之间，字符串之间，除了 `==` 和 `!=` 之外，也都可以被逻辑操作符 `<`、`<=`、`>`、`>=` 运算：
+
+
 ```python
 'a' < 'b'
-```
+```    
+    True
+
+
+
 这是因为字符对应着 Unicode 码，字符在被比较的时候，被比较的是对应的 Unicode 码。
+
+
 ```python
 from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = "all"
@@ -232,10 +290,20 @@ InteractiveShell.ast_node_interactivity = "all"
 ord('A')
 ord('a')
 ```
+
+    False
+    65
+    97
+
 当字符串被比较的时候，将从两个字符串各自的第一个字符开始逐个比较，“一旦决出胜负马上停止”：
+
+
 ```python
 'PYTHON' > 'Python 3'
 ```
+
+    False
+
 ### 列表的操作符
 
 数字和字符串（由字符构成的序列）是最基本的数据类型，而我们往往需要批量处理数字和字符串，这样的时候，我们需要**数组**（Array）。不过，在 Python 语言中，它提供了一个**容器**（Container）的概念，用来容纳批量的数据。
@@ -253,6 +321,8 @@ Python 的容器有很多种 —— 字符串，其实也是容器的一种，�
 > * 逻辑运算：`in`、 `not in`；以及， `<`、`<=`、`>`、`>=`、`!=`、`==` 
 
 两个列表在比较时（前提是两个列表中的数据元素类型相同），遵循的还是跟字符串比较相同的规则：“一旦决出胜负马上停止”。但实际上，由于列表中可以包含不同类型的元素，所以，通常情况下没有实际需求对他们进行 “大于、小于” 的比较。（比较时，类型不同会引发 `TypeError`……）
+
+
 ```python
 from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = "all"
@@ -264,6 +334,12 @@ a_list > b_list
 10 not in a_list
 'ann' in c_list
 ```
+
+    False
+    True
+    True
+
+
 ## 更复杂的运算
 
 对于数字进行加、减、乘、除、商、余、幂的操作，对于字符串进行拼接、拷贝、属于的操作，对布尔值进行或、与、非的操作，这些都是相对简单的运算。
@@ -292,6 +368,8 @@ a_list > b_list
 现在倒不用着急一下子全部了解它们 —— 反正早晚都会的。
 
 这其中，针对数字，有计算绝对值的函数 `abs()`，有计算商余的函数 `divmod()` 等等。
+
+
 ```python
 from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = "all"
@@ -299,11 +377,24 @@ InteractiveShell.ast_node_interactivity = "all"
 abs(-3.1415926)
 divmod(11, 3)
 ```
+
+    3.1415926
+    (3, 2)
+
+
+
 这些内建函数也依然只能完成 “基本操作”，比如，对于数字，我们想计算三角函数的话，内建函数就帮不上忙了，于是，我们需要调用标准库（Standard Library）中的 math 模块（Module）：
+
+
 ```python
 import math
 math.sin(5)
 ```
+
+    -0.9589242746631385
+
+
+
 代码 `math.sin(5)` 这里的 `.`，也可以被理解为 “操作符”，它的作用是：
 
 > 从其它模块中调用函数。
@@ -315,15 +406,28 @@ math.sin(5)
 类（Class）中定义的函数，也可以这样被调用 —— 虽然你还不明白类（Class）究竟是什么，但从结构上很容易理解，它实际上也是保存在其他文件中的一段代码，于是，那段代码内部定义的函数，也可以这样调用。
 
 比如，数字，其实属于一个类，所以，我们可以调用那个类里所定义的函数，比如，`float.as_integer_ratio()`，它将返回两个值，第一个值除以第二个值，恰好等于传递给它的那个浮点数字参数：
+
+
 ```python
 3.1415926.as_integer_ratio()
 ```
+
+    (3537118815677477, 1125899906842624)
+
+
+
 ## 关于布尔值的补充
 
 当你看到以下这样的表达式，而后再看看它的结果，你可能会多少有点迷惑：
+
+
 ```python
 True or 'Python'
 ```
+
+    True
+
+
 这是因为 Python 将 `True` 定义为：
 
 > By default, an object is considered true unless its class defines either a \_\_bool\_\_() method that returns `False` or a \_\_len\_\_() method that returns zero, when called with the object.
@@ -350,6 +454,7 @@ True or 'Python'
 除了数字、布尔值、字符串，以及上一小节介绍的列表之外，还有若干数据类型，比如 `range()`（等差数列）、`tuple`（元组）、`set`（集合）、`dictionary`（字典），再比如 `Date Type`（日期）等等。
 
 它们都是基础数据类型的各种组合 —— 现实生活中，更多需要的是把基础类型组合起来构成的数据。比如，一个通讯簿，里面是一系列字符串分别对应着若干字符串和数字。
+
 ``` python
 entry[3662] = {
     'first_name': 'Michael',
@@ -367,6 +472,8 @@ entry[3662] = {
 针对不同的类型，都有相对应的操作符，可以对其进行运算。
 
 这些类型之间有时也有不得不相互运算的需求，于是，在相互运算之前同样要 _Type Casting_，比如将 List 转换为 Set，或者反之：
+
+
 ```python
 from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = "all"
@@ -378,6 +485,12 @@ a
 b
 c
 ```
+
+    [1, 2, 3, 4, 5, 6, 7]
+    {1, 2, 3, 4, 5, 6, 7}
+    [1, 2, 3, 4, 5, 6, 7]
+
+
 ## 总结
 
 回到最开始：从结构上来看，一切的计算机程序，都由且只由两个最基本的成分构成：
