@@ -39,7 +39,7 @@ chr(25354) # 这个字估计你也不认识……
 
 ## 字符串的标示
 
-标示一个字符串，有 4 种方法，用单引号、用双引号，用三个单引号或者三个双引号：
+标示一个字符串，有 4 种方式，用单引号、用双引号，用三个单引号或者三个双引号：
 ```python
 'Simple is better than complex.' # 用单引号
 ```
@@ -365,7 +365,7 @@ print(s*3)
 
 字符串有很多可以调用 Methods。以下介绍的 `str` Methods，在官方文档 "[Text Sequence Type](https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str)" 中都可以找到。
 
-调用 str 类的 Methods 的方法是使用 `.` 这个符号，比如：
+调用 str 类的 Methods 是使用 `.` 这个符号，比如：
 ```python
 'Python'.upper()
 ```
