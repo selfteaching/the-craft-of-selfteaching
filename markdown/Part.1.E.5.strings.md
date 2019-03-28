@@ -209,10 +209,10 @@ InteractiveShell.ast_node_interactivity = "all"
 
 在写程序的过程中，我们在代码中写的是 _raw_，而例如当我们调用 `print()` 将字符串输出到屏幕上时，是 _presentation_：
 ```python
-s = "He said, it's file." # raw
+s = "He said, it's fine." # raw
 print(s)                   # presentation
 ```
-    He said, it's file.
+    He said, it's fine.
 
 
 以后有时间去看看这两个内建函数，能了解更多细节：
