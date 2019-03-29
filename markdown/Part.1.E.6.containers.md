@@ -454,7 +454,7 @@ print(x)
     None
 
 
-有一个命令、两个 Methods 与删除单个元素相关联， `del`，`a.pop[i]`，`a.remove(x)`  ，请注意它们之间的区别。
+有一个命令、两个 Methods 与删除单个元素相关联， `del`，`a.pop([i])`，`a.remove(x)`  ，请注意它们之间的区别。
 ```python
 import random
 n = 3 
