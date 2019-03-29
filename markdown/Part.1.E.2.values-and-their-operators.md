@@ -422,10 +422,10 @@ math.sin(5)
 
 
 ```python
-True or 'Python'
+not 'Python'
 ```
 
-    True
+    False
 
 
 这是因为 Python 将 `True` 定义为：
