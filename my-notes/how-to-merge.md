@@ -1,4 +1,4 @@
-# Github进行fork后如何与原仓库同步
+# Github进行fork后如何与原仓库同步****20190330
 
 实在是……有太多人同时在帮忙修订错别字或优化 xiaolai 的 `the-craft-of-selfteaching` 了。如果你提交的 pull request 未被接受且得到回复说：“重新fork”，其实是你遇到一个问题：
 
