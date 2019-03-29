@@ -84,7 +84,7 @@ for (i = 0; i < 10; i++) {
 a_list = []
 b_list = [1, 2, 3]
 list(), or list(iterable)            # 这是 Type Casting
-(expression with x) for x in iterable
+[(expression with x) for x in iterable]
 ```
 ```python
 a_list = []
@@ -454,7 +454,7 @@ print(x)
     None
 
 
-有一个命令、两个 Methods 与删除单个元素相关联， `del`，`a.pop[i]`，`a.remove(x)`  ，请注意它们之间的区别。
+有一个命令、两个 Methods 与删除单个元素相关联， `del`，`a.pop([i])`，`a.remove(x)`  ，请注意它们之间的区别。
 ```python
 import random
 n = 3 
