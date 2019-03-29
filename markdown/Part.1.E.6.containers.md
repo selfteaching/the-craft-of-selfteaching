@@ -84,7 +84,7 @@ for (i = 0; i < 10; i++) {
 a_list = []
 b_list = [1, 2, 3]
 list(), or list(iterable)            # 这是 Type Casting
-(expression with x) for x in iterable
+[(expression with x) for x in iterable]
 ```
 ```python
 a_list = []
