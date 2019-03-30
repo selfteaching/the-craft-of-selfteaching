@@ -299,8 +299,8 @@ jupyterlab_sublime 则可以让你在 Jupyter lab 的 cell 中，使用跟 Subli
 }
 ```
 这样就添加了 4 个快捷键：
-> * `⌥ J`: Move selected cells up
-> * `⌥ K`: Move selected cells down
+> * `⌥ J`: Move selected cells down
+> * `⌥ K`: Move selected cells up
 > * `S`: Enable output scrolling
 > * `⌥ S`: Disable output scrolling
 
