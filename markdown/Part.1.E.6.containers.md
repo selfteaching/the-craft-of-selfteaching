@@ -689,7 +689,7 @@ b
 
 事实上，每种数据结构（Data Structures —— 在这一章里，我们一直用的概念是 “容器”，其实是指同一事物的两种称呼）都有自己的应用场景。比如，当我们需要管理很多用户时，集合就可以派上很大用场。
 
-假定两个集合中有些人是 admins，所有人都是 moderators：
+假定两个集合中有些人是 admins，有些人是 moderators：
 ```python
 admins = {'Moose', 'Joker', 'Joker'}
 moderators = {'Ann', 'Chris', 'Jane', 'Moose', 'Zero'}
