@@ -79,12 +79,12 @@ for (i = 0; i < 10; i++) {
 
 ### 列表的生成
 
-生成一个列表，有以下几种方法：
+生成一个列表，有以下几种方式：
 ```python
 a_list = []
 b_list = [1, 2, 3]
 list(), or list(iterable)            # 这是 Type Casting
-(expression with x) for x in iterable
+[(expression with x) for x in iterable]
 ```
 ```python
 a_list = []
@@ -106,7 +106,7 @@ print(c_list, f'has a length of {len(c_list)}.')
     [1, 2, 4, 8, 16, 32, 64, 128] has a length of 8.
 
 
-这最后一种方法颇为神奇：
+这最后一种方式颇为神奇：
 ```python
 [2**x for x in range(8)]
 ```
@@ -141,7 +141,7 @@ print(f'... and it has {len(b_list)} even numbers: {b_list}')
 > * 复制：`*`
 > * 逻辑运算：`in` 和 `not in`，`<`、`<=`、`>`、`>=`、`!=`、`==`
 
-而后两个列表也和两个字符串一样，可以被比较，即，可以进行逻辑运算；比较方法也跟字符串一样，从两个列表各自的第一个元素开始逐个比较，“一旦决出胜负马上停止”：
+而后两个列表也和两个字符串一样，可以被比较，即，可以进行逻辑运算；比较方式也跟字符串一样，从两个列表各自的第一个元素开始逐个比较，“一旦决出胜负马上停止”：
 ```python
 from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = "all"
@@ -454,7 +454,7 @@ print(x)
     None
 
 
-有一个命令、两个 Methods 与删除单个元素相关联， `del`，`a.pop[i]`，`a.remove(x)`  ，请注意它们之间的区别。
+有一个命令、两个 Methods 与删除单个元素相关联， `del`，`a.pop([i])`，`a.remove(x)`  ，请注意它们之间的区别。
 ```python
 import random
 n = 3 
@@ -488,7 +488,7 @@ del a_list[2]
 print(a_list)
 
 print()
-print(a_list.remove('example')) # a_list.remove() 这个方法的返回值是 None
+print(a_list.remove('example')) # a_list.remove() 这个 Method 的返回值是 None
 print(a_list)
 ```
     [86, 69, 81]
@@ -611,7 +611,7 @@ c.__sizeof__()
 
 
 
-等你了解了 Tuple 的标注方法，你就会发现，`range()` 函数返回的等差数列就是一个 Tuple —— `range(6)` 就相当于 `(0, 1, 2, 3, 4, 5)`。
+等你了解了 Tuple 的标注方式，你就会发现，`range()` 函数返回的等差数列就是一个 Tuple —— `range(6)` 就相当于 `(0, 1, 2, 3, 4, 5)`。
 
 ## 集合（Set）
 
@@ -676,7 +676,7 @@ b
 
 ### 操作
 
-将序列类型数据转换成 Set，就等于**去重**。当然，也可以用 `in` 来判断某个元素是否属于这个集合。`copy()`、`len()`、`max()`、`min()`，也都可以用来操作 Set，但 `del` 却不行 —— 因为 Set 中的元素没有索引（它不是有序容器）。从 Set 里删除元素，得用 `set.remove(elem)` 方法；而 Frozen Set 是不可变的，所以不能用 `set.remove(elem)` 方法操作。
+将序列类型数据转换成 Set，就等于**去重**。当然，也可以用 `in` 来判断某个元素是否属于这个集合。`copy()`、`len()`、`max()`、`min()`，也都可以用来操作 Set，但 `del` 却不行 —— 因为 Set 中的元素没有索引（它不是有序容器）。从 Set 里删除元素，得用 `set.remove(elem)`；而 Frozen Set 是不可变的，所以不能用 `set.remove(elem)` 操作。
 
 对于集合，有相应的操作符对它们可以进行集合运算：
 
@@ -736,18 +736,18 @@ plt.show()
 ![png](../images/Part.1.E.6.containers_66_0.png)
 
 
-以上的操作符，都有另外一个版本，即，用 Set 这个类的方法完成。
+以上的操作符，都有另外一个版本，即，用 Set 这个类的 Methods 完成。
 
-|   意义    | 操作符 | 方法                    | 方法相当于 |
+|   意义    | 操作符 | Methods                    | Method 相当于 |
 | :------: | :----: | :---------------------: | :--: |
 | 并集     | <code>&#124;</code>    | `set.union(*others)`         | <code>set &#124; other &#124; ...</code> |
 | 交集     | `&`    | `set.intersection(*others)` | `set & other & ...` |
 | 差集     | `-`    | `set.difference(*others)` | `set - other - ...` |
 | 对称差集 | `^`    | `set.symmetric_difference(other)` | `set ^ other` |
 
-注意，并集、交集、差集的方法，可以接收多个集合作为参数 `(*other)`，但对称差集方法只接收一个参数 `(other)`。
+注意，并集、交集、差集的 Methods，可以接收多个集合作为参数 `(*other)`，但对称差集 Methods 只接收一个参数 `(other)`。
 
-对于集合，推荐更多使用方法而不是操作符的主要原因是：更易读 —— 对人来说，因为有意义、有用处的代码终将需要人去维护。
+对于集合，推荐更多使用 Methods 而不是操作符的主要原因是：更易读 —— 对人来说，因为有意义、有用处的代码终将需要人去维护。
 ```python
 from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = "all"
@@ -794,7 +794,7 @@ admins.symmetric_difference(moderators)
 
 ### 更新
 
-对于集合，有以下更新它自身的方法：
+对于集合，有以下更新它自身的 Methods：
 
 **add**(*elem*)
 > 把 elem 加入集合
@@ -821,7 +821,7 @@ admins.symmetric_difference(moderators)
 > 更新 set, 删除所有在 others 中存在的元素；
 
 **set.symmetric_difference_update**(_other_)，相当于 `set ^= other`
-> 更新 set, 只保留存在于 set 或 other 中的元素，但不保留同时存在于 set 和 other 中的元素；**注意**，该方法*只接收一个参数*。
+> 更新 set, 只保留存在于 set 或 other 中的元素，但不保留同时存在于 set 和 other 中的元素；**注意**，该 Method *只接收一个参数*。
 
 ### 冻结集合
 
