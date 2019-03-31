@@ -53,7 +53,7 @@ if os.path.exists(f.name):
     os.remove(f.name)
     print(f'{f.name} deleted.')
 else:
-    print(f'{f.name} does not exist')
+    print(f'{f.name} does not exist.')
 ```
     test-file.txt
     test-file.txt deleted.
@@ -190,7 +190,7 @@ if os.path.exists(f.name):
     os.remove(f.name)
     print(f'{f.name} deleted.')
 else:
-    print(f'{f.name} does not exist')    
+    print(f'{f.name} does not exist.')    
 ```
     first line
     
