@@ -149,7 +149,7 @@ print('(not False) yields:',  not False)
 
 ## 流程控制
 
-有了布尔运算能力之后，才有_根据情况决定流程_的所谓**流程控制**（Flow Control）的能力。
+有了布尔运算能力之后，才有_根据情况决定流程_的所谓**流程控制**（Control Flow）的能力。
 ```python
 import random
 r = random.randrange(1, 1000)
