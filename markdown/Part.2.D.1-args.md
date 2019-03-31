@@ -33,14 +33,15 @@ do_nothing()
 > 
 > - 再次，名称不能与关键字重合 —— 以下是 Python 的 Keyword List：
 
-| -  | Python     | Keyword    | List       |      -       |
-| ------------ | ---------- | ---------- | ------------ | --------- |
-| `and`      | `as`     | `assert` | `async`    | `await` |
-| `continue` | `def`    | `del`    | `elif`     | `else`  |
-| `finally`  | `for`    | `from`   | `global`   | `if`    |
-| `is`       | `lambda` | `None`   | `nonlocal` | `not`   |
-| `raise`    | `return` | `True`   | `try`      | `while` |
-| `and`      | `as`     | `assert` | `async`    | `await` |
+|     -      | Python     | Keyword    | List       |     -      |
+| ---------- | ---------- | ---------- | ---------- | ---------- |
+| `and`      | `as`       | `assert`   | `async`    | `await`    |
+| `break`    | `class`    | `continue` | `def`      | `del`      |
+| `elif`     | `else`     | `except`   | `False`    | `finally`  |
+| `for`      | `from`     | `global`   | `if`       | `import`   |
+| `in`       | `is`       | `lambda`   | `None`     | `nonlocal` |
+| `not`      | `or`       | `pass`     | `raise`    | `return`   |
+| `True`     | `try`      | `while`    | `with`     | `yield`    |
 
 你随时可以用以下代码查询关键字列表：
 ```python
