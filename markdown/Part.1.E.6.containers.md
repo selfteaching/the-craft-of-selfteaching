@@ -84,7 +84,7 @@ for (i = 0; i < 10; i++) {
 a_list = []
 b_list = [1, 2, 3]
 list(), or list(iterable)            # 这是 Type Casting
-(expression with x) for x in iterable
+[(expression with x) for x in iterable]
 ```
 ```python
 a_list = []
@@ -137,7 +137,7 @@ print(f'... and it has {len(b_list)} even numbers: {b_list}')
 
 列表的操作符和字符串一样，因为它们都是有序容器。列表的操作符有：
 
-> * 拼接：`+` （与字符串不一样的地方是，不能用空格了 `' '`；
+> * 拼接：`+` （与字符串不一样的地方是，不能用空格 `' '` 了）；
 > * 复制：`*`
 > * 逻辑运算：`in` 和 `not in`，`<`、`<=`、`>`、`>=`、`!=`、`==`
 
@@ -454,7 +454,7 @@ print(x)
     None
 
 
-有一个命令、两个 Methods 与删除单个元素相关联， `del`，`a.pop[i]`，`a.remove(x)`  ，请注意它们之间的区别。
+有一个命令、两个 Methods 与删除单个元素相关联， `del`，`a.pop([i])`，`a.remove(x)`  ，请注意它们之间的区别。
 ```python
 import random
 n = 3 
@@ -689,7 +689,7 @@ b
 
 事实上，每种数据结构（Data Structures —— 在这一章里，我们一直用的概念是 “容器”，其实是指同一事物的两种称呼）都有自己的应用场景。比如，当我们需要管理很多用户时，集合就可以派上很大用场。
 
-假定两个集合中有些人是 admins，所有人都是 moderators：
+假定两个集合中有些人是 admins，有些人是 moderators：
 ```python
 admins = {'Moose', 'Joker', 'Joker'}
 moderators = {'Ann', 'Chris', 'Jane', 'Moose', 'Zero'}
