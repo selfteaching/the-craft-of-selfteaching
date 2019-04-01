@@ -137,7 +137,7 @@ print(f'... and it has {len(b_list)} even numbers: {b_list}')
 
 列表的操作符和字符串一样，因为它们都是有序容器。列表的操作符有：
 
-> * 拼接：`+` （与字符串不一样的地方是，不能用空格了 `' '`；
+> * 拼接：`+` （与字符串不一样的地方是，不能用空格 `' '` 了）；
 > * 复制：`*`
 > * 逻辑运算：`in` 和 `not in`，`<`、`<=`、`>`、`>=`、`!=`、`==`
 
@@ -254,7 +254,7 @@ print(L) # 用 del 对 L 操作之后，L 本身少了 1 个元素
 import random
 n = 3 
 
-# 生成 3 个随机数，构成一个列表"
+# 生成 3 个随机数，构成一个列表
 a_list = [random.randrange(65, 91) for i in range(n)]
 b_list = [chr(random.randrange(65, 91)) for i in range(n)]
 print(a_list)
@@ -689,7 +689,7 @@ b
 
 事实上，每种数据结构（Data Structures —— 在这一章里，我们一直用的概念是 “容器”，其实是指同一事物的两种称呼）都有自己的应用场景。比如，当我们需要管理很多用户时，集合就可以派上很大用场。
 
-假定两个集合中有些人是 admins，所有人都是 moderators：
+假定两个集合中有些人是 admins，有些人是 moderators：
 ```python
 admins = {'Moose', 'Joker', 'Joker'}
 moderators = {'Ann', 'Chris', 'Jane', 'Moose', 'Zero'}
@@ -705,7 +705,7 @@ admins                 # 去重自动完成
 admins | moderators    # admins、 moderator，或者身兼两职的，即，两个角色中的所有人 in admins or moderators or both
 admins & moderators    # 既是 admins 又是 moderator 的都有谁？ in both admins and moderators
 admins - moderators    # 是 admins 但不是 moderator 的都有谁？ in admins but not in moderators
-admins ^ moderators    # admins 和 moderator 中不是身兼两职的都有谁？in admins or users but not both
+admins ^ moderators    # admins 和 moderator 中不是身兼两职的都有谁？in admins or moderators but not both
 ```
     {'Joker', 'Moose'}
     True
@@ -729,7 +729,7 @@ moderators = {'Ann', 'Chris', 'Jane', 'Moose', 'Zero'}
 v = venn2(subsets=(admins, moderators), set_labels=('admins', 'moderators'))
 v.get_label_by_id('11').set_text('\n'.join(admins & moderators))
 v.get_label_by_id('10').set_text('\n'.join(admins - moderators))
-v.get_label_by_id('01').set_text('\n'.join(admins ^ moderators))
+v.get_label_by_id('01').set_text('\n'.join(moderators - admins))
 
 plt.show()
 ```
@@ -1037,7 +1037,7 @@ phonebook1
 
 
 
-## 迭代各种容器中元素
+## 迭代各种容器中的元素
 
 我们总是有这样的需求：对容器中的元素逐一进行处理（运算）。这样的时候，我们就用 `for` 循环去迭代它们。
 

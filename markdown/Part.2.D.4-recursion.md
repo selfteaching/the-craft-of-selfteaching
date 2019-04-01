@@ -29,7 +29,7 @@ print(f(5))
 
 ## 递归函数的执行过程
 
-以 factorial(5) 为例，让我们看看程序的流程（注意，图片里的诸如 `n=5>1` 之类的标注，并不是程序语言表达式，只是对读者的说明）:
+以 factorial(5) 为例，让我们看看程序的流程：
 
 ![](../images/recursive-function-call.png)
 
@@ -99,7 +99,7 @@ a_monk_telling_story()
 ```
 这是个_无限循环_的递归，因为这个函数里_没有设置中止自我调用的条件_。无限循环还有个不好听的名字，叫做 “死循环”。
 
-在著名的电影**盗梦空间**（_2010_）里，从整体结构上来看，“入梦” 也是个 “递归函数”。只不过，这个函数和 a_monk_telling_story() 不一样，它并不是死循环 —— 因为它设定了_中止自我调用的条件_：
+在著名的电影**盗梦空间**（_2010_）里，从整体结构上来看，“入梦” 也是个 “递归函数”。只不过，这个函数和 `a_monk_telling_story()` 不一样，它并不是死循环 —— 因为它设定了_中止自我调用的条件_：
 
 > 在电影里，醒过来的条件有两个
 >> * 一个是在梦里死掉；
@@ -152,7 +152,7 @@ print('The in_dream() function returns:', in_dream())
 
 如果疑惑为什么 `random.randrange(0,10)` 能表示 1/10 的概率，请返回去重新阅读[第一部分中关于布尔值的内容](Part.1.E.2.values-and-their-operators.md)。
 
-另外，在 Python 中，若是需要将某个值于 True 或者 False 进行比较，尤其是在条件语句中，推荐写法是（参见 [PEP8](https://www.python.org/dev/peps/pep-0008/)）：
+另外，在 Python 中，若是需要将某个值与 True 或者 False 进行比较，尤其是在条件语句中，推荐写法是（参见 [PEP8](https://www.python.org/dev/peps/pep-0008/)）：
 ```python
 if condition:
     pass
