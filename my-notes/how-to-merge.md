@@ -43,8 +43,11 @@ step 3、执行命令 `git remote add upstream https://github.com/selfteaching/t
 step 4、执行命令 `git status` 检查本地是否有未提交的修改。如果有，则把你本地的有效修改，先从本地仓库推送到你的github仓库。最后再执行一次 `git status` 检查本地已无未提交的修改。
 
 `git add -A` 或者 `git add filename` 
+
 `git commit -m "your note"`
+
 `git push origin master`
+
 `git status`
 
 注1：作为新手，这一步建议严格执行，是为了避免大量无效修改或文本冲突带来的更复杂局面。
