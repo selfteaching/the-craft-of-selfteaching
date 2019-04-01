@@ -118,7 +118,7 @@ sudo yum install git
 在命令行工具中执行以下命令：
 ```bash
 git config --global user.name "<your_name>"
-git config --global user.email <your_email_address>
+git config --global user.email "<your_email_address>"
 ```
 ### Git GUI
 
