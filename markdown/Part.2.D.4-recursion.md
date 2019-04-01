@@ -29,7 +29,7 @@ print(f(5))
 
 ## 递归函数的执行过程
 
-以 factorial(5) 为例，让我们看看程序的流程:
+以 factorial(5) 为例，让我们看看程序的流程：
 
 ![](../images/recursive-function-call.png)
 

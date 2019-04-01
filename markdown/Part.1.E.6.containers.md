@@ -254,7 +254,7 @@ print(L) # 用 del 对 L 操作之后，L 本身少了 1 个元素
 import random
 n = 3 
 
-# 生成 3 个随机数，构成一个列表"
+# 生成 3 个随机数，构成一个列表
 a_list = [random.randrange(65, 91) for i in range(n)]
 b_list = [chr(random.randrange(65, 91)) for i in range(n)]
 print(a_list)
