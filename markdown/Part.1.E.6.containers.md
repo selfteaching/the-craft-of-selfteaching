@@ -705,7 +705,7 @@ admins                 # 去重自动完成
 admins | moderators    # admins、 moderator，或者身兼两职的，即，两个角色中的所有人 in admins or moderators or both
 admins & moderators    # 既是 admins 又是 moderator 的都有谁？ in both admins and moderators
 admins - moderators    # 是 admins 但不是 moderator 的都有谁？ in admins but not in moderators
-admins ^ moderators    # admins 和 moderator 中不是身兼两职的都有谁？in admins or users but not both
+admins ^ moderators    # admins 和 moderator 中不是身兼两职的都有谁？in admins or moderator but not both
 ```
     {'Joker', 'Moose'}
     True
