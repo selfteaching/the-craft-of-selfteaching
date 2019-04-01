@@ -65,7 +65,7 @@ Google Doodle 的寄语是这样的：
 
 在 Python 语言中，**布尔值**（Boolean Value）用 `True` 和 `False` 来表示。
 
-**注意**：请小心区分大小写 —— 因为 Python 解释器是大小写敏感的，对它来说，`True` 和 `true` 不是一回事。
+**注意**：请小心区分大小写 —— 因为 Python 解释器是对大小写敏感的，对它来说，`True` 和 `true` 不是一回事。
 
 任何一个**逻辑表达式**都会返回一个_布尔值_。
 ```python
