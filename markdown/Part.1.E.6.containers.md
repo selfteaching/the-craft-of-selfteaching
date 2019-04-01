@@ -705,7 +705,7 @@ admins                 # 去重自动完成
 admins | moderators    # admins、 moderator，或者身兼两职的，即，两个角色中的所有人 in admins or moderators or both
 admins & moderators    # 既是 admins 又是 moderator 的都有谁？ in both admins and moderators
 admins - moderators    # 是 admins 但不是 moderator 的都有谁？ in admins but not in moderators
-admins ^ moderators    # admins 和 moderator 中不是身兼两职的都有谁？in admins or users but not both
+admins ^ moderators    # admins 和 moderator 中不是身兼两职的都有谁？in admins or moderators but not both
 ```
     {'Joker', 'Moose'}
     True
@@ -729,7 +729,7 @@ moderators = {'Ann', 'Chris', 'Jane', 'Moose', 'Zero'}
 v = venn2(subsets=(admins, moderators), set_labels=('admins', 'moderators'))
 v.get_label_by_id('11').set_text('\n'.join(admins & moderators))
 v.get_label_by_id('10').set_text('\n'.join(admins - moderators))
-v.get_label_by_id('01').set_text('\n'.join(admins ^ moderators))
+v.get_label_by_id('01').set_text('\n'.join(moderators - admins))
 
 plt.show()
 ```
@@ -1037,7 +1037,7 @@ phonebook1
 
 
 
-## 迭代各种容器中元素
+## 迭代各种容器中的元素
 
 我们总是有这样的需求：对容器中的元素逐一进行处理（运算）。这样的时候，我们就用 `for` 循环去迭代它们。
 

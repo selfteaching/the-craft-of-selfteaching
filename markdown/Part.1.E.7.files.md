@@ -53,7 +53,7 @@ if os.path.exists(f.name):
     os.remove(f.name)
     print(f'{f.name} deleted.')
 else:
-    print(f'{f.name} does not exist')
+    print(f'{f.name} does not exist.')
 ```
     test-file.txt
     test-file.txt deleted.
@@ -190,7 +190,7 @@ if os.path.exists(f.name):
     os.remove(f.name)
     print(f'{f.name} deleted.')
 else:
-    print(f'{f.name} does not exist')    
+    print(f'{f.name} does not exist.')    
 ```
     first line
     
@@ -399,9 +399,9 @@ with open('results.txt', 'w') as result:
 ```
 竟然这么简单就搞定了？！
 
-这 12 行的代码，在几秒钟内从接近 370,101 个英文单词中找到 3,771 个如此计算等于 100 的词汇。
+这 12 行的代码，在几秒钟内从 370,099 个英文单词中找到 3,770 个如此计算等于 100 的词汇。
 
-喝着咖啡翻一翻 `result.txt`，很快就找到了那些可以用来做反例格外恰当的词汇。
+喝着咖啡翻一翻 `result.txt`，很快就找到了那些用来做反例格外恰当的词汇。
 
 真无法想象当年的自己若是不懂编程的话现在会是什么样子……
 

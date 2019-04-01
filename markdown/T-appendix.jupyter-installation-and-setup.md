@@ -26,7 +26,7 @@ conda update anaconda
 conda install -c conda-forge nodejs
 conda install -c conda-forge jupyterlab # 这是用来升级 jupyter lab 到最新版的方法
 ```
-安装完毕之后，可以看看各个你将要用到的可执行命令都在什么地方，用 `which` 命令（windows下用 `where` 命令）：
+安装完毕之后，可以看看各个你将要用到的可执行命令都在什么地方，用 `which` 命令（windows 下用 `where` 命令）：
 ```bash
 which python
 python --version
