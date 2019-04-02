@@ -103,7 +103,7 @@ InteractiveShell.ast_node_interactivity = "all"
 
 sys.builtin_module_names
 "_sre" in sys.builtin_module_names # True
-"math" in sys.builtin_module_names # True
+"math" in sys.builtin_module_names # False
 ```
     ('_abc',
      '_ast',
