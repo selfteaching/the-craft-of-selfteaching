@@ -31,7 +31,7 @@ def say_hi(*names, greeting='Hello', capitalized=False):
     Print a string, with a greeting to everyone.
     :param *names: tuple of names to be greeted.
     :param greeting: 'Hello' as default.
-    :param capitalized: Whether name should be converted to capitalzed before print. False as default.
+    :param capitalized: Whether name should be converted to capitalized before print. False as default.
     :returns: None
     """
     for name in names:
