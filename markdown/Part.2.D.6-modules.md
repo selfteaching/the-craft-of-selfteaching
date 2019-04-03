@@ -149,7 +149,7 @@ sys.builtin_module_names
 ```python
 from mycode import *
 ```
-你其实可以只引入当前需要的函数，比如，只引入 `is_prime()`
+你其实可以只引入当前需要的函数，比如，只引入 `is_prime()`：
 ```python
 from mycode import is_prime
 ```
