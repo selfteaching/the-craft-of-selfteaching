@@ -11,35 +11,35 @@
 
 让我们从认识一个人开始罢……
 
-## 乔治·布尔
+## 乔治・布尔
 
 1833 年，一个 18 岁的英国小伙脑子里闪过一个念头：
 
 > **逻辑关系**应该能用**符号**表示。
 
-这个小伙子叫乔治·布尔（[George Boole](https://en.wikipedia.org/wiki/George_Boole)，其实之前就提到过我的这位偶像），于 1815 年出生于距离伦敦北部 120 英里之外的一个小镇，林肯。父亲是位对科学和数学有着浓厚兴趣的鞋匠。乔治·布尔在父亲的影响下，靠阅读自学成才。14 岁的时候就在林肯小镇名声大噪，因为他翻译了一首希腊语的诗歌并发表在本地的报纸上。
+这个小伙子叫乔治・布尔（[George Boole](https://en.wikipedia.org/wiki/George_Boole)，其实之前就提到过我的这位偶像），于 1815 年出生于距离伦敦北部 120 英里之外的一个小镇，林肯。父亲是位对科学和数学有着浓厚兴趣的鞋匠。乔治・布尔在父亲的影响下，靠阅读自学成才。14 岁的时候就在林肯小镇名声大噪，因为他翻译了一首希腊语的诗歌并发表在本地的报纸上。
 
 到了 16 岁的时候，他被本地一所学校聘为教师，那时候他已经在阅读微积分书籍。19 岁的时候布尔创业了 —— 他办了一所小学，自任校长兼教师。23 岁，他开始发表数学方面的论文。他发明了 “操作演算”，即，通过操作符号来研究微积分。他曾经考虑过去剑桥读大学，但后来放弃了，因为为了入学他必须放下自己的研究，还得去参加标准本科生课程。这对一个长期只靠自学成长的人来说，实在是太无法忍受了。
 
-1847 年，乔治 32 岁，出版了他人生的第一本书籍，[THE MATHEMATICAL ANALYSIS OF LOGIC](http://www.gutenberg.org/ebooks/36884) —— 18 岁那年的闪念终于成型。这本书很短，只有 86 页，但最终它竟然成了人类的瑰宝。在书里，乔治·布尔很好地解释了如何使用代数形式表达逻辑思想。
+1847 年，乔治 32 岁，出版了他人生的第一本书籍，[THE MATHEMATICAL ANALYSIS OF LOGIC](http://www.gutenberg.org/ebooks/36884) —— 18 岁那年的闪念终于成型。这本书很短，只有 86 页，但最终它竟然成了人类的瑰宝。在书里，乔治・布尔很好地解释了如何使用代数形式表达逻辑思想。
 
-1849 年，乔治·布尔 34 岁，被当年刚刚成立的女皇学院（Queen's College）聘请为第一位数学教授。随后他开始写那本最著名的书，[AN INVESTIGATION OF THE LAWS OF THOUGHT](http://www.gutenberg.org/ebooks/15114)。他在前言里写到：
+1849 年，乔治・布尔 34 岁，被当年刚刚成立的女皇学院（Queen's College）聘请为第一位数学教授。随后他开始写那本最著名的书，[AN INVESTIGATION OF THE LAWS OF THOUGHT](http://www.gutenberg.org/ebooks/15114)。他在前言里写到：
 
 >  “The design of the following treatise is to investigate the fundamental laws of those operations of the mind by which reasoning is performed; to give expression to them in the symbolical language of a Calculus, and upon this foundation to establish the science of Logic and construct its method; …”
 >
 > “本书论述的是，探索心智推理的基本规律；用微积分的符号语言进行表达，并在此基础上建立逻辑和构建方法的科学……”
 
-在大学任职期间，乔治·布尔写了两本教科书，一本讲微分方程，另外一本讲差分方程，而前者，[A TREATISE ON DIFFERENTIAL EQUATIONS](https://archive.org/details/atreatiseondiff06boolgoog/page/n7)，直到今天，依然难以超越。
+在大学任职期间，乔治・布尔写了两本教科书，一本讲微分方程，另外一本讲差分方程，而前者，[A TREATISE ON DIFFERENTIAL EQUATIONS](https://archive.org/details/atreatiseondiff06boolgoog/page/n7)，直到今天，依然难以超越。
 
 ![george-boole-1864](../images/george-boole-in-1864.png)
 
-乔治·布尔于 1864 年因肺炎去世。
+乔治・布尔于 1864 年因肺炎去世。
 
-乔治·布尔在世的时候，人们并未对他的布尔代数产生什么兴趣。直到 70 年后，克劳德·香农（[Claude Elwood Shannon](https://en.wikipedia.org/wiki/Claude_Shannon)）发表那篇著名论文，[A SYMBOLIC ANALYSIS OF RELAY AND SWITCHING CIRCUITS](https://www.cs.virginia.edu/~evans/greatworks/shannon38.pdf) 之后，布尔代数才算是开始被大规模应用到实处。
+乔治・布尔在世的时候，人们并未对他的布尔代数产生什么兴趣。直到 70 年后，克劳德・香农（[Claude Elwood Shannon](https://en.wikipedia.org/wiki/Claude_Shannon)）发表那篇著名论文，[A SYMBOLIC ANALYSIS OF RELAY AND SWITCHING CIRCUITS](https://www.cs.virginia.edu/~evans/greatworks/shannon38.pdf) 之后，布尔代数才算是开始被大规模应用到实处。
 
-有本书可以闲暇时间翻翻，[The Logician and the Engineer: How George Boole and Claude Shannon Created the Information Age](https://www.amazon.com/gp/product/B0091XBUTM/ref=dbs_a_def_rwt_hsch_vapi_tkin_p1_i4)。可以说，没有乔治·布尔的**布尔代数**，没有克劳德·香农的**逻辑电路**，就没有后来的计算机，就没有后来的互联网，就没有今天的信息时代 —— 世界将会怎样？
+有本书可以闲暇时间翻翻，[The Logician and the Engineer: How George Boole and Claude Shannon Created the Information Age](https://www.amazon.com/gp/product/B0091XBUTM/ref=dbs_a_def_rwt_hsch_vapi_tkin_p1_i4)。可以说，没有乔治・布尔的**布尔代数**，没有克劳德・香农的**逻辑电路**，就没有后来的计算机，就没有后来的互联网，就没有今天的信息时代 —— 世界将会怎样？
 
-2015 年，乔治·布尔诞辰 200 周年，Google 设计了[专门的 Logo](https://www.google.com/doodles/george-booles-200th-birthday) 纪念这位为人类作出巨大贡献的自学奇才。
+2015 年，乔治・布尔诞辰 200 周年，Google 设计了[专门的 Logo](https://www.google.com/doodles/george-booles-200th-birthday) 纪念这位为人类作出巨大贡献的自学奇才。
 
 ![george-boole-google-doodle-2015](../images/george-boole-google-doodle-2015.gif)
 
@@ -59,13 +59,13 @@ Google Doodle 的寄语是这样的：
 
 于是，一旦代码编写好之后，计算机在执行的过程中，除了可以 “_按照顺序执行任务_” 之外，还可以 “_根据不同情况执行不同的任务_”，比如，“_如果条件尚未满足则重复执行某一任务_”。
 
-计算器和计算机都是电子设备，但计算机更为强大的原因，用通俗的说法就是它 “**可编程**”（Programable） —— 而所谓可编程的核心就是_布尔运算_及其相应的**流程控制**（Control Flow）；没有布尔运算能力就没有办法做_流程控制_；没有流程控制就只能 “按顺序执行”，那就显得 “很不智能”…… 
+计算器和计算机都是电子设备，但计算机更为强大的原因，用通俗的说法就是它 “**可编程**”（Programable）—— 而所谓可编程的核心就是_布尔运算_及其相应的**流程控制**（Control Flow）；没有布尔运算能力就没有办法做_流程控制_；没有流程控制就只能 “按顺序执行”，那就显得 “很不智能”…… 
 
 ### 布尔值
 
 在 Python 语言中，**布尔值**（Boolean Value）用 `True` 和 `False` 来表示。
 
-**注意**：请小心区分大小写 —— 因为 Python 解释器是大小写敏感的，对它来说，`True` 和 `true` 不是一回事。
+**注意**：请小心区分大小写 —— 因为 Python 解释器是对大小写敏感的，对它来说，`True` 和 `true` 不是一回事。
 
 任何一个**逻辑表达式**都会返回一个_布尔值_。
 ```python
@@ -149,7 +149,7 @@ print('(not False) yields:',  not False)
 
 ## 流程控制
 
-有了布尔运算能力之后，才有_根据情况决定流程_的所谓**流程控制**（Flow Control）的能力。
+有了布尔运算能力之后，才有_根据情况决定流程_的所谓**流程控制**（Control Flow）的能力。
 ```python
 import random
 r = random.randrange(1, 1000)
@@ -338,7 +338,7 @@ a
 > * 它有处理 —— 即，内部有能够完成某一特定任务的代码；尤其是，它可以根据 “输入” 得到 “输出”；
 > * 它有输出 —— 即，它能向外部输送返回值……
 
-被调用的函数，也可以被理解为**子程序**（Sub-Program） —— 主程序执行到函数调用时，就开始执行实现函数的那些代码，而后再返回主程序…… 
+被调用的函数，也可以被理解为**子程序**（Sub-Program）—— 主程序执行到函数调用时，就开始执行实现函数的那些代码，而后再返回主程序…… 
 
 我们可以把判断一个数字是否是质数的过程，写成函数，以便将来在多处用得着的时候，随时可以调用它：
 ```python

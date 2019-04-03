@@ -1,7 +1,7 @@
 
 # 函数工具
 
-这一章要讲的是迭代器、生成器，和装饰器，这些都是函数工具。有人把它们称为 **DIG**（Decorator, Iterator，Generator）—— 它们都是真正掌握 Python 的关键。
+这一章要讲的是迭代器、生成器，和装饰器，这些都是函数工具。有人把它们称为 **DIG**（Decorator，Iterator，Generator）—— 它们都是真正掌握 Python 的关键。
 
 ## 迭代器（Iterator）
 

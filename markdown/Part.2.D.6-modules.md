@@ -31,7 +31,7 @@ def say_hi(*names, greeting='Hello', capitalized=False):
     Print a string, with a greeting to everyone.
     :param *names: tuple of names to be greeted.
     :param greeting: 'Hello' as default.
-    :param capitalized: Whether name should be converted to capitalzed before print. False as default.
+    :param capitalized: Whether name should be converted to capitalized before print. False as default.
     :returns: None
     """
     for name in names:
@@ -103,7 +103,7 @@ InteractiveShell.ast_node_interactivity = "all"
 
 sys.builtin_module_names
 "_sre" in sys.builtin_module_names # True
-"math" in sys.builtin_module_names # True
+"math" in sys.builtin_module_names # False
 ```
     ('_abc',
      '_ast',
@@ -143,7 +143,7 @@ sys.builtin_module_names
 
 跟变量名、函数名，不能与关键字重名一样，你的模块名称也最好别与系统内建模块名称重合。
 
-## 指定引入模块中特定函数
+## 引入指定模块中特定函数
 
 当你使用 `import mycode` 的时候，你向当前工作空间引入了 `mycode` 文件中定义的所有函数，相当于：
 ```python
