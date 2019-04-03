@@ -32,7 +32,12 @@ if __name__ == '__main__':
     This is the end of the program.
 
 
-当一个模块（其实就是存有 Python 代码的 `.py` 文件）被导入，或者被执行的时候，这个模块的 `__name__` 被设定为 `__main__`。
+
+当一个模块（其实就是存有 Python 代码的 `.py` 文件，例如：`mycode.py` ）被 `import` 语句导入的时候，这个模块的 `__name__` 就是模块名（例如：`mycode` ）。
+
+而当一个模块被命令行运行的时候，这个模块的 __name__ 就被 Python 解释器设定为 '__main__'。
+
+
 
 把一个程序整个封装到 `main()` 之中，而后在模块代码里加上：
 ```python
@@ -41,8 +46,8 @@ if __name__ == '__main__':
 ```
 这么做的结果是：
 
-> 1. 当 Python 文件被当作模块，被 `import` 语句导入时，`main()` 函数不被直接运行；
-> 2. 当 Python 文件被 `python -m` 执行的时候，`main()` 才被执行。
+> 1. 当 Python 文件被当作模块，被 `import` 语句导入时，`if` 判断失败，则 `main()` 函数不被执行；
+> 2. 当 Python 文件被 `python -m` 运行的时候，`if` 判断成功，`main()` 函数才被执行。
 
 还记得那个 Python 的彩蛋吧？`this.py` 的代码如下：
 ```python
