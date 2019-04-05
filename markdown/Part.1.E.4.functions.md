@@ -128,7 +128,7 @@ print(print(1))
 
 在 Python 中，函数的参数，有两种：
 > * **位置参数**（Positional Arguments，在官方文档里常被缩写为 *arg*）
-> * **关键字参数**（Keyword Arguments，在官方文档里常被缩写为 *karg*）
+> * **关键字参数**（Keyword Arguments，在官方文档里常被缩写为 *kwarg*）
 
 在函数定义中，带有 `=` 的，即，已为其设定了默认值的参数，叫做 Keyword Arguments，其它的是 Positional Arguments。
 
