@@ -25,7 +25,7 @@ print()
     1, 2, 3, 4, 5, 
 
 
-有个内建函数，就是用来把一个对象转换成 “可迭代对象” 的 —— `iter()`。
+有个内建函数，就是用来把一个 “可迭代对象”（Iterable）转换成 “迭代器” （Iterator）的 —— `iter()`。
 ```python
 from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = "all"
@@ -43,7 +43,7 @@ type(L)
 
 
 
-可迭代对象如何使用呢？有个 `next()` 函数：
+迭代器如何使用呢？有个 `next()` 函数：
 ```python
 from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = "all"
