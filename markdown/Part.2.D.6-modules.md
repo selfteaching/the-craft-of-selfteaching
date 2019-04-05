@@ -100,6 +100,7 @@ import my_module
 ```python
 from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = "all"
+import sys
 
 sys.builtin_module_names
 "_sre" in sys.builtin_module_names # True
