@@ -526,7 +526,7 @@ g.__dict__
 hasattr(Golem, 'population')
 getattr(Golem, 'population')
 setattr(Golem, 'population', 10000)
-g.population    # 所以，在很多的情况下，不把数据封装在 Class 内部的话，后面会很有很多麻烦。
+g.population    # 所以，在很多的情况下，不把数据封装在 Class 内部的话，后面会有很多麻烦。
 ```
     Help on class Golem in module __main__:
     
