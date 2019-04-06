@@ -73,20 +73,20 @@ Github 上的 “居民” 现在已经养成了一个惯例，无论什么好�
 
 ## Introduction
 
-![Web Developer Roadmap Introduction](../images/intro.png)
+![Web Developer Roadmap Introduction](https://github.com/selfteaching/the-craft-of-selfteaching/blob/master/images/intro.png)
 
 
 ## Frontend Roadmap
 
-![Frontend Roadmap](../images/frontend.png)
+![Frontend Roadmap](https://github.com/selfteaching/the-craft-of-selfteaching/blob/master/images/frontend.png)
 
 ## Back-end Roadmap
 
-![Back-end Roadmap](../images/backend.png)
+![Back-end Roadmap](https://github.com/selfteaching/the-craft-of-selfteaching/blob/master/images/backend.png)
 
 ## DevOps Roadmap
 
-![DevOps Roadmap](../images/devops.png)
+![DevOps Roadmap](https://github.com/selfteaching/the-craft-of-selfteaching/blob/master/images/devops.png)
 
 
 路漫漫其修远兮…… 
