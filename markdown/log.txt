@@ -1,6 +1,0 @@
-
-
-T-appendix.jupyter-installation-and-setup.md (line 6):
-[Anaconda](https://www.anaconda.com) 是目前最方便的 Python 发行版，搭载了很多我们终将必用的软件包，除了 Python 之外，还有 [R 语言](https://www.r-project.org/)，还包括 [Pandoc](https://pandoc.org/)， [NumPy](http://www.numpy.org/)，[SciPy](https://www.scipy.org/)，[Matplotlib](https://matplotlib.org/)…… 等等。
-=>
-[Anaconda](https://www.anaconda.com) 是目前最方便的 Python 发行版，搭载了很多我们终将必用的软件包，除了 Python 之外，还有 [R 语言](https://www.r-project.org/)，还包括 [Pandoc](https://pandoc.org/)，[NumPy](http://www.numpy.org/)，[SciPy](https://www.scipy.org/)，[Matplotlib](https://matplotlib.org/)…… 等等。
