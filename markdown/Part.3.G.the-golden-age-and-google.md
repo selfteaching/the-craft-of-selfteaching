@@ -13,7 +13,7 @@
 
 于是，今天，自学者在真正的意义上身处于一个黄金时代 —— **没有什么是不能自学的**。注意措辞，在这句话前面甚至根本不用加上 “几乎” 这样的限定以示准确 —— 你想学什么，就能学什么，而不是 “只有先拜师才能开始学艺”。
 
-今天的你，想学什么就去问 Google；在学习中遇到什么问题，就直接问 Google —— 直接问它，通常总是比向某个人提问有效率得多。Google 就是这样，越用越离不开它……
+今天的你，想学什么就去问 Google；在学习中遇到什么问题，就直接问 Google —— 直接问它，通常总是比向某个人提问有效率得多。Google 就是这样，越用越离不开它…… 
 
 其实很多人并不真的懂如何用好 Google 的，可是连这个它也能解决，因为你可以直接问它：
 
@@ -23,11 +23,12 @@
 
 ![google-how-effectively](../images/google-how-effectively.png)
 
-[lifehack.com 上的这篇文章](https://www.lifehack.org/articles/technology/20-tips-use-google-search-efficiently.html)也的的确确值得细读 —— 读过且真正理解之后，不夸张地讲，你的 “搜索技能” 已经足够灭掉整个人类当前活跃群体中的 99% 了……  这个说法真的完全没有夸张，绝大多数人就是不会在搜索的过程中使用那些符号的，比如 `-` `*` `~` `@` `#` `:` `"` `..`  —— 还有很多其它技巧…… 话说，你在 Google 上用过 `Time *place*` 吗？
+[lifehack.com 上的这篇文章](https://www.lifehack.org/articles/technology/20-tips-use-google-search-efficiently.html)也的的确确值得细读 —— 读过且真正理解之后，不夸张地讲，你的 “搜索技能” 已经足够灭掉整个人类当前活跃群体中的 99% 了…… 这个说法真的完全没有夸张，绝大多数人就是不会在搜索的过程中使用那些符号的，比如 `-` `*` `~` `@` `#` `:` `"` `..` —— 还有很多其它技巧…… 话说，你在 Google 上用过 `Time *place*` 吗？
+[lifehack.com 上的这篇文章](https://www.lifehack.org/articles/technology/20-tips-use-google-search-efficiently.html)也的的确确值得细读 —— 读过且真正理解之后，不夸张地讲，你的 “搜索技能” 已经足够灭掉整个人类当前活跃群体中的 99% 了…… 这个说法真的完全没有夸张，绝大多数人就是不会在搜索的过程中使用那些符号的，比如 `-` `*` `~` `@` `#` `:` `"` `..` —— 还有很多其它技巧…… 话说，你在 Google 上用过 `Time *place*` 吗？
 
 已经掌握了正则表达式以及 glob 的你，学习一下如何使用这种符号，实在是太小菜一碟了 —— 然而，这么简单的东西所能带来的未来收益是非常惊人的，不信走着瞧。
 
-可实际上，还是得应用我们之前说过的原则： 
+可实际上，还是得应用我们之前说过的原则：
 
 > 首选查询，肯定是官方文档。
 
@@ -41,7 +42,8 @@ Google 还有更为强大的工具给你使用，叫做 Google Custom Search，�
 
 > https://support.google.com/customsearch/
 
-对编程工作来说，Google 当然格外地更为重要 —— 互联网上积累的最多最专业的信息，当然是计算机相关信息。所以，当你遇到什么错误提示的时候，不仅要问 Google，还要优先问问 [Stackoverflow](https://stackoverflow.com) —— 连 Google 自己都这么干。在 [colab.research.google.com](https://colab.research.google.com) （Google 为它的 TensorFlow 服务搭建的 Jupyterlab 环境）上，如果你运行什么代码出错了的话，那么，出错信息下面会出现一个按钮，上面写着：`SEARCH STACK OVERFLOW`，点击它就直接给你 [Stackoverflow](https://stackoverflow.com) 上的搜索结果 …… 真够意思！
+对编程工作来说，Google 当然格外地更为重要 —— 互联网上积累的最多最专业的信息，当然是计算机相关信息。所以，当你遇到什么错误提示的时候，不仅要问 Google，还要优先问问 [Stackoverflow](https://stackoverflow.com) —— 连 Google 自己都这么干。在 [colab.research.google.com](https://colab.research.google.com)（Google 为它的 TensorFlow 服务搭建的 Jupyterlab 环境）上，如果你运行什么代码出错了的话，那么，出错信息下面会出现一个按钮，上面写着：`SEARCH STACK OVERFLOW`，点击它就直接给你 [Stackoverflow](https://stackoverflow.com) 上的搜索结果…… 真够意思！
+对编程工作来说，Google 当然格外地更为重要 —— 互联网上积累的最多最专业的信息，当然是计算机相关信息。所以，当你遇到什么错误提示的时候，不仅要问 Google，还要优先问问 [Stackoverflow](https://stackoverflow.com) —— 连 Google 自己都这么干。在 [colab.research.google.com](https://colab.research.google.com)（Google 为它的 TensorFlow 服务搭建的 Jupyterlab 环境）上，如果你运行什么代码出错了的话，那么，出错信息下面会出现一个按钮，上面写着：`SEARCH STACK OVERFLOW`，点击它就直接给你 [Stackoverflow](https://stackoverflow.com) 上的搜索结果…… 真够意思！
 
 ![google-stackoverflow](../images/google-stackoverflow.png)
 
@@ -67,7 +69,7 @@ Google 还有更为强大的工具给你使用，叫做 Google Custom Search，�
 
 这也是一个自学者的基本素养。
 
-偶尔，也确实会遇到 Google 了很久，就是没有找到答案的情况…… 这样的时候，你可能需要想办法 “问人” 了。然而，最靠谱的通常并不见得是 “身边的人”，而是互联网上各种垂直社区里的其他用户……
+偶尔，也确实会遇到 Google 了很久，就是没有找到答案的情况…… 这样的时候，你可能需要想办法 “问人” 了。然而，最靠谱的通常并不见得是 “身边的人”，而是互联网上各种垂直社区里的其他用户…… 
 
 向人问，也是有学问的 —— 很多人张口就问，结果呢？结果没人理。为什么呢？
 

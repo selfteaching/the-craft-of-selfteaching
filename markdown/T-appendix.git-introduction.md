@@ -7,7 +7,8 @@
 
 ## 内容目标
 
-再一次，这一篇内容的目标，依然不是 “教程”，而是 “教程” 的 “图例” —— 如果我们把真正的教程比喻成 “地图” 的话。最全面的 Git 教程在网上， **Pro Git**，是免费的 —— 把它反复阅读若干遍，理解完整：
+再一次，这一篇内容的目标，依然不是 “教程”，而是 “教程” 的 “图例” —— 如果我们把真正的教程比喻成 “地图” 的话。最全面的 Git 教程在网上，**Pro Git**，是免费的 —— 把它反复阅读若干遍，理解完整：
+再一次，这一篇内容的目标，依然不是 “教程”，而是 “教程” 的 “图例” —— 如果我们把真正的教程比喻成 “地图” 的话。最全面的 Git 教程在网上，**Pro Git**，是免费的 —— 把它反复阅读若干遍，理解完整：
 
 > https://git-scm.com/book/en/v2
 
@@ -124,7 +125,7 @@ git config --global user.email <your_email_address>
 
 Git 的图形化版本客户端，有很多种选择，以下几个跨平台的客户端最受欢迎：
 
-> * [Github Desktop](https://desktop.github.com) 
+> * [Github Desktop](https://desktop.github.com)
 > * [GitAhead](https://gitahead.github.io/gitahead.com/)
 > * [Fork](https://git-fork.com)
 > * [GitKraken](https://www.gitkraken.com)
@@ -162,7 +163,6 @@ Git 的图形化版本客户端，有很多种选择，以下几个跨平台的�
 | `+x`   | 将文件设置为可执行  |
 
 在使用 `man` 命令时，系统会使用 vim 文本编辑工具以只读模式打开帮助文件，常用键盘命令如下：
-
 
 | 键盘命令  | 简要说明                                            |
 | ----- | --------------------------------------------------- |

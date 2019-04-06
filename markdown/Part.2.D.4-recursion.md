@@ -5,7 +5,8 @@
 
 在函数中有个理解门槛比较高的概念：**递归函数**（Recursive Functions）—— 那些**在自身内部调用自身的函数**。说起来都比较拗口。
 
-先看一个例子，我们想要有个能够计算 `n` 的_阶乘_（factorial） `n!` 的函数，`f()`，规则如下：
+先看一个例子，我们想要有个能够计算 `n` 的_阶乘_（factorial）`n!` 的函数，`f()`，规则如下：
+先看一个例子，我们想要有个能够计算 `n` 的_阶乘_（factorial）`n!` 的函数，`f()`，规则如下：
 
 > - `n! = n × (n-1) × (n-2)... × 1`
 > - 即，`n! = n × (n-1)!`
@@ -21,11 +22,10 @@ def f(n):
         return 1
     else:
         return n * f(n-1)
-    
+
 print(f(5))
 ```
     120
-
 
 ## 递归函数的执行过程
 
@@ -33,9 +33,7 @@ print(f(5))
 
 ![](../images/recursive-function-call.png)
 
-
-
-当 f(5) 被调用之后，函数开始运行……
+当 f(5) 被调用之后，函数开始运行…… 
 * 因为 `5 > 1`，所以，在计算 `n * f(n-1)` 的时候要再次调用自己 `f(4)`；所以必须等待 `f(4)` 的值返回；
 * 因为 `4 > 1`，所以，在计算 `n * f(n-1)` 的时候要再次调用自己 `f(3)`；所以必须等待 `f(3)` 的值返回；
 * 因为 `3 > 1`，所以，在计算 `n * f(n-1)` 的时候要再次调用自己 `f(2)`；所以必须等待 `f(2)` 的值返回；
@@ -44,7 +42,8 @@ print(f(5))
 * 下一步返回的是 `2 * 1`；
 * 下一步返回的是 `3 * 2`；
 * 下一步返回的是 `4 * 6`；
-* 下一步返回的是 `5 * 24` ——至此，外部调用 `f(5)` 的最终返回值是 `120`……
+* 下一步返回的是 `5 * 24` —— 至此，外部调用 `f(5)` 的最终返回值是 `120`……
+* 下一步返回的是 `5 * 24` —— 至此，外部调用 `f(5)` 的最终返回值是 `120`……
 
 加上一些输出语句之后，能更清楚地看到大概的执行流程：
 ```python
@@ -58,7 +57,7 @@ def f(n):
         r = n * f(n-1)
         print('\tn =', n, 'return:', r)
         return r
-    
+
 print('Call f(5)...')
 print('Get out of f(n), and f(5) =', f(5))
 ```
@@ -76,23 +75,23 @@ print('Get out of f(n), and f(5) =', f(5))
     	n = 5 return: 120
     Get out of f(n), and f(5) = 120
 
-
 有点烧脑…… 不过，分为几个层面去逐个突破，你会发现它真的很好玩。
 
 ## 递归的终点
 
-递归函数在内部必须有一个能够让自己停止调用自己的方式，否则永远循环下去了……
+递归函数在内部必须有一个能够让自己停止调用自己的方式，否则永远循环下去了…… 
 
 其实，我们所有人很小就见过递归应用，只不过，那时候不知道那就是递归而已。听过那个无聊的故事罢？
 
-> 山上有座庙，庙里有个和尚，和尚讲故事，说……
-> > 山上有座庙，庙里有个和尚，和尚讲故事，说……
-> > > 山上有座庙，庙里有个和尚，和尚讲故事，说……
+> 山上有座庙，庙里有个和尚，和尚讲故事，说…… 
+> > 山上有座庙，庙里有个和尚，和尚讲故事，说…… 
+> > > 山上有座庙，庙里有个和尚，和尚讲故事，说…… 
 
 写成 Python 程序大概是这样：
 ```python
 def a_monk_telling_story():
     print('山上有座庙，庙里有个和尚，和尚讲故事，他说……')
+    print('山上有座庙，庙里有个和尚，和尚讲故事，他说…… ')
     return a_monk_telling_story()
 
 a_monk_telling_story()
@@ -103,19 +102,23 @@ a_monk_telling_story()
 
 > 在电影里，醒过来的条件有两个
 >> * 一个是在梦里死掉；
->> * 一个是在梦里被 kicked 到……
+>> * 一个是在梦里被 kicked 到…… 
 >
-> 如果这两个条件一直不被满足，那就进入 limbo 状态 —— 其实就跟死循环一样，出不来了……  
+> 如果这两个条件一直不被满足，那就进入 limbo 状态 —— 其实就跟死循环一样，出不来了…… 
 
 为了演示，我把故事情节改变成这样：
-> * 入梦， `in_dream()` ，是个递归函数；
+> * 入梦，`in_dream()`，是个递归函数；
+> * 入梦，`in_dream()`，是个递归函数；
 > * 入梦之后醒过来的条件有两个：
->> * 一个是在梦里死掉， `dead is True`；
->> * 一个是在梦里被 kicked， `kicked is True`……
+>> * 一个是在梦里死掉，`dead is True`；
+>> * 一个是在梦里死掉，`dead is True`；
+>> * 一个是在梦里被 kicked，`kicked is True`……
+>> * 一个是在梦里被 kicked，`kicked is True`……
 >>
->> 以上两个条件中任意一个被满足，就苏醒……
+>> 以上两个条件中任意一个被满足，就苏醒…… 
 
 至于为什么会死掉，如何被 kick，我偷懒了一下：管它怎样，管它如何，反正，每个条件被满足的概率是 1/10…… (也只有这样，我才能写出一个简短的，能够运行的 “_盗梦空间程序_”。）
+至于为什么会死掉，如何被 kick，我偷懒了一下：管它怎样，管它如何，反正，每个条件被满足的概率是 1/10……（也只有这样，我才能写出一个简短的，能够运行的 “_盗梦空间程序_”。）
 
 把这个很抽象的故事写成 Python 程序，看看一次入梦之后能睡多少天，大概是这样：
 ```python
@@ -126,16 +129,16 @@ def in_dream(day=0, dead=False, kicked=False):
     kicked = not random.randrange(0,10) # 1/10 probability to be kicked
     day += 1
     print('dead:', dead, 'kicked:', kicked)
-    
+
     if dead:
         print((f"I slept {day} days, and was dead to wake up..."))
         return day
     elif kicked:
         print(f"I slept {day} days, and was kicked to wake up...")
         return day
-    
+
     return in_dream(day)
-    
+
 print('The in_dream() function returns:', in_dream())
 ```
     dead: False kicked: False
@@ -148,7 +151,6 @@ print('The in_dream() function returns:', in_dream())
     dead: True kicked: True
     I slept 8 days, and was dead to wake up...
     The in_dream() function returns: 8
-
 
 如果疑惑为什么 `random.randrange(0,10)` 能表示 1/10 的概率，请返回去重新阅读[第一部分中关于布尔值的内容](Part.1.E.2.values-and-their-operators.md)。
 
@@ -181,7 +183,7 @@ x(5)
           1 def x(n):
           2     return n * x(n-1)
     ----> 3 x(5)
-    
+
     <ipython-input-3-daa4d33fb39b> in x(n)
           1 def x(n):
     ----> 2     return n * x(n-1)
@@ -193,11 +195,10 @@ x(5)
           3 x(5)
     RecursionError: maximum recursion depth exceeded
 
-
 不用深究上面盗梦空间这个程序的其它细节，不过，通过以上三个递归程序 —— 两个很扯淡的例子，一个正经例子 —— 你已经看到了递归函数的共同特征：
 
 > 1. 在 `return` 语句中返回的是_自身的调用_（或者是_含有自身的表达式_）
-> 2. 为了避免死循环，_一定要有至少一个条件_下返回的不再是自身调用……
+> 2. 为了避免死循环，_一定要有至少一个条件_下返回的不再是自身调用…… 
 
 ## 变量的作用域
 
@@ -208,11 +209,10 @@ def factorial(n):
         return 1
     else:
         return n * factorial(n-1)
-    
+
 print(factorial(5))
 ```
     120
-
 
 最初的时候，这个函数的执行流程之所以令人迷惑，是因为初学者对_变量_的**作用域**把握得不够充分。
 
@@ -229,7 +229,7 @@ print(factorial(5))
 
 你也必须遵守同样的原则。而这个原则同样可以在日常的工作生活中 “调用”：
 
-> 做事的原则：自己的事自己做，别人的事，最多通过自己的产出让他们自己去搞……
+> 做事的原则：自己的事自己做，别人的事，最多通过自己的产出让他们自己去搞…… 
 
 再仔细观察一下以下代码。当一个变量被当做参数传递给一个函数的时候，这个变量本身并不会被函数所改变。比如，`a = 5`，而后，再把 `a` 当作参数传递给 `f(a)` 的时候，这个函数当然应该返回它内部任务完成之后应该传递回来的值，但 `a` 本身不会被改变。
 ```python
@@ -238,16 +238,15 @@ def factorial(n):
         return 1
     else:
         return n * factorial(n-1)
-    
+
 a = 5
 b = factorial(a)   # a 并不会因此改变；
 print(a, b)
-a = factorial(a)   # 这是你主动为 a 再一次赋值……
+a = factorial(a)   # 这是你主动为 a 再一次赋值…… 
 print(a, b)
 ```
     5 120
     120 120
-
 
 理解了这一点之后，再看 `factorial()` 这个递归函数的递归执行过程，你就能明白这个事实：
 
@@ -260,13 +259,12 @@ def factorial(n):
         return 1
     else:
         return n * factorial(n-1)
-    
+
 n = 5              # 这一次，这个变量名称是 n
 m = factorial(n)   # n 并不会因此改变；
 print(n, m)
 ```
     5 120
-
 
 在 `m = factorial(n)` 这一句中，`n` 被 `factorial()` 当做参数调用了，但无论函数内部如何操作，并不会改变变量 `n` 的值。
 
@@ -277,18 +275,16 @@ def factorial(x): # 在这个语句块中出现的变量，都是局部变量
         return 1
     else:
         return x * factorial(x-1)
-    
+
 n = 5           # 这一次，这个变量名称是 n
 m = factorial(n)   # n 并不会因此改变；
 print(n, m)
 # 这个例子和之前再之前的示例代码有什么区别吗？
-# 本质上没区别，就是变量名称换了而已……
+# 本质上没区别，就是变量名称换了而已…… 
 ```
     5 120
 
-
 函数开始执行的时候，`x` 的值，是由外部代码（即，函数被调用的那一句）传递进来的。即便函数内部的变量名称与外部的变量名称相同，它们也不是同一个变量。
-
 
 ## 递归函数三原则
 
@@ -298,9 +294,10 @@ print(n, m)
 
 > 1. 根据定义，递归函数必须在内部调用自己；
 > 2. 必须设定一个退出条件；
-> 3. 递归过程中必须能够逐步达到退出条件……
+> 3. 递归过程中必须能够逐步达到退出条件…… 
 
-从这个三原则望过去， `factorial()` 是个合格有效的递归函数，满足第一条，满足第二条，尤其还满足第三条中的 “*逐步达到*”！
+从这个三原则望过去，`factorial()` 是个合格有效的递归函数，满足第一条，满足第二条，尤其还满足第三条中的 “*逐步达到*”！
+从这个三原则望过去，`factorial()` 是个合格有效的递归函数，满足第一条，满足第二条，尤其还满足第三条中的 “*逐步达到*”！
 
 而那个扯淡的盗梦空间递归程序，说实话，不太合格，虽然它满足第一条，也满足第二条，第三条差点蒙混过关：它不是*逐步达到*，而是*不管怎样肯定能达到* —— 这明显是两回事…… 原谅它罢，它的作用就是当例子，一次正面的，一次负面的，作为例子算是功成圆满了！
 
@@ -308,7 +305,7 @@ print(n, m)
 
 准确地讲，递归是一种解决问题的方式。当我们需要解决的问题，可以被逐步拆分成很多越来越小的模块，然后每个小模块还都能用同一种算法处理的时候，用递归函数最简洁有效。所以，只不过是在遇到可以用递归函数解决问题的时候，才需要去写递归函数。
 
-从这个意义上来看，递归函数是程序员为了自己方便而使用的，并不是为了计算机方便而使用 —— 计算机么，你给它的任务多一点或者少一点，对它来讲无所谓，反正有电就能运转，它自己又不付电费……
+从这个意义上来看，递归函数是程序员为了自己方便而使用的，并不是为了计算机方便而使用 —— 计算机么，你给它的任务多一点或者少一点，对它来讲无所谓，反正有电就能运转，它自己又不付电费…… 
 
 理论上来讲，所有用递归函数能完成的任务，不用递归函数也能完成，只不过代码多一点，啰嗦一点，看起来没有那么优美而已。
 
@@ -328,14 +325,13 @@ def teach_yourself(anything):
 
 teach_yourself(coding)
 ```
-自学还真的就是递归函数呢……
+自学还真的就是递归函数呢…… 
 
 ## 思考与练习
 
 普林斯顿大学的一个网页，有很多递归的例子
 
 https://introcs.cs.princeton.edu/java/23recursion/
-    
 
 -----
 **脚注**
@@ -343,7 +339,6 @@ https://introcs.cs.princeton.edu/java/23recursion/
 <a name='fn1'>[1]</a>：参见 Stackoverflow 上的讨论：[Boolean identity == True vs is True](https://stackoverflow.com/questions/27276610/boolean-identity-true-vs-is-true)
 
 <a href='#fn1b'><small>↑Back to Content↑</small></a>
-
 
 <a name='fn2'>[2]</a>：关于[阿西莫夫三铁律](https://zh.wikipedia.org/wiki/%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%B8%89%E5%AE%9A%E5%BE%8B)（Three Laws of Robotics）的类比，来自著名的 Python 教程，[Think Python: How to Think Like a Computer Scientist](http://greenteapress.com/thinkpython2/html/index.html)
 

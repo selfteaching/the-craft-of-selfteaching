@@ -10,7 +10,7 @@ def routine_2():
     sub_routine_1()
     sub_routine_2()
     print('Routine 2 done.')
-    
+
 def sub_routine_1():
     print('Sub-routine 1 done.')
 
@@ -21,7 +21,7 @@ def main():
     routine_1()
     routine_2()
     print('This is the end of the program.')
-    
+
 if __name__ == '__main__':
     main()
 ```
@@ -31,13 +31,10 @@ if __name__ == '__main__':
     Routine 2 done.
     This is the end of the program.
 
-
-
-当一个模块（其实就是存有 Python 代码的 `.py` 文件，例如：`mycode.py` ）被 `import` 语句导入的时候，这个模块的 `__name__` 就是模块名（例如：`mycode` ）。
+当一个模块（其实就是存有 Python 代码的 `.py` 文件，例如：`mycode.py`）被 `import` 语句导入的时候，这个模块的 `__name__` 就是模块名（例如：`mycode`）。
+当一个模块（其实就是存有 Python 代码的 `.py` 文件，例如：`mycode.py`）被 `import` 语句导入的时候，这个模块的 `__name__` 就是模块名（例如：`mycode`）。
 
 而当一个模块被命令行运行的时候，这个模块的 __name__ 就被 Python 解释器设定为 '__main__'。
-
-
 
 把一个程序整个封装到 `main()` 之中，而后在模块代码里加上：
 ```python
@@ -113,7 +110,6 @@ def main():
             d[chr(i+c)] = chr((i+13) % 26 + c)
     print("".join([d.get(c, c) for c in s]))
 
-
 if __name__ == '__main__':
     main()
 ```
@@ -130,7 +126,8 @@ python that.py
 %%bash
 python -m that
 ```
-像 `that.py` 那样把整个程序放进 `main()` 函数之后，`import that` 不会自动执行 main 函数里的代码。不过，你可以调用 that.main() ：
+像 `that.py` 那样把整个程序放进 `main()` 函数之后，`import that` 不会自动执行 main 函数里的代码。不过，你可以调用 that.main()：
+像 `that.py` 那样把整个程序放进 `main()` 函数之后，`import that` 不会自动执行 main 函数里的代码。不过，你可以调用 that.main()：
 ```python
 import that
 that.main()
@@ -143,6 +140,7 @@ help(that)
 所以，之前那个从 37 万个词汇中挑出 3700 个字母加起来等于 100 的词汇的程序，也可以写成以下形式：
 ```python
 #!/usr/bin/env python
+# !/usr/bin/env python
 
 def sum_of_word(word):
     sum = 0
@@ -163,13 +161,13 @@ if __name__ == '__main__':
 
 > [`python3 script executable`](https://www.google.com/search?q=python3+script+executable)
 
-你会很快弄明白的……
+你会很快弄明白的…… 
 
 另外，再搜索一下：
 
 > [`python3 script executable parameters retrieving`](https://www.google.com/search?q=python3+script+executable+parameters+retrieving)
 
-你就可以把以上程序改成在命令行下能够接收指定参数的 Python 可执行文件……
+你就可以把以上程序改成在命令行下能够接收指定参数的 Python 可执行文件…… 
 
 顺带说，`import this` 的彩蛋有更好玩的玩法：
 ```python
@@ -191,28 +189,25 @@ love is not True or False; love is love # True True
     True
     True
 
-
-
 在 Terminal 里输入 `python ⏎` 而后在 Interactive Shell 里逐句输入试试。`love = this` 后面的每一句，都是布尔运算，想想看为什么是那样的结果？
 ```python
 import this
 love = this
 
-this is love      
+this is love
 # True, 试试看，id(this) 和 id(love) 是同一个值
 # 即，它们的内存地址相同
 
-love is True       
-# False, id(love) 和 id(True) 不是同一个值  
-love is False      
+love is True
+# False, id(love) 和 id(True) 不是同一个值
+love is False
 # 同上
 
-
-love is not True or False  
+love is not True or False
 # is not 的优先级比 or 高；所以相当于是：
 # (love is not True) or False，于是返回 True
 
-love is not True or False; love is love  
+love is not True or False; love is love
 # 重复一次上一句 —— `;` 是语句分隔符
 # 而后 love is love 当然是 True
 ```
@@ -245,8 +240,6 @@ love is not True
     4308348176
     4308349120
     True
-
-
 
 Python 的操作符优先级，完整表格在这里：
 

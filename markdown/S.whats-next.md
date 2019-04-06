@@ -17,6 +17,7 @@
 
 > * [The Python Tutorial](https://docs.python.org/3/tutorial/)
 > * [The Hitchhiker’s Guide to Python!](https://docs.python-guide.org/)
+> * [The Hitchhiker's Guide to Python!](https://docs.python-guide.org/)
 > * [Think Python: How to think like a computer scientist](http://greenteapress.com/wp/think-python-2e/)
 > * [Automate the Boring Stuff with Python](https://automatetheboringstuff.com)
 > * [Effective Python](https://effectivepython.com)
@@ -29,7 +30,7 @@
 
 > https://pythonbooks.revolunet.com
 
-千万别觉得多，只要真的全面掌握，后面再学别的，速度上都会因此快出很多很多……
+千万别觉得多，只要真的全面掌握，后面再学别的，速度上都会因此快出很多很多…… 
 
 ## Python Cheatsheet
 
@@ -64,9 +65,9 @@ Github 上的 “居民” 现在已经养成了一个惯例，无论什么好�
 > https://github.com/kamranahmedse/developer-roadmap
 >
 > Below you find a set of charts demonstrating the paths that you can take and the technologies that you would want to adopt in order to become a frontend, backend or a devops. I made these charts for an old professor of mine who wanted something to share with his college students to give them a perspective; sharing them here to help the community.
-> 
+>
 > Check out my blog and say "hi" on Twitter.
-> 
+>
 > **Disclaimer**
 >
 > The purpose of these roadmaps is to give you an idea about the landscape and to guide you if you are confused about what to learn next and not to encourage you to pick what is hip and trendy. You should grow some understanding of why one tool would better suited for some cases than the other and remember hip and trendy never means best suited for the job
@@ -74,7 +75,6 @@ Github 上的 “居民” 现在已经养成了一个惯例，无论什么好�
 ## Introduction
 
 ![Web Developer Roadmap Introduction](https://github.com/selfteaching/the-craft-of-selfteaching/blob/master/images/intro.png)
-
 
 ## Frontend Roadmap
 
@@ -87,7 +87,6 @@ Github 上的 “居民” 现在已经养成了一个惯例，无论什么好�
 ## DevOps Roadmap
 
 ![DevOps Roadmap](https://github.com/selfteaching/the-craft-of-selfteaching/blob/master/images/devops.png)
-
 
 路漫漫其修远兮…… 
 

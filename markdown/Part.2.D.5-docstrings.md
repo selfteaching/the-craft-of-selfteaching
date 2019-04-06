@@ -30,30 +30,26 @@ def is_prime(n):
     else:
         return True
 
-
 help(is_prime)
 print(is_prime.__doc__)
 is_prime.__doc__
 ```
     Help on function is_prime in module __main__:
-    
+
     is_prime(n)
         Return a boolean value based upon
         whether the argument n is a prime number.
-    
-    
+
         Return a boolean value based upon
         whether the argument n is a prime number.
-        
+
     '\n    Return a boolean value based upon\n    whether the argument n is a prime number.\n    '
-
-
 
 Docstring 可以是多行字符串，也可以是单行字符串：
 ```python
 def is_prime(n):
     """Return a boolean value based upon whether the argument n is a prime number."""
-    
+
     if n < 2:
         return False
     if n == 2:
@@ -64,20 +60,17 @@ def is_prime(n):
     else:
         return True
 
-
 help(is_prime)
 print(is_prime.__doc__)
 is_prime.__doc__
 ```
     Help on function is_prime in module __main__:
-    
+
     is_prime(n)
         Return a boolean value based upon whether the argument n is a prime number.
-    
+
     Return a boolean value based upon whether the argument n is a prime number.
     'Return a boolean value based upon whether the argument n is a prime number.'
-
-
 
 Docstring 如若存在，必须在函数定义的内部语句块的开头，也必须与其它语句一样保持相应的缩进（Indention）。Docstring 放在其它地方不起作用：
 ```python
@@ -101,11 +94,10 @@ print(is_prime.__doc__)
 is_prime.__doc__
 ```
     Help on function is_prime in module __main__:
-    
-    is_prime(n)
-    
-    None
 
+    is_prime(n)
+
+    None
 
 ## 书写 Docstring 的规范
 
@@ -119,7 +111,7 @@ is_prime.__doc__
 > 2. 在 Docstring 内部，文字开始之前，以及文字结束之后，都不要有空行；
 > 3. 多行 Docstring，第一行是概要，随后空一行，再写其它部分；
 > 4. 完善的 Docstring，应该概括清楚以下内容：参数、返回值、可能触发的错误类型、可能的副作用，以及函数的使用限制等等；
-> 5. 每个参数的说明都使用单独的一行……
+> 5. 每个参数的说明都使用单独的一行…… 
 
 由于我们还没有开始研究 Class，所以，关于 Class 的 Docstring 应该遵守什么样的规范就暂时略过了。然而，这种规范你总是要反复去阅读参照的。关于 Docstring，有两个规范文件：
 
@@ -132,7 +124,7 @@ is_prime.__doc__
 
 ## Sphinx 版本的 Docstring 规范
 
-Sphinx 可以从 `.py` 文件里提取所有 Docstring，而后生成完整的 Documentation。将来若是你写大型的项目，需要生成完善的文档的时候，你就会发现 Sphinx 是个 “救命” 的家伙，省时、省力、省心、省命……
+Sphinx 可以从 `.py` 文件里提取所有 Docstring，而后生成完整的 Documentation。将来若是你写大型的项目，需要生成完善的文档的时候，你就会发现 Sphinx 是个 “救命” 的家伙，省时、省力、省心、省命…… 
 
 在这里，没办法一下子讲清楚 Sphinx 的使用，尤其是它还用它自己的一种标记语言，reStructureText，文件尾缀使用 `.rst`……
 
@@ -158,16 +150,16 @@ class Vehicle(object):
         :raises: :class:`RuntimeError`: Out of fuel
         :returns: A Car mileage
         :rtype: Cars
-        '''  
+        '''
         pass
 
 help(Vehicle)
 ```
     Help on class Vehicle in module __main__:
-    
+
     class Vehicle(builtins.object)
      |  Vehicle(arg, *args, **kwargs)
-     |  
+     |
      |  The Vehicle object contains lots of vehicles
      |  :param arg: The arg is used for ...
      |  :type arg: str
@@ -175,33 +167,31 @@ help(Vehicle)
      |  :param `**kwargs`: The keyword arguments are used for ...
      |  :ivar arg: This is where we store arg
      |  :vartype arg: str
-     |  
+     |
      |  Methods defined here:
-     |  
+     |
      |  __init__(self, arg, *args, **kwargs)
      |      Initialize self.  See help(type(self)) for accurate signature.
-     |  
+     |
      |  cars(self, distance, destination)
      |      We can't travel a certain distance in vehicles without fuels, so here's the fuels
-     |      
+     |
      |      :param distance: The amount of distance traveled
      |      :type amount: int
      |      :param bool destinationReached: Should the fuels be refilled to cover required distance?
      |      :raises: :class:`RuntimeError`: Out of fuel
-     |      
+     |
      |      :returns: A Car mileage
      |      :rtype: Cars
-     |  
+     |
      |  ----------------------------------------------------------------------
      |  Data descriptors defined here:
-     |  
+     |
      |  __dict__
      |      dictionary for instance variables (if defined)
-     |  
+     |
      |  __weakref__
      |      list of weak references to the object (if defined)
-    
-
 
 通过插件，Sphinx 也能支持 Google Style Docstring 和 Numpy Style Docstring。
 

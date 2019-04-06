@@ -5,7 +5,8 @@
 
 ## 创建文件
 
-创建一个文件，最简单的方式就是用 Python 的内建函数 `open()` 。
+创建一个文件，最简单的方式就是用 Python 的内建函数 `open()`。
+创建一个文件，最简单的方式就是用 Python 的内建函数 `open()`。
 
 `open()` 函数的[官方文档](https://docs.python.org/3/library/functions.html#open)很长，以下是个简化版：
 
@@ -17,19 +18,20 @@
 | -------- | ------------------------------- |
 | `'r'`    | 只读模式                        |
 | `'w'`    | 写入模式（重建）                |
+| `'w'`    | 写入模式（重建）|
 | `'x'`    | 排他模式 —— 如果文件已存在则打开失败 |
 | `'a'`    | 追加模式 —— 在已有文件末尾追加      |
 | `'b'`    | 二进制文件模式                  |
 | `'t'`    | 文本文件模式 (默认)             |
+| `'t'`    | 文本文件模式（默认）|
 | `'+'`    | 读写模式（更新）                |
+| `'+'`    | 读写模式（更新）|
 
 创建一个新文件，用这样一个语句就可以：
 ```python
 open('test-file.txt', 'w')
 ```
     <_io.TextIOWrapper name='test-file.txt' mode='w' encoding='UTF-8'>
-
-
 
 当然，更多的时候，我们会把这个函数的返回值，一个所谓的 [file object](https://docs.python.org/3/glossary.html#term-file-object)，保存到一个变量中，以便后面调用这个 file object 的各种 Methods，比如获取文件名 `file.name`，比如关闭文件 `file.close()`：
 ```python
@@ -38,7 +40,6 @@ print(f.name)
 f.close()
 ```
     test-file.txt
-
 
 ## 删除文件
 
@@ -58,7 +59,6 @@ else:
     test-file.txt
     test-file.txt deleted.
 
-
 ## 读写文件
 
 创建文件之后，我们可以用 `f.write()` 把数据写入文件，也可以用 `f.read()` 读取文件。
@@ -76,8 +76,6 @@ f.close()
     second line
     third line
 
-
-
 文件有很多行的时候，我们可以用 `file.readline()` 操作，这个 Method 每次调用，都会返回文件中的新一行。
 ```python
 f = open('test-file.txt', 'w')
@@ -92,10 +90,8 @@ print(s)
 f.close()
 ```
     first line
-    
+
     second line
-
-
 
 **注意**，返回结果好像跟你想的不太一样。这时候，之前见过的 `str.strip()` 就派上用场了：
 ```python
@@ -104,15 +100,14 @@ f.write('first line\nsecond line\nthird line\n')
 f.close()
 
 f = open('test-file.txt', 'r')
-s = f.readline().strip()    # 返回的是 'first line'，'\n' 被去掉了……
+s = f.readline().strip()    # 返回的是 'first line'，'\n' 被去掉了…… 
 print(s)
-s = f.readline().strip()    # 返回的是 'second line'，'\n' 被去掉了……
+s = f.readline().strip()    # 返回的是 'second line'，'\n' 被去掉了…… 
 print(s)
 f.close()
 ```
     first line
     second line
-
 
 与之相对的，
 ```python
@@ -127,7 +122,6 @@ f.close()
 ```
     ['first line\n', 'second line\n', 'third line\n']
 
-
 既然返回的是列表，那么就可以被迭代，逐一访问每一行：
 ```python
 f = open('test-file.txt', 'w')
@@ -140,12 +134,10 @@ for line in f.readlines():
 f.close()
 ```
     first line
-    
+
     second line
-    
+
     third line
-
-
 
 与之相对的，我们也可以用 `file.writelines()` 把一个列表写入到一个文件中，按顺序每一行写入列表的对应元素：
 ```python
@@ -160,12 +152,10 @@ for line in f.readlines():
 f.close()
 ```
     first line
-    
+
     second line
-    
+
     third line
-
-
 
 ## with 语句块
 
@@ -181,7 +171,7 @@ import os
 
 with open('test-file.txt', 'w') as f:
     f.write('first line\nsecond line\nthird line\n')
-    
+
 with open('test-file.txt', 'r') as f:
     for line in f.readlines():
         print(line)
@@ -190,18 +180,17 @@ if os.path.exists(f.name):
     os.remove(f.name)
     print(f'{f.name} deleted.')
 else:
-    print(f'{f.name} does not exist.')    
+    print(f'{f.name} does not exist.')
 ```
     first line
-    
+
     second line
-    
+
     third line
-    
+
     test-file.txt deleted.
 
-
-另外，用 `with` 语句块的另外一个附加好处就是不用写 `file.close()` 了……
+另外，用 `with` 语句块的另外一个附加好处就是不用写 `file.close()` 了…… 
 
 ## 另一个完整的程序
 
@@ -224,7 +213,7 @@ else:
 
 结论虽然有道理 —— 可这论证过程实在是太过分了罢…… 
 
-我很高兴，觉得这就是个_好例子_！并且，加工一下，会让读者觉得很精彩 —— 如果能找到一些按照同样的计算方式能得到 100 的单词，并且还是那种一看就是 “反例” 的单词……
+我很高兴，觉得这就是个_好例子_！并且，加工一下，会让读者觉得很精彩 —— 如果能找到一些按照同样的计算方式能得到 100 的单词，并且还是那种一看就是 “反例” 的单词…… 
 
 凭直觉，英文单词几十万，如此这般等于 100 的单词岂不是数不胜数？并且，一定会有很多负面意义的单词如此计算也等于 100 罢？然而，这种事情凭直觉是不够的，手工计算又会被累死…… 于是，面对如此荒谬的论证过程，我们竟然 “无话可说”。
 
@@ -234,7 +223,8 @@ else:
 
 > - connivance（纵容）
 > - coyness（羞怯）
-> - flurry (慌张)
+> - flurry（慌张）
+> - flurry（慌张）
 > - impotence（阳痿）
 > - stress（压力）
 > - tuppence（微不足道的东西）
@@ -260,8 +250,6 @@ ord('a')
 ```
     97
 
-
-
 那么，计算 `'knowledge'` 这个字符串的代码很简单：
 ```python
 word = 'knowledge'
@@ -271,7 +259,6 @@ for char in word:
 print(sum)
 ```
     96
-
 
 果然，得到的数值等于 `96` —— 不错。把它写成一个函数罢：`sum_of_word(word)`:
 ```python
@@ -284,8 +271,6 @@ def sum_of_word(word):
 sum_of_word('attitude')
 ```
     100
-
-
 
 那让程序就算把几十万行都算一遍也好像很简单了：
 ```python
@@ -303,14 +288,12 @@ with open('words_alpha.txt', 'r') as file:
     abstrusenesses
     acupuncturist
     adenochondrosarcoma
-    
+
     ...
-    
+
     worshipability
     zeuctocoelomatic
     zygapophysis
-
-
 
 嗯？怎么输出结果跟想得不一样？找到的词怎么都 “奇形怪状” 的…… 而且，输出结果中也没有 `attitude` 这个词。
 
@@ -331,7 +314,7 @@ with open('words_alpha.txt', 'r') as file:
             break                 # 找到一个之后就停下来。
 ```
     abstrusenesses
-    
+
     a 1
     b 2
     s 19
@@ -346,17 +329,14 @@ with open('words_alpha.txt', 'r') as file:
     s 19
     e 5
     s 19
-    
+
      -86
 
-
-怎么有个 `-86`？！仔细看看输出结果，看到每一行之间都被插入了一个空行，想到应该是从文件里读出的行中，包含 `\n` 这种换行符…… 如果是那样的话，那么 `ord('\n') -96` 返回的结果是 `-86` 呢，怪不得找到的词都 “奇形怪状” 的……
+怎么有个 `-86`？！仔细看看输出结果，看到每一行之间都被插入了一个空行，想到应该是从文件里读出的行中，包含 `\n` 这种换行符…… 如果是那样的话，那么 `ord('\n') -96` 返回的结果是 `-86` 呢，怪不得找到的词都 “奇形怪状” 的…… 
 ```python
 ord('\n') -96
 ```
     -86
-
-
 
 改进一下呗 —— 倒也简单，在计算前把读入字符串前后的空白字符都给删掉就好了，用 `str.strip()` 就可以了：
 ```python
@@ -374,14 +354,12 @@ with open('words_alpha.txt', 'r') as file:
     abactinally
     abatements
     abbreviatable
-    
+
     ...
-    
+
     zithern
     zoogleas
     zorgite
-
-
 
 如果想把符合条件的词保存到一个文件 `result.txt` 里的话，那么：
 ```python
@@ -403,13 +381,13 @@ with open('results.txt', 'w') as result:
 
 喝着咖啡翻一翻 `result.txt`，很快就找到了那些用来做反例格外恰当的词汇。
 
-真无法想象当年的自己若是不懂编程的话现在会是什么样子……
+真无法想象当年的自己若是不懂编程的话现在会是什么样子…… 
 
 ## 总结
 
 这一章我们介绍了文本文件的基本操作：
 
 > * 打开文件，直接用内建函数，`open()`，基本模式有 `r` 和 `w`；
-> * 删除文件，得调用 `os` 模块，使用 `os.remove()`，删除文件前最好确认文件确实存在……
+> * 删除文件，得调用 `os` 模块，使用 `os.remove()`，删除文件前最好确认文件确实存在…… 
 > * 读写文件分别有 `file.read()`、`file.write()`、`file.readline()`、`file.readlines()`、`file.writelines()`；
-> * 可以用 `with` 把相关操作都放入同一个语句块……
+> * 可以用 `with` 把相关操作都放入同一个语句块…… 

@@ -13,7 +13,7 @@ for n in range(2, 100):
         if (n % i) == 0:
             break
     else:
-        print(n)  
+        print(n)
 ```
 这其中，包含了_分支_与_循环_ —— 无论多复杂的流程控制用这两个东西就够了，就好像无论多复杂的电路最终都是由通路和开路仅仅两个状态构成的一样。
 
@@ -55,12 +55,11 @@ else:
 ```
     126 is even.
 
-
 有时，表达式 `<expression>` 返回的值有多种情况，并且针对不同的情况我们都要做相应的事情，那么可以这么写：
 ```python
 if expression_1:
     statements_for_expression_1_True
-    
+
 elif expression_2:
     statements_for_expression_2_True
 
@@ -88,7 +87,6 @@ elif r > 7:
 ```
     Big!
 
-
 当然你还可以模拟投飞了的情况，即，最终的骰子数是 `0` 或者 `1`，即，`< 2`：
 ```python
 import random
@@ -96,7 +94,8 @@ r = random.randrange(0, 13) # 生成的随机数应该从 0 开始了；
 
 if r == 7:
     print('Draw!')
-elif r >= 2 and r < 7:      # 如果这里直接写 elif r < 7: ，那么，else: 那一部分永远不会被执行……
+elif r >= 2 and r < 7:      # 如果这里直接写 elif r < 7:，那么，else: 那一部分永远不会被执行……
+elif r >= 2 and r < 7:      # 如果这里直接写 elif r < 7:，那么，else: 那一部分永远不会被执行…… 
     print('Small!')
 elif r > 7:
     print('Big!')
@@ -104,7 +103,6 @@ else:
     print('Not valid!')
 ```
     Small!
-
 
 ## for 循环
 
@@ -132,12 +130,11 @@ for a in range(10):
     value of a: 8
     value of a: 9
 
-
 ### range() 函数
 
 `range()` 是个内建函数，[它的文档](https://docs.python.org/3/library/functions.html#func-range)是这样写的：
 
-> **range**(_stop_) 
+> **range**(_stop_)
 >
 > **range**(_start, stop[, step]_)
 
@@ -154,17 +151,14 @@ list(range(10)) # 将 range(10) 转换成 list，以便清楚看到其内容。
     range(0, 10)
     [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-
-
 `start` 参数的默认值是 `0`。如需指定起点，那么得给 `range()` 传递两个参数，比如，`range(2, 13)`……
 ```python
 list(range(2, 13))
 ```
     [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 
-
-
-第三个参数可选； `step`，步长，就相当于是 “等差数列” 当中的 “差”，默认值是 `1`。例如，`range(1, 10, 2)` 生成的是这样一个数列 `[1, 3, 5, 7, 9]`。所以，打印 `0 ～ 10` 之间的所有奇数，可以这样写：
+第三个参数可选；`step`，步长，就相当于是 “等差数列” 当中的 “差”，默认值是 `1`。例如，`range(1, 10, 2)` 生成的是这样一个数列 `[1, 3, 5, 7, 9]`。所以，打印 `0 ～ 10` 之间的所有奇数，可以这样写：
+第三个参数可选；`step`，步长，就相当于是 “等差数列” 当中的 “差”，默认值是 `1`。例如，`range(1, 10, 2)` 生成的是这样一个数列 `[1, 3, 5, 7, 9]`。所以，打印 `0 ～ 10` 之间的所有奇数，可以这样写：
 ```python
 for i in range(1, 10, 2):
     print(i)
@@ -175,14 +169,11 @@ for i in range(1, 10, 2):
     7
     9
 
-
 我们也可以生成负数的数列：
 ```python
 list(range(0, -10, -1))
 ```
     [0, -1, -2, -3, -4, -5, -6, -7, -8, -9]
-
-
 
 ### Continue、Break 和 Pass
 
@@ -196,12 +187,11 @@ for n in range(2, 100):
         if (n % i) == 0:
             break
     else:
-        print(n)  
+        print(n)
 ```
 `continue` 语句将忽略其后的语句开始下次循环，而 `break` 语句将从此结束当前循环，开始执行循环之后的语句：
 
 ![](../images/continue-break.png)
-
 
 `for` 语句块还可以附加一个 `else` —— 这是 Python 的一个比较有个性的地方。附加在 `for` 结尾的 `else` 语句块，_在没有 `break` 发生的情况下会运行_。
 ```python
@@ -212,7 +202,7 @@ for n in range(2, 100):
     for i in range(2, n):
         if (n % i) == 0:
             break
-    else:               # 下一行的 print(n) 事实上属于语句块 for i in range(2, n): 
+    else:               # 下一行的 print(n) 事实上属于语句块 for i in range(2, n):
         print(n)        # 整个循环结束，都没有发生 break 的情况下，才执行一次 print(n)
 ```
     2
@@ -241,7 +231,6 @@ for n in range(2, 100):
     89
     97
 
-
 试比较以下两段代码：
 ```python
 for n in range(2, 100):
@@ -252,7 +241,7 @@ for n in range(2, 100):
         if (n % i) == 0:
             break
     print(n)            # 事实上相当于针对 range(2, 100) 中每个 n 都执行了一次 print(n)
-                        # 这个 print(n) 属于语句块 for n in range(2, 100): 
+                        # 这个 print(n) 属于语句块 for n in range(2, 100):
 ```
 ```python
 for n in range(2, 100):
@@ -287,7 +276,6 @@ for n in range(2, 100):
     97
     97
     99
-
 
 `pass` 语句什么都不干：
 
@@ -330,18 +318,18 @@ while a < n:
     a, b = b, a+b
 print()
 ```
-    0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 
-
+    0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987
 
 `for` 和 `while` 的区别在哪里？什么时候应该用哪个？
 
-`for` 更适合处理序列类型的数据（Sequence Type）的迭代，比如处理字符串中的每一个字符 ，比如把 `range()` 返回的数列当作某种序列类型的索引。
+`for` 更适合处理序列类型的数据（Sequence Type）的迭代，比如处理字符串中的每一个字符，比如把 `range()` 返回的数列当作某种序列类型的索引。
+`for` 更适合处理序列类型的数据（Sequence Type）的迭代，比如处理字符串中的每一个字符，比如把 `range()` 返回的数列当作某种序列类型的索引。
 
 `while` 更为灵活，因为它后面只需要接上一个逻辑表达式即可。
 
 ## 一个投骰子赌大小的游戏
 
-虽然还不可能随心所欲写程序，但是，你现在具备了起码的 “阅读能力”。有了以上大概的介绍，你也许可以读懂一些代码了 —— 它们在你眼里再也不是天书了……
+虽然还不可能随心所欲写程序，但是，你现在具备了起码的 “阅读能力”。有了以上大概的介绍，你也许可以读懂一些代码了 —— 它们在你眼里再也不是天书了…… 
 
 以下是一个让用户和程序玩掷骰子赌大小的程序。规则如下：
 
@@ -360,7 +348,6 @@ print()
 * 游戏结束条件：
     * 机器人和用户，若任意一方硬币数量为 `0`，则游戏结束；
     * 用户输入了 `q` 主动终止游戏。
-
 
 ```python
 from random import randrange
@@ -392,7 +379,7 @@ while True:         #  除 for 之外的另外一个循环语句
     dice = randrange(2, 13)   # 生成一个 2 到 12 的随机数
     wager = input("What's your bet? ")
     if wager == 'q':
-        break 
+        break
     elif wager in 'bs':  # 只有当用户输入的是 b 或者 s 得时候，才 “掷骰子”……
         result = bet(dice, wager)
         coin_user += result    # coin_user += result 相当于 coin_user = coin_user + result
@@ -404,7 +391,7 @@ while True:         #  除 for 之外的另外一个循环语句
     elif coin_bot == 0:
         print("Woops, the robot's LOST ALL, and game over!")
         break
-   
+
 print(f"You've played {rounds_of_game} rounds.\n")
 print(f"You have {coin_user} coins now.\nBye!")
 ```
@@ -415,7 +402,9 @@ print(f"You have {coin_user} coins now.\nBye!")
 > * 只处理一种情况，用 `if ... `
 > * 处理 `True`/`False` 两种情况，用 `if ... else ...`
 > * 处理多种情况，用 `if ... elif ... elif ... else ...`
-> * 迭代有序数据类型，用 `for ... in ...` ，如果需要处理没有 `break` 发生的情况，用 `for ... else ...`
+> * 迭代有序数据类型，用 `for ... in ...`，如果需要处理没有 `break` 发生的情况，用 `for ... else ...`
+> * 迭代有序数据类型，用 `for ... in ...`，如果需要处理没有 `break` 发生的情况，用 `for ... else ...`
 > * 其它循环，用 `while ...`
-> * 与循环相关的语句还有 `continue`、 `break`、 `pass`
+> * 与循环相关的语句还有 `continue`、`break`、`pass`
+> * 与循环相关的语句还有 `continue`、`break`、`pass`
 > * 函数从控制流角度去看其实就是子程序

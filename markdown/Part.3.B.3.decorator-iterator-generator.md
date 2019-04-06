@@ -20,12 +20,12 @@ for s in set:
     print(s, end=', ')
 print()
 ```
-    t, h, i, s,  , i, s,  , a,  , s, t, r, i, n, g, ., 
-    item 1, item 2, 3, 5, 
-    1, 2, 3, 4, 5, 
+    t, h, i, s,  , i, s,  , a,  , s, t, r, i, n, g, .,
+    item 1, item 2, 3, 5,
+    1, 2, 3, 4, 5,
 
-
-有个内建函数，就是用来把一个 “可迭代对象”（Iterable）转换成 “迭代器” （Iterator）的 —— `iter()`。
+有个内建函数，就是用来把一个 “可迭代对象”（Iterable）转换成 “迭代器”（Iterator）的 —— `iter()`。
+有个内建函数，就是用来把一个 “可迭代对象”（Iterable）转换成 “迭代器”（Iterator）的 —— `iter()`。
 ```python
 from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = "all"
@@ -40,8 +40,6 @@ type(L)
     str_iterator
     tuple_iterator
     list_iterator
-
-
 
 迭代器如何使用呢？有个 `next()` 函数：
 ```python
@@ -63,8 +61,6 @@ next(i)
     'h'
     'o'
     'n'
-
-
 
 在 `i` 这个迭代器里一共有 6 个元素，所以，`next(i)` 在被调用 6 次之后，就不能再被调用了，一旦再被调用，就会触发 StopIteration 错误。
 
@@ -104,8 +100,6 @@ type(Counter)
     105
     type
 
-
-
 这里的重点在于两个函数的存在，`__iter__(self)` 和 `__next__(self)`。
 ```python
     def __iter__(self):
@@ -127,7 +121,6 @@ class Counter(object):
             self.current += 1
         return c
 
-
 for c in Counter(101, 103):
     print(c, sep=', ')
 
@@ -145,7 +138,6 @@ while True:
     202
     203
 
-
 ## 生成器（Generator）
 
 那用函数（而不是 Class）能不能写一个 Counter 呢？答案是能，用生成器（Generator）就行。
@@ -162,7 +154,6 @@ for i in counter(101, 105):
     103
     104
     105
-
 
 哎呀！怎么感觉这个简洁很多呢？
 
@@ -188,7 +179,6 @@ for e in even:
     4
     6
     8
-
 
 其实，这种表达式我们早就在 List Comprehension 里见过 —— 那就是通过生成器表达式完成的。
 
@@ -222,7 +212,6 @@ for o in odd:
     5
     7
     9
-
 
 **生成器表达式必须在括号内使用**（参见官方 [HOWTOS](https://docs.python.org/3/howto/functional.html#generator-expressions-and-list-comprehensions)），包括函数的参数括号，比如：
 ```python
@@ -266,7 +255,6 @@ a_func()
     Hi, I'm a_func!
     Hi, I'm b_func!
 
-
 上一个代码，我们可以写成这样 —— 让 `a_func()` 将它内部的 `b_func()` 作为它的返回值：
 ```python
 def a_func():
@@ -279,7 +267,6 @@ a_func()
     Hi, I'm a_func!
     Hi, I'm b_func!
 
-
 如果我们在 `return` 语句里只写函数名呢？好像这样：
 ```python
 def a_func():
@@ -291,8 +278,6 @@ a_func()
 ```
     Hi, I'm a_func!
     <function __main__.a_func.<locals>.b_func()>
-
-
 
 这次返回的不是调用 `b_func()` 这个函数的执行结果，返回的是 `b_func` 这个_函数本身_。
 
@@ -317,7 +302,7 @@ def a_decorator(func):
 
 def a_func():
     print("Hi, I'm a_func!")
-    
+
 a_func()
 a_decorator(a_func)
 ```
@@ -326,7 +311,6 @@ a_decorator(a_func)
     Hi, I'm a_func!
     ... and we can do sth. after it is called...
 
-
 如果返回的是函数本身，`wrapper`，输出结果跟你想的并不一样：
 ```python
 def a_decorator(func):
@@ -334,18 +318,16 @@ def a_decorator(func):
         print('We can do sth. before a func is called...')
         func()
         print('... and we can do sth. after it is called...')
-    return wrapper  # 
+    return wrapper  #
 
 def a_func():
     print("Hi, I'm a_func!")
-    
+
 a_func()
 a_decorator(a_func)
 ```
     Hi, I'm a_func!
     <function __main__.a_decorator.<locals>.wrapper()>
-
-
 
 ### 装饰器操作符
 
@@ -361,15 +343,15 @@ def a_decorator(func):
 @a_decorator
 def a_func():
     print("Hi, I'm a_func!")
-    
+
 a_func()
 ```
     We can do sth. before calling a_func...
     Hi, I'm a_func!
     ... and we can do sth. after it was called...
 
-
-注意：以上的代码中， `a_decorator(func)` 返回的是 `wrapper` 这个函数本身。
+注意：以上的代码中，`a_decorator(func)` 返回的是 `wrapper` 这个函数本身。
+注意：以上的代码中，`a_decorator(func)` 返回的是 `wrapper` 这个函数本身。
 
 在我们定义 `a_func()` 的时候，在它之前，加上了一句 `@a_decorator`；这么做的结果是：
 
@@ -416,7 +398,6 @@ print(an_output())
 ```
     THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.
 
-
 你还可以给一个函数加上一个以上的装饰器：
 ```python
 def uppercase(func):
@@ -440,7 +421,6 @@ print(an_output())
 ```
     <strong>THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.</strong>
 
-
 你把两个装饰器的顺序调换一下写成下面这样试试：
 ```python
 @uppercase
@@ -450,21 +430,20 @@ def an_output():
 ```
 装饰器的执行顺序是 “自下而上” —— 其实是 “由里到外” 更为准确。体会一下。
 
-
 ### 装饰带有参数函数
 
 到现在我们见到的使用装饰器的函数都是没有参数的：`an_output` 以及之前的 `a_func`。
 
 如果被装饰的函数有参数怎么办？装饰器自身内部又应该怎么写？
 
-这时候，Python 的 `*args` and `**kwargs` 的威力就显现出来了 —— 之前怕麻烦没有通过仔细反复阅读搞定这 “一个星号、两个星号、直接晕倒” 的知识点的人，现在恐怕要吃亏了……
+这时候，Python 的 `*args` and `**kwargs` 的威力就显现出来了 —— 之前怕麻烦没有通过仔细反复阅读搞定这 “一个星号、两个星号、直接晕倒” 的知识点的人，现在恐怕要吃亏了…… 
 
 装饰器函数本身这么写：
 ```python
 def a_decorator(func):
     def wrapper(*args, **kwargs):
         return original_result
-    # ...   
+    # ...
     return wrapper
 ```
 在这里，`(*args, **kwargs)` 非常强大，它可以匹配所有函数传进来的所有参数…… 准确地讲，`*args` 接收并处理所有传递进来的位置参数，`**kwargs` 接收并处理所有传递进来的关键字参数。
@@ -478,14 +457,13 @@ print(say_hi('Hello', 'Jack'))
 ```
     Hello! Jack.
 
-
-如果我们想在装饰器里对函数名、参数，都做些事情 —— 比如，我们写个 `@trace` 用来告诉用户调用一个函数的时候都发生了什么……
+如果我们想在装饰器里对函数名、参数，都做些事情 —— 比如，我们写个 `@trace` 用来告诉用户调用一个函数的时候都发生了什么…… 
 ```python
 def trace(func):
     def wrapper(*args, **kwargs):
         print(f"Trace: You've called a function: {func.__name__}(),",
               f"with args: {args}; kwargs: {kwargs}")
-    
+
         orginal_result = func(*args, **kwargs)
         print(f"Trace: {func.__name__}{args} returned: {orginal_result}")
         return orginal_result
@@ -501,7 +479,6 @@ print(say_hi('Hello', 'Jack'))
     Trace: say_hi('Hello', 'Jack') returned: Hello! Jack.
     Hello! Jack.
 
-
 有了以上的基础知识之后，再去阅读 Python Decorator Library 的 Wiki 页面就会轻松许多：
 
 > https://wiki.python.org/moin/PythonDecoratorLibrary
@@ -513,7 +490,9 @@ print(say_hi('Hello', 'Jack'))
 Oreilly.com 上有篇文章，《5 reasons you need to learn to write Python decorators》中，其中的第五条竟然是：**Boosting your career**!
 
 > Writing decorators isn’t easy at first. It’s not rocket science, but takes enough effort to learn, and to grok the nuances involved, that many developers will never go to the trouble to master it. And that works to your advantage. When you become the person on your team who learns to write decorators well, and write decorators that solve real problems, other developers will use them. Because once the hard work of writing them is done, decorators are so easy to use. This can massively magnify the positive impact of the code you write. And it just might make you a hero, too.
-> 
-> As I’ve traveled far and wide, training hundreds of working software engineers to use Python more effectively, teams have consistently reported writing decorators to be one of the most valuable and important tools they’ve learned in my advanced Python programming workshops. 
+> Writing decorators isn't easy at first. It's not rocket science, but takes enough effort to learn, and to grok the nuances involved, that many developers will never go to the trouble to master it. And that works to your advantage. When you become the person on your team who learns to write decorators well, and write decorators that solve real problems, other developers will use them. Because once the hard work of writing them is done, decorators are so easy to use. This can massively magnify the positive impact of the code you write. And it just might make you a hero, too.
+>
+> As I’ve traveled far and wide, training hundreds of working software engineers to use Python more effectively, teams have consistently reported writing decorators to be one of the most valuable and important tools they’ve learned in my advanced Python programming workshops.
+> As I've traveled far and wide, training hundreds of working software engineers to use Python more effectively, teams have consistently reported writing decorators to be one of the most valuable and important tools they've learned in my advanced Python programming workshops.
 
 为什么有那么多人就是学不会呢？—— 只不过是因为在此之前，遇到 `*args` `**kwargs` 的时候，“一个星号、两个星号、直接晕倒”…… 而后并未再多挣扎一下。

@@ -25,10 +25,9 @@ say_hi('mike', 'john', 'zeo')
     Hi, john!
     Hi, zeo!
 
-
 `say_hi()` 这一行没有任何输出。因为你在调用函数的时候，没有给它传递任何值，于是，在函数内部代码执行的时候，`name in names` 的值是 `False`，所以，`for` 循环内部的代码没有被执行。
 
-在函数内部，是把 `names` 这个参数当作容器处理的 —— 否则也没办法用 `for ... in ...` 来处理。而在调用函数的时候，我们是可以将一个容器传递给函数的 Arbitrary Positional Arguments 的 —— 做法是，在调用函数的时候，在参数前面加上星号 `*`： 
+在函数内部，是把 `names` 这个参数当作容器处理的 —— 否则也没办法用 `for ... in ...` 来处理。而在调用函数的时候，我们是可以将一个容器传递给函数的 Arbitrary Positional Arguments 的 —— 做法是，在调用函数的时候，在参数前面加上星号 `*`：
 ```python
 def say_hi(*names):
     for name in names:
@@ -40,7 +39,6 @@ say_hi(*names)
     Hi, mike!
     Hi, john!
     Hi, zeo!
-
 
 实际上，因为以上的 `say_hi(*names)` 函数内部就是把接收到的参数当作容器处理的，于是，在调用这个函数的时候，向它传递任何容器都会被同样处理：
 ```python
@@ -90,7 +88,6 @@ say_hi(*a_dictionary)
     Hi, mike!
     Hi, joe!
 
-
 _在定义可以接收一系列值的位置参数时，建议在函数内部为该变量命名时总是用**复数**_，因为函数内部，总是需要 `for` 循环去迭代元组中的元素，这样的时候，名称的复数形式对代码的可读性很有帮助 —— 注意以上程序第二行。以中文为母语的人，在这个细节上常常感觉 “不堪重负” —— 因为中文的名词没有复数 —— 但必须习惯。（同样的道理，若是用拼音命名变量，就肯定是为将来挖坑……）
 
 **注意**：一个函数中，可以接收一系列值的位置参数只能有一个；并且若是还有其它位置参数存在，那就必须把这个可以接收一系列值的位置参数排在所有其它位置参数之后。
@@ -104,7 +101,6 @@ say_hi('Hello', 'mike', 'john', 'zeo')
     Hello, Mike!
     Hello, John!
     Hello, Zeo!
-
 
 ## 为函数的某些参数设定默认值
 
@@ -126,8 +122,8 @@ say_hi('Hello', 'mike', 'john', 'zeo', capitalized=True)
     Hello, John!
     Hello, Zeo!
 
-
-##  可以接收一系列值的关键字参数
+## 可以接收一系列值的关键字参数
+## 可以接收一系列值的关键字参数
 
 之前我们看到，可以设定一个位置参数（Positional Argument），接收一系列的值，被称作 “Arbitrary Positional Argument”；
 
@@ -136,20 +132,19 @@ say_hi('Hello', 'mike', 'john', 'zeo', capitalized=True)
 def say_hi(**names_greetings):
     for name, greeting in names_greetings.items():
         print(f'{greeting}, {name}!')
-        
+
 say_hi(mike='Hello', ann='Oh, my darling', john='Hi')
 ```
     Hello, mike!
     Oh, my darling, ann!
     Hi, john!
 
-
 既然在函数内部，我们在处理接收到的 Arbitrary Keyword Argument 时，用的是对字典的迭代方式，那么，在调用函数的时候，也可以直接使用字典的形式：
 ```python
 def say_hi(**names_greetings):
     for name, greeting in names_greetings.items():
         print(f'{greeting}, {name}!')
-        
+
 a_dictionary = {'mike':'Hello', 'ann':'Oh, my darling', 'john':'Hi'}
 say_hi(**a_dictionary)
 
@@ -162,7 +157,6 @@ say_hi(**{'mike':'Hello', 'ann':'Oh, my darling', 'john':'Hi'})
     Oh, my darling, ann!
     Hi, john!
 
-
 至于在函数内部，你用什么样的迭代方式去处理这个字典，是你自己的选择：
 ```python
 def say_hi_2(**names_greetings):
@@ -173,7 +167,6 @@ say_hi_2(mike='Hello', ann='Oh, my darling', john='Hi')
     Hello, mike!
     Oh, my darling, ann!
     Hi, john!
-
 
 ## 函数定义时各种参数的排列顺序
 
@@ -195,7 +188,6 @@ say_hi('Welcome', 'mike', 'john', 'zeo', capitalized=True)
     Welcome, John!
     Welcome, Zeo!
 
-
 如果，你想给其中的 `greeting` 参数也设定个默认值怎么办？写成这样好像可以：
 ```python
 def say_hi(greeting='Hello', *names, capitalized=False):
@@ -210,11 +202,10 @@ say_hi('Welcome', 'mike', 'john', 'zeo', capitalized=True)
     Hi, mike!
     Hi, john!
     Hi, zeo!
-    
+
     Welcome, Mike!
     Welcome, John!
     Welcome, Zeo!
-
 
 但 `greeting` 这个参数虽然有默认值，可这个函数在被调用的时候，还是必须要给出这个参数，否则输出结果出乎你的想象：
 ```python
@@ -228,7 +219,6 @@ say_hi('mike', 'john', 'zeo')
 ```
     mike, john!
     mike, zeo!
-
 
 设定了默认值的 `greeting`，竟然不像你想象的那样是 “可选参数”！所以，你得这样写：
 ```python
@@ -247,7 +237,6 @@ say_hi('mike', 'john', 'zeo', greeting='Hi')
     Hi, mike!
     Hi, john!
     Hi, zeo!
-
 
 这是因为函数被调用时，面对许多参数，Python 需要按照既定的规则（即，顺序）判定每个参数究竟是哪一类型的参数：
 

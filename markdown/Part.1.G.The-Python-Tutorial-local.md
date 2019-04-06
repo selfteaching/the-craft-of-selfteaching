@@ -16,9 +16,9 @@
 
 第一部分反复读过之后，最重要的结果就是：
 
-> 现在你有能力自己查询官方文档了……
+> 现在你有能力自己查询官方文档了…… 
 
-起码，在此之后，再去阅读 [The Python Tutorial](https://docs.python.org/3/tutorial/index.html)，不那么费力了，最起码，可以靠自己理解绝大多数内容……
+起码，在此之后，再去阅读 [The Python Tutorial](https://docs.python.org/3/tutorial/index.html)，不那么费力了，最起码，可以靠自己理解绝大多数内容…… 
 
 在继续阅读本书内容的同时，有空就要反复翻 The Python Tutorial。
 
@@ -60,8 +60,8 @@ Python 的官方文档网址是：
 > `<querries> site:python.org`
 
 有时甚至会指定在那个目录里搜索：
-    
-> `bytes site:python.org/3/library`，你试试这个连接：[bytes site:python.org/3/library](https://www.google.com/search?q=byte+site%3Apython.org%2F3%2Flibrary) 
+
+> `bytes site:python.org/3/library`，你试试这个连接：[bytes site:python.org/3/library](https://www.google.com/search?q=byte+site%3Apython.org%2F3%2Flibrary)
 
 这个原则对任何语言都适用。将来你在学习任何新软件包（库）、语言更新后的新特性、甚至另外一个新语言的时候，都要这么做。所谓的超强自学能力，基本上就是由一些类似这样的小习惯和另外一些特别基础的方法构成的强大能力。
 
@@ -71,11 +71,11 @@ Python 的官方文档网址是：
 
 ![](../images/local-tutorial.png)
 
-也可以把这个教程转换成 epub 格式，以便在移动设备上阅读；甚至可以把这些个页面的 `.rst` 源文件转换成 `.ipynb` 文件，以便用 Jupyter Lab 浏览时可以直接执行其中的代码……
+也可以把这个教程转换成 epub 格式，以便在移动设备上阅读；甚至可以把这些个页面的 `.rst` 源文件转换成 `.ipynb` 文件，以便用 Jupyter Lab 浏览时可以直接执行其中的代码…… 
 
 **注意**
 
-> 此页的 Code Cell 中都是可执行的 bash 命令……
+> 此页的 Code Cell 中都是可执行的 bash 命令…… 
 
 在此页执行它们对你来说是没意义的 —— 因为它们的执行结果在服务器上；这其中的命令，应该在你本地计算机上的 Terminal 中执行，你才能在本地计算机上获取结果。
 
@@ -102,7 +102,8 @@ repo 地址是：
 ```bash
 %%bash
 cd ~/Downloads
-# 总计 241 M，所以需要一点时间
+# 总计 241M，所以需要一点时间
+# 总计 241M，所以需要一点时间
 git clone https://github.com/python/cpython.git
 cd cpython/Doc/tutorial
 ls
@@ -113,7 +114,7 @@ ls
 # rst2ipynb needs pandoc and notedown...
 which pandoc
 which notedown
-# 没有这两样东西的话，需要执行下面两行进行安装……
+# 没有这两样东西的话，需要执行下面两行进行安装…… 
 # conda install -c conda-forge pandoc
 # conda install -c conda-forge notedown
 
@@ -129,7 +130,7 @@ which rst2ipynb
 这个 rst2ipynb 的程序有点讨厌，一次只能处理一个文件…… 下面是一个 bash 程序，其实将来学起来也不难，看着跟 Python 差不多…… 下面的代码执行过后会出现很多 “警告” —— 没关系，文件会正常转换的。
 ```bash
 %%bash
-cd ~/Downloads/cpython/Doc/tutorial/ 
+cd ~/Downloads/cpython/Doc/tutorial/
 for f in *.rst
     do
         rst2ipynb $f -o "${f/%.rst/.ipynb}"
@@ -152,11 +153,11 @@ function rsti {
 ```bash
 source ~/.bash_profile
 ```
-而后，在有 `.rst` 文件的目录下输入 `rsti` 执行即可……
+而后，在有 `.rst` 文件的目录下输入 `rsti` 执行即可…… 
 
 ### 用 Sphinx 生成 html/epub 版本
 ```bash
-%%bash 
+%%bash
 which sphinx-quickstart
 # 没有的话就执行下一行：
 # conda install -c anaconda sphinx
@@ -166,7 +167,7 @@ sphinx-quickstart --help
 生成 html 版本和 epub 版本：
 ```bash
 %%bash
-cd ~/Downloads/cpython/Doc/tutorial/ 
+cd ~/Downloads/cpython/Doc/tutorial/
 sphinx-quickstart -q output --sep -p 'The Python Tutorial' -a 'Guido van Rossum' -r '1.0' -v '1.0' -l 'en' --suffix '.rst' --master 'index' --ext-autodoc --ext-doctest --ext-intersphinx --ext-todo --ext-coverage --ext-imgmath --ext-mathjax --ext-ifconfig --ext-viewcode --makefile --no-batchfile --no-use-make-mode
 cp -f *.rst output/source/
 cd output
@@ -216,7 +217,7 @@ git clone https://github.com/xiaolai/the-python-tutorial-in-other-formats.git
 
 > `cpython/Doc/Makefile`
 
-只不过，将所有文件编译到一个 epub 里，在 iPad 之类的移动设备上打开有点费劲 —— 在我的设备上显示有 7701 页，翻页都要顿一顿……
+只不过，将所有文件编译到一个 epub 里，在 iPad 之类的移动设备上打开有点费劲 —— 在我的设备上显示有 7701 页，翻页都要顿一顿…… 
 
 想要使用这个官方的 `Makefile` 的话，首先确认自己已经安装过 Sphinx，其次需要补充安装一个包：
 ```bash
