@@ -20,7 +20,8 @@ wget https://repo.anaconda.com/archive/Anaconda3-2018.12-MacOSX-x86_64.sh
 ```
 安装到最后一步，会问你是否要安装微软出品的 [Visual Studio Code](https://code.visualstudio.com)，选择 `yes` —— 反正以后你的电脑上会不止一个文本编辑器…… 以后你可能还会安装的文本编辑器包括 [SublimeText](https://www.sublimetext.com), [Atom](https://atom.io) 等等。
 
-安装完毕之后，打开 Terminal(Windows 系统需要打开之前安装的 Anaconda Prompt 输入)，继续安装几个组件：
+安装完毕之后，打开 Terminal(Windows 系统需要打开之前安装的 Anaconda Prompt 输入），继续安装几个组件：
+安装完毕之后，打开 Terminal(Windows 系统需要打开之前安装的 Anaconda Prompt 输入），继续安装几个组件：
 安装完毕之后，打开 Terminal(Windows 系统需要打开之前安装的 Anaconda Prompt 输入），继续安装几个组件：
 ```bash
 conda update conda
@@ -72,11 +73,15 @@ code jupyter_notebook_config.py
 ```json
 #c.NotebookApp.token = ''
 # c.NotebookApp.token = ''
+# c.NotebookApp.token = ''
 #c.NotebookApp.open_browser = False
+# c.NotebookApp.open_browser = False
 # c.NotebookApp.open_browser = False
 #c.NotebookApp.notebook_dir = '~/'
 # c.NotebookApp.notebook_dir = '~/'
+# c.NotebookApp.notebook_dir = '~/'
 #c.NotebookApp.default_url = '/tree'
+# c.NotebookApp.default_url = '/tree'
 # c.NotebookApp.default_url = '/tree'
 ```
 逐条解释一下：
@@ -170,6 +175,7 @@ em {color: #A9312A; font-style: normal !important;}
 table {font-size: 90% !important;}
 
 #jp-main-dock-panel {background-color: #f9f9f9;}
+# jp-main-dock-panel {background-color: #f9f9f9;}
 # jp-main-dock-panel {background-color: #f9f9f9;}
 .jp-RenderedHTMLCommon {font-family: "Yuanti SC"; font-size: 100%;}
 .jp-Notebook {background-color: #fbfafa;}
@@ -370,10 +376,12 @@ Jupyterlab 里较为常用的魔法函数整理如下：
 | `%env`               | 列出当前的环境变量                                           |
 | `%load`              | 将其他文件内容导入 Cell，`%load source`，`source` 可以是文件名，也可以是 URL。 |
 | `%load`              | 将其他文件内容导入 Cell，`%load source`，`source` 可以是文件名，也可以是 URL。|
+| `%load`              | 将其他文件内容导入 Cell，`%load source`，`source` 可以是文件名，也可以是 URL。|
 | `%time`              | 返回 Cell 内代码执行的时间，相关的还有 `%timeit`             |
 | `%writefile`         | 把 Cell 的内容写入文件，`%write file_name`；%write -a file_name，`-a` 是追加 |
 | `%matplotlib inline` | 行内展示 matplotlib 的结果                                   |
 | `%%bash`             | 运行随后的 shell 命令，比如 %%bash ls；与之类似的还有 `%%HTML`， `%%python2`， `%%python3`， `%%ruby`， `%%perl`……                      |
+| `%%bash`             | 运行随后的 shell 命令，比如 %%bash ls；与之类似的还有 `%%HTML`，`%%python2`，`%%python3`，`%%ruby`，`%%perl`……                      |
 | `%%bash`             | 运行随后的 shell 命令，比如 %%bash ls；与之类似的还有 `%%HTML`，`%%python2`，`%%python3`，`%%ruby`，`%%perl`……                      |
 
 ## 桌面版 Jupyter App

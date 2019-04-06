@@ -21,6 +21,7 @@
 
 “不是什么东西都可以从书本里学到的……” 这话听起来那么有道理，只不过是因为自己读书**不够多**、**不够对**而已。
  “不是什么东西都可以从书本里学到的……” 这话听起来那么有道理，只不过是因为自己读书**不够多**、**不够对**而已。
+ “不是什么东西都可以从书本里学到的……” 这话听起来那么有道理，只不过是因为自己读书**不够多**、**不够对**而已。
 
 过了 25 岁，我放弃了读小说，虚构类作品，我只选择看电影；而非虚构类作品，我选择尽量只读英文书，虽然那时候买起来很贵也很费劲，但我觉得值 —— 英文世界和中文世界的文化风格略有不同。在英文世界里，你看到的正常作者好像更多地把 “通俗易懂”、“逻辑严谨” 当作最基本的素养；而在中文世界里，好像 “故弄玄虚”、“偷梁换柱” 更常见一些；在英文世界里，遇到读不懂的东西可以很平静地接受自己暂时的愚笨，心平气和地继续努力就好；在中文世界里，遇到装神弄鬼欺世盗名的，弄不好最初根本没认出来，到最后跟 “认贼作父” 一样令人羞辱难当不堪回首。
 
@@ -35,6 +36,7 @@
 还有，英语在科学研究领域早已成为 “主导语言”（Dominant Language）也是不争的事实。不过，英语成为主导语言的结果，就是英语本身被不断 “强奸”，外来语越来越多，“Long time no see” 被辞典收录就是很好的例子。事实上，英语本身就是个大杂烩…… 
 
 ![Joseph M. Williams’ research visualized (top 10,000 words).](../images/Joseph-M-Williams-research-visualized.png)<a href='https://medium.com/@andreas_simons/the-english-language-is-a-lot-more-french-than-we-thought-heres-why-4db2db3542b3'></a>
+![Joseph M. Williams'research visualized (top 10,000 words).](../images/Joseph-M-Williams-research-visualized.png)<a href='https://medium.com/@andreas_simons/the-english-language-is-a-lot-more-french-than-we-thought-heres-why-4db2db3542b3'></a>
 ![Joseph M. Williams'research visualized (top 10,000 words).](../images/Joseph-M-Williams-research-visualized.png)<a href='https://medium.com/@andreas_simons/the-english-language-is-a-lot-more-french-than-we-thought-heres-why-4db2db3542b3'></a>
 
 读书越多越明白读书少会被忽悠…… 很多人真的会大头捣蒜一般地认同 “不是什么东西都可以从书本里学到的……” 

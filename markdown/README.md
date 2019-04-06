@@ -108,7 +108,8 @@ Part.1.E.7.files.md 文件中有过长的 output 需要编辑
 -----
 **脚注**
 
-<a name='fn1'>[1]</a>： [‘Themselves’ or 'themself’? -- Oxford Dictionary](https://en.oxforddictionaries.com/usage/themselves-or-themself)
+<a name='fn1'>[1]</a>：[ ‘Themselves'or 'themself’？-- Oxford Dictionary](https://en.oxforddictionaries.com/usage/themselves-or-themself)
+<a name='fn1'>[1]</a>：[ ‘Themselves'or 'themself’？-- Oxford Dictionary](https://en.oxforddictionaries.com/usage/themselves-or-themself)
 <a name='fn1'>[1]</a>：[ ‘Themselves'or 'themself’？-- Oxford Dictionary](https://en.oxforddictionaries.com/usage/themselves-or-themself)
 
 <a href='#fn1b'><small>↑Back to Content↑</small></a>

@@ -3,6 +3,7 @@
 
 “过早引用”（[Forward References](https://en.wikipedia.org/wiki/Forward_declaration#id=Forward_reference)，另译为 “前置引用”），原本是计算机领域的术语。
  “过早引用”（[Forward References](https://en.wikipedia.org/wiki/Forward_declaration#id=Forward_reference)，另译为 “前置引用”），原本是计算机领域的术语。
+ “过早引用”（[Forward References](https://en.wikipedia.org/wiki/Forward_declaration#id=Forward_reference)，另译为 “前置引用”），原本是计算机领域的术语。
 
 在几乎所有的编程语言中，对于变量的使用，都有 “先声明再使用” 的要求。直接使用未声明的变量是被禁止的。Python 中，同样如此。如果在从未给 `an_undefined_variable` 赋值的情况下，直接调用这个变量，比如，`print(an_undefined_variable)`，那就会报错：`NameError: name 'an_undefined_variable' is not defined`。
 ```python
@@ -133,6 +134,7 @@ print(an_undefined_variable)
 
 “就算读不懂也要读完” 的更高境界，是 “**就算不明白也要先记住**”。
  “就算读不懂也要读完” 的更高境界，是 “**就算不明白也要先记住**”。
+ “就算读不懂也要读完” 的更高境界，是 “**就算不明白也要先记住**”。
 
 人们普遍讨厌 “死记硬背”…… 不过，说实话，这很肤浅。虽然确实也有 “擅长死记硬背却就是什么都不会的人”，但是，其实有更多记忆力强的人，实际上更可能是 “博闻强识”。
 
@@ -217,11 +219,13 @@ https://docs.python.org/3/library/collections.html#ordereddict-objects
 
 两千五六百年之前，释加牟尼用他的理解以及在那个时代有限的概念详细叙述了打坐的感受 —— 他曾连续打坐 6 年。今天，西方科学家们在深入研究脑科学的时候，发现 [Meditation](https://en.wikipedia.org/wiki/Meditation) 对大脑有特别多的好处…… 这些好处就是好处，与宗教全然没有任何关系的好处。
 
-> * [Harvard neuroscientist: Meditation not only reduces stress, here’s how it changes your brain](https://www.washingtonpost.com/news/inspired-life/wp/2015/05/26/harvard-neuroscientist-meditation-not-only-reduces-stress-it-literally-changes-your-brain/)
+> * [Harvard neuroscientist: Meditation not only reduces stress, here's how it changes your brain](https://www.washingtonpost.com/news/inspired-life/wp/2015/05/26/harvard-neuroscientist-meditation-not-only-reduces-stress-it-literally-changes-your-brain/)
+> * [Harvard neuroscientist: Meditation not only reduces stress, here's how it changes your brain](https://www.washingtonpost.com/news/inspired-life/wp/2015/05/26/harvard-neuroscientist-meditation-not-only-reduces-stress-it-literally-changes-your-brain/)
 > * [Harvard neuroscientist: Meditation not only reduces stress, here's how it changes your brain](https://www.washingtonpost.com/news/inspired-life/wp/2015/05/26/harvard-neuroscientist-meditation-not-only-reduces-stress-it-literally-changes-your-brain/)
 > * [This Is Your Brain on Meditation -- The science explaining why you should meditate every day](https://www.psychologytoday.com/us/blog/use-your-mind-change-your-brain/201305/is-your-brain-meditation)
 > * [Researchers study how it seems to change the brain in depressed patients](https://news.harvard.edu/gazette/story/2018/04/harvard-researchers-study-how-mindfulness-may-change-the-brain-in-depressed-patients/)
-> * [Meditation’s Calming Effects Pinpointed in the Brain](https://www.scientificamerican.com/article/meditations-calming-effects-pinpointed-in-brain/)
+> * [Meditation's Calming Effects Pinpointed in the Brain](https://www.scientificamerican.com/article/meditations-calming-effects-pinpointed-in-brain/)
+> * [Meditation's Calming Effects Pinpointed in the Brain](https://www.scientificamerican.com/article/meditations-calming-effects-pinpointed-in-brain/)
 > * [Meditation's Calming Effects Pinpointed in the Brain](https://www.scientificamerican.com/article/meditations-calming-effects-pinpointed-in-brain/)
 > * [Different meditation types train distinct parts of your brain](https://www.newscientist.com/article/2149489-different-meditation-types-train-distinct-parts-of-your-brain/)
 

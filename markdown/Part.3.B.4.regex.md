@@ -145,12 +145,14 @@ Regex 也一样，它本身就是个迷你语言（Mini Language）。在 Regex 
 
 | 排列 |         原子与操作符优先级      | 从高到低 )  |
 | 排列 |         原子与操作符优先级      | 从高到低）|
+| 排列 |         原子与操作符优先级      | 从高到低）|
 |---|-----------------------------------|------------------------|
 | 1 | 转义符号 (Escaping Symbol)               | `\` |
 | 2 | 分组、捕获 (Grouping or Capturing)                          | `(...)` `(?:...)` `(?=...)` `(?!...)` `(?<=...)` `(?<!...)`     |
 | 3 | 数量 (Quantifiers)      | `a*` `a+` `a?` `a{n, m}` |
 | 4 | 序列与定位（Sequence and Anchor      | `abc` `^` `$` `\b` `\B`               |
 | 5 | 或（Alternation）                       | `a\|b\|c`                   |
+| 5 | 或（Alternation）| `a\|b\|c`                   |
 | 5 | 或（Alternation）| `a\|b\|c`                   |
 | 6 | 原子 (Atoms)                 | `a` `[^abc]` `\t` `\r` `\n` `\d` `\D` `\s` `\S` `\w` `\W` `.` |
 
@@ -308,6 +310,7 @@ re.findall(pttn, str)
 `+` 代表前面的原子必须至少出现一次，即：` 出现次数 ≧ 1`
 
 > 例如，[`go+gle`](https://regexper.com#go+gle)可以匹配 `google` `gooogle` `goooogle` 等;
+> 例如，[`go+gle`](https://regexper.com#go+gle)可以匹配 `google` `gooogle` `goooogle` 等；
 > 例如，[`go+gle`](https://regexper.com#go+gle)可以匹配 `google` `gooogle` `goooogle` 等；
 
 `?` 代表前面的原子最多只可以出现一次，即：`0 ≦ 出现次数 ≦ 1`
@@ -589,7 +592,8 @@ re.sub(pttn, repl, str)
 
 写 Regex 最烧脑的地方在于 “使其全面” —— 要考虑到各种意外情况。
 
-当然，除非必要，也不要在 “全面” 这事上面花太多时间 —— 给你看一个据说是 “最大程度上能够匹配所有 email 地址的 Regex”<a href='#fn4' name='fn4b'><sup>[4]</sup></a>，我都懒得测试的一个正则表达式：
+当然，除非必要，也不要在 “全面” 这事上面花太多时间 —— 给你看一个据说是 “最大程度上能够匹配所有 email 地址的 Regex” <a href='#fn4' name='fn4b'><sup>[4]</sup></a>，我都懒得测试的一个正则表达式：
+当然，除非必要，也不要在 “全面” 这事上面花太多时间 —— 给你看一个据说是 “最大程度上能够匹配所有 email 地址的 Regex” <a href='#fn4' name='fn4b'><sup>[4]</sup></a>，我都懒得测试的一个正则表达式：
 当然，除非必要，也不要在 “全面” 这事上面花太多时间 —— 给你看一个据说是 “最大程度上能够匹配所有 email 地址的 Regex” <a href='#fn4' name='fn4b'><sup>[4]</sup></a>，我都懒得测试的一个正则表达式：
 ```regex
 (?:(?:\r\n)?[ \t])*(?:(?:(?:[^()<>@,;:\\".\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t]
@@ -712,6 +716,7 @@ r\\]|\\.)*\](?:(?:\r\n)?[ \t])*)(?:\.(?:(?:\r\n)?[ \t])*(?:[^()<>@,;:\\".\[\]
 # %load https://raw.githubusercontent.com/jezhiggins/eliza.py/master/eliza.py
 #----------------------------------------------------------------------
 # ----------------------------------------------------------------------
+# ----------------------------------------------------------------------
 # eliza.py
 # eliza.py
 # 
@@ -722,6 +727,7 @@ r\\]|\\.)*\](?:(?:\r\n)?[ \t])*)(?:\.(?:(?:\r\n)?[ \t])*(?:[^()<>@,;:\\".\[\]
 # hacked into a module and updated by Jez Higgins
 # hacked into a module and updated by Jez Higgins
 #----------------------------------------------------------------------
+# ----------------------------------------------------------------------
 # ----------------------------------------------------------------------
 
 import string
@@ -773,10 +779,12 @@ class eliza:
 
 #----------------------------------------------------------------------
 # ----------------------------------------------------------------------
+# ----------------------------------------------------------------------
 # gReflections, a translation table used to convert things you say
 # into things the computer says back, e.g. "I am" --> "you are"
 # into things the computer says back, e.g. "I am" --> "you are"
 #----------------------------------------------------------------------
+# ----------------------------------------------------------------------
 # ----------------------------------------------------------------------
 gReflections = {
   "am"   : "are",
@@ -797,6 +805,7 @@ gReflections = {
 
 #----------------------------------------------------------------------
 # ----------------------------------------------------------------------
+# ----------------------------------------------------------------------
 # gPats, the main response table.  Each element of the list is a
 # two-element list; the first is a regexp, and the second is a
 # two-element list; the first is a regexp, and the second is a
@@ -805,6 +814,7 @@ gReflections = {
 # %1, %2, etc.
 # %1, %2, etc.
 #----------------------------------------------------------------------
+# ----------------------------------------------------------------------
 # ----------------------------------------------------------------------
 gPats = [
   [r'I need (.*)',
@@ -1014,9 +1024,11 @@ gPats = [
 
 #----------------------------------------------------------------------
 # ----------------------------------------------------------------------
+# ----------------------------------------------------------------------
 # command_interface
 # command_interface
 #----------------------------------------------------------------------
+# ----------------------------------------------------------------------
 # ----------------------------------------------------------------------
 def command_interface():
   print('Therapist\n---------')
@@ -1066,7 +1078,8 @@ if __name__ == "__main__":
 
 <a href='#fn4b'><small>↑Back to Content↑</small></a>
 
-<a name='fn5'>[5]</a>：Parry 的源代码（用 Lisp 写的）在这里： http://www.cs.cmu.edu/afs/cs/project/ai-repository/ai/areas/classics/parry/</a>
+<a name='fn5'>[5]</a>：Parry 的源代码（用 Lisp 写的）在这里：http://www.cs.cmu.edu/afs/cs/project/ai-repository/ai/areas/classics/parry/</a>
+<a name='fn5'>[5]</a>：Parry 的源代码（用 Lisp 写的）在这里：http://www.cs.cmu.edu/afs/cs/project/ai-repository/ai/areas/classics/parry/</a>
 <a name='fn5'>[5]</a>：Parry 的源代码（用 Lisp 写的）在这里：http://www.cs.cmu.edu/afs/cs/project/ai-repository/ai/areas/classics/parry/</a>
 
 <a href='#fn5b'><small>↑Back to Content↑</small></a>

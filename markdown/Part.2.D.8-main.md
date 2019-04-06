@@ -141,6 +141,7 @@ help(that)
 ```python
 #!/usr/bin/env python
 # !/usr/bin/env python
+# !/usr/bin/env python
 
 def sum_of_word(word):
     sum = 0

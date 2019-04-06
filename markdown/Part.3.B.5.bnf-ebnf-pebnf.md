@@ -13,6 +13,7 @@
 
 …… 不用非得找人教、找人带 —— 只有这样，**前途**这两个字才会变得实在。
 —— 不用非得找人教、找人带 —— 只有这样，**前途**这两个字才会变得实在。
+—— 不用非得找人教、找人带 —— 只有这样，**前途**这两个字才会变得实在。
 
 于是，我最希望能做到的是，从这里了解了自学方法论，也了解了编程以及 Python 编程的基础概念之后，《自学是门手艺》的读者能够**自顾自地踏上征程，一路走下去** —— 至于走到哪里，能走到哪里，不是我一个作者一厢情愿能够决定的，是吧？
 
@@ -111,9 +112,12 @@ Python 对 BNF 的拓展，借鉴了正则表达式<a href='#fn1' name='fn1b'><s
 # Start symbols for the grammar:
 #       single_input is a single interactive statement;
 # single_input is a single interactive statement;
+# single_input is a single interactive statement;
 #       file_input is a module or sequence of commands read from an input file;
 # file_input is a module or sequence of commands read from an input file;
+# file_input is a module or sequence of commands read from an input file;
 #       eval_input is the input for the eval() functions.
+# eval_input is the input for the eval() functions.
 # eval_input is the input for the eval() functions.
 # NB: compound_stmt in single_input is followed by extra NEWLINE!
 single_input: NEWLINE | simple_stmt | compound_stmt NEWLINE

@@ -188,3 +188,4 @@ for (i = 0; i < n; i++) {
 
 [“小” 无所谓，“完整” 才是关键](Part.3.F.social-selfteaching.md)。
 [ “小” 无所谓，“完整” 才是关键](Part.3.F.social-selfteaching.md)。
+[ “小” 无所谓，“完整” 才是关键](Part.3.F.social-selfteaching.md)。

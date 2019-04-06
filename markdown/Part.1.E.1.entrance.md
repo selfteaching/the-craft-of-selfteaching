@@ -3,6 +3,7 @@
 
 “速成”，对绝大多数人<a href='#fn1' name='fn1b'><sup>[1]</sup></a>来说，在绝大多数情况下，是不大可能的。
  “速成”，对绝大多数人<a href='#fn1' name='fn1b'><sup>[1]</sup></a>来说，在绝大多数情况下，是不大可能的。
+ “速成”，对绝大多数人<a href='#fn1' name='fn1b'><sup>[1]</sup></a>来说，在绝大多数情况下，是不大可能的。
 
 编程如此，自学编程更是如此。有时，遇到复杂度高一点的知识，连快速入门都不一定是很容易的事情。
 
@@ -27,6 +28,7 @@
 1849 年，乔治・布尔 34 岁，被当年刚刚成立的女皇学院（Queen's College）聘请为第一位数学教授。随后他开始写那本最著名的书，[AN INVESTIGATION OF THE LAWS OF THOUGHT](http://www.gutenberg.org/ebooks/15114)。他在前言里写到：
 
 >  “The design of the following treatise is to investigate the fundamental laws of those operations of the mind by which reasoning is performed; to give expression to them in the symbolical language of a Calculus, and upon this foundation to establish the science of Logic and construct its method; …”
+> “The design of the following treatise is to investigate the fundamental laws of those operations of the mind by which reasoning is performed; to give expression to them in the symbolical language of a Calculus, and upon this foundation to establish the science of Logic and construct its method; …” 
 > “The design of the following treatise is to investigate the fundamental laws of those operations of the mind by which reasoning is performed; to give expression to them in the symbolical language of a Calculus, and upon this foundation to establish the science of Logic and construct its method; …” 
 >
 > “本书论述的是，探索心智推理的基本规律；用微积分的符号语言进行表达，并在此基础上建立逻辑和构建方法的科学……” 
@@ -140,7 +142,7 @@ print('(not False) yields:',  not False)
     (not True) yields: False
     (not False) yields: True
 
-千万不要误以为布尔运算是_理科生_才必须会、才能用得上的东西…… 文理艺分科是中国的特殊分类方式，真挺害人的。比如，设计师们在计算机上创作图像的时候，也要频繁使用_或与非_的布尔运算操作才能完成各种图案的拼接…… 抽空看看这个网页：[Boolean Operations used by Sketch App](https://sketchapp.com/docs/shapes/boolean-operations/) —— 这类设计软件，到最后是每个人都用得上的东西呢。另，难道艺术生不需要学习文科或者理科？—— 事实上，他们也有文化课……
+千万不要误以为布尔运算是_理科生_才必须会、才能用得上的东西…… 文理艺分科是中国的特殊分类方式，真挺害人的。比如，设计师们在计算机上创作图像的时候，也要频繁使用_或与非_的布尔运算操作才能完成各种图案的拼接…… 抽空看看这个网页：[Boolean Operations used by Sketch App](https://sketchapp.com/docs/shapes/boolean-operations/) —— 这类设计软件，到最后是每个人都用得上的东西呢。另，难道艺术生不需要学习文科或者理科？—— 事实上，他们也有文化课…… 
 千万不要误以为布尔运算是_理科生_才必须会、才能用得上的东西…… 文理艺分科是中国的特殊分类方式，真挺害人的。比如，设计师们在计算机上创作图像的时候，也要频繁使用_或与非_的布尔运算操作才能完成各种图案的拼接…… 抽空看看这个网页：[Boolean Operations used by Sketch App](https://sketchapp.com/docs/shapes/boolean-operations/) —— 这类设计软件，到最后是每个人都用得上的东西呢。另，难道艺术生不需要学习文科或者理科？—— 事实上，他们也有文化课…… 
 
 ![](../images/operations@2x.png)

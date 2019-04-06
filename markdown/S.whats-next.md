@@ -16,7 +16,8 @@
 无论学什么，一本书肯定不够，以下是学习 Python 的基本必读书籍：
 
 > * [The Python Tutorial](https://docs.python.org/3/tutorial/)
-> * [The Hitchhiker’s Guide to Python!](https://docs.python-guide.org/)
+> * [The Hitchhiker's Guide to Python!](https://docs.python-guide.org/)
+> * [The Hitchhiker's Guide to Python!](https://docs.python-guide.org/)
 > * [The Hitchhiker's Guide to Python!](https://docs.python-guide.org/)
 > * [Think Python: How to think like a computer scientist](http://greenteapress.com/wp/think-python-2e/)
 > * [Automate the Boring Stuff with Python](https://automatetheboringstuff.com)

@@ -7,6 +7,7 @@
 
 “算法”，其实没多神秘，就是 “解决问题的步骤” 而已。
  “算法”，其实没多神秘，就是 “解决问题的步骤” 而已。
+ “算法”，其实没多神秘，就是 “解决问题的步骤” 而已。
 
 在第二部分的第一章里，我们看过一个判断是否为闰年的函数：
 
@@ -314,5 +315,7 @@ else:
 
 > * [doctest — Test interactive Python examples](https://docs.python.org/3/library/doctest.html)
 > * [doctest —— Test interactive Python examples](https://docs.python.org/3/library/doctest.html)
+> * [doctest —— Test interactive Python examples](https://docs.python.org/3/library/doctest.html)
 > * [unittest — Unit testing framework](https://docs.python.org/3/library/unittest.html)
+> * [unittest —— Unit testing framework](https://docs.python.org/3/library/unittest.html)
 > * [unittest —— Unit testing framework](https://docs.python.org/3/library/unittest.html)
