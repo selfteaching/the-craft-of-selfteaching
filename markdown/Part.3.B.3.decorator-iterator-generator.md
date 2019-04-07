@@ -318,7 +318,7 @@ a_func()
 
     <function __main__.a_func.<locals>.b_func()>
 
-这次返回的不是调用 `b_func()` 这个函数的执行结果，返回的是 `b_func` 这个_函数本身_。
+这次返回的不是调用 `b_func()` 这个函数的执行结果，返回的是 `b_func` 这个*函数本身*。
 
 ## 装饰器（Decorator）
 
