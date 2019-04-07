@@ -33,7 +33,7 @@
 
 讲演能力、写作能力，其实同样也是手艺而已，但它们也确实是很必要的手艺。尤其是，具备这两项手艺的人，在现在这样的社会里收入一定不差，不信你就观察一下身边的世界、你的眼界可以触达的人群。
 
-这两个手艺若比作宰牛刀的话，而日常生活里与单人沟通，只不过是杀鸡而已 —— 哈，这个类比真是不能说给沟通对象听，实在有太大的误会可能性。然而，说正经的，其实这也是为什么 “教师” 这个行业的人有不少能够跑出来成为优秀创业者、优秀投资人的原因之一。
+这两个手艺若比作宰牛刀的话，则日常生活里与单人沟通，只不过是杀鸡而已 —— 哈，这个类比真是不能说给沟通对象听，实在有太大的误会可能性。然而，说正经的，其实这也是为什么 “教师” 这个行业的人有不少能够跑出来成为优秀创业者、优秀投资人的原因之一。
 
 当然，绝大多数连一门手艺都没有弄明白的初学者，阅读以下内容时，会觉得 “与当前的自己没关系”…… 不过，请注意，这绝对是 “[刚需幻觉](Part.3.D.indispensable-illusion.md)”，千万不要被它误导。
 
@@ -152,11 +152,13 @@
 价值观可大可小。大到集体利益与个人利益之间的比较，小到自学中 “全面” 压倒一切…… 然而，这世界总有独立于任何人存在的 “客观的价值比较”，只不过，每个人的 “价值观” 是自己的 “观点”。而我们每个人都希望自己的观点尽量摆脱自己的主观，尽量靠近那个 “客观的价值比较”…… 而一旦我们确定自己比原来的自己，甚至相对于其他人更进一步的时候，就很可能值得认真分享。
 
 这个方法着实简单，然而却非常有效。这有点像什么呢？这有点像人家弹个吉他是 “蹦单音”，可你弹的却是 “曲调与和弦” 相辅相成的音乐…… 给你看一个 Youtube 上的《一生所爱》—— 这首曲子是我最喜欢的指弹版本 —— 这种弹法，不仅有旋律，还有和弦，并且还有打击乐器效果 “伴奏”：
+
 ```python
 from IPython.display import IFrame
 
 IFrame('https://www.youtube.com/embed/AjWTop5O5jo?', width='800', height='450')
 ```
+
         <iframe
             width="800"
             height="450"
@@ -178,11 +180,13 @@ IFrame('https://www.youtube.com/embed/AjWTop5O5jo?', width='800', height='450')
 花那么长时间作弊什么的，还不如花那么长时间磨练手艺，你想想看是不是这个道理？
 
 给你看一段视频，加州伯克利大学的 Brian Harvey 在课堂上告诉学生，“为什么不要作弊” 的真正原因：
+
 ```python
 from IPython.display import IFrame
 
 IFrame('https://www.youtube.com/embed/hMloyp6NI4E?', width='800', height='450')
 ```
+
         <iframe
             width="800"
             height="450"
@@ -212,11 +216,13 @@ IFrame('https://www.youtube.com/embed/hMloyp6NI4E?', width='800', height='450')
 有个特别好玩的例子。
 
 现在大家已经熟悉了的吉他演奏中的 “指弹”（Percussive Guitar），可这种玩法在没有 Youtube 的时代里并不多见 —— 在我长大的年代里，甚至 “前所未闻”。不知道是谁，把打击乐器的手法融合到吉他演奏手法中去了，于是，在 Youtube 这样的视频工具出现之后，人们的 “见识” 成本降低了（过去也许要 “去西天取经才行”），很快就有人模仿，很快就有人更为擅长…… 
+
 ```python
 from IPython.display import IFrame
 
 IFrame('https://www.youtube.com/embed/nY7GnAq6Znw?', width='800', height='450')
 ```
+
         <iframe
             width="800"
             height="450"
@@ -245,11 +251,13 @@ IFrame('https://www.youtube.com/embed/nY7GnAq6Znw?', width='800', height='450')
 再进一步，技巧没用了…… 想再进一步，靠的是另外一个层次的东西 —— 那就是尊重与热爱。
 
 这么多年来，在互联网上我最喜爱的老师，是麻省理工大学的 Walter Lewin 教授。
+
 ```python
 from IPython.display import IFrame
 
 IFrame('https://www.youtube.com/embed/sJG-rXBbmCc?', width='800', height='450')
 ```
+
         <iframe
             width="800"
             height="450"

@@ -85,20 +85,20 @@ teach_yourself(coding)
 # 需提前安装 nbconvert 插件，Terminal 下执行：
 $ jupyter nbconvert --to markdown *.ipynb
 
-而后将所有 .md 文件移到 markdown/ 目录之下 —— 除 README.md 文
-件之外
-README.md 文件复制一份到 markdown/ 目录之下，而后编辑为当前文件
+而后将所有 `.md` 文件移到 `markdown/` 目录之下 —— 除 `README.md` 文件之外
+
+`README.md` 文件复制一份到 `markdown/` 目录之下，而后编辑为当前文件
 
 # 需使用 VSCode 批量 Find and Replace:
-将所有 (Part.1.A.better.teachyourself_files/ 替换为 (../images/
-将所有 (Part.1.E.6.containers_files/ 替换为 (../images/
+将所有 (../images/ 替换为 (../images/
+将所有 (../images/ 替换为 (../images/
 将所有 ```\n\n 替换为 ```\n
 将所有	\n\n```	替换为 \n```
-将所有 .ipynb) -> .md
-将所有 (images -> (../images)
+将所有 .ipynb) 替换为 .md)
+将所有 (../images 替换为 (../images
 
-Part.1.E.3.controlflow.md 文件中有过长的 output 需要编辑
-Part.1.E.7.files.md 文件中有过长的 output 需要编辑
+`Part.1.E.3.controlflow.md` 文件中有过长的 output 需要编辑
+`Part.1.E.7.files.md` 文件中有过长的 output 需要编辑
 ```
 
 本书的版权协议为 [CC-BY-NC-ND license](https://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh)。
@@ -108,8 +108,6 @@ Part.1.E.7.files.md 文件中有过长的 output 需要编辑
 -----
 **脚注**
 
-<a name='fn1'>[1]</a>：[ ‘Themselves'or 'themself’？-- Oxford Dictionary](https://en.oxforddictionaries.com/usage/themselves-or-themself)
-<a name='fn1'>[1]</a>：[ ‘Themselves'or 'themself’？-- Oxford Dictionary](https://en.oxforddictionaries.com/usage/themselves-or-themself)
 <a name='fn1'>[1]</a>：[ ‘Themselves'or 'themself’？-- Oxford Dictionary](https://en.oxforddictionaries.com/usage/themselves-or-themself)
 
 <a href='#fn1b'><small>↑Back to Content↑</small></a>

@@ -36,6 +36,7 @@
 进而，想要把一门手艺搞到真正 “精湛” 的地步，最有效的方法就是尽早进入 “造” 的阶段 —— 所谓的 “造”，就是不断**创造**的 “造”。
 
 自学这门手艺，很简单，就是不断地学：
+
 ```python
 def teach_yourself(anything):
     while not create():
@@ -45,6 +46,7 @@ def teach_yourself(anything):
 
 teach_yourself(coding)
 ```
+
 学上几个，自然就很精湛。而其它的用自学这门手艺习得的手艺，基本上都可以用 “是否做出了像样的作品” 作为检验自己的那门手艺是否达到了精湛的衡量指标。
 
 硅谷有一家著名的孵化器，叫 Y-Combinator，现在的掌门人是个很年轻的人，Samuel H. Altman。他在那篇著名的文章《[Advice for ambitious 19 year olds](https://blog.samaltman.com/advice-for-ambitious-19-year-olds)》中有一个精彩的建议：

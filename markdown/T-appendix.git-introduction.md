@@ -8,7 +8,6 @@
 ## 内容目标
 
 再一次，这一篇内容的目标，依然不是 “教程”，而是 “教程” 的 “图例” —— 如果我们把真正的教程比喻成 “地图” 的话。最全面的 Git 教程在网上，**Pro Git**，是免费的 —— 把它反复阅读若干遍，理解完整：
-再一次，这一篇内容的目标，依然不是 “教程”，而是 “教程” 的 “图例” —— 如果我们把真正的教程比喻成 “地图” 的话。最全面的 Git 教程在网上，**Pro Git**，是免费的 —— 把它反复阅读若干遍，理解完整：
 
 > https://git-scm.com/book/en/v2
 
@@ -37,6 +36,7 @@ Git 的作用，基本上可以被划分为三部分：
 其中，`local repository` 和 `staging area` 这两个抽象层的数据，保存在 `working directory` 根目录下的一个隐藏目录 `.git/` 下；需要使用 `ls -a` 才能看到。
 
 当你使用 `git init` 命令将一个本地文件夹 `working directory` 初始化为 `local repository` 的之后，该文件夹内部的结构如下：
+
 ```
 .
 └── .git
@@ -63,7 +63,9 @@ Git 的作用，基本上可以被划分为三部分：
     └── refs
         ├── heads
         └── tags
+
 ```
+
 以下示意图中仅包含最基本的 Git 命令 —— 并且基本上都是独自使用 Git 时的常用命令。
 
 ![](../images/git-command-relationships.png)
@@ -77,20 +79,26 @@ Git 的作用，基本上可以被划分为三部分：
 ### Mac
 
 Mac 的操作系统 Mavericks (10.9) 以上版本中都内建有 Git，你可以在 Terminal 中通过以下命令查看是否有 Git：
+
 ``` bash
 git --version
 which git
 ```
+
 也可以通过 Homebrew 安装最新版本的 Git：
+
 ``` bash
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew doctor
 brew install git
 ```
+
 还可以通过 Conda 安装：
+
 ``` bash
 conda install -c anaconda git
 ```
+
 ### Windows
 
 前往 https://gitforwindows.org 下载并安装 Git for Windows。
@@ -104,23 +112,29 @@ conda install -c anaconda git
 大多数 Linux 操作系统要么基于 Debain，要么基于 Red-Hat —— 请自行查看 [List of Linux distributions](https://en.wikipedia.org/wiki/List_of_Linux_distributions)，确定自己的 Linux 发行版究竟基于哪一个。
 
 基于 Debian 的 Linux 发行版：
+
 ```bash
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install git
 ```
+
 基于 Red-Hat 的 Linux 发行版：
+
 ```bash
 sudo yum upgrade
 sudo yum install git
 ```
+
 ### Git 本地配置
 
 在命令行工具中执行以下命令：
+
 ```bash
 git config --global user.name "<your_name>"
 git config --global user.email <your_email_address>
 ```
+
 ### Git GUI
 
 Git 的图形化版本客户端，有很多种选择，以下几个跨平台的客户端最受欢迎：

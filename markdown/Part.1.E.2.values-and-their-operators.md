@@ -37,9 +37,7 @@ for i in range(80, 110):
 
 `if...`，`for...` 在控制流程：在什么情况下运算什么，在什么情况下重复运算什么；
 
-第 13 行 `is_prime()` 这个函数的调用，也是在控制流程 —— 所以我们可以**把函数看作是 “子程序” **；
-第 13 行 `is_prime()` 这个函数的调用，也是在控制流程 —— 所以我们可以**把函数看作是 “子程序” **；
-第 13 行 `is_prime()` 这个函数的调用，也是在控制流程 —— 所以我们可以**把函数看作是 “子程序” **；
+第 13 行 `is_prime()` 这个函数的调用，也是在控制流程 —— 所以我们可以**把函数看作是 “子程序”**；
 
 一旦这个函数被调用，流程就转向开始执行在第 1 行中定义的 `is_prime()` 函数内部的代码，而这段代码内部还是_计算_和_流程控制_，决定一个返回值 —— 返回值是布尔值；再回到第 13 行，将返回值交给 `if` 判断，决定是否执行第 14 行…… 
 
@@ -104,7 +102,9 @@ float(int(abs(-3.14159)))
 ```
 
     3.14159
+
     3
+
     3.0
 
 ## 值的类型
@@ -130,6 +130,7 @@ InteractiveShell.ast_node_interactivity = "all"
 ```
 
     20.0
+
     ---------------------------------------------------------------------------
 
     TypeError                                 Traceback (most recent call last)
@@ -138,6 +139,7 @@ InteractiveShell.ast_node_interactivity = "all"
           3
           4 11 + 10 - 9 * 8 / 7 // 6 % 5
     ----> 5 '3.14' + 3                  # 这一句会报错
+
     TypeError: can only concatenate str (not "int") to str
 
 所以，在不得不对不同类型的值进行运算之前，总是要事先做 **Type Casting**（类型转换）。比如，
@@ -149,7 +151,6 @@ InteractiveShell.ast_node_interactivity = "all"
 > * 将整数转换成浮点数字用 `float()`；
 > * 将浮点数字转换成整数用 `int()`；
 
-有个函数，`type()`，可以用来查看某个值属于什么类型：
 有个函数，`type()`，可以用来查看某个值属于什么类型：
 
 ```python
@@ -168,13 +169,21 @@ type({'a':1, 'b':2, 'c':3})
 ```
 
     int
+
     float
+
     str
+
     bool
+
     range
+
     list
+
     tuple
+
     set
+
     dict
 
 ## 操作符
@@ -201,7 +210,6 @@ type({'a':1, 'b':2, 'c':3})
 ### 布尔值操作符
 
 针对布尔值，操作符有与或非：`and`、`or`、`not`。
-针对布尔值，操作符有与或非：`and`、`or`、`not`。
 
 它们之中，优先级最低的是或 `or`，然后是与 `and`, 优先级最高的是非 `not`：
 
@@ -211,7 +219,6 @@ True and False or not True
 
     False
 
-最先操作的是 `not`，因为它优先级最高。所以，上面的表达式相当于 `True and False or (not True)`，即相当于 `True and False or False`；
 最先操作的是 `not`，因为它优先级最高。所以，上面的表达式相当于 `True and False or (not True)`，即相当于 `True and False or False`；
 
 然后是 `and`，所以，`True and False or False` 相当于是 `(True and False) or False`，即相当于 `False or False`；
@@ -239,7 +246,6 @@ n < 0 and (n + 1) % 2 == 0
 > * 拼接：`+` 和 `' '`（后者是空格）
 > * 拷贝：`*`
 > * 逻辑运算：`in`、`not in`；以及，`<`、`<=`、`>`、`>=`、`!=`、`==`
-> * 逻辑运算：`in`、`not in`；以及，`<`、`<=`、`>`、`>=`、`!=`、`==`
 
 ```python
 from IPython.core.interactiveshell import InteractiveShell
@@ -252,8 +258,11 @@ InteractiveShell.ast_node_interactivity = "all"
 ```
 
     'AwesomePython'
+
     'AwesomePython'
+
     'Python, Awesome! Awesome! Awesome! '
+
     False
 
 字符之间，字符串之间，除了 `==` 和 `!=` 之外，也都可以被逻辑操作符 `<`、`<=`、`>`、`>=` 运算：
@@ -261,6 +270,7 @@ InteractiveShell.ast_node_interactivity = "all"
 ```python
 'a' < 'b'
 ```
+
     True
 
 这是因为字符对应着 Unicode 码，字符在被比较的时候，被比较的是对应的 Unicode 码。
@@ -275,7 +285,9 @@ ord('a')
 ```
 
     False
+
     65
+
     97
 
 当字符串被比较的时候，将从两个字符串各自的第一个字符开始逐个比较，“一旦决出胜负马上停止”：
@@ -301,7 +313,6 @@ Python 的容器有很多种 —— 字符串，其实也是容器的一种，�
 > * 拼接：`+` 和 `' '`（后者是空格）
 > * 拷贝：`*`
 > * 逻辑运算：`in`、`not in`；以及，`<`、`<=`、`>`、`>=`、`!=`、`==`
-> * 逻辑运算：`in`、`not in`；以及，`<`、`<=`、`>`、`>=`、`!=`、`==`
 
 两个列表在比较时（前提是两个列表中的数据元素类型相同），遵循的还是跟字符串比较相同的规则：“一旦决出胜负马上停止”。但实际上，由于列表中可以包含不同类型的元素，所以，通常情况下没有实际需求对他们进行 “大于、小于” 的比较。（比较时，类型不同会引发 `TypeError`……）
 
@@ -318,7 +329,9 @@ a_list > b_list
 ```
 
     False
+
     True
+
     True
 
 ## 更复杂的运算
@@ -359,6 +372,7 @@ divmod(11, 3)
 ```
 
     3.1415926
+
     (3, 2)
 
 这些内建函数也依然只能完成 “基本操作”，比如，对于数字，我们想计算三角函数的话，内建函数就帮不上忙了，于是，我们需要调用标准库（Standard Library）中的 math 模块（Module）：
@@ -413,7 +427,6 @@ True or 'Python'
 > > * empty sequences and collections: `''`, `()`, `[]`, `{}`, `set()`, `range(0)`
 
 所以，`'Python'` 是个非空的字符串，即，不属于是 `empty sequences`，所以它不被认为是 `False`，即，它的布尔值是 `True`
-所以，`'Python'` 是个非空的字符串，即，不属于是 `empty sequences`，所以它不被认为是 `False`，即，它的布尔值是 `True`
 
 于是，这么理解就轻松了：
 
@@ -456,7 +469,9 @@ c
 ```
 
     [1, 2, 3, 4, 5, 6, 7]
+
     {1, 2, 3, 4, 5, 6, 7}
+
     [1, 2, 3, 4, 5, 6, 7]
 
 ## 总结

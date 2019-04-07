@@ -31,37 +31,45 @@
 `print()` 是初学者最常遇到的函数 —— 姑且不说是不是最常用到的。
 
 它最基本的作用就是把传递给它的值输出到屏幕上，如果不给它任何参数，那么它就输出一个空行：
+
 ```python
 print('line 1st')
 print('line 2nd')
 print()
 print('line 4th')
 ```
+
     line 1st
     line 2nd
 
     line 4th
 
 你也可以向它传递多个参数，参数之间用 `,` 分开，它就会把那些值逐个输出到屏幕，每个值之间默认用空格分开。
+
 ```python
 print('Hello,', 'jack', 'mike', '...', 'and all you guys!')
 ```
+
     Hello, jack mike ... and all you guys!
 
 当我们想把变量或者表达式的值插入字符串中的时候，可以用 f-string：
+
 ```python
 name = 'Ann'
 age = '22'
 print(f'{name} is {age} years old.')
 ```
+
     Ann is 22 years old.
 
 但这并不是 `print()` 这个函数的功能，这实际上是 [`f-string`](https://docs.python.org/3/library/stdtypes.html#printf-style-string-formatting) 的功能，`f-string` 中用花括号 `{}` 括起来的部分是表达式，最终转换成字符串的时候，那些表达式的值（而不是变量或者表达式本身）会被插入相应的位置…… 
+
 ```python
 name = 'Ann'
 age = '22'
 f'{name} is {age} years old.'
 ```
+
     'Ann is 22 years old.'
 
 所以，`print(f'{name} is {age} years old.')` 这一句中，函数 `print()` 完成的还是它最基本的功能：给它什么，它就把什么输出到屏幕上。
@@ -87,6 +95,7 @@ f'{name} is {age} years old.'
 也就是说，这个函数中有若干个具有默认值的参数，即便我们在调用这个函数的时候，就算没有指定它们，它们也存在于此。
 
 即，当我们调用 `print('Hello', 'world!')` 的时候，相当于我们调用的是 `print('Hello', 'world!', sep=' ', end='\n', file=sys.stdout, flush=False)`
+
 ```python
 import sys                                  # 如果没有这一行，代码会报错
 
@@ -96,6 +105,7 @@ print('Hello', 'world!', sep='-', end='\t')
 print('Hello', 'world!', sep='~')           # 上一行的末尾是 \t，所以，这一行并没有换行显示
 print('Hello', 'world!', sep='\n')          # 参数之间用换行 \n 分隔
 ```
+
     Hello world!
     Hello world!
     Hello-world!	Hello~world!
@@ -109,15 +119,15 @@ print('Hello', 'world!', sep='\n')          # 参数之间用换行 \n 分隔
 > `print()` 这个函数的返回值是 `None` —— 注意，它向屏幕输出的内容，与 `print()` 这个函数的返回值不是一回事。
 
 做为例子，看看 `print(print(1))` 这个语句 —— `print()` 这个函数被调用了两次，第一次是 `print(1)`，它向屏幕输出了一次，完整的输出值实际上是 `str(1) + '\n'`，而后返回一个值，`None`；而第二次调用 print()，这相当于是向屏幕输出这个 `None`：
+
 ```python
 print(print(1))
 ```
+
     1
     None
 
-“**看说明书**” 就是这样，全都看了，真不一定全部看懂，但看总是比不看强，因为总是有能看懂的部分……
- “**看说明书**” 就是这样，全都看了，真不一定全部看懂，但看总是比不看强，因为总是有能看懂的部分…… 
- “**看说明书**” 就是这样，全都看了，真不一定全部看懂，但看总是比不看强，因为总是有能看懂的部分…… 
+“**看说明书**” 就是这样，全都看了，真不一定全部看懂，但看总是比不看强，因为总是有能看懂的部分…… 
 
 ## 关键字参数
 
@@ -134,6 +144,7 @@ print(print(1))
 > `sorted(iterable, *, key=None, reverse=False)`
 
 现在先只关注它的 Keyword Arguments，`reverse`：
+
 ```python
 from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = "all"
@@ -141,7 +152,9 @@ InteractiveShell.ast_node_interactivity = "all"
 sorted('abdc')
 sorted('abdc', reverse=True)
 ```
+
     ['a', 'b', 'c', 'd']
+
     ['d', 'c', 'b', 'a']
 
 ## 位置参数
@@ -156,6 +169,7 @@ sorted('abdc', reverse=True)
 > * 而它的返回值，是一个元组（Tuple，至于这是什么东西，后面讲清楚），其中包括两个值，第一个是商，第二个是余 —— 此为该函数的输出。
 
 作为 “这个函数的用户”，你不能（事实上也没必要）调换这两个参数的意义。因为，根据定义，被传递的值的意义就是由参数的位置决定的。
+
 ```python
 from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = "all"
@@ -169,12 +183,19 @@ divmod(3, 11)
 a, b = divmod(3, 11)
 a
 b
+
 ```
+
     (3, 2)
+
     3
+
     2
+
     (0, 3)
+
     0
+
     3
 
 ## 可选位置参数
@@ -195,7 +216,9 @@ InteractiveShell.ast_node_interactivity = "all"
 pow(2, 3)
 pow(2, 3, 4)
 ```
+
     8
+
     0
 
 注意 `pow()` 函数定义部分中，圆括号内的方括号 `[, z]` —— 这是非常严谨的标注，如果没有 `z`，那么那个逗号 `,` 就是没必要的。
@@ -232,6 +255,7 @@ pow(2, 3, 4)
 虽然你现在还不一定知道 Class 究竟是什么，但在阅读官方文档的时候，遇到一些内建函数前面写着 Class，比如 `Class bool([x])`，千万别奇怪，因为 Class 本质上来看就是一种特殊类型的函数，也就是说，它也是函数：
 
 ![](../images/doc-class.png)
+
 ```python
 from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = "all"
@@ -242,10 +266,15 @@ bool(-3.1415926)
 bool(1 == 2)
 bool(None)
 ```
+
     False
+
     True
+
     True
+
     False
+
     False
 
 ## 总结
@@ -256,7 +285,6 @@ bool(None)
 > * 既然你是产品的用户，你要养成好习惯，一定要亲自阅读产品说明书；
 > * 调用函数的时候，注意_可选位置参数的使用方法_和_关键字参数的默认值_；
 > * 函数定义部分，注意两个符号就行了，`[]` 和 `=`；
-> * 所有的函数都有返回值，即便它内部不指定返回值，也有一个默认返回值：`None`；
 > * 所有的函数都有返回值，即便它内部不指定返回值，也有一个默认返回值：`None`；
 > * 另外，一定要耐心阅读该函数在使用的时候需要注意什么 —— 产品说明书的主要作用就在这里…… 
 
@@ -278,6 +306,7 @@ bool(None)
 **脚注**
 
 （2019.02.14）<a name='fn1'>[1]</a>：`print()` 函数的[官方文档](https://docs.python.org/3/library/functions.html#print)里，`sep=''` 肯定是 `sep=' '` 的笔误 —— 可以用以下代码验证：
+
 ```python
 print('a', 'b', sep='')
 print('a', 'b')
@@ -288,7 +317,6 @@ print('a', 'b')
 >
 > 这是改了么？
 
-我回去查看了一下 2019.02.13 我提交的 bug track：[https://bugs.python.org/issue35986](https://bugs.python.org/issue35986)，结论是 “人家没问题，是我自己的浏览器字体设置有问题”……
 我回去查看了一下 2019.02.13 我提交的 bug track：[https://bugs.python.org/issue35986](https://bugs.python.org/issue35986)，结论是 “人家没问题，是我自己的浏览器字体设置有问题”……
 
 然而，我决定将这段文字保留在此书里，以便人们看到 “平日里软件维护是什么样的” —— 作为一个实例放在这里，很好。

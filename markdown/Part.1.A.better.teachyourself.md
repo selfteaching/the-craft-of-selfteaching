@@ -23,6 +23,7 @@
 > 全球范围内都一样，在过去的五十年里，人们的平均寿命预期增长得非常惊人…… 
 
 拿中国地区做例子，根据世界银行的数据统计，中国人在出生时的寿命预期，从 1960 年的 _43.73_ 岁，增长到了 2016 年的 _76.25_ 岁，56 年间的增幅竟然有 **74.39%** 之多！
+
 ```python
 import matplotlib.pyplot as plt
 import numpy as np
@@ -48,6 +49,7 @@ plt.show()
 # data from:
 # https://databank.worldbank.org/data/reports.aspx?source=2&series=SP.DYN.LE00.IN
 ```
+
 ![png](../images/Part.1.A.better.teachyourself_2_0.png)
 
 如此发展下去，虽然人类不大可能永生不死，但平均寿命依然在持续延长是个不争的事实。与上一代不同，现在的千禧一代，需要面对的是百岁人生 —— 毫无疑问，不容置疑。
@@ -65,6 +67,7 @@ plt.show()
 > 没有自学能力
 
 有一个统计指数，叫做人类发展指数（Human Development Index），它的曲线画出来，怎么看都有即将成为指数级上升的趋势。
+
 ```python
 import matplotlib.pyplot as plt
 import numpy as np
@@ -96,6 +99,7 @@ plt.show()
 # data from:
 # blob:https://ourworldindata.org/44b6da71-f79e-42ab-ab37-871e4bd256e9
 ```
+
 ![png](../images/Part.1.A.better.teachyourself_4_0.png)
 
 社会发展越来越快，你要面对的人生越来越长，在那一段与你的直觉猜想并不相同的漫漫人生路上，你居然没有磨练过自学能力，竟然只能眼睁睁地看着自己被甩下且无能为力，难道接下来要在那么长的时间里 “苦中作乐” 吗？
@@ -105,6 +109,7 @@ plt.show()
 我本科学的是会计，研究生跑到国外读宏观经济学没读完，跑回国内做计算机硬件批发，再后来去新东方应聘讲授托福课程，离开新东方之后创业，再后来做投资，这期间不断地写书…… 可事实上，我的经历在这个时代并不特殊。有多少人在后来的职业生涯中所做的事情与当年大学里所学的专业相符呢？
 
 纽约联邦储蓄银行在 2012 年做过一个调查，发现人们的职业与自己大学所学专业相符的比例连 _30%_ 都不到。而且，我猜，这个比例会持续下降的 —— 因为这世界变化快，因为大多数教育机构与世界发展脱钩的程度只能越来越严重…… 
+
 ```python
 import matplotlib.pyplot as plt
 
@@ -126,6 +131,7 @@ plt.show()
 # data from:
 # https://libertystreeteconomics.newyorkfed.org/2013/05/do-big-cities-help-college-graduates-find-better-jobs.html
 ```
+
 ![png](../images/Part.1.A.better.teachyourself_6_0.png)
 
 绝大多数人终生都饱受**时间幻觉**的拖累。
@@ -157,8 +163,6 @@ plt.show()
 于是，从某个层面上来看，我每天都过的很开心。为什么？因为我有未来。凭什么那么确信？因为我知道我自己有自学能力。
 
 **—— 我希望你也有。**
-** —— 我希望你也有。**
-** —— 我希望你也有。**
 
 准确地讲，希望你有个更好的未来。
 

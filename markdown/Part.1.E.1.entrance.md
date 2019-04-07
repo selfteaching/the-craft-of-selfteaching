@@ -2,8 +2,6 @@
 # 入口
 
 “速成”，对绝大多数人<a href='#fn1' name='fn1b'><sup>[1]</sup></a>来说，在绝大多数情况下，是不大可能的。
- “速成”，对绝大多数人<a href='#fn1' name='fn1b'><sup>[1]</sup></a>来说，在绝大多数情况下，是不大可能的。
- “速成”，对绝大多数人<a href='#fn1' name='fn1b'><sup>[1]</sup></a>来说，在绝大多数情况下，是不大可能的。
 
 编程如此，自学编程更是如此。有时，遇到复杂度高一点的知识，连快速入门都不一定是很容易的事情。
 
@@ -27,8 +25,6 @@
 
 1849 年，乔治・布尔 34 岁，被当年刚刚成立的女皇学院（Queen's College）聘请为第一位数学教授。随后他开始写那本最著名的书，[AN INVESTIGATION OF THE LAWS OF THOUGHT](http://www.gutenberg.org/ebooks/15114)。他在前言里写到：
 
->  “The design of the following treatise is to investigate the fundamental laws of those operations of the mind by which reasoning is performed; to give expression to them in the symbolical language of a Calculus, and upon this foundation to establish the science of Logic and construct its method; …”
-> “The design of the following treatise is to investigate the fundamental laws of those operations of the mind by which reasoning is performed; to give expression to them in the symbolical language of a Calculus, and upon this foundation to establish the science of Logic and construct its method; …” 
 > “The design of the following treatise is to investigate the fundamental laws of those operations of the mind by which reasoning is performed; to give expression to them in the symbolical language of a Calculus, and upon this foundation to establish the science of Logic and construct its method; …” 
 >
 > “本书论述的是，探索心智推理的基本规律；用微积分的符号语言进行表达，并在此基础上建立逻辑和构建方法的科学……” 
@@ -72,6 +68,7 @@ Google Doodle 的寄语是这样的：
 **注意**：请小心区分大小写 —— 因为 Python 解释器是对大小写敏感的，对它来说，`True` 和 `true` 不是一回事。
 
 任何一个**逻辑表达式**都会返回一个_布尔值_。
+
 ```python
 from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = "all"
@@ -80,6 +77,7 @@ InteractiveShell.ast_node_interactivity = "all"
 1 == 2
 1 != 2
 ```
+
     True
 
 `1 == 2`，用自然语言描述就是 “_1 等于 2 吗？_” —— 它的布尔值当然是 `False`。
@@ -123,6 +121,7 @@ Python 语言中的**逻辑操作符**（Logical Operators）如下表所示 —
 ![](../images/boolean-operators.png)
 
 先别管以下代码中 `print()` 这个函数的工作原理，现在只需要关注其中布尔运算的结果：
+
 ```python
 print('(True and False) yields:',  True and False)
 print('(True and True) yields:',  True and True)
@@ -133,6 +132,7 @@ print('(False or False) yields:',  False or False)
 print('(not True) yields:',  not True)
 print('(not False) yields:',  not False)
 ```
+
     (True and False) yields: False
     (True and True) yields: True
     (False and True) yields: False
@@ -143,13 +143,13 @@ print('(not False) yields:',  not False)
     (not False) yields: True
 
 千万不要误以为布尔运算是_理科生_才必须会、才能用得上的东西…… 文理艺分科是中国的特殊分类方式，真挺害人的。比如，设计师们在计算机上创作图像的时候，也要频繁使用_或与非_的布尔运算操作才能完成各种图案的拼接…… 抽空看看这个网页：[Boolean Operations used by Sketch App](https://sketchapp.com/docs/shapes/boolean-operations/) —— 这类设计软件，到最后是每个人都用得上的东西呢。另，难道艺术生不需要学习文科或者理科？—— 事实上，他们也有文化课…… 
-千万不要误以为布尔运算是_理科生_才必须会、才能用得上的东西…… 文理艺分科是中国的特殊分类方式，真挺害人的。比如，设计师们在计算机上创作图像的时候，也要频繁使用_或与非_的布尔运算操作才能完成各种图案的拼接…… 抽空看看这个网页：[Boolean Operations used by Sketch App](https://sketchapp.com/docs/shapes/boolean-operations/) —— 这类设计软件，到最后是每个人都用得上的东西呢。另，难道艺术生不需要学习文科或者理科？—— 事实上，他们也有文化课…… 
 
 ![](../images/operations@2x.png)
 
 ## 流程控制
 
 有了布尔运算能力之后，才有_根据情况决定流程_的所谓**流程控制**（Control Flow）的能力。
+
 ```python
 import random
 r = random.randrange(1, 1000)
@@ -161,11 +161,13 @@ if r % 2 == 0:
 else:
     print(r, 'is odd.')
 ```
+
     693 is odd.
 
 你可以多执行几次以上程序，看看每次不同的执行结果。执行方法是，选中上面的 Cell 之后按快捷键 `shift + enter`。
 
 现在看代码，先忽略其它的部分，只看关键部分：
+
 ```python
     ...
     if r % 2 == 0:
@@ -173,7 +175,7 @@ else:
     else:
         ...
 ```
-这个 `if/else` 语句，完成了流程的**分支**功能。`%` 是计算余数的符号，如果 `r` 除以 `2` 的余数等于 `0`，那么它就是偶数，否则，它就是奇数 —— 写成布尔表达式，就是 `r % 2 == 0`。
+
 这个 `if/else` 语句，完成了流程的**分支**功能。`%` 是计算余数的符号，如果 `r` 除以 `2` 的余数等于 `0`，那么它就是偶数，否则，它就是奇数 —— 写成布尔表达式，就是 `r % 2 == 0`。
 
 这一次，你看到了单个等号 `=`：`r = random.randrange(1, 1000)`。
@@ -189,11 +191,13 @@ else:
 现在先别在意头两行代码的工作原理，只关注它的工作结果：`random.randrange(1, 1000)` 这部分代码的作用是返回一个 _1 到 1000 之间_（含左侧 `1` 但不含右侧 `1000`）的随机整数。每次执行以上的程序，它就生成一个新的随机整数，然后因为 `=` 的存在，这个数就被保存到 `r` 这个变量之中。
 
 计算机程序的所谓 “智能”（起码相对于计算器），首先是因为它能做_布尔运算_。计算机的另外一个好处是 “不知疲倦”（反正它也不用自己交电费），所以，它最擅长处理的就是 “重复”，这个词在程序语言中，术语是**循环**（Loop）。以下程序会打印出 `10` 以内的所有奇数：
+
 ```python
 for i in range(10):
     if i % 2 != 0:
         print(i)
 ```
+
     1
     3
     5
@@ -203,11 +207,13 @@ for i in range(10):
 其中 `range(10)` 的返回值，是 `0～9` 的整数序列（默认起始值是 `0`；含左侧 `0`，不含右侧 `10`）。
 
 用自然语言描述以上的程序，大概是这样的 —— 自然语言写在 `#` 之后：
+
 ```python
 for i in range(10): # 对于 0～9 中的所有数字都带入 i 这个变量，执行一遍以下任务：
     if i % 2 != 0:  #     如果 i 除以 2 的余数不等于零的话，执行下面的语句：
         print(i)    #         向屏幕输出 i 这个变量中所保存的值
 ```
+
 就算你让它打印出一百亿以内的奇数，它也毫不含糊 —— 你只需要在 `range()` 这个函数的括号里写上一个那么大的整数就行…… 
 
 让它干一点稍微复杂的事吧，比如，我们想要打印出 `100` 以内所有的_质数_（Primes）。
@@ -220,7 +226,8 @@ for i in range(10): # 对于 0～9 中的所有数字都带入 i 这个变量，
 >> * 如果是，那就不用接着算了，它不是质数；
 >> * 如果全部都试过了，余数都不是 `0`，那么它是质数。
 
-于是，你需要两个**嵌套**的循环，第一个负责作为被除数 `n` 从 `2` 到 `99`（题目是 `100` 以内，所以不包含 `100`）的循环；而这内部，需要另外一个作为除数负责 `i` 从 `2` 到 `n` 的循环：
+于是，你需要两个**嵌套**的循环，第一个是负责让被除数 `n` 从 `2` **遍历**（就是依次经历一次）到 `99`（题目是 `100` 以内，所以不包含 `100`）的循环，第二个是在前者内部负责让除数 `i` 从 `2` 遍历到 `n - 1` 的循环：
+
 ```python
 for n in range(2, 100): #range(2,100)表示含左侧 2，不含右侧 100，是不是第三次看到这个说法了？
     if n == 2:
@@ -232,6 +239,7 @@ for n in range(2, 100): #range(2,100)表示含左侧 2，不含右侧 100，是�
     else:                  # 这里目前你可能看不懂…… 但先关注结果吧。
         print(n)
 ```
+
     2
     3
     5
@@ -263,6 +271,7 @@ for n in range(2, 100): #range(2,100)表示含左侧 2，不含右侧 100，是�
 以上的**算法**可以改进（程序员们经常用的词汇是 “_优化_”）<a id='plusone'></a>：
 
 > 从 `2` 作为除数开始试，试到 $\sqrt{n}$ 之后的一个整数就可以了…… 
+
 ```python
 for n in range(2, 100):
     if n == 2:
@@ -274,6 +283,7 @@ for n in range(2, 100):
     else:
         print(n)
 ```
+
     2
     3
     5
@@ -313,16 +323,17 @@ for n in range(2, 100):
 现在，最重要的是初步理解一个函数的基本构成。关于**函数**，相关的概念有：_函数名_（Function Name）、_参数_（Parameters）、_返回值_（Return Value）、_调用_（Call）。
 
 拿一个更为简单的函数作为例子，`abs()`。它的作用很简单：接收一个数字作为参数，经过运算，返回该数字的绝对值。
+
 ```python
 a = abs(-3.1415926)
 a
 ```
+
     3.1415926
 
 在以上的代码的第 1 行中，
 
 > * 我们_调用_了一个_函数名_为 `abs` 的函数；写法是 `abs(-3.1415926)`；
-> * 这么写，就相当于向它_传递_了一个_参数_，其值为：`-3.1415926`；
 > * 这么写，就相当于向它_传递_了一个_参数_，其值为：`-3.1415926`；
 > * 该函数接收到这个参数之后，根据这个参数的_值_在函数内部进行了*运算*；
 > * 而后该函数返回了一个值，_返回值_为之前接收到的参数的值的绝对值 `3.1415926`；
@@ -337,6 +348,7 @@ a
 被调用的函数，也可以被理解为**子程序**（Sub-Program）—— 主程序执行到函数调用时，就开始执行实现函数的那些代码，而后再返回主程序…… 
 
 我们可以把判断一个数字是否是质数的过程，写成函数，以便将来在多处用得着的时候，随时可以调用它：
+
 ```python
 def is_prime(n):            # 定义 is_prime()，接收一个参数
     if n < 2:              # 开始使用接收到的那个参数（值）开始计算…… 
@@ -353,6 +365,7 @@ for i in range(80, 110):
     if is_prime(i):          # 调用 is_prime() 函数，
         print(i)            # 如果返回值为 True，则向屏幕输出 i
 ```
+
     83
     89
     97
@@ -366,11 +379,13 @@ for i in range(80, 110):
 ### 语句
 
 一个完整的程序，由一个或者多个**语句**（Statements）构成。通常情况下，建议每一行只写一条语句。
+
 ```python
 for i in range(10):
     if i % 2 != 0:
         print(i)
 ```
+
     1
     3
     5
@@ -416,19 +431,23 @@ for i in range(10):
 看到 `x = x + 1` 依然会困惑…… 之所以困惑，是因为你还没有习惯把单等号 `=` 当作赋值符号，把双等号 `==` 当作逻辑判断的 “等于”。
 
 `x = x + 1` 的意思是说，把表达式 `x + 1` 的值保存到变量 `x` 中去 —— 如此这般之后，`x` 这个变量中所保存的就不再是原来的值了…… 
+
 ```python
 x = 0
 x += 1
 print(x)
 ```
+
     1
 
 其实不难理解，只要习惯了就好。理论上，加减乘除商余幂这些操作符，都可以与赋值符号并用。
+
 ```python
 x = 11
 x %= 3   # x = x % 3
 print(x)
 ```
+
     2
 
 ## 总结

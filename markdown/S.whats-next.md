@@ -17,8 +17,6 @@
 
 > * [The Python Tutorial](https://docs.python.org/3/tutorial/)
 > * [The Hitchhiker's Guide to Python!](https://docs.python-guide.org/)
-> * [The Hitchhiker's Guide to Python!](https://docs.python-guide.org/)
-> * [The Hitchhiker's Guide to Python!](https://docs.python-guide.org/)
 > * [Think Python: How to think like a computer scientist](http://greenteapress.com/wp/think-python-2e/)
 > * [Automate the Boring Stuff with Python](https://automatetheboringstuff.com)
 > * [Effective Python](https://effectivepython.com)
@@ -75,19 +73,19 @@ Github 上的 “居民” 现在已经养成了一个惯例，无论什么好�
 
 ## Introduction
 
-![Web Developer Roadmap Introduction](https://github.com/selfteaching/the-craft-of-selfteaching/blob/master/images/intro.png)
+![Web Developer Roadmap Introduction](../images/intro.png)
 
 ## Frontend Roadmap
 
-![Frontend Roadmap](https://github.com/selfteaching/the-craft-of-selfteaching/blob/master/images/frontend.png)
+![Frontend Roadmap](../images/frontend.png)
 
 ## Back-end Roadmap
 
-![Back-end Roadmap](https://github.com/selfteaching/the-craft-of-selfteaching/blob/master/images/backend.png)
+![Back-end Roadmap](../images/backend.png)
 
 ## DevOps Roadmap
 
-![DevOps Roadmap](https://github.com/selfteaching/the-craft-of-selfteaching/blob/master/images/devops.png)
+![DevOps Roadmap](../images/devops.png)
 
 路漫漫其修远兮…… 
 

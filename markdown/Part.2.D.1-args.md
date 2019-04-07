@@ -9,7 +9,7 @@
 
 所以，在我看来，有了一点基础知识之后，最早应该学习的是 “如何写函数” —— 这个起点会更好一些。
 
-这一章的内容，看起来会感觉与[Part1 F4 函数那一章](Part.1.F.4.functions.md)部分重合。但这两章的出发点不一样：
+这一章的内容，看起来会感觉与 [Part1.E.4 函数那一章](Part.1.E.4.functions.md)部分重合。但这两章的出发点不一样：
 
 > * [Part1.E.4 函数那一章](Part.1.E.4.functions.md)，只是为了让读者有 “阅读” 函数说明文档的能力；
 > * 这一章，是为了让读者能够开始动手写函数给自己或别人用…… 
@@ -19,12 +19,14 @@
 哪怕一个函数内部什么都不干，它也得有个名字，然后名字后面要加上圆括号 `()`，以明示它是个函数，而不是某个变量。
 
 定义一个函数的关键字是 `def`，以下代码定义了一个什么都不干的函数：
+
 ```python
 def do_nothing():
     pass
 
 do_nothing()
 ```
+
 为函数取名（为变量取名也一样）有些基本的注意事项：
 
 > - 首先，名称不能以数字开头。能用在名称开头的有，大小写字母和下划线 `_`；
@@ -44,6 +46,7 @@ do_nothing()
 | `True`     | `try`      | `while`    | `with`     | `yield`    |
 
 你随时可以用以下代码查询关键字列表：
+
 ```python
 from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = "all"
@@ -52,6 +55,7 @@ import keyword
 keyword.kwlist               # 列出所有关键字
 keyword.iskeyword('if')      # 查询某个词是不是关键字
 ```
+
     ['False',
      'None',
      'True',
@@ -87,6 +91,7 @@ keyword.iskeyword('if')      # 查询某个词是不是关键字
      'while',
      'with',
      'yield']
+
     True
 
 关于更多为函数、变量取名所需要的注意事项，请参阅：
@@ -99,12 +104,14 @@ keyword.iskeyword('if')      # 查询某个词是不是关键字
 ## 不接收任何参数的函数
 
 在定义函数的时候，可以定义成不接收任何参数；但调用函数的时候，依然需要写上函数名后面的圆括号 `()`：
+
 ```python
 def do_something():
     print('This is a hello message from do_something().')
 
 do_something()
 ```
+
     This is a hello message from do_something().
 
 ## 没有 return 语句的函数
@@ -112,6 +119,7 @@ do_something()
 函数内部，不一定非要有 `return` 语句 —— 上面 `do_somthing()` 函数就没有 `return` 语句。但如果函数内部并未定义返回值，那么，该函数的返回值是 `None`，当 `None` 被当作布尔值对待的时候，相当于是 `False`。
 
 这样的设定，使得函数调用总是可以在条件语句中被当作判断依据：
+
 ```python
 def do_something():
     print('This is a hello message from do_something().')
@@ -119,6 +127,7 @@ def do_something():
 if not do_something():                # 由于该函数名称的缘故，这一句代码的可读性很差…… 
     print("The return value of 'do_something()' is None.")
 ```
+
     This is a hello message from do_something().
     The return value of 'do_something()' is None.
 
@@ -134,6 +143,7 @@ if not do_something():                # 由于该函数名称的缘故，这一�
 > * 年份能被 100 整除但不能被 400 整除的，不是闰年。
 
 所以，相当于要在能被 4 整除的年份中，排除那些能被 100 整除却不能被 400 整除的年份。
+
 ```python
 def is_leap(year):
     leap = False
@@ -148,9 +158,13 @@ is_leap(12)
 is_leap(100)
 is_leap(400)
 ```
+
     False
+
     True
+
     False
+
     True
 
 ```python
@@ -160,9 +174,11 @@ def _is_leap(year):
     return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
 _is_leap(300)
 ```
+
     False
 
 函数可以同时接收多个参数。比如，我们可以写个函数，让它输出从大于某个数字到小于另外一个数字的斐波那契数列；那就需要定义两个参数，调用它的时候也需要传递两个参数：
+
 ```python
 def fib_between(start, end):
     a, b = 0, 1
@@ -173,9 +189,11 @@ def fib_between(start, end):
 
 fib_between(100, 10000)
 ```
+
     144 233 377 610 987 1597 2584 4181 6765
 
 当然可以把这个函数写成返回值是一个列表：
+
 ```python
 def fib_between(start, end):
     r = []
@@ -188,11 +206,13 @@ def fib_between(start, end):
 
 fib_between(100, 10000)
 ```
+
     [144, 233, 377, 610, 987, 1597, 2584, 4181, 6765]
 
 ## 变量的作用域
 
 下面的代码，经常会让初学者迷惑：
+
 ```python
 def increase_one(n):
     n += 1
@@ -202,6 +222,7 @@ n = 1
 print(increase_one(n))
 # print(n)
 ```
+
     2
 
 当 `increase_one(n)` 被调用之后，`n` 的值究竟是多少呢？或者更准确点问，随后的 `print(n)` 的输出结果应该是什么呢？
@@ -217,11 +238,11 @@ print(increase_one(n))
 > 而后，`increase_one()` 函数的代码开始执行，局域变量 `n` 经过 `n += 1` 之后，其中存储的值是 `2`，而后这个值被 `return` 语句返回，所以，`print(increase(n))` 所输出的值是函数被调用之后的返回值，即，`2`。
 >
 > 然而，全局变量 `n` 的值并没有被改变，因为局部变量 `n`（它的值是 `2`）和全局变量 `n`（它的值还是 `1`）只不过是名字相同而已，但它们并不是同一个变量。
-> 然而，全局变量 `n` 的值并没有被改变，因为局部变量 `n`（它的值是 `2`）和全局变量 `n`（它的值还是 `1`）只不过是名字相同而已，但它们并不是同一个变量。
 
 以上的文字，可能需要反复阅读若干遍；几遍下来，消除了疑惑，以后就彻底没问题了；若是这个疑惑并未消除，或者关键点并未消化，以后则会反复被这个疑惑所坑害，浪费无数时间。
 
 不过，有一种情况要格外注意 —— 在函数内部处理被传递进来的值是可变容器（比如，列表）的时候：
+
 ```python
 def be_careful(a, b):
     a = 2
@@ -232,9 +253,11 @@ b = [1, 2, 3]
 be_careful(a, b)
 a, b
 ```
+
     (1, ['What?!', 2, 3])
 
 所以，一个比较好的习惯是，如果传递进来的值是列表，那么在函数内部对其操作之前，先创建一个它的拷贝：
+
 ```python
 def be_careful(a, b):
     a = 2
@@ -246,5 +269,6 @@ b = [1, 2, 3]
 be_careful(a, b)
 a, b
 ```
+
     (1, [1, 2, 3])
 

@@ -72,6 +72,7 @@
 少量执行结果太长的代码，其输出被设置成了 “Scrolled”，是可以通过触摸板或鼠标滑轮上下滑动的。
 
 为了避免大量使用 `print()` 才能看到输出结果，在很多的代码单元格中，开头插入了以下代码：
+
 ```python
 from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = "all"
@@ -79,13 +80,15 @@ InteractiveShell.ast_node_interactivity = "all"
 你可以暂时忽略它们的意义和工作原理。注意：有时，你需要在执行第二次的时候，才能看到全部输出结果。
 
 另外，有少量代码示例，为了让读者每次执行的时候看到不同的结果，使用了随机函数，为其中的变量赋值，比如：
+
 ```python
 import random
 r = random.randrange(1, 1000)
 ```
+
 同样，你可以暂时忽略它们的意义和工作原理；只需要知道因为有它们在，所以每次执行那个单元格中的代码会有不同的结果就可以了。
 
-如果你不是直接在网站上浏览这本 “书”、或者是在阅读印刷版，而是在本地自己搭建 Jupyterlab 环境使用，那么请参阅附录《[Jupyterlab 的安装与配置](T-appendix.jupyter-installation-and-setup.md)》。
+如果你不是直接在网站上浏览这本 “书”、或者不是在阅读印刷版，而是在本地自己搭建 Jupyterlab 环境使用，那么请参阅附录《[Jupyterlab 的安装与配置](T-appendix.jupyter-installation-and-setup.md)》。
 
 > **注意**：尤其需要仔细看看《[Jupyterlab 的安装与配置](T-appendix.jupyter-installation-and-setup.md)》的《关于 Jupyter lab themes》这一小节 —— 否则，阅读体验会有很大差别。
 

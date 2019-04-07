@@ -12,8 +12,6 @@
 > 让读者从认知自学能力开始，通过自学编程作为第一个实践，逐步完整掌握自学能力，进而在随后漫长的人生中，需要什么就去学什么，
 
 …… 不用非得找人教、找人带 —— 只有这样，**前途**这两个字才会变得实在。
-—— 不用非得找人教、找人带 —— 只有这样，**前途**这两个字才会变得实在。
-—— 不用非得找人教、找人带 —— 只有这样，**前途**这两个字才会变得实在。
 
 于是，我最希望能做到的是，从这里了解了自学方法论，也了解了编程以及 Python 编程的基础概念之后，《自学是门手艺》的读者能够**自顾自地踏上征程，一路走下去** —— 至于走到哪里，能走到哪里，不是我一个作者一厢情愿能够决定的，是吧？
 
@@ -35,10 +33,8 @@
 所以，我要认为这本 “书” 的最重要工作是：
 
 > 为读者解读清楚地图上的 “图例”，从此之后读者在任何需要的时候能够彻底读懂地图。
-> 为读者解读清楚地图上的 “图例”，从此之后读者在任何需要的时候能够彻底读懂地图。
 
-在阅读官方文档的时候，很多人在 [The Python Tutorial](https://docs.python.org/3/tutorial/index.html) 上就已经觉得吃力了…… 如果到了 [Standard Libraries](https://docs.python.org/3/library/index.html) 和 [Language References](https://docs.python.org/3/reference/index.html) 的部分，就基本上完全放弃了，比如，以下这段摘自 [string —— Common string operations](https://docs.python.org/3/library/string.html)：
-在阅读官方文档的时候，很多人在 [The Python Tutorial](https://docs.python.org/3/tutorial/index.html) 上就已经觉得吃力了…… 如果到了 [Standard Libraries](https://docs.python.org/3/library/index.html) 和 [Language References](https://docs.python.org/3/reference/index.html) 的部分，就基本上完全放弃了，比如，以下这段摘自 [string —— Common string operations](https://docs.python.org/3/library/string.html)：
+在阅读官方文档的时候，很多人在 [The Python Tutorial](https://docs.python.org/3/tutorial/index.html) 上就已经觉得吃力了…… 如果到了 [Standard Libraries](https://docs.python.org/3/library/index.html) 和 [Language References](https://docs.python.org/3/reference/index.html) 的部分，就基本上完全放弃了，比如，以下这段摘自 [string — Common string operations](https://docs.python.org/3/library/string.html)：
 
 > Format Specification Mini-Language
 > ...
@@ -63,6 +59,7 @@ type            ::=  "b" | "c" | "d" | "e" | "E" | "f" | "F" | "g" | "G" |
 其实吧，真的不难的 —— 它就是语法描述的方法。
 
 比如，什么是符合语法的整数（Integer）呢？符合以下语法描述的是整数（使用 Python 的 EBNF）：
+
 ```
 integer ::= [sign] digit +
 sign    ::= "+" | "-"
@@ -80,7 +77,6 @@ digit   ::=  "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
 
 于是：
 
-> 1. `interger` 定义是：由 “可选的 `sign`” 和 “一个或者多个 `digit` 的集合” 构成 —— 第一行末尾那个 `+` 的作用和正则表达式里的 `+` 一样；
 > 1. `interger` 定义是：由 “可选的 `sign`” 和 “一个或者多个 `digit` 的集合” 构成 —— 第一行末尾那个 `+` 的作用和正则表达式里的 `+` 一样；
 > 2. `sign` 的定义是什么呢？要么是 `+` 要么是 `-；`
 > 3. `digit` 的定义是什么呢？从 `"0"` 到 `"9"` 中的任何一个值…… 
@@ -103,6 +99,7 @@ Python 对 BNF 的拓展，借鉴了正则表达式<a href='#fn1' name='fn1b'><s
 > * ` + ` 表示一个或者多个…… 
 
 —— 用冒号 `:` 替代了 `::=`，用单引号 `''` 替代了双引号 `""`，而尖括号 `<>` 干脆不用了：
+
 ``` python
 # Grammar for Python
 
@@ -111,14 +108,8 @@ Python 对 BNF 的拓展，借鉴了正则表达式<a href='#fn1' name='fn1b'><s
 
 # Start symbols for the grammar:
 #       single_input is a single interactive statement;
-# single_input is a single interactive statement;
-# single_input is a single interactive statement;
 #       file_input is a module or sequence of commands read from an input file;
-# file_input is a module or sequence of commands read from an input file;
-# file_input is a module or sequence of commands read from an input file;
 #       eval_input is the input for the eval() functions.
-# eval_input is the input for the eval() functions.
-# eval_input is the input for the eval() functions.
 # NB: compound_stmt in single_input is followed by extra NEWLINE!
 single_input: NEWLINE | simple_stmt | compound_stmt NEWLINE
 file_input: (NEWLINE | stmt)* ENDMARKER
@@ -261,7 +252,9 @@ encoding_decl: NAME
 yield_expr: 'yield' [yield_arg]
 yield_arg: 'from' test | testlist
 ```
+
 现在你已经能读懂 BNF 了，那么，可以再读读用 BNF 描述的 Regex 语法<a href='#fn2' name='fn2b'><sup>[2]</sup></a>，就当复习了 —— 很短的：
+
 ```html
 BNF grammar for Perl-style regular expressions
 
@@ -281,9 +274,10 @@ BNF grammar for Perl-style regular expressions
 <positive-set>   ::=  "[" <set-items> "]"
 <negative-set>   ::=  "[^" <set-items> "]"
 <set-items>      ::=  <set-item> | <set-item> <set-items>
-<set-items>      ::=  <range> | <char>
+<set-item>       ::=  <range> | <char>
 <range>          ::=  <char> "-" <char>
 ```
+
 真的没原来以为得那么神秘，是不？<a href='#fn3' name='fn3b'><sup>[3]</sup></a>
 
 都学到这儿了…… 顺带再自学个东西吧。
