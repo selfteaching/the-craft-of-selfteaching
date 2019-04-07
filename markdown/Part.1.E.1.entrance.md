@@ -79,6 +79,7 @@ InteractiveShell.ast_node_interactivity = "all"
 ```
 
     True
+    Flase    
 
 `1 == 2`，用自然语言描述就是 “_1 等于 2 吗？_” —— 它的布尔值当然是 `False`。
 
