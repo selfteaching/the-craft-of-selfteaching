@@ -5,11 +5,11 @@
 
 编程如此，自学编程更是如此。有时，遇到复杂度高一点的知识，连快速入门都不一定是很容易的事情。
 
-所以，这一章的名称，特意从 “*入门*” 改成了 “**入口**” —— 它的作用是给你 “指一个入口”，至于你能否从那个入口进去，是你自己的事了…… 
+所以，这一章的名称，特意从 “*入门*” 改成了 “**入口**” —— 它的作用是给你 “指一个入口”，至于你能否从那个入口进去，是你自己的事了……
 
 不过，有一点不一样的地方，我给你指出的入口，跟别的编程入门书籍不一样 —— 它们几乎无一例外都是从一个 “Hello World!” 程序开始的…… 而我们呢？
 
-让我们从认识一个人开始罢…… 
+让我们从认识一个人开始罢……
 
 ## 乔治・布尔
 
@@ -25,9 +25,9 @@
 
 1849 年，乔治・布尔 34 岁，被当年刚刚成立的女皇学院（Queen's College）聘请为第一位数学教授。随后他开始写那本最著名的书，[AN INVESTIGATION OF THE LAWS OF THOUGHT](http://www.gutenberg.org/ebooks/15114)。他在前言里写到：
 
-> “The design of the following treatise is to investigate the fundamental laws of those operations of the mind by which reasoning is performed; to give expression to them in the symbolical language of a Calculus, and upon this foundation to establish the science of Logic and construct its method; …” 
+> “The design of the following treatise is to investigate the fundamental laws of those operations of the mind by which reasoning is performed; to give expression to them in the symbolical language of a Calculus, and upon this foundation to establish the science of Logic and construct its method; …”
 >
-> “本书论述的是，探索心智推理的基本规律；用微积分的符号语言进行表达，并在此基础上建立逻辑和构建方法的科学……” 
+> “本书论述的是，探索心智推理的基本规律；用微积分的符号语言进行表达，并在此基础上建立逻辑和构建方法的科学……”
 
 在大学任职期间，乔治・布尔写了两本教科书，一本讲微分方程，另外一本讲差分方程，而前者，[A TREATISE ON DIFFERENTIAL EQUATIONS](https://archive.org/details/atreatiseondiff06boolgoog/page/n7)，直到今天，依然难以超越。
 
@@ -51,7 +51,7 @@ Google Doodle 的寄语是这样的：
 
 从定义上来看，所谓**程序**（Programs）其实一点都不神秘。
 
-因为程序这个东西，不过是按照一定*顺序*完成任务的**流程**（Procedures）。根据定义，日常生活中你做盘蛋炒饭给自己吃，也是完成了一个 “做蛋炒饭” 的程序 —— 你按部就班完成了一系列的步骤，最终做好了一碗蛋炒饭给自己吃 —— 从这个角度望过去，所有的菜谱都是程序…… 
+因为程序这个东西，不过是按照一定*顺序*完成任务的**流程**（Procedures）。根据定义，日常生活中你做盘蛋炒饭给自己吃，也是完成了一个 “做蛋炒饭” 的程序 —— 你按部就班完成了一系列的步骤，最终做好了一碗蛋炒饭给自己吃 —— 从这个角度望过去，所有的菜谱都是程序……
 
 只不过，菜谱这种程序，编写者是人，执行者还是人；而我们即将要学会写的程序，编写者是人，执行者是计算机 —— 当然，菜谱用自然语言编写，计算机程序由程序员用编程语言编写。
 
@@ -72,14 +72,14 @@ Google Doodle 的寄语是这样的：
 ```python
 from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = "all"
-# 请暂时忽略以上两行…… 
+# 请暂时忽略以上两行……
 
 1 == 2
 1 != 2
 ```
 
+    False
     True
-    Flase    
 
 `1 == 2`，用自然语言描述就是 “_1 等于 2 吗？_” —— 它的布尔值当然是 `False`。
 
@@ -143,7 +143,7 @@ print('(not False) yields:',  not False)
     (not True) yields: False
     (not False) yields: True
 
-千万不要误以为布尔运算是*理科生*才必须会、才能用得上的东西…… 文理艺分科是中国的特殊分类方式，真挺害人的。比如，设计师们在计算机上创作图像的时候，也要频繁使用*或与非*的布尔运算操作才能完成各种图案的拼接…… 抽空看看这个网页：[Boolean Operations used by Sketch App](https://sketchapp.com/docs/shapes/boolean-operations/) —— 这类设计软件，到最后是每个人都用得上的东西呢。另，难道艺术生不需要学习文科或者理科？—— 事实上，他们也有文化课…… 
+千万不要误以为布尔运算是*理科生*才必须会、才能用得上的东西…… 文理艺分科是中国的特殊分类方式，真挺害人的。比如，设计师们在计算机上创作图像的时候，也要频繁使用*或与非*的布尔运算操作才能完成各种图案的拼接…… 抽空看看这个网页：[Boolean Operations used by Sketch App](https://sketchapp.com/docs/shapes/boolean-operations/) —— 这类设计软件，到最后是每个人都用得上的东西呢。另，难道艺术生不需要学习文科或者理科？—— 事实上，他们也有文化课……
 
 ![](../images/operations@2x.png)
 
@@ -215,7 +215,7 @@ for i in range(10): # 对于 0～9 中的所有数字都带入 i 这个变量，
         print(i)    #         向屏幕输出 i 这个变量中所保存的值
 ```
 
-就算你让它打印出一百亿以内的奇数，它也毫不含糊 —— 你只需要在 `range()` 这个函数的括号里写上一个那么大的整数就行…… 
+就算你让它打印出一百亿以内的奇数，它也毫不含糊 —— 你只需要在 `range()` 这个函数的括号里写上一个那么大的整数就行……
 
 让它干一点稍微复杂的事吧，比如，我们想要打印出 `100` 以内所有的*质数*（Primes）。
 
@@ -271,7 +271,7 @@ for n in range(2, 100): #range(2,100)表示含左侧 2，不含右侧 100，是�
 
 以上的**算法**可以改进（程序员们经常用的词汇是 “*优化*”）<a id='plusone'></a>：
 
-> 从 `2` 作为除数开始试，试到 $\sqrt{n}$ 之后的一个整数就可以了…… 
+> 从 `2` 作为除数开始试，试到 $\sqrt{n}$ 之后的一个整数就可以了……
 
 ```python
 for n in range(2, 100):
@@ -344,16 +344,16 @@ a
 
 > * 它有输入 —— 即，它能接收外部通过参数传递的值；
 > * 它有处理 —— 即，内部有能够完成某一特定任务的代码；尤其是，它可以根据 “输入” 得到 “输出”；
-> * 它有输出 —— 即，它能向外部输送返回值…… 
+> * 它有输出 —— 即，它能向外部输送返回值……
 
-被调用的函数，也可以被理解为**子程序**（Sub-Program）—— 主程序执行到函数调用时，就开始执行实现函数的那些代码，而后再返回主程序…… 
+被调用的函数，也可以被理解为**子程序**（Sub-Program）—— 主程序执行到函数调用时，就开始执行实现函数的那些代码，而后再返回主程序……
 
 我们可以把判断一个数字是否是质数的过程，写成函数，以便将来在多处用得着的时候，随时可以调用它：
 
 ```python
 def is_prime(n):            # 定义 is_prime()，接收一个参数
-    if n < 2:              # 开始使用接收到的那个参数（值）开始计算…… 
-        return False       # 不再是返回给人，而是返回给调用它的代码…… 
+    if n < 2:              # 开始使用接收到的那个参数（值）开始计算……
+        return False       # 不再是返回给人，而是返回给调用它的代码……
     if n == 2:
         return True
     for m in range(2, int(n**0.5)+1):
@@ -431,7 +431,7 @@ for i in range(10):
 
 看到 `x = x + 1` 依然会困惑…… 之所以困惑，是因为你还没有习惯把单等号 `=` 当作赋值符号，把双等号 `==` 当作逻辑判断的 “等于”。
 
-`x = x + 1` 的意思是说，把表达式 `x + 1` 的值保存到变量 `x` 中去 —— 如此这般之后，`x` 这个变量中所保存的就不再是原来的值了…… 
+`x = x + 1` 的意思是说，把表达式 `x + 1` 的值保存到变量 `x` 中去 —— 如此这般之后，`x` 这个变量中所保存的就不再是原来的值了……
 
 ```python
 x = 0
@@ -467,7 +467,7 @@ print(x)
 
 这些概念，基本上都是**独立于**某一种编程语言的（Language Independent），无论将来你学习哪一种编程语言，不管是 C++，还是 JavaScript，抑或是 Golang，这些概念都在那里。
 
-学会一门编程语言之后，再学其它的就会容易很多 —— 而且，当你学会了其中一个之后，早晚你会顺手学其它的，为了更高效使用微软办公套件，你可能会花上一两天时间研究一下 VBA；为了给自己做个网页什么的，你会顺手学会 JavaScript；为了修改某个编辑器插件，你发现人家是用 Ruby 写的，大致读读官方文档，你就可以下手用 Ruby 语言了；为了搞搞数据可视化，你会发现不学会 R 语言有点不方便…… 
+学会一门编程语言之后，再学其它的就会容易很多 —— 而且，当你学会了其中一个之后，早晚你会顺手学其它的，为了更高效使用微软办公套件，你可能会花上一两天时间研究一下 VBA；为了给自己做个网页什么的，你会顺手学会 JavaScript；为了修改某个编辑器插件，你发现人家是用 Ruby 写的，大致读读官方文档，你就可以下手用 Ruby 语言了；为了搞搞数据可视化，你会发现不学会 R 语言有点不方便……
 
 你把这些概念装在脑子里，而后就会发现几乎所有的编程入门教学书籍结构都差不多是由这些概念构成的。因为，所有的编程语言基础都一样，所有的编程语言都是我们指挥计算机的工具。无论怎样，反正都需要输入输出，无论什么语言，不可能没有布尔运算，不可能没有流程控制，不可能没有函数，只要是高级语言，就都需要编译器…… 所以，掌握这些基本概念，是将来持续学习的基础。
 

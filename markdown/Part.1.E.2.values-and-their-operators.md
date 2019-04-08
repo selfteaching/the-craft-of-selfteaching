@@ -12,8 +12,8 @@
 
 ```python
 def is_prime(n):            # 定义 is_prime()，接收一个参数
-    if n < 2:              # 开始使用接收到的那个参数（值）开始计算…… 
-        return False       # 不再是返回给人，而是返回给调用它的代码…… 
+    if n < 2:              # 开始使用接收到的那个参数（值）开始计算……
+        return False       # 不再是返回给人，而是返回给调用它的代码……
     if n == 2:
         return True
     for m in range(2, int(n**0.5)+1):
@@ -37,9 +37,9 @@ for i in range(80, 110):
 
 `if...`，`for...` 在控制流程：在什么情况下运算什么，在什么情况下重复运算什么；
 
-第 13 行 `is_prime()` 这个函数的调用，也是在控制流程 —— 所以我们可以**把函数看作是 “子程序”**；
+第 13 行 `is_prime()` 这个函数的调用，也是在控制流程 —— 所以我们可以**把函数看作是 “子程序” **；
 
-一旦这个函数被调用，流程就转向开始执行在第 1 行中定义的 `is_prime()` 函数内部的代码，而这段代码内部还是*计算*和*流程控制*，决定一个返回值 —— 返回值是布尔值；再回到第 13 行，将返回值交给 `if` 判断，决定是否执行第 14 行…… 
+一旦这个函数被调用，流程就转向开始执行在第 1 行中定义的 `is_prime()` 函数内部的代码，而这段代码内部还是*计算*和*流程控制*，决定一个返回值 —— 返回值是布尔值；再回到第 13 行，将返回值交给 `if` 判断，决定是否执行第 14 行……
 
 而计算机这种可编程设备之所以可以做流程控制，是因为它可以做**布尔运算**，即，它可以*对布尔值*进行*操作*，而后将布尔值交给*分支*和*循环*语句，构成了程序中的流程控制。
 
@@ -102,9 +102,7 @@ float(int(abs(-3.14159)))
 ```
 
     3.14159
-
     3
-
     3.0
 
 ## 值的类型
@@ -130,16 +128,16 @@ InteractiveShell.ast_node_interactivity = "all"
 ```
 
     20.0
-
+    
     ---------------------------------------------------------------------------
-
+    
     TypeError                                 Traceback (most recent call last)
-
+    
     <ipython-input-18-e922b7565e53> in <module>
           3
           4 11 + 10 - 9 * 8 / 7 // 6 % 5
     ----> 5 '3.14' + 3                  # 这一句会报错
-
+    
     TypeError: can only concatenate str (not "int") to str
 
 所以，在不得不对不同类型的值进行运算之前，总是要事先做 **Type Casting**（类型转换）。比如，
@@ -169,21 +167,13 @@ type({'a':1, 'b':2, 'c':3})
 ```
 
     int
-
     float
-
     str
-
     bool
-
     range
-
     list
-
     tuple
-
     set
-
     dict
 
 ## 操作符
@@ -258,11 +248,8 @@ InteractiveShell.ast_node_interactivity = "all"
 ```
 
     'AwesomePython'
-
     'AwesomePython'
-
     'Python, Awesome! Awesome! Awesome! '
-
     False
 
 字符之间，字符串之间，除了 `==` 和 `!=` 之外，也都可以被逻辑操作符 `<`、`<=`、`>`、`>=` 运算：
@@ -285,9 +272,7 @@ ord('a')
 ```
 
     False
-
     65
-
     97
 
 当字符串被比较的时候，将从两个字符串各自的第一个字符开始逐个比较，“一旦决出胜负马上停止”：
@@ -329,9 +314,7 @@ a_list > b_list
 ```
 
     False
-
     True
-
     True
 
 ## 更复杂的运算
@@ -372,7 +355,6 @@ divmod(11, 3)
 ```
 
     3.1415926
-
     (3, 2)
 
 这些内建函数也依然只能完成 “基本操作”，比如，对于数字，我们想计算三角函数的话，内建函数就帮不上忙了，于是，我们需要调用标准库（Standard Library）中的 math 模块（Module）：
@@ -469,9 +451,7 @@ c
 ```
 
     [1, 2, 3, 4, 5, 6, 7]
-
     {1, 2, 3, 4, 5, 6, 7}
-
     [1, 2, 3, 4, 5, 6, 7]
 
 ## 总结
@@ -509,6 +489,6 @@ c
 > * Python 的内建函数：https://docs.python.org/3/library/functions.html
 > * Python 的标准数据类型：https://docs.python.org/3/library/stdtypes.html
 
-另外，其实所有的操作符，在 Python 内部也是调用函数完成的…… 
+另外，其实所有的操作符，在 Python 内部也是调用函数完成的……
 
 > https://docs.python.org/3.7/library/operator.html

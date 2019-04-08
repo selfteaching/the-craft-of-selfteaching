@@ -1,7 +1,7 @@
 
 # 类 —— Python 的实现
 
-既然已经在不碰代码的情况下，把 OOP 中的主要概念梳理清楚了，以下的行文中，那些概念就直接用英文罢，省得理解上还得再绕个弯…… 
+既然已经在不碰代码的情况下，把 OOP 中的主要概念梳理清楚了，以下的行文中，那些概念就直接用英文罢，省得理解上还得再绕个弯……
 
 ## Defining Class
 
@@ -38,21 +38,13 @@ type(g.say_hi)
 ```
 
     'Clay'
-
     2019
-
-    <bound method Golem.say_hi of <__main__.Golem object at 0x107bac278>>
-
+    <bound method Golem.say_hi of <__main__.Golem object at 0x10430e7b8>>
     Hi!
-
     __main__.Golem
-
     str
-
     int
-
     method
-
     method
 
 以上，我们创建了一个 Class:
@@ -78,12 +70,12 @@ class Golem:
 当我们用 `g = Golem('Clay')` 这一句创建了一个 Golam 的 Instance 的时候，以下一连串的事情发生了：
 
 > * `g` 从此之后就是一个根据 Golem 这个 Class 创建的 Instance，对使用者来说，它就是个 Object；
-> * 因为 Golem 这个 Class 的代码中有 `__init__()`，所以，当 `g` 被创建的时候，`g` 就需要被初始化…… 
+> * 因为 Golem 这个 Class 的代码中有 `__init__()`，所以，当 `g` 被创建的时候，`g` 就需要被初始化……
 > * 在 `g` 所在的变量目录中，出现了一个叫做 `self` 的用来指代 `g` 本身的变量；
 > * self.name 接收了一个参数，`'Clay'`，并将其保存了下来；
-> * 生成了一个叫做 `self.built_year` 的变量，其中保存的是 `g` 这个 Object 被创建时的年份…… 
+> * 生成了一个叫做 `self.built_year` 的变量，其中保存的是 `g` 这个 Object 被创建时的年份……
 
-对了，Golem 和 Robot 一样，都是机器人的意思；Golem 的本义来自于犹太神话，一个被赋予了生命的泥人…… 
+对了，Golem 和 Robot 一样，都是机器人的意思；Golem 的本义来自于犹太神话，一个被赋予了生命的泥人……
 
 ## Inheritance
 
@@ -103,12 +95,13 @@ class Golem:
     def say_hi(self):
         print('Hi!')
 
-class Running_Golem(Golem):      # 刚刚就说，这个圆括号另有用途…… 
+class Running_Golem(Golem):      # 刚刚就说，这个圆括号另有用途……
 
     def run(self):
         print("Can't you see? I'm running...")
 
 rg = Running_Golem('Clay')
+
 rg.run
 rg.run()
 rg.name
@@ -116,7 +109,8 @@ rg.built_year
 rg.say_hi()
 ```
 
-    <bound method Running_Golem.run of <__main__.Running_Golem object at 0x106dc1643>>Can't you see? I'm running...
+    <bound method Running_Golem.run of <__main__.Running_Golem object at 0x1068b37b8>>
+    Can't you see? I'm running...
     'Clay'
     2019
     Hi!
@@ -146,7 +140,7 @@ class runningGolem(Golem):
     def run(self):
         print("Can't you see? I'm running...")
 
-    def say_hi(self):                            # 不再使用 Parent Class 中的定义，而是新的…… 
+    def say_hi(self):                            # 不再使用 Parent Class 中的定义，而是新的……
         print('Hey! Nice day, Huh?')
 
 rg = runningGolem('Clay')
@@ -157,14 +151,10 @@ rg.built_year
 rg.say_hi()
 ```
 
-    <bound method runningGolem.run of <__main__.runningGolem object at 0x1056f9358>>
-
+    <bound method runningGolem.run of <__main__.runningGolem object at 0x1068c8128>>
     Can't you see? I'm running...
-
     'Clay'
-
     2019
-
     Hey! Nice day, Huh?
 
 ## Inspecting A Class
@@ -196,7 +186,7 @@ class runningGolem(Golem):
     def run(self):
         print('Can\'t you see? I\'m running...')
 
-    def say_hi(self):                            # 不再使用 Parent Class 中的定义，而是新的…… 
+    def say_hi(self):                            # 不再使用 Parent Class 中的定义，而是新的……
         print('Hey! Nice day, Huh?')
 
 rg = runningGolem('Clay')
@@ -207,7 +197,7 @@ hasattr(rg, 'built_year')
 ```
 
     Help on runningGolem in module __main__ object:
-
+    
     class runningGolem(Golem)
      |  runningGolem(name=None)
      |
@@ -236,7 +226,7 @@ hasattr(rg, 'built_year')
      |
      |  __weakref__
      |      list of weak references to the object (if defined)
-
+    
     ['__class__',
      '__delattr__',
      '__dict__',
@@ -267,9 +257,7 @@ hasattr(rg, 'built_year')
      'name',
      'run',
      'say_hi']
-
     {'name': 'Clay', 'built_year': 2019}
-
     True
 
 ## Scope
@@ -280,7 +268,7 @@ hasattr(rg, 'built_year')
 
 另外，我们还要给机器人设置个使用年限，比如 10 年；
 
-…… 而外部会每隔一段时间，用 `Golem.is_active()` 去检查所有的机器人，所以，不需要外部额外操作，到了年头，它应该能关掉自己。—— 当然，又由于以下代码是简化书写的，核心目的是为了讲解 Scope，所以并没有专门写模拟 10 年后某些机器人自动关闭的情形…… 
+…… 而外部会每隔一段时间，用 `Golem.is_active()` 去检查所有的机器人，所以，不需要外部额外操作，到了年头，它应该能关掉自己。—— 当然，又由于以下代码是简化书写的，核心目的是为了讲解 Scope，所以并没有专门写模拟 10 年后某些机器人自动关闭的情形……
 
 在运行以下代码之前，需要先介绍三个 Python 的内建函数：
 
@@ -335,25 +323,15 @@ g.is_active()
 ```
 
     True
-
     True
-
     False
-
     False
-
     False
-
     1
-
     10
-
     11
-
     10
-
     10
-
     True
 
 如果你试过把第 13 行的 `Golem.population += 1` 改成 `population += 1`，你会被如下信息提醒：
@@ -363,7 +341,7 @@ g.is_active()
 ---> 13         population += 1
 UnboundLocalError: local variable 'population' referenced before assignment
 ```
-—— 本地变量 `population` 尚未赋值，就已经提前被引用…… 为什么会这样呢？因为在你所创建 `g` 之后，马上执行的是 `__init()__` 这个初始化函数，而 `population` 是在这个函数之外定义的…… 
+—— 本地变量 `population` 尚未赋值，就已经提前被引用…… 为什么会这样呢？因为在你所创建 `g` 之后，马上执行的是 `__init()__` 这个初始化函数，而 `population` 是在这个函数之外定义的……
 
 如果你足够细心，你会发现这个版本中，有些变量前面有两个下划线 `__`，比如，`__life_span` 和 `self.__active`。这是 Python 的定义，变量名前面加上一个以上下划线（Underscore）`_` 的话，那么该变量是 “私有变量”（Private Variables），不能被外部引用。而按照 Python 的惯例，我们会使用两个下划线起始，去命名私有变量，如：`__life_span`。你可以回去试试，把所有的 `__life_span` 改成 `_life_span`（即，变量名开头只有一个 `_`，那么，`hasattr(Golem, '_life_span')` 和 `hasattr(g, '_life_span')` 的返回值就都变成了 `True`。
 
@@ -433,8 +411,7 @@ g.population
 g.population()
 ```
 
-    <bound method Golem.population of <__main__.Golem object at 0x1036f5cc0>>
-
+    <bound method Golem.population of <__main__.Golem object at 0x1068da160>>
     1
 
 如果，你希望外部能够像获得 Class 的属性那样，直接写 `g.population`，而不是必须加上一个括号 `g.population()` 传递参数（实际上传递了一个隐含的 `self` 参数），那么可以在 `def population(self):` 之前的一行加上一句 `@property`：
@@ -570,8 +547,10 @@ setattr(Golem, 'population', 10000)
 g.population    # 所以，在很多的情况下，不把数据封装在 Class 内部的话，后面会有很多麻烦。
 ```
 
+    1
+    101
+    101
     Help on class Golem in module __main__:
-
     class Golem(builtins.object)
      |  Golem(name=None)
      |
@@ -596,6 +575,19 @@ g.population    # 所以，在很多的情况下，不把数据封装在 Class �
      |      list of weak references to the object (if defined)
      |
      |  population
-
+    mappingproxy({'__module__': '__main__',
+                  '_Golem__population': 101,
+                  '_Golem__life_span': 10,
+                  '__init__': <function __main__.Golem.__init__(self, name=None)>,
+                  'say_hi': <function __main__.Golem.say_hi(self)>,
+                  'cease': <function __main__.Golem.cease(self)>,
+                  'is_active': <function __main__.Golem.is_active(self)>,
+                  'population': <property at 0x1068f9d68>,
+                  '__dict__': <attribute '__dict__' of 'Golem' objects>,
+                  '__weakref__': <attribute '__weakref__' of 'Golem' objects>,
+                  '__doc__': None})
+    {'name': 'Clay', 'built_year': 2019, '_Golem__active': True}
+    True
+    <property at 0x1068f9d68>
     10000
 
