@@ -29,11 +29,14 @@ ord('a')
 chr(122)
 
 ord('氅')  # 完了，汉字也有你不认识的吧？
-chr(25354) # 这个字估计你也不认识…… 
+chr(25354) # 这个字估计你也不认识……
 
 # ord('Python') # 这一句会报错
 ```
 
+    97
+    'z'
+    27653
     '挊'
 
 ## 字符串的标示
@@ -107,14 +110,12 @@ str(3.1415926)
 ```
 
     3
-
     3.0
-
     '3.1415926'
 
 `input()` 这个内建函数的功能是接收用户的键盘输入，而后将其作为字符串返回。它可以接收一个字符串作为参数，在接收用户键盘输入之前，会把这个参数输出到屏幕，作为给用户的提示语。这个参数是可选参数，直接写 `input()`，即，没有提供参数，那么它在要求用户输入的时候，就没有提示语。
 
-以下代码会报错，因为 `age < 18` 不是合法的逻辑表达式，因为 `age` 是由 `input()` 传递过来的字符串；于是，它不是数字，那么它不可以与数字比较…… 
+以下代码会报错，因为 `age < 18` 不是合法的逻辑表达式，因为 `age` 是由 `input()` 传递过来的字符串；于是，它不是数字，那么它不可以与数字比较……
 
 ```python
 age = input('Please tell me your age: ')
@@ -125,18 +126,18 @@ else:
 ```
 
     Please tell me your age:  19
-
+    
     ---------------------------------------------------------------------------
-
+    
     TypeError                                 Traceback (most recent call last)
-
+    
     <ipython-input-9-0573fe379e83> in <module>
           1 age = input('Please tell me your age: ')
     ----> 2 if age < 18:
           3     print('I can not sell you drinks...')
           4 else:
           5     print('Have a nice drink!')
-
+    
     TypeError: '<' not supported between instances of 'str' and 'int'
 
 要改成这样才可能行：
@@ -153,10 +154,9 @@ else:
 ```
 
     Please tell me your age:  19
-
     Have a nice drink!
 
-**注意**：如果你用来浏览当前 `.ipynb` 文件的是那个桌面 App [Nteract](https://nteract.io/)，它目前不支持 input() 这个函数的调用…… 
+**注意**：如果你用来浏览当前 `.ipynb` 文件的是那个桌面 App [Nteract](https://nteract.io/)，它目前不支持 input() 这个函数的调用……
 
 ## 转义符
 
@@ -200,14 +200,12 @@ InteractiveShell.ast_node_interactivity = "all"
 'He said, it\'s fine.'
 # 要么你这么写：
 "He said, it's fine."
-# 要么，不管用单引号还是双引号标示字符串，都习惯于用 \' 和 \" 书写属于字符串内部的引号…… 
+# 要么，不管用单引号还是双引号标示字符串，都习惯于用 \' 和 \" 书写属于字符串内部的引号……
 "He said, it\'s fine."
 ```
 
     "He said, it's fine."
-
     "He said, it's fine."
-
     "He said, it's fine."
 
 转义符号 `\` 的另外两个常用形式是和 `t`、`n` 连起来用，`\t` 代表制表符（就是用 TAB `⇥` 键敲出来的东西），`\n` 代表换行符（就是用 Enter `⏎` 敲出来的东西）。
@@ -291,7 +289,7 @@ for char in s:
     4 o
     5 n
 
-对于有序容器中的元素 —— 字符串就是字符的有序容器 —— 由于它们是有索引的，所以我们可以根据索引提取容器中的值，你可以把 `[]` 当作是有序容器的操作符之一，我们姑且将其称为 “_索引操作符_”。注意以下代码第 3 行中，`s` 后面的 `[]`，以及里面的变量 `i`：
+对于有序容器中的元素 —— 字符串就是字符的有序容器 —— 由于它们是有索引的，所以我们可以根据索引提取容器中的值，你可以把 `[]` 当作是有序容器的操作符之一，我们姑且将其称为 “*索引操作符*”。注意以下代码第 3 行中，`s` 后面的 `[]`，以及里面的变量 `i`：
 
 ```python
 s = 'Python'
@@ -310,13 +308,13 @@ for i in s:
     o
     n
 
-我们可以使用_索引操作符_根据_索引_**提取**字符串这个_有序容器_中的_一个或多个元素_，即，其中的字符或字符串。这个 “提取” 的动作有个专门的术语，叫做 “Slicing”（切片）。索引操作符 `[]` 中可以有一个、两个或者三个整数参数，如果有两个参数，需要用 `:` 隔开。它最终可以写成以下 4 种形式：
+我们可以使用*索引操作符*根据*索引***提取**字符串这个*有序容器*中的*一个或多个元素*，即，其中的字符或字符串。这个 “提取” 的动作有个专门的术语，叫做 “Slicing”（切片）。索引操作符 `[]` 中可以有一个、两个或者三个整数参数，如果有两个参数，需要用 `:` 隔开。它最终可以写成以下 4 种形式：
 
 > * `s[index]` —— 返回索引值为 `index` 的那个字符
 > * `s[start:]` —— 返回从索引值为 `start` 开始一直到字符串末尾的所有字符
-> * `s[start:stop]` —— 返回从索引值为 `start` 开始一直到索引值为 `stop` 的那个字符_之前_的所有字符
-> * `s[:stop]` —— 返回从字符串开头一直到索引值为 `stop` 的那个字符_之前_的所有字符
-> * `s[start:stop:step]` —— 返回从索引值为 `start` 开始一直到索引值为 `stop` 的那个字符_之前_的，以 `step` 为步长提取的所有字符
+> * `s[start:stop]` —— 返回从索引值为 `start` 开始一直到索引值为 `stop` 的那个字符*之前*的所有字符
+> * `s[:stop]` —— 返回从字符串开头一直到索引值为 `stop` 的那个字符*之前*的所有字符
+> * `s[start:stop:step]` —— 返回从索引值为 `start` 开始一直到索引值为 `stop` 的那个字符*之前*的，以 `step` 为步长提取的所有字符
 
 提醒：无论是 `range(1,2)`，或者 `random.randrange(100, 1000)` 又或者 `s[start:stop]` 都有一个相似的规律，包含左侧的 `1`, `100`, `start`，不包含右侧的 `2`, `1000`, `stop`。
 
@@ -333,13 +331,9 @@ s[1:5:2]
 ```
 
     'y'
-
     'thon'
-
     'tho'
-
     'Pytho'
-
     'yh'
 
 ## 处理字符串的内建函数
@@ -363,28 +357,20 @@ print(s*3)
 ```
 
     10
-
     9
-
     13
-
     'A'
-
     请照抄一遍这个数字 3.14:  3.14
-
     3
-
     28.26
-
     4
-
     3.143.143.14
 
 ## 处理字符串的 Method
 
 在 Python 中，字符串是一个**对象** —— 更准确地讲，是 str 类（`Class str`）的对象。
 
-第一部分尚未读完的你，暂时不用了解对象究竟是什么；只需要知道的是，一个对象的内部有很多函数…… 这些写在对象内部的函数，有个专门的名称，类的**方法**（Method）。问题在于，在讲解编程的内容里，“方法” 这个词（比如，处理数值的_方法_是……）随处可见；所以，**为了避免歧义**，以后的文字里，提到 “类的方法” 的时候，直接用 **Method** 这个英文单词…… 
+第一部分尚未读完的你，暂时不用了解对象究竟是什么；只需要知道的是，一个对象的内部有很多函数…… 这些写在对象内部的函数，有个专门的名称，类的**方法**（Method）。问题在于，在讲解编程的内容里，“方法” 这个词（比如，处理数值的*方法*是……）随处可见；所以，**为了避免歧义**，以后的文字里，提到 “类的方法” 的时候，直接用 **Method** 这个英文单词……
 
 字符串有很多可以调用的 Methods。以下介绍的 `str` Methods，在官方文档 "[Text Sequence Type](https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str)" 中都可以找到。
 
@@ -412,7 +398,7 @@ _.lower()
 ```
 
     'NOW IS BETTER THAN NEVER.'
-
+    
     'now is better than never.'
 
 ```python
@@ -423,7 +409,7 @@ InteractiveShell.ast_node_interactivity = "all"
 
 'ß'.casefold()           # 德语字符中，大写 ß 的小写形式是 ss
 len('ß'.casefold())
-'ß'.lower()              # lower() 对这类字符无能为力…… 
+'ß'.lower()              # lower() 对这类字符无能为力……
 len('ß'.lower())
 # casefold
 '\u0132'                # Ĳ 这个字符的 Unicode 编码
@@ -437,19 +423,12 @@ len('\u0132'.casefold())
 ```
 
     'ss'
-
     2
-
     'ß'
-
     1
-
     'Ĳ'
-
     'ĳ'
-
     'ĳ'
-
     1
 
 ```python
@@ -462,7 +441,6 @@ s.title() # 每个单词首字母大写
 ```
 
     'Now is better than never.'
-
     'Now Is Better Than Never.'
 
 ```python
@@ -473,9 +451,7 @@ s.title().swapcase()
 ```
 
     'nOW IS BETTER THAN NEVER.'
-
     'Now Is Better Than Never.'
-
     'nOW iS bETTER tHAN nEVER.'
 
 另外，还有个 `str.encode()` 在处理非英文字符串（比如中文）的时候，经常会用到：
@@ -526,9 +502,7 @@ s.lower().count('mp', 10, 30)
 ```
 
     4
-
     3
-
     1
 
 以下是 `str` 的搜索与替换的 Methods：`str.find()`, `str.rfind()`, `str.index()` 的示例：
@@ -566,28 +540,19 @@ print()
 ```
 
     Example of str.find():
-
+    
     2
-
     24
-
     -1
-
     Example of str.rfind():
-
     56
-
     56
-
     -1
-
     Example of str.index():
-
     2
-
     56
 
-`str.startswith()` 和 `str.endswith()` 是用来判断一个_字符串_是否以某个_子字符串_起始或者结束的：
+`str.startswith()` 和 `str.endswith()` 是用来判断一个*字符串*是否以某个*子字符串*起始或者结束的：
 
 ```python
 s = """Simple is better than complex.
@@ -647,7 +612,7 @@ print(s.lower().replace('mp', '[ ]', 2))
 ```
 
     s.lower().replace('mp', '[ ]', 2):
-
+    
     si[ ]le is better than co[ ]lex.
     complex is better than complicated.
 
@@ -668,7 +633,6 @@ s.expandtabs(2)
 ```
 
     "Special cases   aren't  special enough  to      break   the     rules."
-
     "Special cases aren't  special enough  to  break the rules."
 
 ### 去除子字符
@@ -687,7 +651,7 @@ s.strip()
 ```
 
     '\r \t Simple is better than complex.    \t \n'
-
+    
     'Simple is better than complex.'
 
 但是，如果给定了一个字符串作为参数，那么参数字符串中的所有字母都会被当做需要从首尾剔除的对象：
@@ -699,13 +663,11 @@ InteractiveShell.ast_node_interactivity = "all"
 s = "Simple is better than complex."
 s
 s.strip('Six.p')    # p 全部处理完之后，p 并不在首尾，所以原字符串中的 p 字母不受影响；
-s.strip('pSix.mle') # 这一次，首尾的 p 被处理了…… 参数中的字符顺序对结果没有影响，换成 Sipx.mle 也一样…… 
+s.strip('pSix.mle') # 这一次，首尾的 p 被处理了…… 参数中的字符顺序对结果没有影响，换成 Sipx.mle 也一样……
 ```
 
     'Simple is better than complex.'
-
     'mple is better than comple'
-
     ' is better than co'
 
 还可以只对左侧处理，`str.lstrip()` 或者只对右侧处理，`str.rstrip()`
@@ -718,13 +680,11 @@ InteractiveShell.ast_node_interactivity = "all"
 s = "Simple is better than complex."
 s
 s.lstrip('Six.p')    # p 全部处理完之后，p 并不在首部，所以原字符串中的 p 字母不受影响；
-s.lstrip('pSix.mle') # 这一次，首部的 p 被处理了…… 参数中的字符顺序对结果没有影响，换成 Sipx.mle 也一样…… 
+s.lstrip('pSix.mle') # 这一次，首部的 p 被处理了…… 参数中的字符顺序对结果没有影响，换成 Sipx.mle 也一样……
 ```
 
     'Simple is better than complex.'
-
     'mple is better than complex.'
-
     ' is better than complex.'
 
 ```python
@@ -735,13 +695,11 @@ InteractiveShell.ast_node_interactivity = "all"
 s = "Simple is better than complex."
 s
 s.rstrip('Six.p')    # p 全部处理完之后，p 并不在尾部，所以原字符串中的 p 字母不受影响；
-s.rstrip('pSix.mle') # 这一次，尾部的 p 被处理了…… 参数中的字符顺序对结果没有影响，换成 Sipx.mle 也一样…… 
+s.rstrip('pSix.mle') # 这一次，尾部的 p 被处理了…… 参数中的字符顺序对结果没有影响，换成 Sipx.mle 也一样……
 ```
 
     'Simple is better than complex.'
-
     'Simple is better than comple'
-
     'Simple is better than co'
 
 ### 拆分字符串
@@ -779,7 +737,7 @@ s.splitlines()    # 注意输出结果前后的方括号，[]，表示这个返�
 ```
 
     'Name,Age,Location\nJohn,18,New York\nMike,22,San Francisco\nJanny,25,Miami\nSunny,21,Shanghai'
-
+    
     ['Name,Age,Location',
      'John,18,New York',
      'Mike,22,San Francisco',
@@ -813,17 +771,11 @@ r.split(sep=',', maxsplit=-1) # 默认值是 -1，拆分全部
 ```
 
     'Mike,22,San Francisco'
-
     ['Mike,22,San', 'Francisco']
-
     ['Mike', '22', 'San Francisco']
-
     ['Mike', '22', 'San Francisco']
-
     ['Mike', '22,San Francisco']
-
     ['Mike,22,San Francisco']
-
     ['Mike', '22', 'San Francisco']
 
 ### 拼接字符串
@@ -867,13 +819,13 @@ s.title().rjust(60, '.')
 ```
 
     '                Sparse Is Better Than Dense!                '
-
+    
     '================Sparse Is Better Than Dense!================'
-
+    
     'Sparse Is Better Than Dense!'
-
+    
     '                                Sparse Is Better Than Dense!'
-
+    
     '................................Sparse Is Better Than Dense!'
 
 将字符串靠左或者靠右对齐放置：
@@ -881,7 +833,7 @@ s.title().rjust(60, '.')
 > * `str.ljust(width)`
 > * `str.rjust(width)`
 
-另外，还有个字符串 Method 是，将字符串转换成左侧由 `0` 填充的指定长度字符串。例如，这在批量生成文件名的时候就很有用…… 
+另外，还有个字符串 Method 是，将字符串转换成左侧由 `0` 填充的指定长度字符串。例如，这在批量生成文件名的时候就很有用……
 
 ```python
 for i in range(1, 11):
@@ -926,7 +878,7 @@ InteractiveShell.ast_node_interactivity = "all"
 name = 'John'
 age = 25
 '{} is {} years old.'.format(name, age)
-# 不写占位符索引就默认每个占位符的索引从第一个开始是 0, 1, 2 ... (占位符数量 - 1)
+# 不写占位符索引就默认每个占位符的索引从第一个开始是 0, 1, 2 ...（占位符数量 - 1)
 # '{} {}'.format(a, b) 和 '{0} {1}'.format(a, b) 是一样的。
 
 # '{0} is {2} years old.'.format(name, age)
@@ -936,16 +888,14 @@ age = 25
 "Are you {0}? :-{{+}}".format(name)
 
 # "%s is %d years old." % (name, age)
-# 上一行这是兼容 Python 2 的老式写法，可以从此忽略…… 
+# 上一行这是兼容 Python 2 的老式写法，可以从此忽略……
 
-# str.fomrat() 里可以直接写表达式…… 
+# str.fomrat() 里可以直接写表达式……
 '{} is a grown up? {}'.format(name, age >= 18)
 ```
 
     'John is 25 years old.'
-
     'Are you John? :-{+}'
-
     'John is a grown up? True'
 
 #### 使用 f-string
@@ -966,7 +916,6 @@ f'{name} is a grown up? {age >= 18}'
 ```
 
     'John is 25 years old.'
-
     'John is a grown up? True'
 
 只不过，str.format() 的用法中，索引顺序可以任意指定，于是相对更为灵活，下面的例子只是为了演示参数位置可以任意指定：
@@ -1052,10 +1001,10 @@ print("'for'.isidentifier():", \
 
 不过，若是自己动手整理成一个表格，总结归纳一下这一章节的内容，你就会发现其实没多繁杂，总之就还是那点事，怎么处理字符串？用操作符、用内建函数，用 Methods。只不过，字符串的操作符和数值的操作符不一样 —— 类型不一样，操作符就当然不一样了么！—— 最不一样的地方是，字符串是有序容器的一种，所以，它有索引，所以可以根据索引提取…… 至于剩下的么，就是很常规的了，用函数处理，用 Methods 处理，只不过，Methods 相对多了一点而已。
 
-整理成表格之后，就会发现想要全部记住其实并没多难…… 
+整理成表格之后，就会发现想要全部记住其实并没多难……
 
 > * 为了表格在一屏中可以正确显示，本来应该规规矩矩写 `str.xxx`，但写成了 `s.xxx`……
-> * 另外，操作那一行，为了分类记忆方便，把 `len()` 和 `s.join()` 也放进去了…… 
+> * 另外，操作那一行，为了分类记忆方便，把 `len()` 和 `s.join()` 也放进去了……
 
 ![](../images/string-concepts.png)
 
@@ -1086,12 +1035,12 @@ Python 针对数字常用的操作符和内建函数，按照**优先级**从低
 
 Python 用来处理数值的内建函数：
 
-> * `abs(n)` 函数返回参数 `n` 的_绝对值_；
-> * `int(n)` 用来将_浮点数字_ `n` 换成_整数_；
-> * `float(n)` 用来将_整数_ `n` 转换成_浮点数字_；
-> * `divmod(n, m)` 用来计算  `n`  除以  `m`，返回两个整数，一个是*商*，另外一个是_余_；
-> * `pow(n, m)` 用来做乘方运算，返回 `n` 的 `m` _次方_；
-> * `round(n)` 返回离浮点数字 `n` 最近的那个_整数_。
+> * `abs(n)` 函数返回参数 `n` 的*绝对值*；
+> * `int(n)` 用来将*浮点数字* `n` 换成*整数*；
+> * `float(n)` 用来将*整数* `n` 转换成*浮点数字*；
+> * `divmod(n, m)` 用来计算  `n`  除以  `m`，返回两个整数，一个是*商*，另外一个是*余*；
+> * `pow(n, m)` 用来做乘方运算，返回 `n` 的 `m` *次方*；
+> * `round(n)` 返回离浮点数字 `n` 最近的那个*整数*。
 
 Python 做更为复杂的数学计算的模块（Module）是 math module，参阅：
 

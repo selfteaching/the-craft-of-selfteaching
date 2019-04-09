@@ -41,9 +41,9 @@ type(L)
 ```
 
     str_iterator
-
+    
     tuple_iterator
-
+    
     list_iterator
 
 迭代器如何使用呢？有个 `next()` 函数：
@@ -63,15 +63,10 @@ next(i)
 ```
 
     'P'
-
     'y'
-
     't'
-
     'h'
-
     'o'
-
     'n'
 
 在 `i` 这个迭代器里一共有 6 个元素，所以，`next(i)` 在被调用 6 次之后，就不能再被调用了，一旦再被调用，就会触发 StopIteration 错误。
@@ -105,17 +100,14 @@ type(Counter)
 ```
 
     11
-
     12
-
     13
-
     101
     102
     103
     104
     105
-
+    
     type
 
 这里的重点在于两个函数的存在，`__iter__(self)` 和 `__next__(self)`。
@@ -315,10 +307,9 @@ a_func()
 ```
 
     Hi, I'm a_func!
-
     <function __main__.a_func.<locals>.b_func()>
 
-这次返回的不是调用 `b_func()` 这个函数的执行结果，返回的是 `b_func` 这个_函数本身_。
+这次返回的不是调用 `b_func()` 这个函数的执行结果，返回的是 `b_func` 这个*函数本身*。
 
 ## 装饰器（Decorator）
 
@@ -370,7 +361,6 @@ a_decorator(a_func)
 ```
 
     Hi, I'm a_func!
-
     <function __main__.a_decorator.<locals>.wrapper()>
 
 ### 装饰器操作符
@@ -491,7 +481,7 @@ def an_output():
 
 如果被装饰的函数有参数怎么办？装饰器自身内部又应该怎么写？
 
-这时候，Python 的 `*args` and `**kwargs` 的威力就显现出来了 —— 之前怕麻烦没有通过仔细反复阅读搞定这 “一个星号、两个星号、直接晕倒” 的知识点的人，现在恐怕要吃亏了…… 
+这时候，Python 的 `*args` and `**kwargs` 的威力就显现出来了 —— 之前怕麻烦没有通过仔细反复阅读搞定这 “一个星号、两个星号、直接晕倒” 的知识点的人，现在恐怕要吃亏了……
 
 装饰器函数本身这么写：
 
@@ -516,7 +506,7 @@ print(say_hi('Hello', 'Jack'))
 
     Hello! Jack.
 
-如果我们想在装饰器里对函数名、参数，都做些事情 —— 比如，我们写个 `@trace` 用来告诉用户调用一个函数的时候都发生了什么…… 
+如果我们想在装饰器里对函数名、参数，都做些事情 —— 比如，我们写个 `@trace` 用来告诉用户调用一个函数的时候都发生了什么……
 
 ```python
 def trace(func):

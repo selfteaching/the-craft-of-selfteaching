@@ -5,7 +5,7 @@
 
 ## 模块
 
-我们可以将以下内容保存到一个名为 `mycode.py` 的文件中 —— 这样可以被外部调用的 `.py` 文件，有个专门的称呼，**模块**（Module）—— 于是，其实任何一个 `.py` 文件都可以被称为_模块_：
+我们可以将以下内容保存到一个名为 `mycode.py` 的文件中 —— 这样可以被外部调用的 `.py` 文件，有个专门的称呼，**模块**（Module）—— 于是，其实任何一个 `.py` 文件都可以被称为*模块*：
 
 ```python
 # %load mycode.py
@@ -58,24 +58,24 @@ mycode.say_hi('mike', 'zoe')
 ```
 
     Help on function is_prime in module mycode:
-
+    
     is_prime(n)
         Return a boolean value based upon
         whether the argument n is a prime number.
-
+    
     Help on function say_hi in module mycode:
-
+    
     say_hi(*names, greeting='Hello', capitalized=False)
         Print a string, with a greeting to everyone.
         :param *names: tuple of names to be greeted.
         :param greeting: 'Hello' as default.
         :param capitalized: Whether name should be converted to capitalzed before print. False as default.
         :returns: None
-
+    
     'mycode'
-
+    
     True
-
+    
     Hello, mike!
     Hello, zoe!
 
@@ -150,9 +150,7 @@ sys.builtin_module_names
      'time',
      'xxsubtype',
      'zipimport')
-
     True
-
     False
 
 跟变量名、函数名，不能与关键字重名一样，你的模块名称也最好别与系统内建模块名称重合。
@@ -180,7 +178,7 @@ is_prime(3)
 
     True
 
-注意，如果当前目录中并没有 `mycode.py` 这个文件，那么，`mycode` 会被当作目录名再被尝试一次，如果当前目录内，有个叫做 `mycode` 的目录（或称文件夹），那么，`from mycode import *` 的作用就是把 `mycode` 这个文件夹中的所有 `.py` 文件全部导入…… 
+注意，如果当前目录中并没有 `mycode.py` 这个文件，那么，`mycode` 会被当作目录名再被尝试一次，如果当前目录内，有个叫做 `mycode` 的目录（或称文件夹），那么，`from mycode import *` 的作用就是把 `mycode` 这个文件夹中的所有 `.py` 文件全部导入……
 
 如果我们想要导入 `foo` 这个目录中的 `bar.py` 这个模块文件，那么，可以这么写：
 
@@ -216,7 +214,6 @@ m.say_hi('mike', 'zoe')
 ```
 
     True
-
     Hello, mike!
     Hello, zoe!
 
@@ -231,7 +228,7 @@ import this
 ```
 
     The Zen of Python, by Tim Peters
-
+    
     Beautiful is better than ugly.
     Explicit is better than implicit.
     Simple is better than complex.
@@ -347,12 +344,12 @@ this.s
      'x': 'k',
      'y': 'l',
      'z': 'm'}
-
+    
     "Gur Mra bs Clguba, ol Gvz Crgref\n\nOrnhgvshy vf orggre guna htyl.\nRkcyvpvg vf orggre guna vzcyvpvg.\nFvzcyr vf orggre guna pbzcyrk.\nPbzcyrk vf orggre guna pbzcyvpngrq.\nSyng vf orggre guna arfgrq.\nFcnefr vf orggre guna qrafr.\nErnqnovyvgl pbhagf.\nFcrpvny pnfrf nera'g fcrpvny rabhtu gb oernx gur ehyrf.\nNygubhtu cenpgvpnyvgl orngf chevgl.\nReebef fubhyq arire cnff fvyragyl.\nHayrff rkcyvpvgyl fvyraprq.\nVa gur snpr bs nzovthvgl, ershfr gur grzcgngvba gb thrff.\nGurer fubhyq or bar-- naq cersrenoyl bayl bar --boivbhf jnl gb qb vg.\nNygubhtu gung jnl znl abg or boivbhf ng svefg hayrff lbh'er Qhgpu.\nAbj vf orggre guna arire.\nNygubhtu arire vf bsgra orggre guna *evtug* abj.\nVs gur vzcyrzragngvba vf uneq gb rkcynva, vg'f n onq vqrn.\nVs gur vzcyrzragngvba vf rnfl gb rkcynva, vg znl or n tbbq vqrn.\nAnzrfcnprf ner bar ubaxvat terng vqrn -- yrg'f qb zber bs gubfr!"
 
 试试吧，试试能否独立读懂这个文件里的代码 —— 对初学者来说，还是挺练脑子的呢！
 
-它先是通过一个规则生成了一个密码表，保存在 `d` 这个字典中；而后，将 `s` 这个变量中保存的 “密文” 翻译成了英文…… 
+它先是通过一个规则生成了一个密码表，保存在 `d` 这个字典中；而后，将 `s` 这个变量中保存的 “密文” 翻译成了英文……
 
 或许，你可以试试，看看怎样能写个函数出来，给你一段英文，你可以把它加密成跟它一样的 “密文”？
 
