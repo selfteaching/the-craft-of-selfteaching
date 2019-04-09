@@ -14,6 +14,7 @@ Python 在这方面很用功，把函数的 “产品说明书” 当作语言�
 在函数定义内部，我们可以加上 **Docstring**；将来函数的 “用户” 就可以通过 `help()` 这个内建函数，或者 `.__doc__` 这个 Method 去查看这个 Docstring，即，该函数的 “产品说明书”。
 
 先看一个 Docstring 以及如何查看某个函数的 Docstring 的例子：
+
 ```python
 def is_prime(n):
     """
@@ -30,30 +31,28 @@ def is_prime(n):
     else:
         return True
 
-
 help(is_prime)
 print(is_prime.__doc__)
 is_prime.__doc__
 ```
+
     Help on function is_prime in module __main__:
-    
+
     is_prime(n)
         Return a boolean value based upon
         whether the argument n is a prime number.
-    
-    
+
         Return a boolean value based upon
         whether the argument n is a prime number.
-        
+
     '\n    Return a boolean value based upon\n    whether the argument n is a prime number.\n    '
 
-
-
 Docstring 可以是多行字符串，也可以是单行字符串：
+
 ```python
 def is_prime(n):
     """Return a boolean value based upon whether the argument n is a prime number."""
-    
+
     if n < 2:
         return False
     if n == 2:
@@ -64,22 +63,22 @@ def is_prime(n):
     else:
         return True
 
-
 help(is_prime)
 print(is_prime.__doc__)
 is_prime.__doc__
 ```
+
     Help on function is_prime in module __main__:
-    
+
     is_prime(n)
         Return a boolean value based upon whether the argument n is a prime number.
-    
+
     Return a boolean value based upon whether the argument n is a prime number.
+
     'Return a boolean value based upon whether the argument n is a prime number.'
 
-
-
 Docstring 如若存在，必须在函数定义的内部语句块的开头，也必须与其它语句一样保持相应的缩进（Indention）。Docstring 放在其它地方不起作用：
+
 ```python
 def is_prime(n):
     if n < 2:
@@ -100,12 +99,12 @@ help(is_prime)
 print(is_prime.__doc__)
 is_prime.__doc__
 ```
-    Help on function is_prime in module __main__:
-    
-    is_prime(n)
-    
-    None
 
+    Help on function is_prime in module __main__:
+
+    is_prime(n)
+
+    None
 
 ## 书写 Docstring 的规范
 
@@ -137,6 +136,7 @@ Sphinx 可以从 `.py` 文件里提取所有 Docstring，而后生成完整的 D
 在这里，没办法一下子讲清楚 Sphinx 的使用，尤其是它还用它自己的一种标记语言，reStructureText，文件尾缀使用 `.rst`……
 
 但是，可以看一个例子：
+
 ```python
 class Vehicle(object):
     '''
@@ -148,26 +148,31 @@ class Vehicle(object):
     :ivar arg: This is where we store arg
     :vartype arg: str
     '''
+
     def __init__(self, arg, *args, **kwargs):
         self.arg = arg
+
     def cars(self, distance, destination):
         '''We can't travel a certain distance in vehicles without fuels, so here's the fuels
+
         :param distance: The amount of distance traveled
         :type amount: int
         :param bool destinationReached: Should the fuels be refilled to cover required distance?
         :raises: :class:`RuntimeError`: Out of fuel
+
         :returns: A Car mileage
         :rtype: Cars
-        '''  
+        '''
         pass
 
 help(Vehicle)
 ```
+
     Help on class Vehicle in module __main__:
-    
+
     class Vehicle(builtins.object)
      |  Vehicle(arg, *args, **kwargs)
-     |  
+     |
      |  The Vehicle object contains lots of vehicles
      |  :param arg: The arg is used for ...
      |  :type arg: str
@@ -175,33 +180,31 @@ help(Vehicle)
      |  :param `**kwargs`: The keyword arguments are used for ...
      |  :ivar arg: This is where we store arg
      |  :vartype arg: str
-     |  
+     |
      |  Methods defined here:
-     |  
+     |
      |  __init__(self, arg, *args, **kwargs)
      |      Initialize self.  See help(type(self)) for accurate signature.
-     |  
+     |
      |  cars(self, distance, destination)
      |      We can't travel a certain distance in vehicles without fuels, so here's the fuels
-     |      
+     |
      |      :param distance: The amount of distance traveled
      |      :type amount: int
      |      :param bool destinationReached: Should the fuels be refilled to cover required distance?
      |      :raises: :class:`RuntimeError`: Out of fuel
-     |      
+     |
      |      :returns: A Car mileage
      |      :rtype: Cars
-     |  
+     |
      |  ----------------------------------------------------------------------
      |  Data descriptors defined here:
-     |  
+     |
      |  __dict__
      |      dictionary for instance variables (if defined)
-     |  
+     |
      |  __weakref__
      |      list of weak references to the object (if defined)
-    
-
 
 通过插件，Sphinx 也能支持 Google Style Docstring 和 Numpy Style Docstring。
 
