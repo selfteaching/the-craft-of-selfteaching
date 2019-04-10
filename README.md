@@ -1,6 +1,6 @@
 # the-craft-of-selfteaching
 
-> One has no future if he couldn't teach himself.
+> One has no future if one couldn't teach themself<a href='#fn1' name='fn1b'><sup>[1]</sup></a>.
 
 # 自学是门手艺
 
@@ -10,22 +10,25 @@
 
 特别感谢**霍炬**（[@virushuo](https://github.com/virushuo)）、**洪强宁**（[@hongqn](https://github.com/hongqn)) 两位良师诤友在此书写作过程中给予我的巨大帮助！
 
-![](images/learning-curve-spiral.png)
-
 ```python
-# psudo-code of selfteaching in Python
-def TeachYourSelf(anything):
-    while not create(something):
+# pseudo-code of selfteaching in Python
+
+def teach_yourself(anything):
+    while not create():
         learn()
         practice()
-    return TeachYourSelf(another)
+    return teach_yourself(another)
 
-TeachYourSelf(coding)
+teach_yourself(coding)
 ```
 
-请先行阅读 [T-appendix.jupyter-installation-and-setup](T-appendix.jupyter-installation-and-setup.ipynb) 以便在本地安装 [Jupyterlab](https://github.com/jupyterlab/jupyterlab) 而后用更好的体验阅读本书。
+请先行阅读 [T-appendix.jupyter-installation-and-setup](T-appendix.jupyter-installation-and-setup.ipynb) 以便在本地安装 [Jupyterlab](https://github.com/jupyterlab/jupyterlab) 而后就能用更好的体验阅读本书。
 
 有兴趣帮忙的朋友，请先行阅读 [如何使用 Pull Request 为这本书校对](02.proof-of-work.ipynb)。
+
+2019 年 3 月 23 日，新增 Markdown 版本：
+
+> https://github.com/selfteaching/the-craft-of-selfteaching/tree/master/markdown
 
 ### 目录
 
@@ -42,7 +45,7 @@ TeachYourSelf(coding)
 > - [Part.1.E.5.strings（**字符串**）](Part.1.E.5.strings.ipynb)
 > - [Part.1.E.6.containers（**数据容器**）](Part.1.E.6.containers.ipynb)
 > - [Part.1.E.7.files（**文件**）](Part.1.E.7.files.ipynb)
-> - [Part.1.F.deal-with-forward-references（**如何从容应对含有过多“过早引用”的知识？**）](Part.1.F.deal-with-forward-references.ipynb)
+> - [Part.1.F.deal-with-forward-references（**如何从容应对含有过多 “过早引用” 的知识？**）](Part.1.F.deal-with-forward-references.ipynb)
 > - [Part.1.G.The-Python-Tutorial-local（**官方教程：The Python Tutorial**）](Part.1.G.The-Python-Tutorial-local.ipynb)
 > - [Part.2.A.clumsy-and-patience（**笨拙与耐心**）](Part.2.A.clumsy-and-patience.ipynb)
 > - [Part.2.B.deliberate-practicing（**刻意练习**）](Part.2.B.deliberate-practicing.ipynb)
@@ -80,3 +83,10 @@ TeachYourSelf(coding)
 本书的版权协议为 [CC-BY-NC-ND license](https://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh)。
 
 ![CC-BY-NC-ND](images/CC-BY-NC-ND.png?raw=true "CC-BY-NC-ND")
+
+-----
+**脚注**
+
+<a name='fn1'>[1]</a>：['Themselves' or 'themself'? -- Oxford Dictionary](https://en.oxforddictionaries.com/usage/themselves-or-themself)
+
+<a href='#fn1b'><small>↑Back to Content↑</small></a>
