@@ -7,7 +7,7 @@
 
 ## 允许命令行启动 VS Code
 
-使用快捷键 `⇧⌘p` 呼出 Command Palette，在其中输入 `shell command`，而后选中 `Install 'code' command in PATH`。此后，就可以在 Terminal 命令行中使用 `code` 命令了。(Windows 系统安装 VS Code 时会自动配置好，并不需要此步骤)
+使用快捷键 `⇧⌘p` 呼出 Command Palette，在其中输入 `shell command`，而后选中 `Install 'code' command in PATH`。此后，就可以在 Terminal 命令行中使用 `code` 命令了。(Windows 系统安装 VS Code 时会自动配置好，并不需要此步骤）
 
 ![](../images/vscode-shell.png)
 
@@ -43,10 +43,10 @@ TAB 键 `⇥` 触发的自动补全有两种：
 
 字符串自动补全，使用的是所谓的 Fuzzy Match。输入 `sum_of_word` 中所包含的任意字符的任意组合（按顺序），它都会尽量去匹配；所以，`su` 和 `sow` 都可以匹配 `sum_of_word`，再比如，`rst` 可以匹配 `result`。
 
-
-在 Snippet 自动补全的过程中，常常有若干个 “TAB Stop”，即，有若干个位置可以使用 TAB 键 `⇥` （或者，`Shift + ⇥`）来回切换；这时，第一种字符串自动补全的功能就失效了，如果需要使用字符串自动补全，那么需要按快捷键 ESC `⎋` 退出 Snippet 自动补全模式。
+在 Snippet 自动补全的过程中，常常有若干个 “TAB Stop”，即，有若干个位置可以使用 TAB 键 `⇥`（或者，`Shift + ⇥`）来回切换；这时，第一种字符串自动补全的功能就失效了，如果需要使用字符串自动补全，那么需要按快捷键 ESC `⎋` 退出 Snippet 自动补全模式。
 
 以下的 gif 文件演示的是以下代码的输入过程：
+
 ```python
 def sum_of_word(word):
     sum = 0
@@ -59,6 +59,7 @@ with open('results.txt', 'w') as results:
             if sum_of_word(word.strip()) == 100:
                 results.write(word)
 ```
+
 因为有这样的功能，所以你在输入程序的时候其实是非常从容的，可以很慢输入，边思考边输入…… 可实际上，完成速度却很快。
 
 ![](../images/vscodedemo.gif)
