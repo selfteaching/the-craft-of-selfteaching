@@ -10,19 +10,18 @@
 
 特别感谢**霍炬**（[@virushuo](https://github.com/virushuo)）、**洪强宁**（[@hongqn](https://github.com/hongqn)) 两位良师诤友在此书写作过程中给予我的巨大帮助！
 
-![](../images/learning-curve-spiral.png)
 ```python
 # pseudo-code of selfteaching in Python
 
 def teach_yourself(anything):
-    while not create(something):
+    while not create():
         learn()
         practice()
     return teach_yourself(another)
 
 teach_yourself(coding)
 ```
-请先行阅读 [T-appendix.jupyter-installation-and-setup](T-appendix.jupyter-installation-and-setup.md) 以便在本地安装 [Jupyterlab](https://github.com/jupyterlab/jupyterlab) 而后用更好的体验阅读本书。
+请先行阅读 [T-appendix.jupyter-installation-and-setup](T-appendix.jupyter-installation-and-setup.md) 以便在本地安装 [Jupyterlab](https://github.com/jupyterlab/jupyterlab) 而后就能用更好的体验阅读本书。
 
 有兴趣帮忙的朋友，请先行阅读 [如何使用 Pull Request 为这本书校对](02.proof-of-work.md)。
 
@@ -45,7 +44,7 @@ teach_yourself(coding)
 > - [Part.1.E.5.strings（**字符串**）](Part.1.E.5.strings.md)
 > - [Part.1.E.6.containers（**数据容器**）](Part.1.E.6.containers.md)
 > - [Part.1.E.7.files（**文件**）](Part.1.E.7.files.md)
-> - [Part.1.F.deal-with-forward-references（**如何从容应对含有过多“过早引用”的知识？**）](Part.1.F.deal-with-forward-references.md)
+> - [Part.1.F.deal-with-forward-references（**如何从容应对含有过多 “过早引用” 的知识？**）](Part.1.F.deal-with-forward-references.md)
 > - [Part.1.G.The-Python-Tutorial-local（**官方教程：The Python Tutorial**）](Part.1.G.The-Python-Tutorial-local.md)
 > - [Part.2.A.clumsy-and-patience（**笨拙与耐心**）](Part.2.A.clumsy-and-patience.md)
 > - [Part.2.B.deliberate-practicing（**刻意练习**）](Part.2.B.deliberate-practicing.md)
@@ -79,31 +78,27 @@ teach_yourself(coding)
 > - [T-appendix.jupyter-installation-and-setup（**Jupyterlab 的安装与配置**）](T-appendix.jupyter-installation-and-setup.md)
 > - [T-appendix.symbols（**这些符号都代表什么？**）](T-appendix.symbols.md)
 
-
-
 ## 关于 ```.ipynb``` 文件转换为 ```.md``` 文件的备注：
 
 ```bash
 # 需提前安装 nbconvert 插件，Terminal 下执行：
 $ jupyter nbconvert --to markdown *.ipynb
 
-而后将所有 .md 文件移到 markdown/ 目录之下 —— 除 README.md 文
-件之外
-README.md 文件复制一份到 markdown/ 目录之下，而后编辑为当前文件
+而后将所有 `.md` 文件移到 `markdown/` 目录之下 —— 除 `README.md` 文件之外
+
+`README.md` 文件复制一份到 `markdown/` 目录之下，而后编辑为当前文件
 
 # 需使用 VSCode 批量 Find and Replace:
+将所有 (images/ 替换为 (../images/
 将所有 (Part.1.A.better.teachyourself_files/ 替换为 (../images/
 将所有 (Part.1.E.6.containers_files/ 替换为 (../images/
 将所有 ```\n\n 替换为 ```\n
 将所有	\n\n```	替换为 \n```
-将所有 .ipynb) -> .md
-将所有 (images -> (../images)
+将所有 .ipynb) 替换为 .md)
 
-Part.1.E.3.controlflow.md 文件中有过长的 output 需要编辑
-Part.1.E.7.files.md 文件中有过长的 output 需要编辑
+`Part.1.E.3.controlflow.md` 文件中有过长的 output 需要编辑
+`Part.1.E.7.files.md` 文件中有过长的 output 需要编辑
 ```
-
-
 
 本书的版权协议为 [CC-BY-NC-ND license](https://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh)。
 
@@ -112,6 +107,6 @@ Part.1.E.7.files.md 文件中有过长的 output 需要编辑
 -----
 **脚注**
 
-<a name='fn1'>[1]</a>： [‘Themselves’ or 'themself’? -- Oxford Dictionary](https://en.oxforddictionaries.com/usage/themselves-or-themself)
+<a name='fn1'>[1]</a>：['Themselves' or 'themself'?-- Oxford Dictionary](https://en.oxforddictionaries.com/usage/themselves-or-themself)
 
 <a href='#fn1b'><small>↑Back to Content↑</small></a>
