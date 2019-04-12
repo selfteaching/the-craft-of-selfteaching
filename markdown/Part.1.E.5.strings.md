@@ -163,18 +163,18 @@ else:
 有一个重要的字符，叫做 “转义符”，`\`，也有的地方把它称为 “脱字符”，因为它的英文原文是 _Escaping Character_。它本身不被当作字符，你要想在字符串里含有这个字符，得这样写 `\\`：
 
 ```python
-'\\'
+print('\\')
 ```
 
     '\\'
 
 ```python
-'\'
+print('\')
 ```
 
       File "<ipython-input-10-d44a383620ab>", line 1
-        '\'
-           ^
+        print('\')
+                  ^
     SyntaxError: EOL while scanning string literal
 
 上面这一行报错信息是 `SyntaxError: EOL while scanning string literal`。这是因为 `\'` 表示的是单引号字符 `'`（Literal）—— 是可被输出到屏幕的 `'`，而不是用来标示字符串的那个 `'` —— 别急，无论哪个初学者第一次读到前面的句子都觉得有点莫名其妙…… —— 于是，Python 编译器扫描这个 “字符串” 的时候，还没找到标示字符串末尾的另外一个 `'` 的时候就读到了 `EOL`（End Of Line）。
