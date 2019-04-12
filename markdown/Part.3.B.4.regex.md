@@ -31,7 +31,7 @@ Wikipedia 上对正则表达式的说明如下：
 
 现在，我们已经把术语全部 “解密” 了，然后再看看下面的表述：
 
-> 我们可以用书写特定的规则，用来在文本中捕获与规则一致的字符串，而后对其进行操作…… 
+> 我们可以用书写特定的规则，用来在文本中捕获与规则一致的字符串，而后对其进行操作……
 
 理解起来相当顺畅。
 
@@ -149,13 +149,13 @@ Regex 也一样，它本身就是个迷你语言（Mini Language）。在 Regex 
 
 先大致看看它的操作符优先级，你就会对它有相当不错的了解：
 
-| 排列 |         原子与操作符优先级      | （从高到低）  |
+| 排列 |         原子与操作符优先级      |（从高到低）|
 |---|-----------------------------------|------------------------|
 | 1 | 转义符号 (Escaping Symbol)               | `\` |
 | 2 | 分组、捕获 (Grouping or Capturing)                          | `(...)` `(?:...)` `(?=...)` `(?!...)` `(?<=...)` `(?<!...)`     |
 | 3 | 数量 (Quantifiers)      | `a*` `a+` `a?` `a{n, m}` |
-| 4 | 序列与定位（Sequence and Anchor）      | `abc` `^` `$` `\b` `\B`               |
-| 5 | 或（Alternation）                       | `a\|b\|c`                   |
+| 4 | 序列与定位（Sequence and Anchor）| `abc` `^` `$` `\b` `\B`               |
+| 5 | 或（Alternation）| `a\|b\|c`                   |
 | 6 | 原子 (Atoms)                 | `a` `[^abc]` `\t` `\r` `\n` `\d` `\D` `\s` `\S` `\w` `\W` `.` |
 
 当然，你若是在之前，没有自学过、理解过 Python（或者任何其它编程语言）表达式中的操作符优先级，那么一上来就看上面的表格不仅对你没有帮助，只能让你更迷惑。
@@ -184,7 +184,6 @@ string.digits
 ```
 
     'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-
     '0123456789'
 
 以下字符在 Regex 中都有特殊含义：
@@ -285,7 +284,6 @@ re.findall(pttn, str)
 ```
 
     ['er', 'er', 'er']
-
     ['er', 'er']
 
 **注意**：`^` 和 `$` 在 Python 语言中被 `\A` 和 `\Z` 替代。
@@ -354,11 +352,11 @@ re.findall(pttn, str)
 ```
 
     ['google', 'gooogle', 'goooogle', 'goooooogle']
-
+    
     ['google', 'gooogle', 'goooogle']
-
+    
     ['coloured', 'colored']
-
+    
     ['520', '52000', '5200000', '520000000', '520000000000']
 
 数量操作符是对它之前的原子进行操作的，换言之，数量操作符的操作元是操作符之前的原子。
@@ -388,9 +386,7 @@ re.findall(pttn, str)
 ```
 
     ['er', 'er', 'er', 'er']
-
     ['e', 'r', 'r', 'r', 'e', 'r', 'e', 'r', 'e', 'e', 'r', 'e', 'e']
-
     ['er', 'er', 'er', 'er']
 
 在以上的例子中，看不出 `er` 和 `(er)` 的区别，但是，加上数量操作符就不一样了 —— 因为*数量操作符只对它之前的那一个原子进行操作*：
@@ -414,9 +410,7 @@ re.findall(pttn, str)
 ```
 
     ['err', 'er', 'er', 'er']
-
     ['err', 'r', 'erer', 'e', 'ere', 'e']
-
     ['er', 'er', 'er']
 
 ## 或操作符 `|`
@@ -485,9 +479,7 @@ re.sub(pttn, repl, str)
 ```
 
     [('white', 'black')]
-
     'The black dog wears a white hat.'
-
     'The white dog wears a white hat.'
 
 ## 非捕获匹配
@@ -506,7 +498,7 @@ re.sub(pttn, repl, str)
 ```
 
     ['black']
-
+    
     'The black dog wears a black hat.'
 
 需要注意的是，虽然非匹配捕获不将匹配值暂存以便随后替换时调用，但匹配处依然是将来可被替换的位置。
@@ -609,7 +601,7 @@ re.sub(pttn, repl, str)
 
 写 Regex 最烧脑的地方在于 “使其全面” —— 要考虑到各种意外情况。
 
-当然，除非必要，也不要在 “全面” 这事上面花太多时间 —— 给你看一个据说是 “最大程度上能够匹配所有 email 地址的 Regex”<a href='#fn4' name='fn4b'><sup>[4]</sup></a>，我都懒得测试的一个正则表达式：
+当然，除非必要，也不要在 “全面” 这事上面花太多时间 —— 给你看一个据说是 “最大程度上能够匹配所有 email 地址的 Regex” <a href='#fn4' name='fn4b'><sup>[4]</sup></a>，我都懒得测试的一个正则表达式：
 
 ```regex
 (?:(?:\r\n)?[ \t])*(?:(?:(?:[^()<>@,;:\\".\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t]
@@ -698,7 +690,7 @@ r\\]|\\.)*\](?:(?:\r\n)?[ \t])*)(?:\.(?:(?:\r\n)?[ \t])*(?:[^()<>@,;:\\".\[\]
 
 ## 趣事一则
 
-[ELIZA](https://en.wikipedia.org/wiki/ELIZA) 是人类史上第一个 “聊天机器人” 程序，上个世纪六十年代，1966 年实现的。核心就是使用正则表达式匹配对方语句中的关键词汇，再经过替换，形成看似有意义的 “回应” —— 事实上，ELIZA 完全不知道自己在说什么…… 
+[ELIZA](https://en.wikipedia.org/wiki/ELIZA) 是人类史上第一个 “聊天机器人” 程序，上个世纪六十年代，1966 年实现的。核心就是使用正则表达式匹配对方语句中的关键词汇，再经过替换，形成看似有意义的 “回应” —— 事实上，ELIZA 完全不知道自己在说什么……
 
 几年后，就是七十年代初，1972 年，另外一个聊天机器人 [Parry](https://en.wikipedia.org/wiki/PARRY) <a href='#fn5' name='fn5b'><sup>[5]</sup></a>被写了出来…… 随后第二年，这两个聊天机器人在 ARPANET “碰面” 好好地聊了一下<a href='#fn6' name='fn6b'><sup>[6]</sup></a>：
 
@@ -734,7 +726,7 @@ r\\]|\\.)*\](?:(?:\r\n)?[ \t])*)(?:\.(?:(?:\r\n)?[ \t])*(?:[^()<>@,;:\\".\[\]
 # %load https://raw.githubusercontent.com/jezhiggins/eliza.py/master/eliza.py
 #----------------------------------------------------------------------
 #  eliza.py
-# 
+#
 #  a cheezy little Eliza knock-off by Joe Strout
 #  with some updates by Jeff Epler
 #  hacked into a module and updated by Jez Higgins

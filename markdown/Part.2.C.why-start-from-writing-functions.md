@@ -7,7 +7,7 @@
 
 绝大多数编程书籍并不区分学习者的 “读” 与 “写” 这两个实际上应该分离的阶段 —— 虽然现实中这两个阶段总是多多少少重叠一部分。
 
-在一个比较自然的过程中，我们总是先学会阅读，而后才开始练习写作；并且，最终，阅读的量一定远远大于写作的量 —— 即，输入远远大于输出。当然，貌似也有例外。据说，香港作家倪匡，他自己后来很少读书，每天咣当咣当地像是打扫陈年旧物倒垃圾一样写作 —— 他几乎是全球最具产量的畅销小说作家，貌似地球另外一端的史蒂芬・金都不如他多。又当然，他的主要输入来自于他早年丰富的人生经历，人家读书，他阅世，所以，实际上并不是输入很少，恰恰相反，是输入太多…… 
+在一个比较自然的过程中，我们总是先学会阅读，而后才开始练习写作；并且，最终，阅读的量一定远远大于写作的量 —— 即，输入远远大于输出。当然，貌似也有例外。据说，香港作家倪匡，他自己后来很少读书，每天咣当咣当地像是打扫陈年旧物倒垃圾一样写作 —— 他几乎是全球最具产量的畅销小说作家，貌似地球另外一端的史蒂芬・金都不如他多。又当然，他的主要输入来自于他早年丰富的人生经历，人家读书，他阅世，所以，实际上并不是输入很少，恰恰相反，是输入太多……
 
 所以，正常情况下，输入多于输出，或者，输入远远多于输出，不仅是自然现象，也是无法改变的规则。
 
@@ -30,19 +30,19 @@ Python 的代码是开源的，它的代码仓库在 Github 上：
 > This directory contains a collection of demonstration scripts for
 > various aspects of Python programming.
 >
-> * beer.py        Well-known programming example: Bottles of beer.
-> * eiffel.py      Python advanced magic: A metaclass for Eiffel post/preconditions.
-> * hanoi.py       Well-known programming example: Towers of Hanoi.
-> * life.py        Curses programming: Simple game-of-life.
-> * markov.py      Algorithms: Markov chain simulation.
-> * mcast.py       Network programming: Send and receive UDP multicast packets.
-> * queens.py      Well-known programming example: N-Queens problem.
-> * redemo.py      Regular Expressions: GUI script to test regexes.
-> * rpython.py     Network programming: Small client for remote code execution.
-> * rpythond.py    Network programming: Small server for remote code execution.
-> * sortvisu.py    GUI programming: Visualization of different sort algorithms.
-> * ss1.py         GUI/Application programming: A simple spreadsheet application.
-> * vector.py      Python basics: A vector class with demonstrating special methods.
+> * `beer.py`        Well-known programming example: Bottles of beer.
+> * `eiffel.py`      Python advanced magic: A metaclass for Eiffel post/preconditions.
+> * `hanoi.py`       Well-known programming example: Towers of Hanoi.
+> * `life.py`        Curses programming: Simple game-of-life.
+> * `markov.py`      Algorithms: Markov chain simulation.
+> * `mcast.py`       Network programming: Send and receive UDP multicast packets.
+> * `queens.py`      Well-known programming example: N-Queens problem.
+> * `redemo.py`      Regular Expressions: GUI script to test regexes.
+> * `rpython.py`     Network programming: Small client for remote code execution.
+> * `rpythond.py`    Network programming: Small server for remote code execution.
+> * `sortvisu.py`    GUI programming: Visualization of different sort algorithms.
+> * `ss1.py`         GUI/Application programming: A simple spreadsheet application.
+> * `vector.py`      Python basics: A vector class with demonstrating special methods.
 
 最起码把这其中的以下几个程序都精读一下，看看自己的理解能力：
 
@@ -63,7 +63,7 @@ Python 的代码是开源的，它的代码仓库在 Github 上：
 
 > - 完成一个功能；
 > - 只完成一个功能；
-> - 没有任何错误地只完成一个功能…… 
+> - 没有任何错误地只完成一个功能……
 
 然而，即便是从小入手，任务也没有变得过分简单。其中涉及的话题理解起来并不容易，尽管我们尽量用最简单的例子。涉及的话题有：
 
@@ -82,4 +82,4 @@ Python 的代码是开源的，它的代码仓库在 Github 上：
 
 你要习惯，归纳、总结、整理的工作，从来都不是一次就能完成的，都需要反复多次之后才能彻底完成。必须习惯这种流程 —— 而不是像那些从未自学过的人一样，对这种东西想当然地全不了解。
 
-另外，从现代编程方法论来看，“写作” 部分一上来就从函数入手也的确是 “更正确” 的，因为结构化编程的核心就是拆分任务，把任务拆分到不能再拆分为止 —— 什么时候不能再拆分了呢？就是当一个函数只完成一个功能的时候…… 
+另外，从现代编程方法论来看，“写作” 部分一上来就从函数入手也的确是 “更正确” 的，因为结构化编程的核心就是拆分任务，把任务拆分到不能再拆分为止 —— 什么时候不能再拆分了呢？就是当一个函数只完成一个功能的时候……

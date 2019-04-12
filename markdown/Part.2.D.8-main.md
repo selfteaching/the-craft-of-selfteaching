@@ -143,7 +143,7 @@ python that.py
 python -m that
 ```
 
-像 `that.py` 那样把整个程序放进 `main()` 函数之后，`import that` 不会自动执行 main 函数里的代码。不过，你可以调用 `that.main()`：
+像 `that.py` 那样把整个程序放进 `main()` 函数之后，`import that` 不会自动执行 main 函数里的代码。不过，你可以调用 that.main()：
 
 ```python
 import that
@@ -182,13 +182,13 @@ if __name__ == '__main__':
 
 > [`python3 script executable`](https://www.google.com/search?q=python3+script+executable)
 
-你会很快弄明白的…… 
+你会很快弄明白的……
 
 另外，再搜索一下：
 
 > [`python3 script executable parameters retrieving`](https://www.google.com/search?q=python3+script+executable+parameters+retrieving)
 
-你就可以把以上程序改成在命令行下能够接收指定参数的 Python 可执行文件…… 
+你就可以把以上程序改成在命令行下能够接收指定参数的 Python 可执行文件……
 
 顺带说，`import this` 的彩蛋有更好玩的玩法：
 
@@ -206,15 +206,10 @@ love is not True or False; love is love # True True
 ```
 
     True
-
     False
-
     False
-
     True
-
     True
-
     True
 
 在 Terminal 里输入 `python ⏎` 而后在 Interactive Shell 里逐句输入试试。`love = this` 后面的每一句，都是布尔运算，想想看为什么是那样的结果？
@@ -262,25 +257,15 @@ love is not True
 ```
 
     True
-
     False
-
     False
-
     True
-
     True
-
     True
-
     4345330968
-
     4345330968
-
     4308348176
-
     4308349120
-
     True
 
 Python 的操作符优先级，完整表格在这里：

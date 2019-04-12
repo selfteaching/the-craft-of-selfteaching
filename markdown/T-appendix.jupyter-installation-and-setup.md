@@ -22,14 +22,13 @@ chmod +x Anaconda3-2018.12-MacOSX-x86_64.sh
 
 安装到最后一步，会问你是否要安装微软出品的 [Visual Studio Code](https://code.visualstudio.com)，选择 `yes` —— 反正以后你的电脑上会不止一个文本编辑器…… 以后你可能还会安装的文本编辑器包括 [SublimeText](https://www.sublimetext.com), [Atom](https://atom.io) 等等。
 
-安装完毕之后，打开 Terminal（Windows 系统需要打开之前安装的 Anaconda Prompt 输入），继续安装几个组件：
+安装完毕之后，打开 Terminal(Windows 系统需要打开之前安装的 Anaconda Prompt 输入），继续安装几个组件：
 
 ```bash
 conda update conda
 conda update anaconda
 conda install -c conda-forge nodejs
 conda install -c conda-forge jupyterlab # 这是用来升级 jupyter lab 到最新版的方法
-
 ```
 
 安装完毕之后，可以看看各个你将要用到的可执行命令都在什么地方，用 `which` 命令（windows下用 `where` 命令）：
@@ -101,7 +100,7 @@ code jupyter_notebook_config.py
 
 > `c.NotebookApp.notebook_dir = '~/'`
 
-在 Terminal 中执行 `jupyter` 命令的时候，它默认是在你当前所在的工作目录打开 `jupyter`，这同样是出于安全考虑。但是，如果你只是在自己的电脑上使用，且只有自己在使用，那么莫不如直接把它设置成 `~/`，即，你的用户根目录，这样会很方便地访问各种地方的文件…… 
+在 Terminal 中执行 `jupyter` 命令的时候，它默认是在你当前所在的工作目录打开 `jupyter`，这同样是出于安全考虑。但是，如果你只是在自己的电脑上使用，且只有自己在使用，那么莫不如直接把它设置成 `~/`，即，你的用户根目录，这样会很方便地访问各种地方的文件……
 
 > `c.NotebookApp.default_url = '/tree'`
 
@@ -255,7 +254,7 @@ toc 插件，自动将 ipynb 文件中的标题转换成目录。
 
 ![](https://github.com/jupyterlab/jupyterlab-toc/raw/master/toc.gif)
 
-jupyterlab_sublime 则可以让你在 Jupyter lab 的 cell 中，使用跟 SublimeText 一样的快捷键，比如 `⌘ D` 能够多选其它与当前选中内容一样的内容；比如 `⌘` 加鼠标点击，可以生成多个可编辑点…… 
+jupyterlab_sublime 则可以让你在 Jupyter lab 的 cell 中，使用跟 SublimeText 一样的快捷键，比如 `⌘ D` 能够多选其它与当前选中内容一样的内容；比如 `⌘` 加鼠标点击，可以生成多个可编辑点……
 
 ![](http://blog.rtwilson.com/wp-content/uploads/2016/03/IPyNbSublime.gif)
 
@@ -387,7 +386,7 @@ InteractiveShell.ast_node_interactivity = "all"
 ```
 
     (1, 2, 3)
-
+    
     {1, 2, 3}
 
 ## 魔法函数
@@ -404,11 +403,11 @@ Jupyterlab 里较为常用的魔法函数整理如下：
 | `%run`               | 在 Cell 中运行 `.py` 文件：`%run file_name`                  |
 | `%who`               | 列出所有当前 Global Scope 中的变量；类似的还有：`%who df`，`%whos` |
 | `%env`               | 列出当前的环境变量                                           |
-| `%load`              | 将其他文件内容导入 Cell，`%load source`，`source` 可以是文件名，也可以是 URL。 |
+| `%load`              | 将其他文件内容导入 Cell，`%load source`，`source` 可以是文件名，也可以是 URL。|
 | `%time`              | 返回 Cell 内代码执行的时间，相关的还有 `%timeit`             |
 | `%writefile`         | 把 Cell 的内容写入文件，`%write file_name`；%write -a file_name，`-a` 是追加 |
 | `%matplotlib inline` | 行内展示 matplotlib 的结果                                   |
-| `%%bash`             | 运行随后的 shell 命令，比如 %%bash ls；与之类似的还有 `%%HTML`， `%%python2`， `%%python3`， `%%ruby`， `%%perl`……                      |
+| `%%bash`             | 运行随后的 shell 命令，比如 %%bash ls；与之类似的还有 `%%HTML`，`%%python2`，`%%python3`，`%%ruby`，`%%perl`……                      |
 
 ## 桌面版 Jupyter App
 
@@ -422,7 +421,7 @@ Jupyterlab 里较为常用的魔法函数整理如下：
 
 ### Pineapple
 
-只支持 MacOS，也很好用 —— 缺点就是很难看…… 
+只支持 MacOS，也很好用 —— 缺点就是很难看……
 
 > https://nwhitehead.github.io/pineapple/
 
