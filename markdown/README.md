@@ -105,7 +105,7 @@ $ jupyter nbconvert --to markdown *.ipynb
 我用的 Stylus 定制 CSS（针对 github.com）是这样的：
 
 ```css
-a {color: #2456A4 !important;}
+.markdown-body {font-family: "PingFang SC";}
 strong {color:#6392BF;}
 em {color: #A9312A; font-style: normal !important;}
 table {font-size: 95% !important;}
