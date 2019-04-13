@@ -97,9 +97,9 @@ $ jupyter nbconvert --to markdown *.ipynb
 
 -----
 
-推荐读者在自己的浏览器上安装 [Stylus](https://github.com/openstyles/stylus) 这类终端 CSS 定制插件，Chrome/Firefox/Opera 都支持 Stylus 插件。以便拥有更好的阅读体验。
+推荐读者在自己的浏览器上安装 [Stylus](https://github.com/openstyles/stylus) 这类终端 CSS 定制插件，Chrome/Firefox/Opera 都支持 Stylus 插件。以便拥有更好的阅读体验。以下 gif 图片展示的是使用自定义 css 前后的效果：
 
-![](../images/github-markdown-style.gif?raw=true)
+> ![](../images/github-markdown-style.gif?raw=true)
 
 
 我用的 Stylus 定制 CSS（针对 github.com）是这样的：
