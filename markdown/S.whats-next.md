@@ -73,19 +73,19 @@ Github 上的 “居民” 现在已经养成了一个惯例，无论什么好�
 
 ## Introduction
 
-![Web Developer Roadmap Introduction](../images/intro.png)
+![Web Developer Roadmap Introduction](../images/intro.png?raw=true)
 
 ## Frontend Roadmap
 
-![Frontend Roadmap](../images/frontend.png)
+![Frontend Roadmap](../images/frontend.png?raw=true)
 
 ## Back-end Roadmap
 
-![Back-end Roadmap](../images/backend.png)
+![Back-end Roadmap](../images/backend.png?raw=true)
 
 ## DevOps Roadmap
 
-![DevOps Roadmap](../images/devops.png)
+![DevOps Roadmap](../images/devops.png?raw=true)
 
 路漫漫其修远兮……
 

@@ -9,7 +9,7 @@
 
 字符串、由 `range()` 函数生成的等差数列、列表、元组是**有序类型**（Sequence Type），而集合与字典是*无序*的。
 
-![](../images/python-containers-final.png)
+![](../images/python-containers-final.png?raw=true)
 
 另外，集合没有*重合*元素。
 
@@ -534,7 +534,7 @@ print(a_list)
 
 而整理成表格之后呢，理解与记忆真的是零压力：
 
-![](../images/list-concepts.png)
+![](../images/list-concepts.png?raw=true)
 
 ## 元组（Tuple）
 
@@ -761,7 +761,7 @@ v.get_label_by_id('01').set_text('\n'.join(moderators - admins))
 plt.show()
 ```
 
-![png](../images/Part.1.E.6.containers_66_0.png)
+![png](../images/Part.1.E.6.containers_66_0.png?raw=true)
 
 以上的操作符，都有另外一个版本，即，用 Set 这个类的 Methods 完成。
 

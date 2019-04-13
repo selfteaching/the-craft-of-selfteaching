@@ -21,7 +21,7 @@
 
 经过多年的发展，Google 的使用体验越来越好，2019 年的今天，你搜索以上语句返回的页面里，Google 甚至在众多搜索结果中选了一条它 “认为” 是 “最佳” 的搜索结果：
 
-![google-how-effectively](../images/google-how-effectively.png)
+![google-how-effectively](../images/google-how-effectively.png?raw=true)
 
 [lifehack.com 上的这篇文章](https://www.lifehack.org/articles/technology/20-tips-use-google-search-efficiently.html)也的的确确值得细读 —— 读过且真正理解之后，不夸张地讲，你的 “搜索技能” 已经足够灭掉整个人类当前活跃群体中的 99% 了…… 这个说法真的完全没有夸张，绝大多数人就是不会在搜索的过程中使用那些符号的，比如 `-` `*` `~` `@` `#` `:` `"` `..` —— 还有很多其它技巧…… 话说，你在 Google 上用过 `Time *place*` 吗？
 
@@ -43,17 +43,17 @@ Google 还有更为强大的工具给你使用，叫做 Google Custom Search，�
 
 对编程工作来说，Google 当然格外地更为重要 —— 互联网上积累的最多最专业的信息，当然是计算机相关信息。所以，当你遇到什么错误提示的时候，不仅要问 Google，还要优先问问 [Stackoverflow](https://stackoverflow.com) —— 连 Google 自己都这么干。在 [colab.research.google.com](https://colab.research.google.com)（Google 为它的 TensorFlow 服务搭建的 Jupyterlab 环境）上，如果你运行什么代码出错了的话，那么，出错信息下面会出现一个按钮，上面写着：`SEARCH STACK OVERFLOW`，点击它就直接给你 [Stackoverflow](https://stackoverflow.com) 上的搜索结果…… 真够意思！
 
-![google-stackoverflow](../images/google-stackoverflow.png)
+![google-stackoverflow](../images/google-stackoverflow.png?raw=true)
 
 [Google](https://google.com)、[Stackoverflow](https://stackoverflow.com)、[Wikipedia](https://en.wikipedia.org)、[Youtube](https://youtube.com)，这些都是你经常要去搜索的好地方。
 
 二十年前，Google 刚出现的时候，谁能想象它今天这个样子呢？以下是 1998 年 11 月 11 日 http://google.com 这个网址的截图：
 
-![google-homepage-1998](../images/google-homepage-1998.png)
+![google-homepage-1998](../images/google-homepage-1998.png?raw=true)
 
 当时，网站还没有正式上线，第一个链接是一个原型设计，用一个二级域名发布在斯坦福的网站上：http://google.stanford.edu/：
 
-![google-prototype-1998](../images/google-prototype-1998.png)
+![google-prototype-1998](../images/google-prototype-1998.png?raw=true)
 
 那个时候，Google 还要向外人强调一下，他们已经有 2500 万页面可供检索！
 
