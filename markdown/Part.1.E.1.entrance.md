@@ -271,7 +271,7 @@ for n in range(2, 100): #range(2,100)表示含左侧 2，不含右侧 100，是�
 
 以上的**算法**可以改进（程序员们经常用的词汇是 “*优化*”）<a id='plusone'></a>：
 
-> 从 `2` 作为除数开始试，试到 $\sqrt{n}$ 之后的一个整数就可以了……
+> 从 `2` 作为除数开始试，试到 <sup>2</sup>&radic;<span style="text-decoration: overline">n</span> 之后的一个整数就可以了……
 
 ```python
 for n in range(2, 100):
