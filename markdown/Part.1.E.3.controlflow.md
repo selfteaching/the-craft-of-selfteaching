@@ -286,7 +286,7 @@ for n in range(2, 100):
     for i in range(2, n):
         if (n % i) == 0:
             break
-        print(n)            # 事实上相当于针对 range(2, n) 中每个 n 都执行了一次 print(n)
+        print(n)            # 事实上相当于针对 range(2, n) 中每个 i 都执行了一次 print(n)
 ```
 
     2
