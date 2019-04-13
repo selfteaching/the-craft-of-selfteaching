@@ -492,7 +492,8 @@ str = 'The white dog wears a black hat.'
 pttn = r'The (?:white|black) dog wears a (white|black) hat.'
 re.findall(pttn, str)                   # 只捕获了一处，也就是说只有一个值将来可以被引用
 
-repl = r'The \1 dog wears a \1 hat.'    # 不过，可替换的位置却有两个（即便非捕获匹配，也有可替换位置）
+repl = r'The \1 dog wears a \1 hat.'    # 之前的一处捕获，在替换时可被多次引用
+書評
 re.sub(pttn, repl, str)
 
 ```
