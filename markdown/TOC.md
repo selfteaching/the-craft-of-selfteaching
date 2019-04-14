@@ -1,7 +1,9 @@
+## 自学是门艺术
+
 - [01 前言](01.preface.md)
 - [02 如何证明你真的读过这本书？](02.proof-of-work.md)
 
-## Part 1
+## PART 1
 
 - [Part.1.A 为什么一定要掌握自学能力？](Part.1.A.better.teachyourself.md)
 - [Part.1.B 为什么把编程当作自学的入口？](Part.1.B.why.start.from.learning.coding.md)
@@ -17,7 +19,7 @@
 - [Part.1.F 如何从容应对含有过多 “过早引用” 的知识？](Part.1.F.deal-with-forward-references.md)
 - [Part.1.G 官方教程：The Python Tutorial](Part.1.G.The-Python-Tutorial-local.md)
 
-## Part 2
+## PART 2
 
 - [Part.2.A 笨拙与耐心](Part.2.A.clumsy-and-patience.md)
 - [Part.2.B 刻意练习](Part.2.B.deliberate-practicing.md)
@@ -32,7 +34,7 @@
 - [Part.2.D.8 可执行的 Python 文件](Part.2.D.8-main.md)
 - [Part.2.E 刻意思考](Part.2.E.deliberate-thinking.md)
 
-## 第三章
+## PART 3
 
 - [Part.3.A 战胜难点**）](Part.3.A.conquering-difficulties.md)
 - [Part.3.B.1 类 —— 面向对象编程**）](Part.3.B.1.classes-1.md)
@@ -55,7 +57,7 @@
 
 ## 附录
 
-- [T-appendix A: Visual Studio Code 的安装与配置**）](T-appendix.editor.vscode.md)
-- [T-appendix B: Git 简介**）](T-appendix.git-introduction.md)
-- [T-appendix C: Jupyterlab 的安装与配置**）](T-appendix.jupyter-installation-and-setup.md)
-- [T-appendix D: 这些符号都代表什么？**）](T-appendix.symbols.md)
+- [Appendix A: Visual Studio Code 的安装与配置**）](T-appendix.editor.vscode.md)
+- [Appendix B: Git 简介**）](T-appendix.git-introduction.md)
+- [Appendix C: Jupyterlab 的安装与配置**）](T-appendix.jupyter-installation-and-setup.md)
+- [Appendix D: 这些符号都代表什么？**）](T-appendix.symbols.md)
