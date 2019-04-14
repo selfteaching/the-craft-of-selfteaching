@@ -347,7 +347,7 @@ UnboundLocalError: local variable 'population' referenced before assignment
 
 看看下面的图示，理解起来更为直观一些：
 
-![](../images/class-variables-scope.png?raw=true)
+![](images/class-variables-scope.png?raw=true)
 
 整个代码启动之后，总计有 4 个 Scopes 如图所示：
 
