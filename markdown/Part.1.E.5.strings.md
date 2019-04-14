@@ -164,9 +164,11 @@ else:
 
 ```python
 '\\'
+print('\\')
 ```
 
     '\\'
+    \
 
 ```python
 '\'
