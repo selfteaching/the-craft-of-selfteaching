@@ -50,7 +50,7 @@ plt.show()
 # https://databank.worldbank.org/data/reports.aspx?source=2&series=SP.DYN.LE00.IN
 ```
 
-![png](../images/Part.1.A.better.teachyourself_2_0.png?raw=true)
+![png](images/Part.1.A.better.teachyourself_2_0.png?raw=true)
 
 如此发展下去，虽然人类不大可能永生不死，但平均寿命依然在持续延长是个不争的事实。与上一代不同，现在的千禧一代，需要面对的是百岁人生 —— 毫无疑问，不容置疑。
 
