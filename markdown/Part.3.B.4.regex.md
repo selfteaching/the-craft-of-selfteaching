@@ -66,7 +66,7 @@ re.findall(pttn, str)
 
 我们最好先直接看看 Regex 的工作过程。以下，是用微软发行的代码编辑工具 Visual Studio Code 针对一小段文本使用若干条 Regex 进行匹配的过程：
 
-![](../images/regex-test.gif?raw=true)
+![](images/regex-test.gif?raw=true)
 
 Python 的项目代码仓库里有一个很简短的 Demo 程序，叫 [`redemo.py`](https://github.com/python/cpython/blob/master/Tools/demo/redemo.py)，它使用 [Tcl/Tk](https://docs.python.org/3/library/tkinter.html) 作为图形界面，也可以用来测试正则表达式。
 
@@ -76,13 +76,13 @@ Python 的项目代码仓库里有一个很简短的 Demo 程序，叫 [`redemo.
 
 它运行起来长成这样：
 
-![](../images/redemo.png?raw=true)
+![](images/redemo.png?raw=true)
 
 目前（2019）网上最方便的 Regex 测试器，是 [regex101.com](https://regex101.com)：
 
 以下，就是在一段文本中，找出所有首写字母大写的词汇的*过程*，并将其先全部替换成小写，再将其全部替换为大写的过程；使用的正则表达式是 `([A-Z])\w+`，替换表达式分别是 `\L$1` 和 `\U$1`：
 
-![](../images/regex101.gif?raw=true)
+![](images/regex101.gif?raw=true)
 
 这个网站太好了，所以，平日里我是用 [Nativefier](https://github.com/jiahaog/nativefier) 工具将这个网站打包为一个 Mac Desktop App 使用。不过，它也有局限，就是被搜索文件略微大点就报错，说 `timeout`……
 
