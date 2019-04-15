@@ -31,7 +31,7 @@
 
 在大学任职期间，乔治・布尔写了两本教科书，一本讲微分方程，另外一本讲差分方程，而前者，[A TREATISE ON DIFFERENTIAL EQUATIONS](https://archive.org/details/atreatiseondiff06boolgoog/page/n7)，直到今天，依然难以超越。
 
-![george-boole-1864](../images/george-boole-in-1864.png)
+![george-boole-1864](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/george-boole-in-1864.png?raw=true)
 
 乔治・布尔于 1864 年因肺炎去世。
 
@@ -41,7 +41,7 @@
 
 2015 年，乔治・布尔诞辰 200 周年，Google 设计了[专门的 Logo](https://www.google.com/doodles/george-booles-200th-birthday) 纪念这位为人类作出巨大贡献的自学奇才。
 
-![george-boole-google-doodle-2015](../images/george-boole-google-doodle-2015.gif)
+![george-boole-google-doodle-2015](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/george-boole-google-doodle-2015.gif?raw=true)
 
 Google Doodle 的寄语是这样的：
 
@@ -119,7 +119,7 @@ Python 语言中的**逻辑操作符**（Logical Operators）如下表所示 —
 
 **注意**：它们全部是小写。因为布尔值只有两个，所以布尔运算结果只有几种而已，如下图所示：
 
-![](../images/boolean-operators.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/boolean-operators.png?raw=true)
 
 先别管以下代码中 `print()` 这个函数的工作原理，现在只需要关注其中布尔运算的结果：
 
@@ -145,7 +145,7 @@ print('(not False) yields:',  not False)
 
 千万不要误以为布尔运算是*理科生*才必须会、才能用得上的东西…… 文理艺分科是中国的特殊分类方式，真挺害人的。比如，设计师们在计算机上创作图像的时候，也要频繁使用*或与非*的布尔运算操作才能完成各种图案的拼接…… 抽空看看这个网页：[Boolean Operations used by Sketch App](https://sketchapp.com/docs/shapes/boolean-operations/) —— 这类设计软件，到最后是每个人都用得上的东西呢。另，难道艺术生不需要学习文科或者理科？—— 事实上，他们也有文化课……
 
-![](../images/operations@2x.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/operations@2x.png?raw=true)
 
 ## 流程控制
 
@@ -271,7 +271,7 @@ for n in range(2, 100): #range(2,100)表示含左侧 2，不含右侧 100，是�
 
 以上的**算法**可以改进（程序员们经常用的词汇是 “*优化*”）<a id='plusone'></a>：
 
-> 从 `2` 作为除数开始试，试到 $\sqrt{n}$ 之后的一个整数就可以了……
+> 从 `2` 作为除数开始试，试到 <sup>2</sup>&radic;<span style="text-decoration: overline">n</span> 之后的一个整数就可以了……
 
 ```python
 for n in range(2, 100):
@@ -403,7 +403,7 @@ for i in range(10):
 
 在很多其他的语言中，比如，JavaScript，用大括号 `{}` 作为语句块标示 —— 这是 Python 比较特殊的地方，它组织语句块的方式如下图所示：
 
-![](../images/python-leading-space.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/python-leading-space.png?raw=true)
 
 >**注意**：在同一个文件里，不建议混合使用 Tab 和 Space；要么全用空格，要么全用制表符。
 

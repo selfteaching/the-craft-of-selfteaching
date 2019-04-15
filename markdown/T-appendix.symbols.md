@@ -15,7 +15,7 @@
 
 很多人最初的时候学不进去，就是因为 “一些符号的用法太多了，经常混淆，于是就觉得累了、烦了……” 然而，只要多重复几次多在脑子里过几遍就熟悉了 —— 若是真的熟悉了、若是真的掌握了，你就会觉得：真的没什么啊！哪儿有那么难啊？！
 
-![](../images/symbols.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/symbols.png?raw=true)
 
 学编程的一个好玩之处就是：
 

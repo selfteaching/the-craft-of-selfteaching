@@ -15,7 +15,7 @@
 
 有个曲子很难（当然也非常好听），曲名是 [Recrerdes Da La Alhambra](https://www.youtube.com/watch?v=OOsRMECWKAE) 阿罕布拉宫的回忆。你看看曲谱就知道它多难了：
 
-![](../images/guitar-tab.gif)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/guitar-tab.gif?raw=true)
 
 那怎么办？怎么办？！—— 我的办法听起来看起来都很笨：
 
@@ -73,11 +73,11 @@ IFrame('https://www.youtube.com/embed/OOsRMECWKAE?', width='800', height='450')
 
 拆解的第一种方法是把某个任务拆分成若干个小任务，正如上面的讲解那样，我称它为 “横向拆解”。
 
-![](../images/decompose-x.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/decompose-x.png?raw=true)
 
 另外一种方法，我称它为 “纵向拆解”（有时，我也会用 “分层拆解” 这个说法）。
 
-![](../images/decompose-y.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/decompose-y.png?raw=true)
 
 这种方式在自学复杂的概念体系时特别管用。
 
@@ -171,7 +171,7 @@ for (i = 0; i < n; i++) {
 
 创业也好，投资也罢，还是一样的。因为我这个人脸皮厚，不怕人们笑话，所以我可以平静地说这事：
 
-> 我参与过（或投资）**很多**失败的创业项目……
+> 我参与（或投资）过**很多**失败的创业项目……
 
 对所有复盘的结果，无一例外，根源都是当初立项的时候，很多重要细节还没搞清楚，甚至没想到要去搞清楚，就已经开始行动…… 于是，在成本不断积累的情况下，没完没了地处理各种 “意外”，没完没了地重新制定目标，没完没了地拖延，没完没了地 “重新启动”…… 直至开始苟延残喘，最后不了了之。
 
@@ -179,7 +179,7 @@ for (i = 0; i < n; i++) {
 
 也许，有人可能会理直气壮地反问，“怎么可能从一开始就把所有情况都想清楚么！” 唉，是呀，以前我也是这么想的…… 直到吃了很多亏，很多很多亏，很多很多很大很大的亏，才 “发现” 且不得不痛下决心去接受：事先想不清楚的，就不要去做。
 
-这是一种特殊、且重要、又极有价值的能力。现实生活中，后来我也见过若干有这种能力的高人，比如，你可以到网上搜一个人名，[庄辰超](https://www.google.com/search?q=庄辰超），他就是我见过的能做到干什么事之前都能全都想清楚的真人活人之一。
+这是一种特殊、且重要、又极有价值的能力。现实生活中，后来我也见过若干有这种能力的高人，比如，你可以到网上搜一个人名，[庄辰超](https://www.google.com/search?q=庄辰超)，他就是我见过的能做到干什么事之前都能全都想清楚的真人活人之一。
 
 自学的时候，拆解任务的重要性更是如此。
 

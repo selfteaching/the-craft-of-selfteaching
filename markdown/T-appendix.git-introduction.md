@@ -3,7 +3,7 @@
 
 --- You should've learned Git yesterday.
 
-![](../images/git-time-machine-cover.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/git-time-machine-cover.png?raw=true)
 
 ## 内容目标
 
@@ -68,7 +68,7 @@ Git 的作用，基本上可以被划分为三部分：
 
 以下示意图中仅包含最基本的 Git 命令 —— 并且基本上都是独自使用 Git 时的常用命令。
 
-![](../images/git-command-relationships.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/git-command-relationships.png?raw=true)
 
 在工作区 `working directory` 这个抽象层中，你完成各种日常工作，创建、编辑、删除…… 你可能需要用某个编辑器去修改文件，你也可能频繁使用各种 Bash 命令，如，`rm` `mkdir` `cp` `mv` 等等。
 

@@ -115,11 +115,11 @@ Github 能成为地球上最大的有效社交网络，没毛病，因为**用�
 
 <a name='fn1'>[1]</a>：NPR：[Most Beautiful Woman' By Day, Inventor By Night](https://www.npr.org/2011/11/27/142664182/most-beautiful-woman-by-day-inventor-by-night)
 
-![](../images/Lamarr_patent.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/Lamarr_patent.png?raw=true)
 
 上图是保存在美国专利局的一个存档文件（US Patent 2,292,387, Aug 11, 1942）截图。这项专利的发明者是 [Hedy Lamarr](https://en.wikipedia.org/wiki/Hedy_Lamarr)，人家长得是这样的：
 
-![](../images/hedy-lamarr-hero-getty.jpg)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/hedy-lamarr-hero-getty.jpg?raw=true)
 
 Hedy Lamarr 是好莱坞最知名的演员之一，并且，她也是自学高手：
 

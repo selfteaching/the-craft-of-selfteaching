@@ -25,7 +25,7 @@ for n in range(2, 100):
 
 ## if 语句
 
-`if` 语句的最简单构成是这样 —— 注意第 1 行末尾的冒号：
+`if` 语句的最简单构成是这样 —— 注意第 1 行末尾的冒号 `:` 和第 2 行的缩进：
 
 ```python
 if expression:
@@ -222,7 +222,7 @@ for n in range(2, 100):
 
 `continue` 语句将忽略其后的语句开始下次循环，而 `break` 语句将从此结束当前循环，开始执行循环之后的语句：
 
-![](../images/continue-break.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/continue-break.png?raw=true)
 
 `for` 语句块还可以附加一个 `else` —— 这是 Python 的一个比较有个性的地方。附加在 `for` 结尾的 `else` 语句块，_在没有 `break` 发生的情况下会运行_。
 
@@ -286,7 +286,7 @@ for n in range(2, 100):
     for i in range(2, n):
         if (n % i) == 0:
             break
-        print(n)            # 事实上相当于针对 range(2, n) 中每个 n 都执行了一次 print(n)
+        print(n)            # 事实上相当于针对 range(2, n) 中每个 i 都执行了一次 print(n)
 ```
 
     2

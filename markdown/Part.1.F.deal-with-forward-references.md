@@ -20,7 +20,7 @@ print(an_undefined_variable)
 
 充满过早引用的知识结构，在大脑中会构成类似 M.C. Escher 善画的那种 “不可能图形” 那样的 “结构”。
 
-![](../images/four-cones.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/four-cones.png?raw=true)
 
 在上图中，前三个椎形一般不会造成视觉困惑 —— 尤其是第一个。
 
@@ -30,7 +30,7 @@ print(an_undefined_variable)
 
 对一个点的位置困惑，连带着它与其它三个点之间的关系。可若那不是锥体，而是立方体呢？每个点的位置困惑会造成对它与更多点之间的更多联系的困惑…… 若是更多面体呢？
 
-![](../images/2_necker_cubes.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/2_necker_cubes.png?raw=true)
 
 把这些令人困惑的点，比喻成 “过早引用”，你就明白为什么 “很多过早引用” 的知识结构会那么令人困惑，处理起来那么令人疲惫了吧？
 
@@ -179,7 +179,7 @@ Python 官方网站上的 [The Python Tutorial](https://docs.python.org/3/tutori
 
 我在第一次粗略读过整个 [Python Official Tutorial](https://docs.python.org/3/tutorial/datastructures.html) 中的第五章之后，顺手整理了一下 Containers 的概念表格：
 
-![](../images/python-containers.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/python-containers.png?raw=true)
 
 **可这张图错了！**
 
@@ -187,7 +187,7 @@ Python 官方网站上的 [The Python Tutorial](https://docs.python.org/3/tutori
 
 于是肯定需要再次整理，若干次改进之后，那张图就变成了下面这个样子：
 
-![](../images/python-containers-final.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/python-containers-final.png?raw=true)
 
 > 另外，从 Python 3.7 开始，Dictionary 是 insertion ordered 了：<br />
 https://docs.python.org/3/library/collections.html#ordereddict-objects
@@ -204,7 +204,7 @@ https://docs.python.org/3/library/collections.html#ordereddict-objects
 
 人家随手做个图，都舍不得不精致：
 
-![](../images/iter-relationships.gif)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/iter-relationships.gif?raw=true)
 
 自学能力强的人有个特点，就是**不怕麻烦**。小时候经常听到母亲念叨，“怕麻烦！那还活着干嘛啊？活着多麻烦啊！” —— 深刻。
 
