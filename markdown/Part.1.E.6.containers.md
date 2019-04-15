@@ -353,7 +353,7 @@ print('the sorted:\n', b_list)
 
 b_list.sort(key=str.lower, reverse=True)
 # key 参数，默认是 None
-# key=str.lower 的意思是，在比较的时候，先全都转换成小写再比较……
+# key=str.lower 的意思是，在比较排序的时候，先全都转换成小写再比较排序……
 # —— 但并不改变原有值
 print('the sorted reversely:\n', b_list)
 ```
