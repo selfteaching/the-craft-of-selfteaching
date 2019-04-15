@@ -654,7 +654,7 @@ s.strip()
     
     'Simple is better than complex.'
 
-但是，如果给定了一个字符串作为参数，那么参数字符串中的所有字母都会被当做需要从首尾剔除的对象：
+但是，如果给定了一个字符串作为参数，那么参数字符串中的所有字母都会被当做需要从首尾剔除的对象，直到新的首位字母不包含在参数中，就会停止剔除：
 
 ```python
 from IPython.core.interactiveshell import InteractiveShell
