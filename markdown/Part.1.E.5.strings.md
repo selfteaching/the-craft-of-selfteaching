@@ -890,7 +890,7 @@ age = 25
 # "%s is %d years old." % (name, age)
 # 上一行这是兼容 Python 2 的老式写法，可以从此忽略……
 
-# str.format() 里可以直接写表达式……
+# str.fomrat() 里可以直接写表达式……
 '{} is a grown up? {}'.format(name, age >= 18)
 ```
 
@@ -1006,7 +1006,7 @@ print("'for'.isidentifier():", \
 > * 为了表格在一屏中可以正确显示，本来应该规规矩矩写 `str.xxx`，但写成了 `s.xxx`……
 > * 另外，操作那一行，为了分类记忆方便，把 `len()` 和 `s.join()` 也放进去了……
 
-![](images/string-concepts.png?raw=true)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/string-concepts.png?raw=true)
 
 “记住” 的方法并不是马上就只盯着表格看…… 正确方法是反复阅读这一章内容中的代码，并逐一运行，查看输出结果；还要顺手改改看看，多多体会。多次之后，再看着表格回忆知识点，直到牢记为止。
 
