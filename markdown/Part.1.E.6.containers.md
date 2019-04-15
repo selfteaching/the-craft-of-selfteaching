@@ -423,7 +423,7 @@ print()
 e_list = d_list
 del e_list[6:8]
 print(e_list)
-print(d_list)             # 对 e_list 操作，相等于对 d_list 操作
+print(d_list)             # 对 e_list 操作，相当于对 d_list 操作
 
 # 在末尾追加一个列表
 print()
