@@ -67,7 +67,7 @@ class Golem:
 
 在 Class 的代码中，如果定义了 `__init__()` 函数，那么系统就会将它当作用来 Instance 在创建后被初始化的函数。这个函数名称是强制指定的，初始化函数必须使用这个名称；注意 `init` 两端各有两个下划线 `_`。
 
-当我们用 `g = Golem('Clay')` 这一句创建了一个 Golam 的 Instance 的时候，以下一连串的事情发生了：
+当我们用 `g = Golem('Clay')` 这一句创建了一个 Golem 的 Instance 的时候，以下一连串的事情发生了：
 
 > * `g` 从此之后就是一个根据 Golem 这个 Class 创建的 Instance，对使用者来说，它就是个 Object；
 > * 因为 Golem 这个 Class 的代码中有 `__init__()`，所以，当 `g` 被创建的时候，`g` 就需要被初始化……
@@ -347,7 +347,7 @@ UnboundLocalError: local variable 'population' referenced before assignment
 
 看看下面的图示，理解起来更为直观一些：
 
-![](../images/class-variables-scope.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/class-variables-scope.png?raw=true)
 
 整个代码启动之后，总计有 4 个 Scopes 如图所示：
 
@@ -365,6 +365,12 @@ UnboundLocalError: local variable 'population' referenced before assignment
 在 Scope ③ 中，`population` 是不存在的，如果需要引用这个值，可以用 `Golem.population`，也可以用 `self.population`。同样的道理，在 Scope ③ 中 `__life_span` 也不存在，如果想用这个值，可以用 `Golem.__life_span` 或者 `self.__life_span`；
 
 Scope ④ 与 Scope ③ 平行存在。所以在这里，`population` 和 `__life_span` 也同样并不存在。
+
+**补充**
+
+在本例子中，在 `__init__(self, name=None)` 函数中 `self.population` 和 `Golem.population` 都可以使用，但使用效果是不一样的：
+
+> * `self.population` 总是去读取 `Golem` 类中 `population` 的初始值，即使后面通过 `setattr((Golem, 'population', 10)` 更改 `population` 的值后，`self.population` 的值仍为 `0`，但 `Golem.population` 值则为 `10`，你可以自己动手尝试一下。
 
 ## Encapsulation
 

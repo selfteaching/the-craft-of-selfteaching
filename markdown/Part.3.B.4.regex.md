@@ -66,7 +66,7 @@ re.findall(pttn, str)
 
 我们最好先直接看看 Regex 的工作过程。以下，是用微软发行的代码编辑工具 Visual Studio Code 针对一小段文本使用若干条 Regex 进行匹配的过程：
 
-![](../images/regex-test.gif)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/regex-test.gif?raw=true)
 
 Python 的项目代码仓库里有一个很简短的 Demo 程序，叫 [`redemo.py`](https://github.com/python/cpython/blob/master/Tools/demo/redemo.py)，它使用 [Tcl/Tk](https://docs.python.org/3/library/tkinter.html) 作为图形界面，也可以用来测试正则表达式。
 
@@ -76,13 +76,13 @@ Python 的项目代码仓库里有一个很简短的 Demo 程序，叫 [`redemo.
 
 它运行起来长成这样：
 
-![](../images/redemo.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/redemo.png?raw=true)
 
 目前（2019）网上最方便的 Regex 测试器，是 [regex101.com](https://regex101.com)：
 
 以下，就是在一段文本中，找出所有首写字母大写的词汇的*过程*，并将其先全部替换成小写，再将其全部替换为大写的过程；使用的正则表达式是 `([A-Z])\w+`，替换表达式分别是 `\L$1` 和 `\U$1`：
 
-![](../images/regex101.gif)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/regex101.gif?raw=true)
 
 这个网站太好了，所以，平日里我是用 [Nativefier](https://github.com/jiahaog/nativefier) 工具将这个网站打包为一个 Mac Desktop App 使用。不过，它也有局限，就是被搜索文件略微大点就报错，说 `timeout`……
 
@@ -492,7 +492,8 @@ str = 'The white dog wears a black hat.'
 pttn = r'The (?:white|black) dog wears a (white|black) hat.'
 re.findall(pttn, str)                   # 只捕获了一处，也就是说只有一个值将来可以被引用
 
-repl = r'The \1 dog wears a \1 hat.'    # 不过，可替换的位置却有两个（即便非捕获匹配，也有可替换位置）
+repl = r'The \1 dog wears a \1 hat.'    # 之前的一处捕获，在替换时可被多次引用
+書評
 re.sub(pttn, repl, str)
 
 ```
@@ -500,8 +501,6 @@ re.sub(pttn, repl, str)
     ['black']
     
     'The black dog wears a black hat.'
-
-需要注意的是，虽然非匹配捕获不将匹配值暂存以便随后替换时调用，但匹配处依然是将来可被替换的位置。
 
 在 Python 代码中使用正则表达式，匹配和捕获以及随后的替换，有更灵活的方式，因为可以对那些值直接编程。`re.sub()` 中，`repl` 参数甚至可以接收另外一个函数作为参数 —— 以后你肯定会自行认真阅读以下页面中的所有内容：
 

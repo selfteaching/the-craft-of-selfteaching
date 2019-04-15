@@ -9,23 +9,23 @@
 
 使用快捷键 `⇧⌘p` 呼出 Command Palette，在其中输入 `shell command`，而后选中 `Install 'code' command in PATH`。此后，就可以在 Terminal 命令行中使用 `code` 命令了。(Windows 系统安装 VS Code 时会自动配置好，并不需要此步骤）
 
-![](../images/vscode-shell.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/vscode-shell.png?raw=true)
 
 ## 选择 Python 解析器版本
 
 使用快捷键 `⇧⌘p` 呼出 Command Palette，在其中输入 `select interpreter`，而后选中 `Python: Select Interpreter`。
 
-![](../images/vscode-select-python-version1.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/vscode-select-python-version1.png?raw=true)
 
 而后，在系统中已安装的若干个版本中选择你需要的那一个。MacOS 系统自带一个 Python 2.7，而我们安装的 Anaconda 为系统另外安装了一个 Python 3.7。
 
-![](../images/vscode-select-python-version2.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/vscode-select-python-version2.png?raw=true)
 
 ## 安装扩展
 
 使用快捷键 `⇧⌘x` 呼出扩展面板。安装 anaconda 扩展，它会连带装上 python 扩展：
 
-![](../images/vscode-extensions.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/vscode-extensions.png?raw=true)
 
 另外，为了输入方便，有两个扩展可选安装：
 
@@ -62,7 +62,7 @@ with open('results.txt', 'w') as results:
 
 因为有这样的功能，所以你在输入程序的时候其实是非常从容的，可以很慢输入，边思考边输入…… 可实际上，完成速度却很快。
 
-![](../images/vscodedemo.gif)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/vscodedemo.gif?raw=true)
 
 另外，SublimeText 的多光标输入是很多程序员爱不释手的功能，于是，各种编辑器里都有第三方写的 SublimeText Keymap 插件，连 Jupyterlab 都有：
 

@@ -285,7 +285,7 @@ BNF grammar for Perl-style regular expressions
 这个东西叫 `glob`，是 Global 的缩写。你可以把它理解为 “超级简化版正则表达式” —— 它最初是 Unix/Posix 操作系统中用来匹配文件名的 “通配符”。
 
 先看一张 1971 的 Unix 操作系统中关于 glob 的截图：
-![](../images/Unix_Glob_Reference.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/Unix_Glob_Reference.png?raw=true)
 > A screenshot of the original 1971 Unix reference page for glob – note the owner is dmr, short for Dennis Ritchie.
 
 glob 的主要符号只有这么几个：

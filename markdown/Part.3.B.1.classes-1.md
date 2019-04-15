@@ -37,7 +37,7 @@
 
 在程序设计过程中，我们常常需要对标现实世界创造对象。这时候我们用的最直接手段就是**抽象**（Abstract）。抽象这个手段，在现实中漫画家们最常用。为什么你看到下面的图片觉得它们俩看起来像是人？尤其是在你明明知道那肯定不是人的情况下，却已然接受那是两个漫画小人的形象？
 
-![](../images/a-cartoon.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/a-cartoon.png?raw=true)
 
 这种描绘方式，就是抽象，很多 “没必要” 的细节都被去掉了（或者反过来说，没有被采用），留下的两个特征，一个是头，一个是双眼 —— 连那双 “眼睛” 都抽象到只剩下一个黑点了……
 
@@ -52,7 +52,7 @@
 
 我们为生物分类，就是一层又一层地抽象的过程。当我们使用 “生物” 这个词的时候，它并不是某一个特定的我们能够指称的东西…… 然后我们开始给它分类……
 
-[![](../images/Tree-of-Life.gif)](https://crucialconsiderations.org/wp-content/uploads/2016/08/Tree-of-Life.jpg)
+[![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/Tree-of-Life.gif?raw=true)](https://crucialconsiderations.org/wp-content/uploads/2016/08/Tree-of-Life.jpg)
 
 所以，当我们在程序里创建对象的时候，做法常常是
 
@@ -94,6 +94,6 @@
 
 最后，补充一下，不要误以为所有的 Classes 都是对事物（即，名词）的映射 —— 虽然大多数情况下确实如此。
 
-![](../images/code-review.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/code-review.png?raw=true)
 
 对基本概念有了一定的了解之后，再去看 Python 语言是如何实现的，就感觉没那么难了。

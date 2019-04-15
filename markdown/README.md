@@ -21,15 +21,10 @@ def teach_yourself(anything):
 
 teach_yourself(coding)
 ```
-请先行阅读 [T-appendix.jupyter-installation-and-setup](T-appendix.jupyter-installation-and-setup.md) 以便在本地安装 [Jupyterlab](https://github.com/jupyterlab/jupyterlab) 而后就能用更好的体验阅读本书。
 
-有兴趣帮忙的朋友，请先行阅读 [如何使用 Pull Request 为这本书校对](02.proof-of-work.md)。
+> 有兴趣帮忙的朋友，请先行阅读 [如何使用 Pull Request 为这本书校对](02.proof-of-work.md)。
 
-2019 年 3 月 23 日，新增 Markdown 版本：
-
-> https://github.com/selfteaching/the-craft-of-selfteaching/tree/master/markdown
-
-### 目录
+## 目录
 
 > - [01.preface（**前言**）](01.preface.md)
 > - [02.proof-of-work（**如何证明你真的读过这本书？**）](02.proof-of-work.md)
@@ -89,9 +84,9 @@ $ jupyter nbconvert --to markdown *.ipynb
 `README.md` 文件复制一份到 `markdown/` 目录之下，而后编辑为当前文件
 
 # 需使用 VSCode 批量 Find and Replace:
-将所有 (images/ 替换为 (../images/
-将所有 (Part.1.A.better.teachyourself_files/ 替换为 (../images/
-将所有 (Part.1.E.6.containers_files/ 替换为 (../images/
+将所有 (https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/ 替换为 (https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/
+将所有 (Part.1.A.better.teachyourself_files/ 替换为 (https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/
+将所有 (Part.1.E.6.containers_files/ 替换为 (https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/
 将所有 ```\n\n 替换为 ```\n
 将所有	\n\n```	替换为 \n```
 将所有 .ipynb) 替换为 .md)
@@ -100,9 +95,61 @@ $ jupyter nbconvert --to markdown *.ipynb
 `Part.1.E.7.files.md` 文件中有过长的 output 需要编辑
 ```
 
+-----
+
+推荐读者在自己的浏览器上安装 [Stylus](https://github.com/openstyles/stylus) 这类终端 CSS 定制插件，Chrome/Firefox/Opera 都支持 Stylus 插件。以便拥有更好的阅读体验。以下 gif 图片展示的是使用自定义 css 前后的效果：
+
+> ![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/github-markdown-style.gif?raw=true)
+
+
+我用的 Stylus 定制 CSS（针对 github.com）是这样的：
+
+```css
+.markdown-body {font-family: "PingFang SC";}
+strong {color:#6392BF;}
+em {color: #A9312A; font-style: normal !important;}
+table {font-size: 95% !important;}
+
+
+.CodeMirror, pre {font-size: 90%;}
+pre {
+    padding: 10px 25px;
+    background-color: #fafafa;
+    border-left: 4px solid #dadada;
+    border-radius: 10px;
+}
+
+pre code {
+    background-color: #fafafa;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+p code, 
+li code,
+blockquote p code, 
+blockquote li code,
+td code {
+    background-color: #f6f6f6;
+    font-size: 90%;
+    color:#2e2e2e;
+    padding: 4px 4px;
+    margin: 0 8px;
+    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.2);
+    border-radius: 4px;
+}
+}
+```
+
+我写的内容里，为了重点突出，特别定制了 `strong` 和 `em` 两个元素的显示，让它们以不同的颜色展示；又因为中文并不适合斜体展示，所以，把 `em` 的 `font-style` 设定为 `normal`……
+
+-----
+
 本书的版权协议为 [CC-BY-NC-ND license](https://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh)。
 
-![CC-BY-NC-ND](../images/CC-BY-NC-ND.png?raw=true "CC-BY-NC-ND")
+![CC-BY-NC-ND](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/CC-BY-NC-ND.png?raw=true)
 
 -----
 **脚注**

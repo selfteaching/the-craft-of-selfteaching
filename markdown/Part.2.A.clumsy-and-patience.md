@@ -69,7 +69,7 @@
 
 大约 1984 年，我在远在边疆的延吉市的本地青少年宫参加了一个要交 10 元学费的暑期计算机兴趣班，老师姓金，教的是 BASIC 语言，用的机器是这样的：
 
-![](../images/Acorn-Electron.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/Acorn-Electron.png?raw=true)
 
 它要外接上一个九寸的单色显示器，那时候还没有磁盘，所以，只要一断电，就什么都没有了……
 

@@ -78,7 +78,7 @@ f'{name} is {age} years old.'
 
 以下，是 print() 这个函数的[官方文档](https://docs.python.org/3/library/functions.html#print)：
 
-![](../images/doc-print.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/doc-print.png?raw=true)
 
 最必须读懂的部分，就是这一行：
 
@@ -160,7 +160,7 @@ sorted('abdc', reverse=True)
 
 位置参数，顾名思义，是 “由位置决定其值的参数”。拿 `divmod()` 为例，它的[官方文档](https://docs.python.org/3/library/functions.html#divmod)是这样写的：
 
-![](../images/doc-divmod.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/doc-divmod.png?raw=true)
 
 它接收且必须接收两个参数。
 
@@ -195,7 +195,7 @@ b
 
 有些函数，如 `pow()`，有**可选的位置参数**（Optional Positional Arguments）。
 
-![](../images/doc-pow.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/doc-pow.png?raw=true)
 
 于是，`pow()` 有两种用法，各有不同的结果：
 
@@ -217,11 +217,11 @@ pow(2, 3, 4)
 
 看看 `exec()` 的官方文档（先别管这个函数干嘛用的），注意函数定义中的两个嵌套的方括号：
 
-![](../images/doc-exec.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/doc-exec.png?raw=true)
 
 这些方括号的意思是说：
 
-> * 没在方括号里的 `object` 是不可或缺的函数，调用时必须提供；
+> * 没在方括号里的 `object` 是不可或缺的参数，调用时必须提供；
 > * 可以有第二个参数，第二个参数会被接收为 `globals`；
 > * 在有第二个参数的情况下，第三个参数会被接收为 `locals`；
 > * *但是，你没办法在不指定 `globals` 这个位置参数的情况下指定 `locals`……*
@@ -234,19 +234,19 @@ pow(2, 3, 4)
 
 再仔细看看 `print()`，它只有一个位置参数：
 
-![](../images/doc-print-def.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/doc-print-def.png?raw=true)
 
 因为位置决定了值的定义，一般来说，一个函数里最多只有一个这种可以接收很多值的位置参数 —— 否则如何获知谁是谁呢？
 
 如果与此同时，还有若干个位置参数，那么，*能够接收很多值的位置参数*只能放置最后，就好像 `max()` 函数那样：
 
-![](../images/doc-max.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/doc-max.png?raw=true)
 
 ## Class 也是函数
 
 虽然你现在还不一定知道 Class 究竟是什么，但在阅读官方文档的时候，遇到一些内建函数前面写着 Class，比如 `Class bool([x])`，千万别奇怪，因为 Class 本质上来看就是一种特殊类型的函数，也就是说，它也是函数：
 
-![](../images/doc-class.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/doc-class.png?raw=true)
 
 ```python
 from IPython.core.interactiveshell import InteractiveShell
