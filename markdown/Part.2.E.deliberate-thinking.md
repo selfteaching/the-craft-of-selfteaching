@@ -19,7 +19,7 @@
 
 比如，当你看到字符串的 Methods 中有一个 `str.zfill()` 的时候，马上就能想到，“嗯！这可以用来批量更名文件……”
 
-![](../images/rename-macos.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/rename-macos.png?raw=true)
 
 虽然现在的 Mac OS 操作系统里已经有相当不错的批量更名工具内建在 Finder 之中（选中多个文件之后，在右键菜单中能看到 `rename` 命令），但这是近期才加进去的功能，几年前却没有 —— 也就是说，几年前的时候，有人可以用 `str.zfill()` 写个简单的程序完成自己的工作，而另外一些人仅因为操作系统没有提供类似的功能就要么手工做，要么干脆忍着忘了算了……
 

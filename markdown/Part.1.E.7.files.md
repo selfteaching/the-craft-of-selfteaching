@@ -116,7 +116,7 @@ f.close()
     first line
     second line
 
-与之相对的，
+与之相对的，我们可以使用 `file.readlins()` 这个命令，将文件作为一个列表返回，列表中的每个元素对应着文件中的每一行：
 
 ```python
 f = open('test-file.txt', 'w')

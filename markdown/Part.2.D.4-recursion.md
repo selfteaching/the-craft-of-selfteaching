@@ -31,7 +31,7 @@ print(f(5))
 
 以 factorial(5) 为例，让我们看看程序的流程：
 
-![](../images/recursive-function-call.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/recursive-function-call.png?raw=true)
 
 当 f(5) 被调用之后，函数开始运行……
 * 因为 `5 > 1`，所以，在计算 `n * f(n-1)` 的时候要再次调用自己 `f(4)`；所以必须等待 `f(4)` 的值返回；

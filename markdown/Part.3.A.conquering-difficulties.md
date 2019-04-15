@@ -38,7 +38,7 @@
 
 那个 “突然”，其实就是阿基米德的 [Eureka](https://en.wikipedia.org/wiki/Eureka_effect)，那个他从澡堂里冲出来大喊大叫的词汇。
 
-![](../images/archimedes-eureka.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/archimedes-eureka.png?raw=true)
 
 其实吧，泡澡和冥想，还真是最容易产生 Eureka 状态的两种活动。原理在于，泡澡和打坐的时候，大脑都极其放松，乃至于原本相互之间并无联系的脑神经突触之间突然产生相互关联；而那结果就是日常生活中所描述的 “融会贯通”，于是，突然之间，Eureka！
 

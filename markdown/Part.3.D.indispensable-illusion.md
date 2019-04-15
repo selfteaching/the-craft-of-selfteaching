@@ -90,11 +90,11 @@
 
 这一点也经常被人利用。在新闻学里，就有著名的 “Framing Effect”：
 
-![](../images/framing-effect.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/framing-effect.png?raw=true)
 
 这个原理也经常被各路营销使用：
 
-![](../images/framing-bias.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/framing-bias.png?raw=true)
 
 很容易想象，经常被这些东西误导的人，“脑力” 欠缺到什么程度 —— 这当然也是他们全无自学能力的结果之一。
 

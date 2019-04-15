@@ -39,7 +39,7 @@ Python 的官方文档网址是：
 
 此人很帅，但更帅的是他的车牌（摘自 Guido van Rossume 的[个人主页](https://gvanrossum.github.io)）：
 
-![](https://gvanrossum.github.io/images/license.jpg)
+![](https://gvanrossum.github.io/images/license.jpg?raw=true)
 
 ## 为什么一定要阅读官方文档
 
@@ -69,7 +69,7 @@ Python 的官方文档网址是：
 
 把 The Python Tutorial 拉回本地阅读，可能更为方便，尤其是可以用 Sphinx 重新制作之后，页面左侧可以总是显示完整的目录：
 
-![](../images/local-tutorial.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/local-tutorial.png?raw=true)
 
 也可以把这个教程转换成 epub 格式，以便在移动设备上阅读；甚至可以把这些个页面的 `.rst` 源文件转换成 `.ipynb` 文件，以便用 Jupyter Lab 浏览时可以直接执行其中的代码……
 
@@ -216,7 +216,7 @@ make epub
 
 用 Sphinx 这样生成的版本，支持本地目录内搜索，也确实比在网站上看更方便一点：
 
-![](../images/search-generated-by-sphinx.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/search-generated-by-sphinx.png?raw=true)
 
 ### 下载已经转换好的版本
 

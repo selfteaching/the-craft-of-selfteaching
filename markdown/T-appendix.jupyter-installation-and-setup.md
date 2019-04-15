@@ -425,4 +425,4 @@ Jupyterlab 里较为常用的魔法函数整理如下：
 
 > https://nwhitehead.github.io/pineapple/
 
-![https://nwhitehead.github.io/pineapple/images/sshots.png](https://nwhitehead.github.io/pineapple/images/sshots.png)
+![https://nwhitehead.github.io/pineapple/images/sshots.png](https://nwhitehead.github.io/pineapple/images/sshots.png?raw=true)
