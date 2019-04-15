@@ -561,7 +561,7 @@ Complex is better than complicated."""
 # str.startswith(prefix[, start[, end]])
 print("s.lower().startswith('S'):", \
       s.lower().startswith('S'))
-print("s.lower().startswith('b'):", \
+print("s.lower().startswith('b, 10'):", \
       s.lower().startswith('b', 10))
 print("s.lower().startswith('e', 11, 20):", \
       s.lower().startswith('e', 11, 20))
