@@ -828,10 +828,7 @@ for i in range(1, 11):
 
 占位符中可以使用由零开始的索引。
 
-```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-
+```python,ignore
 name = 'John'
 age = 25
 '{} is {} years old.'.format(name, age)
@@ -859,10 +856,7 @@ age = 25
 
 _f-string_ 与 `str.format()` 的功用差不多，只是写法简洁一些 —— 在字符串标示之前加上一个字母 `f`：
 
-```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-
+```python,ignore
 # https://docs.python.org/3/library/stdtypes.html#printf-style-bytes-formatting
 # f-string
 
