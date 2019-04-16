@@ -33,7 +33,7 @@
 
 还有，英语在科学研究领域早已成为 “主导语言”（Dominant Language）也是不争的事实。不过，英语成为主导语言的结果，就是英语本身被不断 “强奸”，外来语越来越多，“Long time no see” 被辞典收录就是很好的例子。事实上，英语本身就是个大杂烩……
 
-![Joseph M. Williams’ research visualized (top 10,000 words).](../images/Joseph-M-Williams-research-visualized.png)<a href='https://medium.com/@andreas_simons/the-english-language-is-a-lot-more-french-than-we-thought-heres-why-4db2db3542b3'></a>
+![Joseph M. Williams’ research visualized (top 10,000 words).](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/Joseph-M-Williams-research-visualized.png?raw=true)<a href='https://medium.com/@andreas_simons/the-english-language-is-a-lot-more-french-than-we-thought-heres-why-4db2db3542b3'></a>
 
 读书越多越明白读书少会被忽悠…… 很多人真的会大头捣蒜一般地认同 “不是什么东西都可以从书本里学到的……”
 
@@ -74,11 +74,11 @@
 
 > 绝大多数情况下，没人能教你，也不一定有人愿意教你…… 到最后，你想学会或你必须学会什么东西的时候，**你只能靠阅读！** —— 因为其实你谁都靠不上……
 
-我有很多偶像，英国数学家乔治·布尔就是其中一个 —— 因为他就是个基本上只靠阅读自学成才的人。十八、九岁，就自学了微积分 —— 那是将近两百年前，没有 Google，没有 Wikipedia…… 然后他还自己创办了学校，给自己打工…… 从来没有上过大学，后来却被皇家学院聘请为该学院第一个数学教授。然后，人家发明的布尔代数，在百年之后引发了信息革命…… 达芬奇也是这样的人 —— 要说惨，他比所有人都惨…… 因为几乎从一开始就貌似没有谁有资格有能力教他。
+我有很多偶像，英国数学家乔治・布尔就是其中一个 —— 因为他就是个基本上只靠阅读自学成才的人。十八、九岁，就自学了微积分 —— 那是将近两百年前，没有 Google，没有 Wikipedia…… 然后他还自己创办了学校，给自己打工…… 从来没有上过大学，后来却被皇家学院聘请为该学院第一个数学教授。然后，人家发明的布尔代数，在百年之后引发了信息革命…… 达芬奇也是这样的人 —— 要说惨，他比所有人都惨…… 因为几乎从一开始就貌似没有谁有资格有能力教他。
 
 这些例子都太遥远了。给你讲个我身边的人，我亲自打过很长时间交道的人 —— 此人姓邱，人称邱老板。
 
-邱老板所写的区块链交易所引擎，在 Github 上用的是个很霸气的名字，“[貔貅](https://github.com/peatio/peatio)”（英文用了一个生造的词，Peatio） —— 这个 Repo 至 2019 年春节的时候，总计有 2,913 个 Star，有 2,150 个 Fork…… 绝对是全球这个领域中最受关注的开源项目。2017 年 9 月，云币应有关部门要求关闭之前，是全球排名前三的区块链交易所。
+邱老板所写的区块链交易所引擎，在 Github 上用的是个很霸气的名字，“[貔貅](https://github.com/peatio/peatio)”（英文用了一个生造的词，Peatio）—— 这个 Repo 至 2019 年春节的时候，总计有 2,913 个 Star，有 2,150 个 Fork…… 绝对是全球这个领域中最受关注的开源项目。2017 年 9 月，云币应有关部门要求关闭之前，是全球排名前三的区块链交易所。
 
 邱老板当年上学上到几年级呢？初中未读完，所以，跟他聊天随口说成语是很有负担的，因为他真的可能听不懂…… 然而，他的编程、他的英语，全是自学的…… 学到什么地步呢？学到可以创造极有价值的商业项目的地步。他什么学习班都没上过，全靠阅读 —— 基本上只读互联网这本大书。
 

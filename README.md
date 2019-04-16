@@ -45,7 +45,7 @@ teach_yourself(coding)
 > - [Part.1.E.5.strings（**字符串**）](Part.1.E.5.strings.ipynb)
 > - [Part.1.E.6.containers（**数据容器**）](Part.1.E.6.containers.ipynb)
 > - [Part.1.E.7.files（**文件**）](Part.1.E.7.files.ipynb)
-> - [Part.1.F.deal-with-forward-references（**如何从容应对含有过多“过早引用”的知识？**）](Part.1.F.deal-with-forward-references.ipynb)
+> - [Part.1.F.deal-with-forward-references（**如何从容应对含有过多 “过早引用” 的知识？**）](Part.1.F.deal-with-forward-references.ipynb)
 > - [Part.1.G.The-Python-Tutorial-local（**官方教程：The Python Tutorial**）](Part.1.G.The-Python-Tutorial-local.ipynb)
 > - [Part.2.A.clumsy-and-patience（**笨拙与耐心**）](Part.2.A.clumsy-and-patience.ipynb)
 > - [Part.2.B.deliberate-practicing（**刻意练习**）](Part.2.B.deliberate-practicing.ipynb)
@@ -82,11 +82,11 @@ teach_yourself(coding)
 
 本书的版权协议为 [CC-BY-NC-ND license](https://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh)。
 
-![CC-BY-NC-ND](images/CC-BY-NC-ND.png?raw=true "CC-BY-NC-ND")
+![CC-BY-NC-ND](images/CC-BY-NC-ND.png?raw=true)
 
 -----
 **脚注**
 
-<a name='fn1'>[1]</a>： [‘Themselves’ or 'themself’? -- Oxford Dictionary](https://en.oxforddictionaries.com/usage/themselves-or-themself)
+<a name='fn1'>[1]</a>：['Themselves' or 'themself'? -- Oxford Dictionary](https://en.oxforddictionaries.com/usage/themselves-or-themself)
 
 <a href='#fn1b'><small>↑Back to Content↑</small></a>
