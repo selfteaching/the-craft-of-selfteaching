@@ -66,13 +66,21 @@ for i in range(10):
     8
     9
 
-即便是用比 C 更为 “现代” 一点的 JavaScript，也大抵上应该是这样的：
+即便是用比 C 更为 “现代” 一点的 JavaScript，大抵上应该这样写：
 
 ```javascript
 var i;
 for (i = 0; i < 10; i++) {
   console.log(i)
 }
+```
+
+或者用函数 `forEach` 的语法糖：
+
+```javascript
+[...Array(10).keys()].forEach((x) => {
+  console.log(x)
+})
 ```
 
 当然，有时候我们也需要比较复杂的计数器，不过，Python 也不只有 `for` 循环，还有 `while` 循环，在必要的时候可以写复杂的计数器。
