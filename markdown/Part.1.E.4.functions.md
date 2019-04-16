@@ -67,7 +67,8 @@ print(f'{name} is {age} years old.')
 ```python
 name = 'Ann'
 age = '22'
-f'{name} is {age} years old.'
+a = f'{name} is {age} years old.'
+print(a)
 ```
 
     'Ann is 22 years old.'
@@ -146,11 +147,10 @@ print(print(1))
 现在先只关注它的 Keyword Arguments，`reverse`：
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-
-sorted('abdc')
-sorted('abdc', reverse=True)
+a = sorted('abdc')
+b = sorted('abdc', reverse=True)
+print(a)
+print(b)
 ```
 
     ['a', 'b', 'c', 'd']
@@ -170,18 +170,15 @@ sorted('abdc', reverse=True)
 作为 “这个函数的用户”，你不能（事实上也没必要）调换这两个参数的意义。因为，根据定义，被传递的值的意义就是由参数的位置决定的。
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-
-divmod(11, 3)
+print(divmod(11, 3))
 a, b = divmod(11, 3)
-a
-b
+print(a)
+print(b)
 
-divmod(3, 11)
+print(divmod(3, 11))
 a, b = divmod(3, 11)
-a
-b
+print(a)
+print(b)
 ```
 
     (3, 2)
@@ -203,11 +200,8 @@ b
 > * `pow(x, y, z)` —— 返回值是 `x ** y % z`
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-
-pow(2, 3)
-pow(2, 3, 4)
+print(pow(2, 3))
+print(pow(2, 3, 4))
 ```
 
     8
@@ -249,14 +243,11 @@ pow(2, 3, 4)
 ![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/doc-class.png?raw=true)
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-
-bool()
-bool(3.1415926)
-bool(-3.1415926)
-bool(1 == 2)
-bool(None)
+print(bool())
+print(bool(3.1415926))
+print(bool(-3.1415926))
+print(bool(1 == 2))
+print(bool(None))
 ```
 
     False

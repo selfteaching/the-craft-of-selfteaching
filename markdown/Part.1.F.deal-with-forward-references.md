@@ -94,22 +94,23 @@ print(an_undefined_variable)
 
 在学习 Python 语言的过程中，有个例子可以说明以上的现象。
 
-在 Python 语言中，`for` 循环可以附加一个 `else` 部分。你到 Google 上搜索一下 [`for else python`](https://www.google.com/search?q=for+else+python) 就能看到有多少人在 “追问” 这是干什么的？还有另外一些链接，会告诉你 “for... else” 这个 “秘密” 的含义，将其称为 “语法糖” 什么的……
+在 Python 语言中，`for` 循环可以附加一个 `else` 部分。你到 Google 上搜索一下 [for else python](https://www.google.com/search?q=for+else+python) 就能看到有多少人在 “追问” 这是干什么的？还有另外一些链接，会告诉你 “for... else” 这个 “秘密” 的含义，将其称为 “语法糖” 什么的……
 
 其实，[官方教程](https://docs.python.org/3/tutorial/controlflow.html#break-and-continue-statements-and-else-clauses-on-loops)里写的非常清楚的，并且还给出了一个例子：
 
 > Loop statements may have an else clause; it is executed when the loop terminates through exhaustion of the list (with for) or when the condition becomes false (with while), but not when the loop is terminated by a break statement. This is exemplified by the following loop, which searches for prime numbers:
->
-> ```python
-> >>> for n in range(2, 10):
-> ...     for x in range(2, n):
-> ...         if n % x == 0:
-> ...             print(n, 'equals', x, '*', n//x)
-> ...             break
-> ...     else:
-> ...         # loop fell through without finding a factor
-> ...         print(n, 'is a prime number')
-> ...
+
+```python
+for n in range(2, 10):
+    for x in range(2, n):
+        if n % x == 0:
+            print(n, 'equals', x, '*', n//x)
+            break
+    else:
+        # loop fell through without finding a factor
+        print(n, 'is a prime number')
+```
+
 > 2 is a prime number
 > 3 is a prime number
 > 4 equals 2 * 2
@@ -118,9 +119,9 @@ print(an_undefined_variable)
 > 7 is a prime number
 > 8 equals 2 * 4
 > 9 equals 3 * 3
-> ```
 
-只有两种情况，
+
+只有两种情况：
 
 > * 要么干脆就没读过，
 > * 要么是读了，却没读到这个细节……

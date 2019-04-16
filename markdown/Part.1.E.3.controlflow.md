@@ -27,7 +27,7 @@ for n in range(2, 100):
 
 `if` 语句的最简单构成是这样 —— 注意第 1 行末尾的冒号 `:` 和第 2 行的缩进：
 
-```python
+```python,ignore
 if expression:
     statements
 ```
@@ -46,7 +46,7 @@ if r % 2 == 0:
 
 如果，表达式 `expression` 返回值无论真假，我们都需要做一点相应的事情，那么我们这么写：
 
-```python
+```python,ignore
 if expression:
     statements_for_True
 else:
@@ -69,7 +69,7 @@ else:
 
 有时，表达式 `<expression>` 返回的值有多种情况，并且针对不同的情况我们都要做相应的事情，那么可以这么写：
 
-```python
+```python,ignore
 if expression_1:
     statements_for_expression_1_True
 
@@ -127,7 +127,7 @@ Python 语言中，`for` 循环不使用其它语言中那样的计数器，取�
 
 用 C 语言写循环是这样的：
 
-```C
+```cpp,ignore
 for( a = 0; a < 10; a = a + 1 ){
     printf("value of a: %d\n", a);
 }
@@ -164,21 +164,17 @@ for a in range(10):
 这就解释了为什么有的时候我们会在 `for ... in range(...):` 这种循环内的语句块里进行计算的时候，经常会在变量之后写上 `+ 1`，因为我们 range(n) 的返回数列中不包含 `n`，但我们有时候却需要 `n`。[点击这里返回看看第一章里提到的例子：所谓算法那一小节](Part.1.E.1.entrance.ipynb#plusone)。
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-
-range(10)
-list(range(10)) # 将 range(10) 转换成 list，以便清楚看到其内容。
+print(range(10))
+print(list(range(10))) # 将 range(10) 转换成 list，以便清楚看到其内容。
 ```
 
     range(0, 10)
-
     [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 `start` 参数的默认值是 `0`。如需指定起点，那么得给 `range()` 传递两个参数，比如，`range(2, 13)`……
 
 ```python
-list(range(2, 13))
+print(list(range(2, 13)))
 ```
 
     [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
@@ -199,7 +195,8 @@ for i in range(1, 10, 2):
 我们也可以生成负数的数列：
 
 ```python
-list(range(0, -10, -1))
+a = list(range(0, -10, -1))
+print(a)
 ```
 
     [0, -1, -2, -3, -4, -5, -6, -7, -8, -9]
@@ -342,7 +339,7 @@ for i in range(100):
 
 `while` 循环的格式如下：
 
-```python
+```python,ignore
 while expression:
     statements
 ```
@@ -416,7 +413,7 @@ def bet(dice, wager):    # 接收两个参数，一个是骰子点数，另一�
 while True:         #  除 for 之外的另外一个循环语句
     print(f'You: {coin_user}\t Bot: {coin_bot}')
     dice = randrange(2, 13)   # 生成一个 2 到 12 的随机数
-    wager = input("What's your bet? ")
+    wager = input("What's your bet? (type 'q' to quit)")
     if wager == 'q':
         break
     elif wager in 'bs':  # 只有当用户输入的是 b 或者 s 得时候，才 “掷骰子”……

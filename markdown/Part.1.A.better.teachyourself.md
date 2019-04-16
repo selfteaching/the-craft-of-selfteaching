@@ -24,7 +24,7 @@
 
 拿中国地区做例子，根据世界银行的数据统计，中国人在出生时的寿命预期，从 1960 年的 _43.73_ 岁，增长到了 2016 年的 _76.25_ 岁，56 年间的增幅竟然有 **74.39%** 之多！
 
-```python
+```python,ignore
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -68,7 +68,7 @@ plt.show()
 
 有一个统计指数，叫做人类发展指数（Human Development Index），它的曲线画出来，怎么看都有即将成为指数级上升的趋势。
 
-```python
+```python,ignore
 import matplotlib.pyplot as plt
 import numpy as np
 plt.figure(figsize=(10, 5))
@@ -110,7 +110,7 @@ plt.show()
 
 纽约联邦储蓄银行在 2012 年做过一个调查，发现人们的职业与自己大学所学专业相符的比例连 _30%_ 都不到。而且，我猜，这个比例会持续下降的 —— 因为这世界变化快，因为大多数教育机构与世界发展脱钩的程度只能越来越严重……
 
-```python
+```python,ignore
 import matplotlib.pyplot as plt
 
 labels = ['Major Match', '']

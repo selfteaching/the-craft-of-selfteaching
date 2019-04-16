@@ -84,6 +84,7 @@ InteractiveShell.ast_node_interactivity = "all"
 ```python
 import random
 r = random.randrange(1, 1000)
+print(r)
 ```
 
 同样，你可以暂时忽略它们的意义和工作原理；只需要知道因为有它们在，所以每次执行那个单元格中的代码会有不同的结果就可以了。

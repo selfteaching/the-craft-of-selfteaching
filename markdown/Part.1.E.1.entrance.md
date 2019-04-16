@@ -70,12 +70,8 @@ Google Doodle 的寄语是这样的：
 任何一个**逻辑表达式**都会返回一个*布尔值*。
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-# 请暂时忽略以上两行……
-
-1 == 2
-1 != 2
+print(1 == 2)
+print(1 != 2)
 ```
 
     False
@@ -169,7 +165,7 @@ else:
 
 现在看代码，先忽略其它的部分，只看关键部分：
 
-```python
+```python,ignore
     ...
     if r % 2 == 0:
         ...
@@ -327,7 +323,7 @@ for n in range(2, 100):
 
 ```python
 a = abs(-3.1415926)
-a
+print(a)
 ```
 
     3.1415926
