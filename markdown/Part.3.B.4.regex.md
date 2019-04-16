@@ -80,7 +80,7 @@ Python 的项目代码仓库里有一个很简短的 Demo 程序，叫 [`redemo.
 
 目前（2019）网上最方便的 Regex 测试器，是 [regex101.com](https://regex101.com)：
 
-以下，就是在一段文本中，找出所有首写字母大写的词汇的*过程*，并将其先全部替换成小写，再将其全部替换为大写的过程；使用的正则表达式是 `([A-Z])\w+`，替换表达式分别是 `\L$1` 和 `\U$1`：
+以下，就是在一段文本中，找出所有首写字母大写的词汇的*过程*，并将其先全部替换成小写，再将其全部替换为大写的过程；使用的正则表达式是 `([A-Z]\w+)`，替换表达式分别是 `\L$1` 和 `\U$1`：
 
 ![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/regex101.gif?raw=true)
 
