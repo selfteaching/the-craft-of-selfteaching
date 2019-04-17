@@ -880,6 +880,8 @@ age = 25
 '{} is {} years old.'.format(name, age)
 # 不写占位符索引就默认每个占位符的索引从第一个开始是 0, 1, 2 ...（占位符数量 - 1)
 # '{} {}'.format(a, b) 和 '{0} {1}'.format(a, b) 是一样的。
+'{1} is {0} years old.'.format(name, age)
+# '{1} {0}'.format(a, b) 和 '{} {}'.format(a, b) 是不一样的，前者人为干预了默认排列顺序。
 
 # '{0} is {2} years old.'.format(name, age)
 # 这一句会报错，因为 2 超出实际参数索引极限
