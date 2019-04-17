@@ -17,16 +17,16 @@
 > > * 年份能被 100 整除但不能被 400 整除的，不是闰年。
 > > * 所以，相当于要在能被 4 整除的年份中，排除那些能被 100 整除却不能被 400 整除的年份。
 
-不要往回翻！现在自己动手尝试着写出这个函数？你会发现其实并不容易的…… 
+不要往回翻！现在自己动手尝试着写出这个函数？你会发现其实并不容易的……
 
 ```python
 def is_leap(year):
     pass
 ```
 
-第一步，跟很多人想象得不一样，第一步不是上来就开始写…… 
+第一步，跟很多人想象得不一样，第一步不是上来就开始写……
 
-第一步是先假定这个函数写完了，我们需要验证它返回的结果对不对…… 
+第一步是先假定这个函数写完了，我们需要验证它返回的结果对不对……
 
 这种 “通过先想办法验证结果而后从结果倒推” 的开发方式，是一种很有效的方法论，叫做 “Test Driven Development”，以测试为驱动的开发。
 
@@ -37,7 +37,7 @@ def is_leap(year):
 > * `is_leap(220)` 的返回值应该是 `True`
 > * `is_leap(400)` 的返回值应该是 `True`
 
-能够罗列出以上四种情况，其实只不过是根据算法 “考虑全面” 之后的结果 —— 但你自己试试就知道了，无论多简单的事，想要 “考虑全面” 好像并不容易…… 
+能够罗列出以上四种情况，其实只不过是根据算法 “考虑全面” 之后的结果 —— 但你自己试试就知道了，无论多简单的事，想要 “考虑全面” 好像并不容易……
 
 所以，在写 `def is_leap(year)` 中的内容之前，我只是用 `pass` 先把位置占上，而后在后面添加了四个用来测试结果的语句 —— 它们的值，现在当然都是 `False`…… 等我把整个函数写完了，写正确了，那么它们的值就都应该变成 `True`。
 
@@ -55,17 +55,17 @@ is_leap(400) is True
 ```
 
     False
-
+    
     False
-
+    
     False
-
+    
     False
 
 考虑到更多的年份不是闰年，所以，排除顺序大抵上应该是这样：
 > * 先假定都不是闰年；
 > * 再看看是否能被 `4` 整除；
-> * 再剔除那些能被 `100` 整除但不能被 `400` 整除的年份…… 
+> * 再剔除那些能被 `100` 整除但不能被 `400` 整除的年份……
 
 于是，先实现第一句：“先假定都不是闰年”：
 
@@ -84,11 +84,8 @@ is_leap(400) is True
 ```
 
     False
-
     True
-
     False
-
     False
 
 然后再实现这部分：“年份应该是 4 的倍数”：
@@ -110,11 +107,8 @@ is_leap(400) is True
 ```
 
     True
-
     False
-
     True
-
     True
 
 现在剩下最后一条了：“剔除那些能被 `100` 整除但不能被 `400` 整除的年份”…… 拿一个参数值，比如，`200` 为例：
@@ -122,7 +116,7 @@ is_leap(400) is True
 > * 因为它能被 `4` 整除，所以，使 `r = True`，
 > * 然后再看它是否能被 `100` 整除 —— 能 —— 既然如此再看它能不能被 `400` 整除，
 >   * 如果不能，那就让 `r = False`；
->   * 如果能，就保留 `r` 的值…… 
+>   * 如果能，就保留 `r` 的值……
 > 如此这般，`200` 肯定使得 `r = False`。
 
 ```python
@@ -145,14 +139,11 @@ is_leap(400) is True
 ```
 
     True
-
+    True
+    True
     True
 
-    True
-
-    True
-
-尽管整个过程读起来很直观，但真的要自己从头到尾操作，就可能四处出错，不信你就试试 —— 这一页最下面添加一个单元格，自己动手从头写到尾试试…… 
+尽管整个过程读起来很直观，但真的要自己从头到尾操作，就可能四处出错，不信你就试试 —— 这一页最下面添加一个单元格，自己动手从头写到尾试试……
 
 当然，Python 内建库中的 `datetime.py` 模块里的代码更简洁，之前给你看过：
 
@@ -183,12 +174,12 @@ print(11/0)
 ```
 
     ---------------------------------------------------------------------------
-
+    
     ZeroDivisionError                         Traceback (most recent call last)
-
+    
     <ipython-input-2-5544d98276be> in <module>
     ----> 1 print(11/0)
-
+    
     ZeroDivisionError: division by zero
 
 虽然这个语句本身没有语法错误，但这个表达式是不能被处理的。于是，它触发了 `ZeroDivisionError`，这个 “意外” 使得程序不可能继续执行下去。
@@ -272,15 +263,15 @@ f = open('test_file.txt', 'r')
 ```
 
     ---------------------------------------------------------------------------
-
+    
     FileNotFoundError                         Traceback (most recent call last)
-
+    
     <ipython-input-3-5fac19176fe6> in <module>
     ----> 1 f = open('test_file.txt', 'r')
-
+    
     FileNotFoundError: [Errno 2] No such file or directory: 'test_file.txt'
 
-在 Python 中，我们可以用 `try` 语句块去执行那些可能出现 “意外” 的语句，`try` 也可以配合 `except`、`else`、`finally` 使用。从另外一个角度看，`try` 语句块也是一种特殊的流程控制，专注于 “当意外发生时应该怎么办？” 
+在 Python 中，我们可以用 `try` 语句块去执行那些可能出现 “意外” 的语句，`try` 也可以配合 `except`、`else`、`finally` 使用。从另外一个角度看，`try` 语句块也是一种特殊的流程控制，专注于 “当意外发生时应该怎么办？”
 
 ```python
 try:
@@ -293,7 +284,7 @@ except FileNotFoundError as fnf_error:
 
 如此这般的结果是：
 
-> 当程序中的语句 `f = open('test_file.txt', 'r')` 因为 `test_file.txt` 不存在而引发意外之时，`except` 语句块会接管流程；而后，又因为在 `except` 语句块中我们指定了 `FileNotFoundError`，所以，若是 `FileNotFoundError` 真的发生了，那么，`except` 语句块中的代码，即，`print(fnf_error)` 会被执行…… 
+> 当程序中的语句 `f = open('test_file.txt', 'r')` 因为 `test_file.txt` 不存在而引发意外之时，`except` 语句块会接管流程；而后，又因为在 `except` 语句块中我们指定了 `FileNotFoundError`，所以，若是 `FileNotFoundError` 真的发生了，那么，`except` 语句块中的代码，即，`print(fnf_error)` 会被执行……
 
 你可以用的试错流程还有以下变种：
 
@@ -352,5 +343,5 @@ else:
 
 现在还不是时候，等你把整本书都完成之后，记得回来再看这个链接：
 
-> * [doctest — Test interactive Python examples](https://docs.python.org/3/library/doctest.html)
-> * [unittest — Unit testing framework](https://docs.python.org/3/library/unittest.html)
+> * [doctest —— Test interactive Python examples](https://docs.python.org/3/library/doctest.html)
+> * [unittest —— Unit testing framework](https://docs.python.org/3/library/unittest.html)

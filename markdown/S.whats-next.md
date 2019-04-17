@@ -29,7 +29,7 @@
 
 > https://pythonbooks.revolunet.com
 
-千万别觉得多，只要真的全面掌握，后面再学别的，速度上都会因此快出很多很多…… 
+千万别觉得多，只要真的全面掌握，后面再学别的，速度上都会因此快出很多很多……
 
 ## Python Cheatsheet
 
@@ -43,7 +43,7 @@
 
 ## Awesome Python
 
-Github 上的 “居民” 现在已经养成了一个惯例，无论什么好东西，他们都会为其制作一个 “Awesome ...” 的页面，在里面齐心协力搜集相关资源。比如，你想学 Golang，那你去 Google 搜索 [`Awesome Go`](https://www.google.com/search?q=awesome+go)，一定会给你指向到一个 Github 上的 “Awesome Go” 的页面…… 
+Github 上的 “居民” 现在已经养成了一个惯例，无论什么好东西，他们都会为其制作一个 “Awesome ...” 的页面，在里面齐心协力搜集相关资源。比如，你想学 Golang，那你去 Google 搜索 [`Awesome Go`](https://www.google.com/search?q=awesome+go)，一定会给你指向到一个 Github 上的 “Awesome Go” 的页面……
 
 以下是 Awesome Python 的链接：
 
@@ -51,7 +51,7 @@ Github 上的 “居民” 现在已经养成了一个惯例，无论什么好�
 
 ## CS 专业的人都在学什么？
 
-如果你真有兴趣把这门手艺学精，不妨看看 Computer Science 专业的人都在学什么…… 
+如果你真有兴趣把这门手艺学精，不妨看看 Computer Science 专业的人都在学什么……
 
 下面这个链接值得认真阅读：
 
@@ -73,20 +73,20 @@ Github 上的 “居民” 现在已经养成了一个惯例，无论什么好�
 
 ## Introduction
 
-![Web Developer Roadmap Introduction](../images/intro.png)
+![Web Developer Roadmap Introduction](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/intro.png?raw=true)
 
 ## Frontend Roadmap
 
-![Frontend Roadmap](../images/frontend.png)
+![Frontend Roadmap](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/frontend.png?raw=true)
 
 ## Back-end Roadmap
 
-![Back-end Roadmap](../images/backend.png)
+![Back-end Roadmap](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/backend.png?raw=true)
 
 ## DevOps Roadmap
 
-![DevOps Roadmap](../images/devops.png)
+![DevOps Roadmap](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/devops.png?raw=true)
 
-路漫漫其修远兮…… 
+路漫漫其修远兮……
 
 但多有意思啊？这完全就是一场闯关游戏。

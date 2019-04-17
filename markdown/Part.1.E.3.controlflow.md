@@ -25,7 +25,7 @@ for n in range(2, 100):
 
 ## if 语句
 
-`if` 语句的最简单构成是这样 —— 注意第 1 行末尾的冒号：
+`if` 语句的最简单构成是这样 —— 注意第 1 行末尾的冒号 `:` 和第 2 行的缩进：
 
 ```python
 if expression:
@@ -41,6 +41,8 @@ r = random.randrange(1, 1000)
 if r % 2 == 0:
     print(f'{r} is even.')
 ```
+
+    372 is even.
 
 如果，表达式 `expression` 返回值无论真假，我们都需要做一点相应的事情，那么我们这么写：
 
@@ -63,7 +65,7 @@ else:
     print(f'{r} is odd.')
 ```
 
-    126 is even.
+    945 is odd.
 
 有时，表达式 `<expression>` 返回的值有多种情况，并且针对不同的情况我们都要做相应的事情，那么可以这么写：
 
@@ -109,7 +111,7 @@ r = random.randrange(0, 13) # 生成的随机数应该从 0 开始了；
 
 if r == 7:
     print('Draw!')
-elif r >= 2 and r < 7:      # 如果这里直接写 elif r < 7:，那么，else: 那一部分永远不会被执行…… 
+elif r >= 2 and r < 7:      # 如果这里直接写 elif r < 7:，那么，else: 那一部分永远不会被执行……
     print('Small!')
 elif r > 7:
     print('Big!')
@@ -220,7 +222,7 @@ for n in range(2, 100):
 
 `continue` 语句将忽略其后的语句开始下次循环，而 `break` 语句将从此结束当前循环，开始执行循环之后的语句：
 
-![](../images/continue-break.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/continue-break.png?raw=true)
 
 `for` 语句块还可以附加一个 `else` —— 这是 Python 的一个比较有个性的地方。附加在 `for` 结尾的 `else` 语句块，_在没有 `break` 发生的情况下会运行_。
 
@@ -284,7 +286,7 @@ for n in range(2, 100):
     for i in range(2, n):
         if (n % i) == 0:
             break
-        print(n)            # 事实上相当于针对 range(2, n) 中每个 n 都执行了一次 print(n)
+        print(n)            # 事实上相当于针对 range(2, n) 中每个 i 都执行了一次 print(n)
 ```
 
     2
@@ -301,17 +303,7 @@ for n in range(2, 100):
     11
     11
     11
-    11
-    11
-    11
-    11
-    11
-    11
-    13
     ...
-    97
-    97
-    97
     97
     97
     97
@@ -376,7 +368,7 @@ print()
 
 ## 一个投骰子赌大小的游戏
 
-虽然还不可能随心所欲写程序，但是，你现在具备了起码的 “阅读能力”。有了以上大概的介绍，你也许可以读懂一些代码了 —— 它们在你眼里再也不是天书了…… 
+虽然还不可能随心所欲写程序，但是，你现在具备了起码的 “阅读能力”。有了以上大概的介绍，你也许可以读懂一些代码了 —— 它们在你眼里再也不是天书了……
 
 以下是一个让用户和程序玩掷骰子赌大小的程序。规则如下：
 

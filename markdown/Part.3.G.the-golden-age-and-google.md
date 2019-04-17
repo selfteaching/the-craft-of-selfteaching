@@ -13,7 +13,7 @@
 
 于是，今天，自学者在真正的意义上身处于一个黄金时代 —— **没有什么是不能自学的**。注意措辞，在这句话前面甚至根本不用加上 “几乎” 这样的限定以示准确 —— 你想学什么，就能学什么，而不是 “只有先拜师才能开始学艺”。
 
-今天的你，想学什么就去问 Google；在学习中遇到什么问题，就直接问 Google —— 直接问它，通常总是比向某个人提问有效率得多。Google 就是这样，越用越离不开它…… 
+今天的你，想学什么就去问 Google；在学习中遇到什么问题，就直接问 Google —— 直接问它，通常总是比向某个人提问有效率得多。Google 就是这样，越用越离不开它……
 
 其实很多人并不真的懂如何用好 Google 的，可是连这个它也能解决，因为你可以直接问它：
 
@@ -21,7 +21,7 @@
 
 经过多年的发展，Google 的使用体验越来越好，2019 年的今天，你搜索以上语句返回的页面里，Google 甚至在众多搜索结果中选了一条它 “认为” 是 “最佳” 的搜索结果：
 
-![google-how-effectively](../images/google-how-effectively.png)
+![google-how-effectively](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/google-how-effectively.png?raw=true)
 
 [lifehack.com 上的这篇文章](https://www.lifehack.org/articles/technology/20-tips-use-google-search-efficiently.html)也的的确确值得细读 —— 读过且真正理解之后，不夸张地讲，你的 “搜索技能” 已经足够灭掉整个人类当前活跃群体中的 99% 了…… 这个说法真的完全没有夸张，绝大多数人就是不会在搜索的过程中使用那些符号的，比如 `-` `*` `~` `@` `#` `:` `"` `..` —— 还有很多其它技巧…… 话说，你在 Google 上用过 `Time *place*` 吗？
 
@@ -43,21 +43,21 @@ Google 还有更为强大的工具给你使用，叫做 Google Custom Search，�
 
 对编程工作来说，Google 当然格外地更为重要 —— 互联网上积累的最多最专业的信息，当然是计算机相关信息。所以，当你遇到什么错误提示的时候，不仅要问 Google，还要优先问问 [Stackoverflow](https://stackoverflow.com) —— 连 Google 自己都这么干。在 [colab.research.google.com](https://colab.research.google.com)（Google 为它的 TensorFlow 服务搭建的 Jupyterlab 环境）上，如果你运行什么代码出错了的话，那么，出错信息下面会出现一个按钮，上面写着：`SEARCH STACK OVERFLOW`，点击它就直接给你 [Stackoverflow](https://stackoverflow.com) 上的搜索结果…… 真够意思！
 
-![google-stackoverflow](../images/google-stackoverflow.png)
+![google-stackoverflow](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/google-stackoverflow.png?raw=true)
 
 [Google](https://google.com)、[Stackoverflow](https://stackoverflow.com)、[Wikipedia](https://en.wikipedia.org)、[Youtube](https://youtube.com)，这些都是你经常要去搜索的好地方。
 
 二十年前，Google 刚出现的时候，谁能想象它今天这个样子呢？以下是 1998 年 11 月 11 日 http://google.com 这个网址的截图：
 
-![google-homepage-1998](../images/google-homepage-1998.png)
+![google-homepage-1998](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/google-homepage-1998.png?raw=true)
 
 当时，网站还没有正式上线，第一个链接是一个原型设计，用一个二级域名发布在斯坦福的网站上：http://google.stanford.edu/：
 
-![google-prototype-1998](../images/google-prototype-1998.png)
+![google-prototype-1998](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/google-prototype-1998.png?raw=true)
 
 那个时候，Google 还要向外人强调一下，他们已经有 2500 万页面可供检索！
 
-事实上，到了 2008 年，Google 公告称，可供检索页面已经超过一万亿（One Trillion），到了 2016 年年底，这个数字已经超过 130 万亿…… 
+事实上，到了 2008 年，Google 公告称，可供检索页面已经超过一万亿（One Trillion），到了 2016 年年底，这个数字已经超过 130 万亿……
 
 换个角度看，这个数字同时也是互联网上信息的积累 —— 世界上再没有比互联网更大更全的 “书” 了。并且，由于 Google 的存在，互联网这本大书，是可检索的！
 
@@ -67,7 +67,7 @@ Google 还有更为强大的工具给你使用，叫做 Google Custom Search，�
 
 这也是一个自学者的基本素养。
 
-偶尔，也确实会遇到 Google 了很久，就是没有找到答案的情况…… 这样的时候，你可能需要想办法 “问人” 了。然而，最靠谱的通常并不见得是 “身边的人”，而是互联网上各种垂直社区里的其他用户…… 
+偶尔，也确实会遇到 Google 了很久，就是没有找到答案的情况…… 这样的时候，你可能需要想办法 “问人” 了。然而，最靠谱的通常并不见得是 “身边的人”，而是互联网上各种垂直社区里的其他用户……
 
 向人问，也是有学问的 —— 很多人张口就问，结果呢？结果没人理。为什么呢？
 

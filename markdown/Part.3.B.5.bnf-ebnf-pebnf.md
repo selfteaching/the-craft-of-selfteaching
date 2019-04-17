@@ -34,7 +34,7 @@
 
 > 为读者解读清楚地图上的 “图例”，从此之后读者在任何需要的时候能够彻底读懂地图。
 
-在阅读官方文档的时候，很多人在 [The Python Tutorial](https://docs.python.org/3/tutorial/index.html) 上就已经觉得吃力了…… 如果到了 [Standard Libraries](https://docs.python.org/3/library/index.html) 和 [Language References](https://docs.python.org/3/reference/index.html) 的部分，就基本上完全放弃了，比如，以下这段摘自 [string — Common string operations](https://docs.python.org/3/library/string.html)：
+在阅读官方文档的时候，很多人在 [The Python Tutorial](https://docs.python.org/3/tutorial/index.html) 上就已经觉得吃力了…… 如果到了 [Standard Libraries](https://docs.python.org/3/library/index.html) 和 [Language References](https://docs.python.org/3/reference/index.html) 的部分，就基本上完全放弃了，比如，以下这段摘自 [string —— Common string operations](https://docs.python.org/3/library/string.html)：
 
 > Format Specification Mini-Language
 > ...
@@ -52,7 +52,7 @@ type            ::=  "b" | "c" | "d" | "e" | "E" | "f" | "F" | "g" | "G" |
 ```
 > ...
 
-读到这，看着一大堆的 `::=` `[]` `|` 当场傻眼了…… 
+读到这，看着一大堆的 `::=` `[]` `|` 当场傻眼了……
 
 这是 BNF 描述，还是 Python 自己定制的 EBNF…… 为了理解它们，以后当然最好有空研究一下 “上下文无关文法”（[Context-free Grammar](https://en.wikipedia.org/wiki/Context-free_grammar)），没准未来你一高兴就会去玩一般人不敢玩的各种 Parser，甚至干脆自己写门编程语言啥的…… 不过，完全可以跳过那些复杂的东西的 —— 因为你当前的目标只不过是 “能够读懂那些符号的含义”。
 
@@ -72,20 +72,20 @@ digit   ::=  "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
 > * `[ ]` 中是可选项；
 > * `" "` 双引号里的内容表示字符；
 > * ` | ` 竖线两边的是可选内容，相当于or；
-> * ` * ` 表示零个或者多个…… 
-> * ` + ` 表示一个或者多个…… 
+> * ` * ` 表示零个或者多个……
+> * ` + ` 表示一个或者多个……
 
 于是：
 
 > 1. `interger` 定义是：由 “可选的 `sign`” 和 “一个或者多个 `digit` 的集合” 构成 —— 第一行末尾那个 `+` 的作用和正则表达式里的 `+` 一样；
 > 2. `sign` 的定义是什么呢？要么是 `+` 要么是 `-；`
-> 3. `digit` 的定义是什么呢？从 `"0"` 到 `"9"` 中的任何一个值…… 
+> 3. `digit` 的定义是什么呢？从 `"0"` 到 `"9"` 中的任何一个值……
 
 于是，`99`、`+99`、`-99`，都是符合以上语法描述的 `integer`；但 `99+` 和 `99-` 肯定不符合以上语法描述的 `integer`。
 
 很简单吧？反正就是在 `::=` 左边逐行列出一个语法构成的所有要素，而后在右边逐行逐一定义，直至全部要素定义完毕。
 
-也许那些在此之前已经熟悉 BNF 范式的人会有点惊讶，“你怎么连 ‘*终结符*’ 和 ‘*非终结符*’ 这种最基本的概念都跳过了？” —— 是呀，即便不讲那俩概念也能把这事讲清楚到 “能马上开始用” 了的地步…… 这就是我经常说的，“人类有这个神奇的本领，擅长使用自己并不懂的东西……” 
+也许那些在此之前已经熟悉 BNF 范式的人会有点惊讶，“你怎么连 ‘*终结符*’ 和 ‘*非终结符*’ 这种最基本的概念都跳过了？” —— 是呀，即便不讲那俩概念也能把这事讲清楚到 “能马上开始用” 了的地步…… 这就是我经常说的，“人类有这个神奇的本领，擅长使用自己并不懂的东西……”
 
 Python 对 BNF 的拓展，借鉴了正则表达式<a href='#fn1' name='fn1b'><sup>[1]</sup></a> —— 从最后两个符号的使用（`*` `+`）你可以看得出来。顺带说，这也是为什么这本 “书” 里非要讲其他入门书籍里不讲的正则表达式的原因之一。
 
@@ -93,10 +93,10 @@ Python 对 BNF 的拓展，借鉴了正则表达式<a href='#fn1' name='fn1b'><s
 
 > * `:` 表示定义；
 > * `[ ]` 中是可选项；
-> * `' '` 双引号里的内容表示字符；
+> * `' '` 引号里的内容表示字符；
 > * ` | ` 竖线两边的是可选内容，相当于or；
-> * ` * ` 表示零个或者多个…… 
-> * ` + ` 表示一个或者多个…… 
+> * ` * ` 表示零个或者多个……
+> * ` + ` 表示一个或者多个……
 
 —— 用冒号 `:` 替代了 `::=`，用单引号 `''` 替代了双引号 `""`，而尖括号 `<>` 干脆不用了：
 
@@ -285,7 +285,7 @@ BNF grammar for Perl-style regular expressions
 这个东西叫 `glob`，是 Global 的缩写。你可以把它理解为 “超级简化版正则表达式” —— 它最初是 Unix/Posix 操作系统中用来匹配文件名的 “通配符”。
 
 先看一张 1971 的 Unix 操作系统中关于 glob 的截图：
-![](../images/Unix_Glob_Reference.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/Unix_Glob_Reference.png?raw=true)
 > A screenshot of the original 1971 Unix reference page for glob – note the owner is dmr, short for Dennis Ritchie.
 
 glob 的主要符号只有这么几个：
@@ -300,7 +300,7 @@ glob 的主要符号只有这么几个：
 > * https://en.wikipedia.org/wiki/Glob_(programming)
 > * https://en.wikipedia.org/wiki/Wildcard_character
 
-顺带说，现在你再去读关于 Format String 的官方文档，就不会再觉得 “根本看不懂” 了，恰恰相反，你会觉得 “我怎么之前连这个都看不懂呢？” 
+顺带说，现在你再去读关于 Format String 的官方文档，就不会再觉得 “根本看不懂” 了，恰恰相反，你会觉得 “我怎么之前连这个都看不懂呢？”
 
 > https://docs.python.org/3/library/string.html#format-string-syntax
 
@@ -313,7 +313,7 @@ glob 的主要符号只有这么几个：
 -----
 **脚注**
 
-<a name='fn1'>[1]</a>：[The Python Language Reference » 1.2 Notation](https://docs.python.org/3/reference/introduction.html#notation) —— 这个链接必须去看一看…… 
+<a name='fn1'>[1]</a>：[The Python Language Reference » 1.2 Notation](https://docs.python.org/3/reference/introduction.html#notation) —— 这个链接必须去看一看……
 
 <a href='#fn1b'><small>↑Back to Content↑</small></a>
 

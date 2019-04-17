@@ -5,14 +5,14 @@
 
 > * 它可以有**输入** —— 即，它能接收外部通过参数传递的值；
 > * 它可以有**处理** —— 即，内部有能够完成某一特定任务的代码；尤其是，它可以根据 “输入” 得到 “输出”；
-> * 它可以有**输出** —— 即，它能向外部输送返回值…… 
+> * 它可以有**输出** —— 即，它能向外部输送返回值……
 
 所以，在我看来，有了一点基础知识之后，最早应该学习的是 “如何写函数” —— 这个起点会更好一些。
 
 这一章的内容，看起来会感觉与 [Part1.E.4 函数那一章](Part.1.E.4.functions.md)部分重合。但这两章的出发点不一样：
 
 > * [Part1.E.4 函数那一章](Part.1.E.4.functions.md)，只是为了让读者有 “阅读” 函数说明文档的能力；
-> * 这一章，是为了让读者能够开始动手写函数给自己或别人用…… 
+> * 这一章，是为了让读者能够开始动手写函数给自己或别人用……
 
 ## 为函数取名
 
@@ -91,7 +91,7 @@ keyword.iskeyword('if')      # 查询某个词是不是关键字
      'while',
      'with',
      'yield']
-
+    
     True
 
 关于更多为函数、变量取名所需要的注意事项，请参阅：
@@ -124,14 +124,14 @@ do_something()
 def do_something():
     print('This is a hello message from do_something().')
 
-if not do_something():                # 由于该函数名称的缘故，这一句代码的可读性很差…… 
+if not do_something():                # 由于该函数名称的缘故，这一句代码的可读性很差……
     print("The return value of 'do_something()' is None.")
 ```
 
     This is a hello message from do_something().
     The return value of 'do_something()' is None.
 
-`if not do_something(): ` 翻译成自然语言，应该是，“如果 `do_something()` 的返回值是 ‘非真’，那么：……” 
+`if not do_something(): ` 翻译成自然语言，应该是，“如果 `do_something()` 的返回值是 ‘非真’，那么：……”
 
 ## 接收外部传递进来的值
 
@@ -160,11 +160,8 @@ is_leap(400)
 ```
 
     False
-
     True
-
     False
-
     True
 
 ```python

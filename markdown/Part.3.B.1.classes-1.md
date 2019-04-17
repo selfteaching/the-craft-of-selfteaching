@@ -15,17 +15,17 @@
 
 比如，Erlang 的发明者，[Joe Armstrong](https://en.wikipedia.org/wiki/Joe_Armstrong_(programmer) 就很讨厌 OOP，觉得它效率低下。他用的类比也确实令人忍俊不禁，说得也挺准的：
 
-> 支持 OOP 的语言的问题在于，它们总是随身携带着一堆并不明确的环境 —— 你明明只不过想要个香蕉，可你所获得的是一个大猩猩手里拿着香蕉…… 以及那大猩猩身后的整个丛林！<br />—— [Coders at Work](http://www.codersatwork.com)
+> 支持 OOP 的语言的问题在于，它们总是随身携带着一堆并不明确的环境 —— 你明明只不过想要个香蕉，可你所获得的是一个大猩猩手里拿着香蕉…… 以及那大猩猩身后的整个丛林！<br /> —— [Coders at Work](http://www.codersatwork.com)
 
-创作 UTF-8 和 Golang 的程序员 [Rob Pike](https://en.wikipedia.org/wiki/Rob_Pike)，更看不上 OOP，在 2004 年的一个讨论帖里直接把 OOP 比作 “[Roman numerals of computing](https://groups.google.com/forum/#!topic/comp.os.plan9/VUUznNK2t4Q%5B151-175%5D)” —— 讽刺它就是很土很低效的东西。八年后又[挖坟把一个 Java 教授写的 OOP 文章嘲弄了一番](https://plus.google.com/+RobPikeTheHuman/posts/hoJdanihKwb)：“也不知道是什么脑子，认为写 6 个新的 Class 比直接用 1 行表格搜索更好？” 
+创作 UTF-8 和 Golang 的程序员 [Rob Pike](https://en.wikipedia.org/wiki/Rob_Pike)，更看不上 OOP，在 2004 年的一个讨论帖里直接把 OOP 比作 “[Roman numerals of computing](https://groups.google.com/forum/#!topic/comp.os.plan9/VUUznNK2t4Q%5B151-175%5D)” —— 讽刺它就是很土很低效的东西。八年后又[挖坟把一个 Java 教授写的 OOP 文章嘲弄了一番](https://plus.google.com/+RobPikeTheHuman/posts/hoJdanihKwb)：“也不知道是什么脑子，认为写 6 个新的 Class 比直接用 1 行表格搜索更好？”
 
-[Paul Graham](https://en.wikipedia.org/wiki/Paul_Graham_(programmer) —— 就是那个著名的 Y-Combinator 的创始人 —— 也一样对 OOP 不以为然，在 [Why Arc isn't Especially Object-Oriented](http://www.paulgraham.com/noop.html) 中，说他认为 OOP 之所以流行，就是因为平庸程序员（Mediocre programers）太多，大公司用这种编程范式去阻止那帮家伙，让他们捅不出太大的娄子…… 
+[Paul Graham](https://en.wikipedia.org/wiki/Paul_Graham_(programmer) —— 就是那个著名的 Y-Combinator 的创始人 —— 也一样对 OOP 不以为然，在 [Why Arc isn't Especially Object-Oriented](http://www.paulgraham.com/noop.html) 中，说他认为 OOP 之所以流行，就是因为平庸程序员（Mediocre programers）太多，大公司用这种编程范式去阻止那帮家伙，让他们捅不出太大的娄子……
 
 然而，争议归争议，应用归应用 —— 就好像英语的弊端不见得比其他语言少，可就是最流行，那怎么办呢？用呗 —— 虽然该抱怨的时候也得抱怨抱怨。
 
 从另外一个角度望过去，大牛们如此评价 OOP 也是很容易理解的 —— 因为他们太聪明，又因为他们太懒得花时间去理解或容忍笨蛋…… 我们不一样，最不一样的地方在于，我们不仅更多容忍他人，而且更能够容忍自己的愚笨，所以，视角就不同了，仅此而已。
 
-并且，上面两位大牛写的编程语言，现在也挺流行，Joe Armstrong 的 Erlang 和 Rob Pike 的 Golang，弄不好早晚你也得去学学，去用用…… 
+并且，上面两位大牛写的编程语言，现在也挺流行，Joe Armstrong 的 Erlang 和 Rob Pike 的 Golang，弄不好早晚你也得去学学，去用用……
 
 ## 基本术语
 
@@ -37,9 +37,9 @@
 
 在程序设计过程中，我们常常需要对标现实世界创造对象。这时候我们用的最直接手段就是**抽象**（Abstract）。抽象这个手段，在现实中漫画家们最常用。为什么你看到下面的图片觉得它们俩看起来像是人？尤其是在你明明知道那肯定不是人的情况下，却已然接受那是两个漫画小人的形象？
 
-![](../images/a-cartoon.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/a-cartoon.png?raw=true)
 
-这种描绘方式，就是抽象，很多 “没必要” 的细节都被去掉了（或者反过来说，没有被采用），留下的两个特征，一个是头，一个是双眼 —— 连那双 “眼睛” 都抽象到只剩下一个黑点了…… 
+这种描绘方式，就是抽象，很多 “没必要” 的细节都被去掉了（或者反过来说，没有被采用），留下的两个特征，一个是头，一个是双眼 —— 连那双 “眼睛” 都抽象到只剩下一个黑点了……
 
 这种被保留下来的 “必要的特征”，叫做对象的**属性**（Attributes），进而，这些抽象的对象，既然是 “人” 的映射，它们实际上也能做一些抽象过后被保留下来的 “必要的行为”，比如，说话，哭笑，这些叫做对象的**方法**（Methods）。
 
@@ -50,9 +50,9 @@
 
 从另外一个方面来看，在设计复杂对象的时候，抽象到极致是一种必要。
 
-我们为生物分类，就是一层又一层地抽象的过程。当我们使用 “生物” 这个词的时候，它并不是某一个特定的我们能够指称的东西…… 然后我们开始给它分类…… 
+我们为生物分类，就是一层又一层地抽象的过程。当我们使用 “生物” 这个词的时候，它并不是某一个特定的我们能够指称的东西…… 然后我们开始给它分类……
 
-[![](../images/Tree-of-Life.gif)](https://crucialconsiderations.org/wp-content/uploads/2016/08/Tree-of-Life.jpg)
+[![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/Tree-of-Life.gif?raw=true)](https://crucialconsiderations.org/wp-content/uploads/2016/08/Tree-of-Life.jpg)
 
 所以，当我们在程序里创建对象的时候，做法常常是
 
@@ -63,7 +63,7 @@
 
 > Class ⊃ Subclass
 
-在 OOP 中，这叫**继承**（Inheritance）关系。比如，狗这个*对象*，就可以是从哺乳动物这个对象*继承*过来的。如果哺乳动物有 “头” 这个*属性*（Attributes），那么在狗这个对象中就没必要再重新定义这个属性了，因为既然狗是从哺乳动物继承过来的，那么它就拥有哺乳动物的所有属性…… 
+在 OOP 中，这叫**继承**（Inheritance）关系。比如，狗这个*对象*，就可以是从哺乳动物这个对象*继承*过来的。如果哺乳动物有 “头” 这个*属性*（Attributes），那么在狗这个对象中就没必要再重新定义这个属性了，因为既然狗是从哺乳动物继承过来的，那么它就拥有哺乳动物的所有属性……
 
 每当我们创建好一个类之后，我们就可以根据它创建它的许多个**实例**（Instances）。比如，创建好了 “狗” 这个类之后，我们就可以根据这个类创建很多条狗…… 这好多条狗，就是狗这个类的*实例*。
 
@@ -81,8 +81,8 @@
 
 之前提到函数的时候，我用的说辞是，
 
-> - 你写了一个函数，而后你要为这个产品的使用者写说明书…… 
-> - —— 当然，产品使用者之中也包括未来的你…… 
+> - 你写了一个函数，而后你要为这个产品的使用者写说明书……
+> - —— 当然，产品使用者之中也包括未来的你……
 
 类（Class）这个东西也一样，它也有创作者和使用者。
 
@@ -94,6 +94,6 @@
 
 最后，补充一下，不要误以为所有的 Classes 都是对事物（即，名词）的映射 —— 虽然大多数情况下确实如此。
 
-![](../images/code-review.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/code-review.png?raw=true)
 
 对基本概念有了一定的了解之后，再去看 Python 语言是如何实现的，就感觉没那么难了。
