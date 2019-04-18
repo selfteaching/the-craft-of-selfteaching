@@ -7,7 +7,7 @@
 
 绝大多数编程书籍并不区分学习者的 “读” 与 “写” 这两个实际上应该分离的阶段 —— 虽然现实中这两个阶段总是多多少少重叠一部分。
 
-在一个比较自然的过程中，我们总是先学会阅读，而后才开始练习写作；并且，最终，阅读的量一定远远大于写作的量 —— 即，输入远远大于输出。当然，貌似也有例外。据说，香港作家倪匡，他自己后来很少读书，每天咣当咣当地像是打扫陈年旧物倒垃圾一样写作 —— 他几乎是全球最具产量的畅销小说作家，貌似地球另外一端的史蒂芬·金都不如他多。又当然，他的主要输入来自于他早年丰富的人生经历，人家读书，他阅世，所以，实际上并不是输入很少，恰恰相反，是输入太多……
+在一个比较自然的过程中，我们总是先学会阅读，而后才开始练习写作；并且，最终，阅读的量一定远远大于写作的量 —— 即，输入远远大于输出。当然，貌似也有例外。据说，香港作家倪匡，他自己后来很少读书，每天咣当咣当地像是打扫陈年旧物倒垃圾一样写作 —— 他几乎是全球最具产量的畅销小说作家，貌似地球另外一端的史蒂芬・金都不如他多。又当然，他的主要输入来自于他早年丰富的人生经历，人家读书，他阅世，所以，实际上并不是输入很少，恰恰相反，是输入太多……
 
 所以，正常情况下，输入多于输出，或者，输入远远多于输出，不仅是自然现象，也是无法改变的规则。
 
@@ -30,19 +30,19 @@ Python 的代码是开源的，它的代码仓库在 Github 上：
 > This directory contains a collection of demonstration scripts for
 > various aspects of Python programming.
 >
-> * beer.py        Well-known programming example: Bottles of beer.
-> * eiffel.py      Python advanced magic: A metaclass for Eiffel post/preconditions.
-> * hanoi.py       Well-known programming example: Towers of Hanoi.
-> * life.py        Curses programming: Simple game-of-life.
-> * markov.py      Algorithms: Markov chain simulation.
-> * mcast.py       Network programming: Send and receive UDP multicast packets.
-> * queens.py      Well-known programming example: N-Queens problem.
-> * redemo.py      Regular Expressions: GUI script to test regexes.
-> * rpython.py     Network programming: Small client for remote code execution.
-> * rpythond.py    Network programming: Small server for remote code execution.
-> * sortvisu.py    GUI programming: Visualization of different sort algorithms.
-> * ss1.py         GUI/Application programming: A simple spreadsheet application.
-> * vector.py      Python basics: A vector class with demonstrating special methods.
+> * `beer.py`        Well-known programming example: Bottles of beer.
+> * `eiffel.py`      Python advanced magic: A metaclass for Eiffel post/preconditions.
+> * `hanoi.py`       Well-known programming example: Towers of Hanoi.
+> * `life.py`        Curses programming: Simple game-of-life.
+> * `markov.py`      Algorithms: Markov chain simulation.
+> * `mcast.py`       Network programming: Send and receive UDP multicast packets.
+> * `queens.py`      Well-known programming example: N-Queens problem.
+> * `redemo.py`      Regular Expressions: GUI script to test regexes.
+> * `rpython.py`     Network programming: Small client for remote code execution.
+> * `rpythond.py`    Network programming: Small server for remote code execution.
+> * `sortvisu.py`    GUI programming: Visualization of different sort algorithms.
+> * `ss1.py`         GUI/Application programming: A simple spreadsheet application.
+> * `vector.py`      Python basics: A vector class with demonstrating special methods.
 
 最起码把这其中的以下几个程序都精读一下，看看自己的理解能力：
 
@@ -55,7 +55,7 @@ Python 的代码是开源的，它的代码仓库在 Github 上：
 
 就算读不懂也没关系，把读不懂的部分标记下来，接下来就可以 “带着问题学习”……
 
-在未来的时间里，一个好的习惯就是，有空了去读读别人写的代码 —— 理解能力的提高，就靠这个了。你会发现这事儿跟其他领域的学习没什么区别。你学英语也一样，读多了，自然就读得快了，理解得快了，并且在那过程中自然而然地习得了很多 “句式”，甚至很多 “说理的方法”、“讲故事的策略”…… 然后就自然而然地会写了，从能写一点开始，慢慢到 “很能写”！
+在未来的时间里，一个好的习惯就是，有空了去读读别人写的代码 —— 理解能力的提高，就靠这个了。你会发现这事跟其他领域的学习没什么区别。你学英语也一样，读多了，自然就读得快了，理解得快了，并且在那过程中自然而然地习得了很多 “句式”，甚至很多 “说理的方法”、“讲故事的策略”…… 然后就自然而然地会写了，从能写一点开始，慢慢到 “很能写”！
 
 为了顺利启动第一部分的 “阅读”，特意找了个不一样的入口，“布尔运算”；第二部分，从 “阅读” 过渡到 “写作”，我也同样特意寻找了一个不一样的入口：**从函数开始写起**。
 
