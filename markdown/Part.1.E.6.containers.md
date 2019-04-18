@@ -345,6 +345,7 @@ b_list = [chr(random.randrange(65, 91)) +\
             chr(random.randrange(97, 123))\
             for i in range(n)]
 # 可以在行末加上 \ 符号，表示 “该行未完待续……”
+# 不加 \ 也是可以的
 
 print(f'b_list comprehends {len(b_list)} random string elements:\n', b_list)
 
