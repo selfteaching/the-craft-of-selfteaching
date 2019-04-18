@@ -393,7 +393,9 @@ a_list = a_list.sort() # 这一句会报错
 
 ```python
 import random
-n = 3
+n = 3 
+
+print('1_part')
 a_list = [random.randrange(65, 91) for i in range(n)]
 b_list = [chr(random.randrange(65, 91)) for i in range(n)]
 print(a_list)
@@ -404,13 +406,15 @@ print(c_list)
 c_list.append('100')
 print(c_list)
 
-# 清空序列
 print()
+print('2_part_清空序列部分')
+# 清空序列
 print(a_list)
 a_list.clear()
 print(a_list)
 
 print()
+print('3_part_拷贝一个列表')
 # 拷贝一个列表
 d_list = c_list.copy()
 print(d_list)
@@ -419,20 +423,24 @@ print(d_list)
 print(c_list)             # 对一个拷贝操作，不会更改 “原件”
 
 print()
+print('4_part_演示不同')
 # 演示拷贝 .copy() 与赋值 = 的不同
 e_list = d_list
 del e_list[6:8]
 print(e_list)
-print(d_list)             # 对 e_list 操作，相当于对 d_list 操作
+print(d_list)             # 对 e_list 操作，相等于对 d_list 操作
 
-# 在末尾追加一个列表
 print()
+print('5_part_在末尾追加一个列表')
+# 在末尾追加一个列表
 print(a_list)
 a_list.extend(c_list)      # 相当于 a_list += c_list
 print(a_list)
 
-# 在某索引位置插入一个元素
+
 print()
+print('6_part_在某索引位置插入一个元素')
+# 在某索引位置插入一个元素
 print(a_list)
 a_list.insert(1, 'example')   # 在索引 1 的位置插入 'example'
 a_list.insert(3, 'example')   # 在索引 3 的位置插入 'example'；
@@ -443,8 +451,10 @@ print(a_list)
 # a_list.sort() 这一句会出错，因为当前列表中的元素，是 int 和 str 混合的。
 
 print()
+print('7_part_颠倒列表前后顺序')
+# 颠倒列表前后顺序
 print(a_list)
-a_list.reverse()
+a_list.reverse() # 仅把 list 前后颠倒一下
 print(a_list)
 x = a_list.reverse() # reverse() 只对当前序列操作，并不返回一个逆序列表；返回值是 None
 print(x)
