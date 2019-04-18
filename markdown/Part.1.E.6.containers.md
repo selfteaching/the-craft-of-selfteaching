@@ -285,7 +285,7 @@ print(a_list)
 # 内建函数操作 len()、max()、min()
 print(len(c_list))
 print(max(b_list)) # 内建函数内部做了异常处理，可以比较字符和数字 —— 初学者最讨厌这种事情了……
-print(min(b_list))
+print(min(b_list)) # 读者注意，max() 和 min() 应用的是 b_list, len() 应用的是 c_list ……请自行找到对应的 list 进行分析。
 
 print('X' not in b_list)
 ```
