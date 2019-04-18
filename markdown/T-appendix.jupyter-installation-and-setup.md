@@ -3,7 +3,7 @@
 
 ## 下载并安装 Anaconda
 
-[Anaconda](https://www.anaconda.com) 是目前最方便的 Python 发行版，搭载了很多我们终将必用的软件包，除了 Python 之外，还有 [R 语言](https://www.r-project.org/)，还包括 [Pandoc](https://pandoc.org/)， [NumPy](http://www.numpy.org/)，[SciPy](https://www.scipy.org/)，[Matplotlib](https://matplotlib.org/)…… 等等。
+[Anaconda](https://www.anaconda.com) 是目前最方便的 Python 发行版，搭载了很多我们终将必用的软件包，除了 Python 之外，还有 [R 语言](https://www.r-project.org/)，还包括 [Pandoc](https://pandoc.org/)，[NumPy](http://www.numpy.org/)，[SciPy](https://www.scipy.org/)，[Matplotlib](https://matplotlib.org/)…… 等等。
 
 无论是图形化界面安装，还是命令行界面安装，建议都把 Anaconda 安装在本地用户目录内，`~/`。请下载并安装 Python 3.x 的版本。
 
@@ -12,21 +12,27 @@
 > https://docs.anaconda.com/anaconda/install/
 
 在 MacOS 的 Terminal 命令行下，可以直接下载并安装：
+
 ```bash
 cd ~/Downloads/
 wget https://repo.anaconda.com/archive/Anaconda3-2018.12-MacOSX-x86_64.sh
+chmod +x Anaconda3-2018.12-MacOSX-x86_64.sh
 ./Anaconda3-2018.12-MacOSX-x86_64.sh
 ```
+
 安装到最后一步，会问你是否要安装微软出品的 [Visual Studio Code](https://code.visualstudio.com)，选择 `yes` —— 反正以后你的电脑上会不止一个文本编辑器…… 以后你可能还会安装的文本编辑器包括 [SublimeText](https://www.sublimetext.com), [Atom](https://atom.io) 等等。
 
-安装完毕之后，打开 Terminal(Windows 系统需要打开之前安装的 Anaconda Prompt 输入)，继续安装几个组件：
+安装完毕之后，打开 Terminal(Windows 系统需要打开之前安装的 Anaconda Prompt 输入），继续安装几个组件：
+
 ```bash
 conda update conda
 conda update anaconda
 conda install -c conda-forge nodejs
 conda install -c conda-forge jupyterlab # 这是用来升级 jupyter lab 到最新版的方法
 ```
-安装完毕之后，可以看看各个你将要用到的可执行命令都在什么地方，用 `which` 命令（windows 下用 `where` 命令）：
+
+安装完毕之后，可以看看各个你将要用到的可执行命令都在什么地方，用 `which` 命令（windows下用 `where` 命令）：
+
 ```bash
 which python
 python --version
@@ -38,9 +44,11 @@ jupyter notebook --version
 which pip
 pip --version
 ```
+
 ## 第一次启动 Jupyter lab
 
 打开 Terminal，`cd` 到你想打开 Jupyter lab 的目录（就是你保存 `ipynb` 文件的地方，以便在 Jupyter lab 中打开、浏览、编辑 `ipynb` 文件），在这里以用户根目录为例 `~/`：
+
 ```bash
 cd ~
 jupyter lab
@@ -54,10 +62,13 @@ jupyter lab
 ## 配置 Jupyter lab
 
 打开 Terminal，输入以下命令：
+
 ```bash
 jupyter lab --generate-config
 ```
+
 这会在 `~/.jupyter/` 目录下生成一个 `jupyter_notebook_config.py` 文件。
+
 ```bash
 cd ~/.jupyter
 code jupyter_notebook_config.py
@@ -67,12 +78,14 @@ code jupyter_notebook_config.py
 事实上，你可以用你喜欢的任何编辑器打开 `~/.jupyter/jupyter_notebook_config.py` 文件。
 
 文件内容很长，有空可以仔细看。可以直接将以下内容拷贝粘贴到文件底部，根据需求修改：
+
 ```json
 #c.NotebookApp.token = ''
 #c.NotebookApp.open_browser = False
 #c.NotebookApp.notebook_dir = '~/'
 #c.NotebookApp.default_url = '/tree'
 ```
+
 逐条解释一下：
 
 > `c.NotebookApp.token = ''`
@@ -94,6 +107,7 @@ code jupyter_notebook_config.py
 这一项留给那些依然习惯于使用 jupter notebook 的人，这样设置之后，即便是输入 `jupyter lab` 命令，打开的还是 jupyter notebook。
 
 在 Terminal 里常用的与 Jupyter 有关的命令有：
+
 ```bash
 jupyter lab
 jupyter lab --version
@@ -101,15 +115,19 @@ conda install -c conda-forge jupyterlab # 这是用来升级 jupyter lab 到最�
 jupyter notebook list                   # 查看正在运行的 jupyter lab/notebook
 jupyter notebook stop                   # 停止 jupyter lab/notebook 服务
 ```
+
 ## 将 Jupyter lab 配置成系统服务
 
 如果，你厌烦每次都要跑到 Terminal 里启动 Jupyter lab，可以把它配置成系统服务，每次开机启动它就自动运行。而你需要做的只不过是直接从浏览器中访问 [http://localhost:8888/](http://localhost:8888/)。
+
 ```bash
 code ~/Library/LaunchAgents/com.jupyter.lab.plist
 ```
+
 这条命令会让 Visual Studio Code 创建 `~/Library/LaunchAgents/com.jupyter.lab.plist` 文件并打开。
 
 在其中拷贝粘贴以下内容，注意，要把其中的 `your_username` 修改为你的用户名：
+
 ``` xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -134,29 +152,37 @@ code ~/Library/LaunchAgents/com.jupyter.lab.plist
 </plist>
 ```
 如果之前在 `jupyter_notebook_config.py` 文件里已经设置过
+
 ```json
 c.NotebookApp.open_browser = False
 c.NotebookApp.notebook_dir = '~/'
 ```
 那么这两行就可以不要了：
+
 ```xml
 		<string>--no-browser</string>
 		<string>--notebook-dir=/Users/your_username/</string>
 ```
+
 而后在 Terminal 里执行：
+
 ```bash
 launchctl load ~/Library/LaunchAgents/com.jupyter.lab.plist
 ```
+
 如果你想重新启动这个服务，那么执行：
+
 ```bash
 launchctl unload ~/Library/LaunchAgents/com.jupyter.lab.plist
 launchctl load ~/Library/LaunchAgents/com.jupyter.lab.plist
 ```
+
 ## 关于 Jupyter lab themes
 
 对中文用户来说，Jupyter 的默认字号有点过小，阅读起来不是很舒适。但最佳的方案不是去寻找合适的 themes，而是直接使用支持 [Stylus](https://github.com/openstyles/stylus) 这类终端 CSS 定制插件的浏览器，Chrome/Firefox/Opera 都支持 Stylus 插件。
 
 我用的 Stylus 定制 CSS 是这样的：
+
 ```css
 a {color: #2456A4 !important;}
 strong {color:#6392BF;}
@@ -182,9 +208,9 @@ table {font-size: 90% !important;}
 .jp-RenderedHTMLCommon h2 code,
 .jp-RenderedHTMLCommon h3 code,
 .jp-RenderedHTMLCommon h4 code,
-.jp-RenderedHTMLCommon p code, 
+.jp-RenderedHTMLCommon p code,
 .jp-RenderedHTMLCommon li code,
-.jp-RenderedHTMLCommon blockquote p code, 
+.jp-RenderedHTMLCommon blockquote p code,
 .jp-RenderedHTMLCommon blockquote li code,
 .jp-RenderedHTMLCommon td code {
     background-color: #f6f6f6;
@@ -196,6 +222,7 @@ table {font-size: 90% !important;}
     border-radius: 4px;
 }
 ```
+
 这样就相当于我把 JupyterLab Light 这个 Theme 稍微 Tweak 了一下。
 
 另，我写的内容里，为了重点突出，特别定制了 `strong` 和 `em` 两个元素的显示，让它们以不同的颜色展示；又因为中文并不适合斜体展示，所以，把 `em` 的 `font-style` 设定为 `normal`……
@@ -208,17 +235,21 @@ Jupyter notebook 经过很多年的发展，现在有很多扩展插件，但也
 > * [ryantam626/jupyterlab_sublime](https://github.com/ryantam626/jupyterlab_sublime)
 
 首先在用快捷键 `⌘ ,` 打开 Jupter lab 的 Advanced Settings，在 Extension Manager 中，添加 User Overrides：
+
 ```json
 {
     "enabled": true
 }
 ```
+
 而后在 Terminal 执行以下命令安装插件：
-```bash 
+
+```bash
 jupyter labextension install @jupyterlab/toc
 jupyter labextension install @ryantam626/jupyterlab_sublime
 jupyter lab build
 ```
+
 toc 插件，自动将 ipynb 文件中的标题转换成目录。
 
 ![](https://github.com/jupyterlab/jupyterlab-toc/raw/master/toc.gif)
@@ -232,7 +263,6 @@ jupyterlab_sublime 则可以让你在 Jupyter lab 的 cell 中，使用跟 Subli
 以下是 MacOS 下 Jupyter lab 最常用的快捷键。快捷键在两种模式下执行，进入编辑模式用 `⏎`，回到命令模式用 `⎋`（ESC）。
 
 另外，代码编辑过程中需要安装 Jupyterlab 插件 [@ryantam626/jupyterlab_sublime](https://github.com/ryantam626/jupyterlab_sublime) 之后才能使用 “多行同时编辑功能”。
-
 
 | 快捷键                                  | 说明                                                         | 模式   |
 | --------------------------------------- | ------------------------------------------------------------ | ------ |
@@ -258,6 +288,7 @@ jupyterlab_sublime 则可以让你在 Jupyter lab 的 cell 中，使用跟 Subli
 ## 增加一些必要的快捷键
 
 在 Settings > Keyboard Shortcuts 中，可以设定一些常用但系统并未给出的快捷键：
+
 ```json
 {
 	"notebook:move-cells-down-down": {
@@ -311,37 +342,41 @@ jupyterlab_sublime 则可以让你在 Jupyter lab 的 cell 中，使用跟 Subli
 ## 输出所有变量内容
 
 默认情况下，Code Cell 只输出最后一个可以被 evaluate 的值，用 `_` 代表之前刚刚被 evaluate 的值。
+
 ```python
 [1, 2, 3]
 ```
-    [1, 2, 3]
 
+    [1, 2, 3]
 
 ```python
 _ # 执行完上面的 Cell，试试这个 Cell; 而后执行完下面的 Cell 之后再重新执行一次当前这个 Cell
 ```
-    [1, 2, 3]
 
+    [1, 2, 3]
 
 ```python
 (1, 2, 3)
 {1, 2, 3}
 ```
+
     {1, 2, 3}
-
-
 
 于是，为了显示最近 evaluate 的多个值，我们总是不得不使用很多的 `print()`……
 
 如果觉得这事比较烦的话，可以在 Cell 最上面写上：
+
 ```python
 from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = "all"
 ```
+
 如果还想更省事一点，就把这个设置写入配置文件：
+
 ```python
 c.InteractiveShell.ast_node_interactivity = "all"
 ```
+
 ```python
 from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = "all"
@@ -349,10 +384,10 @@ InteractiveShell.ast_node_interactivity = "all"
 (1, 2, 3)
 {1, 2, 3}
 ```
+
     (1, 2, 3)
+    
     {1, 2, 3}
-
-
 
 ## 魔法函数
 
@@ -368,11 +403,11 @@ Jupyterlab 里较为常用的魔法函数整理如下：
 | `%run`               | 在 Cell 中运行 `.py` 文件：`%run file_name`                  |
 | `%who`               | 列出所有当前 Global Scope 中的变量；类似的还有：`%who df`，`%whos` |
 | `%env`               | 列出当前的环境变量                                           |
-| `%load`              | 将其他文件内容导入 Cell，`%load source`，`source` 可以是文件名，也可以是 URL。 |
+| `%load`              | 将其他文件内容导入 Cell，`%load source`，`source` 可以是文件名，也可以是 URL。|
 | `%time`              | 返回 Cell 内代码执行的时间，相关的还有 `%timeit`             |
 | `%writefile`         | 把 Cell 的内容写入文件，`%write file_name`；%write -a file_name，`-a` 是追加 |
 | `%matplotlib inline` | 行内展示 matplotlib 的结果                                   |
-| `%%bash`             | 运行随后的 shell 命令，比如 %%bash ls；与之类似的还有 `%%HTML`， `%%python2`， `%%python3`， `%%ruby`， `%%perl`……                      |
+| `%%bash`             | 运行随后的 shell 命令，比如 %%bash ls；与之类似的还有 `%%HTML`，`%%python2`，`%%python3`，`%%ruby`，`%%perl`……                      |
 
 ## 桌面版 Jupyter App
 
@@ -390,4 +425,4 @@ Jupyterlab 里较为常用的魔法函数整理如下：
 
 > https://nwhitehead.github.io/pineapple/
 
-![https://nwhitehead.github.io/pineapple/images/sshots.png](https://nwhitehead.github.io/pineapple/images/sshots.png)
+![https://nwhitehead.github.io/pineapple/images/sshots.png](https://nwhitehead.github.io/pineapple/images/sshots.png?raw=true)

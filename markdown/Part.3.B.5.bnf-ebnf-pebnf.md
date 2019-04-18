@@ -32,9 +32,9 @@
 
 所以，我要认为这本 “书” 的最重要工作是：
 
-> 为读者解读清楚地图上的“图例”，从此之后读者在任何需要的时候能够彻底读懂地图。
+> 为读者解读清楚地图上的 “图例”，从此之后读者在任何需要的时候能够彻底读懂地图。
 
-在阅读官方文档的时候，很多人在 [The Python Tutorial](https://docs.python.org/3/tutorial/index.html) 上就已经觉得吃力了…… 如果到了 [Standard Libraries](https://docs.python.org/3/library/index.html) 和 [Language References](https://docs.python.org/3/reference/index.html) 的部分，就基本上完全放弃了，比如，以下这段摘自 [string — Common string operations](https://docs.python.org/3/library/string.html)：
+在阅读官方文档的时候，很多人在 [The Python Tutorial](https://docs.python.org/3/tutorial/index.html) 上就已经觉得吃力了…… 如果到了 [Standard Libraries](https://docs.python.org/3/library/index.html) 和 [Language References](https://docs.python.org/3/reference/index.html) 的部分，就基本上完全放弃了，比如，以下这段摘自 [string —— Common string operations](https://docs.python.org/3/library/string.html)：
 
 > Format Specification Mini-Language
 > ...
@@ -59,11 +59,12 @@ type            ::=  "b" | "c" | "d" | "e" | "E" | "f" | "F" | "g" | "G" |
 其实吧，真的不难的 —— 它就是语法描述的方法。
 
 比如，什么是符合语法的整数（Integer）呢？符合以下语法描述的是整数（使用 Python 的 EBNF）：
+
 ```
 integer ::= [sign] digit +
 sign    ::= "+" | "-"
 digit   ::=  "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
-``` 
+```
 以上的描述中，基本符号没几个，它们各自的含义是：
 
 > * `::=` 表示定义；
@@ -76,7 +77,7 @@ digit   ::=  "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
 
 于是：
 
-> 1. `interger` 定义是：由“可选的 `sign`”和“一个或者多个 `digit` 的集合” 构成 —— 第一行末尾那个 `+` 的作用和正则表达式里的 `+` 一样；
+> 1. `interger` 定义是：由 “可选的 `sign`” 和 “一个或者多个 `digit` 的集合” 构成 —— 第一行末尾那个 `+` 的作用和正则表达式里的 `+` 一样；
 > 2. `sign` 的定义是什么呢？要么是 `+` 要么是 `-；`
 > 3. `digit` 的定义是什么呢？从 `"0"` 到 `"9"` 中的任何一个值……
 
@@ -84,7 +85,7 @@ digit   ::=  "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
 
 很简单吧？反正就是在 `::=` 左边逐行列出一个语法构成的所有要素，而后在右边逐行逐一定义，直至全部要素定义完毕。
 
-也许那些在此之前已经熟悉 BNF 范式的人会有点惊讶，“你怎么连 ‘_终结符_’ 和 ‘_非终结符_’ 这种最基本的概念都跳过了？” —— 是呀，即便不讲那俩概念也能把这事讲清楚到 “能马上开始用” 了的地步…… 这就是我经常说的，“人类有这个神奇的本领，擅长使用自己并不懂的东西……”
+也许那些在此之前已经熟悉 BNF 范式的人会有点惊讶，“你怎么连 ‘*终结符*’ 和 ‘*非终结符*’ 这种最基本的概念都跳过了？” —— 是呀，即便不讲那俩概念也能把这事讲清楚到 “能马上开始用” 了的地步…… 这就是我经常说的，“人类有这个神奇的本领，擅长使用自己并不懂的东西……”
 
 Python 对 BNF 的拓展，借鉴了正则表达式<a href='#fn1' name='fn1b'><sup>[1]</sup></a> —— 从最后两个符号的使用（`*` `+`）你可以看得出来。顺带说，这也是为什么这本 “书” 里非要讲其他入门书籍里不讲的正则表达式的原因之一。
 
@@ -92,12 +93,13 @@ Python 对 BNF 的拓展，借鉴了正则表达式<a href='#fn1' name='fn1b'><s
 
 > * `:` 表示定义；
 > * `[ ]` 中是可选项；
-> * `' '` 双引号里的内容表示字符；
+> * `' '` 引号里的内容表示字符；
 > * ` | ` 竖线两边的是可选内容，相当于or；
 > * ` * ` 表示零个或者多个……
 > * ` + ` 表示一个或者多个……
 
 —— 用冒号 `:` 替代了 `::=`，用单引号 `''` 替代了双引号 `""`，而尖括号 `<>` 干脆不用了：
+
 ``` python
 # Grammar for Python
 
@@ -250,7 +252,9 @@ encoding_decl: NAME
 yield_expr: 'yield' [yield_arg]
 yield_arg: 'from' test | testlist
 ```
+
 现在你已经能读懂 BNF 了，那么，可以再读读用 BNF 描述的 Regex 语法<a href='#fn2' name='fn2b'><sup>[2]</sup></a>，就当复习了 —— 很短的：
+
 ```html
 BNF grammar for Perl-style regular expressions
 
@@ -270,9 +274,10 @@ BNF grammar for Perl-style regular expressions
 <positive-set>   ::=  "[" <set-items> "]"
 <negative-set>   ::=  "[^" <set-items> "]"
 <set-items>      ::=  <set-item> | <set-item> <set-items>
-<set-items>      ::=  <range> | <char>
+<set-item>       ::=  <range> | <char>
 <range>          ::=  <char> "-" <char>
 ```
+
 真的没原来以为得那么神秘，是不？<a href='#fn3' name='fn3b'><sup>[3]</sup></a>
 
 都学到这儿了…… 顺带再自学个东西吧。
@@ -280,7 +285,7 @@ BNF grammar for Perl-style regular expressions
 这个东西叫 `glob`，是 Global 的缩写。你可以把它理解为 “超级简化版正则表达式” —— 它最初是 Unix/Posix 操作系统中用来匹配文件名的 “通配符”。
 
 先看一张 1971 的 Unix 操作系统中关于 glob 的截图：
-![](../images/Unix_Glob_Reference.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/Unix_Glob_Reference.png?raw=true)
 > A screenshot of the original 1971 Unix reference page for glob – note the owner is dmr, short for Dennis Ritchie.
 
 glob 的主要符号只有这么几个：
