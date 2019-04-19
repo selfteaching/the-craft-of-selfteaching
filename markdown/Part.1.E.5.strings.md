@@ -561,7 +561,7 @@ Complex is better than complicated."""
 # str.startswith(prefix[, start[, end]])
 print("s.lower().startswith('S'):", \
       s.lower().startswith('S'))
-print("s.lower().startswith('b, 10'):", \
+print("s.lower().startswith('b', 10):", \
       s.lower().startswith('b', 10))
 print("s.lower().startswith('e', 11, 20):", \
       s.lower().startswith('e', 11, 20))
@@ -579,7 +579,7 @@ print("s.lower().endswith('.', 10, 20):", \
 ```
 
     s.lower().startswith('S'): False
-    s.lower().startswith('b'): True
+    s.lower().startswith('b', 10): True
     s.lower().startswith('e', 11, 20): True
     s.lower().endswith('.'): True
     s.lower().endswith('.', 10): True
@@ -654,7 +654,7 @@ s.strip()
     
     'Simple is better than complex.'
 
-但是，如果给定了一个字符串作为参数，那么参数字符串中的所有字母都会被当做需要从首尾剔除的对象，直到新的首位字母不包含在参数中，就会停止剔除：
+但是，如果给定了一个字符串作为参数，那么参数字符串中的所有字母都会被当做需要从首尾剔除的对象，直到新的首尾字母不包含在参数中，就会停止剔除：
 
 ```python
 from IPython.core.interactiveshell import InteractiveShell
