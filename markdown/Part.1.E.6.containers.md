@@ -1005,6 +1005,7 @@ tuple(phonebook1)
 set(phonebook1)
 sorted(phonebook1)
 sorted(phonebook1, reverse=True)
+phonebook1 # 运行发现：内建函数操作后，会返回 key 相应的数据，原字典不改变。
 ```
 
     8
