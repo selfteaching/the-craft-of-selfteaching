@@ -170,7 +170,7 @@ files = [f for f in os.listdir('.') if os.path.isfile(f)]
 files.sort()
 for f in files:
     if '.ipynb' in f:
-        with open(f, 'r') as file:
+        with open(f, 'r', encoding = 'UTF-8') as file:
             str = file.read()
             pttn = r'"# (.*)"\n'
             r = re.findall(pttn, str)
