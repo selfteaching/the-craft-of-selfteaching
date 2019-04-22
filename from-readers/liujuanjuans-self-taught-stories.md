@@ -14,11 +14,12 @@
 
 - 2017 年中开始关注区块链，于2018年初主动离开游戏行业拥抱区块链行业
 
-- 2018 年 3 月创建 PRS 拓荒者社群，半年后加入 PRESSone BD运营 团队
+- 2018 年 3 月创建 PRS 拓荒者社群，半年后加入 PRESSone BD运营团队
 
 ## 我的体悟
 
-首次读《自学是门手艺》时，我手痒痒，偷时间用 vscode + git 练习，一坐就是两三个小时，如此沉迷几次，玩出来一个自动处理时间开销数据的脚本，顺便把我们团队用来面试程序员的一道 python 题给做了。看了我的代码后，工程师打趣说：你可以来上班了；另一位也颇为乐意鼓励我说：面试时写出这样的代码确实可以考虑招进来。额……我代码读得少，莫哄我转岗。
+首次读《自学是门手艺》时，我手痒痒，偷时间用 vscode + git 练习，一坐就是两三个小时，如此沉迷几次，玩出来一个自动处理时间开销数据的脚本，顺便把我们团队用来面试程序员的一道 python 题给做了。看了我的代码后，工程师打趣说：你可以来上班了；另一位也颇为乐意鼓励我说：面试时写出这样的代码确实可以考虑招进来。额…… 我代码读得少，莫哄我转岗。
+首次读《自学是门手艺》时，我手痒痒，偷时间用 vscode + git 练习，一坐就是两三个小时，如此沉迷几次，玩出来一个自动处理时间开销数据的脚本，顺便把我们团队用来面试程序员的一道 python 题给做了。看了我的代码后，工程师打趣说：你可以来上班了；另一位也颇为乐意鼓励我说：面试时写出这样的代码确实可以考虑招进来。额…… 我代码读得少，莫哄我转岗。
 
 我是一名运营，不是程序员，没有相关的教育或培训经历。2003 年大一首次接触电脑并只必修了 C 语言。2009 年在网易当QC，主程帮我破冰了很多小到不能再小的知识点，让我学会 linux shell 命令行和 mysql 操作，得以独立胜任在无任何游戏界面的情况下完成游戏战斗系统与合服功能的测试。2011 年在网易内部转岗做策划，主程给我找了一本 python 简明教程，我用一个上午浏览语法规则和全书框架，下午就直接读项目的任务系统脚本，并把代码逻辑转换到 excel 中配表。三个月内，我在搜索引擎和简明教程的帮助下，写了几个子类、一些函数以及很多个游戏脚本，其中包括复杂的场景剧情逻辑。这些代码在主程的把关之下全部提交到项目库并正式上线。这两段职场经历中，我都是拿到就用，边做边学。
 
@@ -60,3 +61,72 @@
 通过练习搜索来精通搜索，通过练习编程来掌握编程。确实没什么新鲜秘诀。
 
 这就是我作为一个运营，编程初心者的切身经历。
+
+---
+
+本文的 [PRESS.one 签名](https://press.one/file/v?s=b54fadaeaa3f6dd3f1fb9eedc1a142b91f7b3271b2b81e2141d5243b49e6139531ad25694e973b22b1b9e6427b9adc4692d78604d7018d12d998d8719a551ea20&h=70e40ae7bfcdf876bade2b9c0c0174a6be8ed86fc47a11439270c65585a7ca09&a=ed73e900e209def08ff03a2e3fadbac99af087c0&f=P1&v=3)。
+
+另附：我当时写出来的代码。现在你或许还不会写码，但其实大致能读懂；更或者，你有更好的写法。
+
+```python
+
+import os
+import os.path
+
+"""
+题目：
+文章统计所有字符的出现次数，并按照次数倒序输出
+
+"""
+
+testFile ='D:/myfilepath/text_001.txt'
+
+def main():
+    with open(testFile,'rt',encoding='UTF-8') as f:
+        blines = f.readlines()
+
+    aList = get_chars(blines)
+    muchtimesDic = count_chars(aList,blines)
+
+    keys = muchtimesDic.keys()
+    vals = muchtimesDic.values()
+    rlist = [(key,val) for key,val in zip(keys,vals)]
+
+    Rlist = sorted(rlist,key = lambda x:x[1],reverse = True)
+    for i in Rlist:
+        print(i[0],i[1])
+    print(Rlist)
+
+def get_chars(blines):
+    """
+    功能：获取待检索的字符列表。通过遍历文本，把所有出现的字符列举出来。（大小写不敏感）
+    """
+    aList = []
+
+    for aline in blines:
+        aline = aline.lower()
+        bline = aline[:]
+        for i in bline:
+            if i not in aList :
+                aList.append(i)
+    return aList
+
+def count_chars(aList,blines):
+    """
+    功能：统计字符出现的次数，并返回字典。
+    """
+    muchtimesDic = {}
+
+    for i in aList:
+        howmanytimes = 0
+        for aline in blines:
+            aline = aline.lower()
+            bline = aline[:]
+            if i in bline:
+                howmanytimes = bline.count(i) + howmanytimes
+        muchtimesDic[i] = howmanytimes
+    return muchtimesDic
+
+main()
+
+```
