@@ -311,7 +311,7 @@ print(n, m)
 
 现在可以小小总结一下了。
 
-一个递归函数，之所以是一个有用、有效的递归函数，因为它要遵守递归三原则。正如，一个机器人之所以是个合格的机器人，因为它遵循[阿西莫夫三铁律](https://zh.wikipedia.org/wiki/%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%B8%89%E5%AE%9A%E5%BE%8B)（Three Laws of Robotics）一样<a href='#fn2' name='fn2b'><sup>[2]</sup></a>。
+一个递归函数，之所以是一个有用、有效的递归函数，是因为它要遵守递归三原则。正如，一个机器人之所以是个合格的机器人，是因为它遵循[阿西莫夫三铁律](https://zh.wikipedia.org/wiki/%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%B8%89%E5%AE%9A%E5%BE%8B)（Three Laws of Robotics）一样<a href='#fn2' name='fn2b'><sup>[2]</sup></a>。
 
 > 1. 根据定义，递归函数必须在内部调用自己；
 > 2. 必须设定一个退出条件；
