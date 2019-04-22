@@ -114,7 +114,7 @@ print('Hello, world!')
 > * https://docs.python.org/zh-cn/3/tutorial/index.html (for v.3.7.2）
 > * http://www.pythondoc.com/pythontutorial3/ (for v.3.6.3)
 
-我曾经专门写过一本书发布在网上，叫《[人人都能用英语](https://github.com/xiaolai/everyone-can-use-english)》。其中的观点就是，大多数人之所以在英语这事上很挫，是因为他们花无数的时间去 _“学”_，但就是 _“不用”_。学以致用，用以促学。可就是不用，无论如何就是不用，那英语学了那么多年能学好吗？
+我曾经专门写过一本书发布在网上，叫《[人人都能用英语](https://github.com/xiaolai/everyone-can-use-english)》。其中的观点就是，大多数人之所以在英语这事上很矬，是因为他们花无数的时间去 _“学”_，但就是 _“不用”_。学以致用，用以促学。可就是不用，无论如何就是不用，那英语学了那么多年能学好吗？
 
 自学编程的一个 “副作用” 就是，**你不得不用英语**。而且还是天天用，不停地用。
 
