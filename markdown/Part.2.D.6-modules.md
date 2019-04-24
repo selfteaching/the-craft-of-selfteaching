@@ -116,7 +116,7 @@ import sys
 
 sys.builtin_module_names
 "_sre" in sys.builtin_module_names # True
-"math" in sys.builtin_module_names # False
+"math" in sys.builtin_module_names # False （根据自己电脑库的安装情况，结果会有不同）
 ```
 
     ('_abc',
