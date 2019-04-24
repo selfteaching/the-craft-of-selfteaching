@@ -55,6 +55,8 @@ help(mycode.say_hi)
 mycode.__name__
 mycode.is_prime(3)
 mycode.say_hi('mike', 'zoe')
+# 可自行尝试模块的其他参数，比如下面的为“使用首字母大写”功能
+# mycode.say_hi('mike', 'zoe', capitalize=True)
 ```
 
     Help on function is_prime in module mycode:
