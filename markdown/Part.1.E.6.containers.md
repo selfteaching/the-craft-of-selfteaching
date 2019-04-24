@@ -1182,8 +1182,8 @@ for i, t in enumerate(reversed(t)):
 可以在 `zip()` 这个函数的帮助下，同时迭代两个或者两个以上的容器中的元素（这样做的前提是，多个容器中的元素数量最好相同）：
 
 ```python
-chars='abcdefghijklmnopqrstuvwxyz'
-nums=range(1, 27)
+chars = 'abcdefghijklmnopqrstuvwxyz'
+nums = range(1, 27)
 for c, n in zip(chars, nums):
     print(f"Let's assume {c} represents {n}.")
 ```
