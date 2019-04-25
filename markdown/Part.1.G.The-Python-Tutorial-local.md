@@ -105,7 +105,7 @@ repo 地址是：
 ```bash
 %%bash
 cd ~/Downloads
-# 总计 241M，所以需要一点时间
+# 总计 175M（文件大小随版本变动），所以需要一点时间
 git clone https://github.com/python/cpython.git
 cd cpython/Doc/tutorial
 ls
