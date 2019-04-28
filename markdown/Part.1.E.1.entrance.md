@@ -65,7 +65,7 @@ Google Doodle 的寄语是这样的：
 
 在 Python 语言中，**布尔值**（Boolean Value）用 `True` 和 `False` 来表示。
 
-> ![NOTE]
+> [!NOTE]
 > **注意**：请小心区分大小写 —— 因为 Python 解释器是对大小写敏感的，对它来说，`True` 和 `true` 不是一回事。
 
 任何一个**逻辑表达式**都会返回一个*布尔值*。
@@ -82,10 +82,10 @@ print(1 != 2)
 
 `1 != 2`，用自然语言描述就是 “1 不等于 2 吗？” —— 它的布尔值当然是 `True`。
 
-> ![NOTE]
+> [!NOTE]
 > **注意**：自然语言中的 “*等于*”，在 Python 编程语言中，使用的符号是 `==`，**不是一个等号！**
 
-> ![NOTE]
+> [!NOTE]
 > **请再次注意**：单个等号 `=`，有其他的用处。初学者最不适应的就是，在编程语言里所使用的操作符，与他们之前在其他地方已经习惯了的使用方法并不相同 —— 不过，适应一段时间就好了。
 
 ### 逻辑操作符
@@ -116,7 +116,7 @@ Python 语言中的**逻辑操作符**（Logical Operators）如下表所示 —
 
 > 分别用 `and`、`or`、`not` 表示
 
-> ![NOTE]
+> [!NOTE]
 > **注意**：它们全部是小写。因为布尔值只有两个，所以布尔运算结果只有几种而已，如下图所示：
 
 ![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/boolean-operators.png?raw=true)
@@ -405,7 +405,7 @@ for i in range(10):
 
 ![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/python-leading-space.png?raw=true)
 
-> ![NOTE]
+> [!NOTE]
 > **注意**：在同一个文件里，不建议混合使用 Tab 和 Space；要么全用空格，要么全用制表符。
 
 ### 注释
