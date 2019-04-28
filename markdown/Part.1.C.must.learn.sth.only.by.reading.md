@@ -31,9 +31,9 @@
 
 当然，英文书里同样烂书也很多，烂作者也同样一大堆，胡说八道欺世盗名的一大串…… 但总体上来看，非小说类著作质量的确更高一点。
 
-还有，英语在科学研究领域早已成为 “主导语言”（Dominant Language）也是不争的事实。不过，英语成为主导语言的结果，就是英语本身被不断 “强奸”，外来语越来越多，“Long time no see” 被辞典收录就是很好的例子。事实上，英语本身就是个大杂烩……
+还有，英语在科学研究领域早已成为 “主导语言”（Dominant Language）也是不争的事实。不过，英语成为主导语言的结果，就是英语本身被不断 “强奸”，外来语越来越多，“Long time no see” 被辞典收录就是很好的例子。事实上，[英语本身就是个大杂烩](https://medium.com/@andreas_simons/the-english-language-is-a-lot-more-french-than-we-thought-heres-why-4db2db3542b3)……
 
-![Joseph M. Williams’ research visualized (top 10,000 words).](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/Joseph-M-Williams-research-visualized.png?raw=true)<a href='https://medium.com/@andreas_simons/the-english-language-is-a-lot-more-french-than-we-thought-heres-why-4db2db3542b3'></a>
+![Joseph M. Williams’ research visualized (top 10,000 words).](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/Joseph-M-Williams-research-visualized.png?raw=true)
 
 读书越多越明白读书少会被忽悠…… 很多人真的会大头捣蒜一般地认同 “不是什么东西都可以从书本里学到的……”
 
