@@ -998,8 +998,8 @@ Python 做更为复杂的数学计算的模块（Module）是 math module，参�
 > https://docs.python.org/3/library/math.html
 
 -----
+
 **脚注**
 
-<a name='fn1'>[1]</a>：请查阅 https://en.wikipedia.org/wiki/Unicode
+[1](fn1)：请查阅 https://en.wikipedia.org/wiki/Unicode
 
-<a href='#fn1b'><small>↑Back to Content↑</small></a>
