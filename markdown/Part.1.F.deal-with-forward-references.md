@@ -4,30 +4,33 @@
 “过早引用”（[Forward References](https://en.wikipedia.org/wiki/Forward_declaration#id=Forward_reference)，另译为 “前置引用”），原本是计算机领域的术语。
 
 在几乎所有的编程语言中，对于变量的使用，都有 “先声明再使用” 的要求。直接使用未声明的变量是被禁止的。Python 中，同样如此。如果在从未给 `an_undefined_variable` 赋值的情况下，直接调用这个变量，比如，`print(an_undefined_variable)`，那就会报错：`NameError: name 'an_undefined_variable' is not defined`。
+
 ```python
 print(an_undefined_variable)
 ```
+
     ---------------------------------------------------------------------------
+    
     NameError                                 Traceback (most recent call last)
+    
     <ipython-input-1-7e0e1cc14e37> in <module>
     ----> 1 print(an_undefined_variable)
     
     NameError: name 'an_undefined_variable' is not defined
 
-
 充满过早引用的知识结构，在大脑中会构成类似 M.C. Escher 善画的那种 “不可能图形” 那样的 “结构”。
 
-![](../images/four-cones.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/four-cones.png?raw=true)
 
 在上图中，前三个椎形一般不会造成视觉困惑 —— 尤其是第一个。
 
-若是加上虚线，比如，第二个和第三个，那么由于我们预设虚线表示 “原本应该看不见的部分”，于是，`C` 点的位置相对于 `B` 和 `D` 应该更靠近自己；`C'` 的位置，相对于 `B'` 和 `D'` 应该更远离自己…… 
+若是加上虚线，比如，第二个和第三个，那么由于我们预设虚线表示 “原本应该看不见的部分”，于是，`C` 点的位置相对于 `B` 和 `D` 应该更靠近自己；`C'` 的位置，相对于 `B'` 和 `D'` 应该更远离自己……
 
 然而，在第四个椎形中，由于 `B"D"` 和 `A"C"` 都是实线，于是，我们一下子就失去了判断依据，不知道 `C"` 究竟是离自己更近还是更远？
 
 对一个点的位置困惑，连带着它与其它三个点之间的关系。可若那不是锥体，而是立方体呢？每个点的位置困惑会造成对它与更多点之间的更多联系的困惑…… 若是更多面体呢？
 
-![](../images/2_necker_cubes.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/2_necker_cubes.png?raw=true)
 
 把这些令人困惑的点，比喻成 “过早引用”，你就明白为什么 “很多过早引用” 的知识结构会那么令人困惑，处理起来那么令人疲惫了吧？
 
@@ -55,9 +58,9 @@ print(an_undefined_variable)
 
 这是最重要的起点。听起来简单，甚至有点莫名其妙 —— 但以后你就会越来越深刻地体会到，这么简单的策略，绝大多数人竟然不懂，也因此吃了很多很多亏。
 
-充满了过早引用的知识讲解，就不可能是一遍就读懂的。别说这种信息密度极高的复杂且重要的知识获取了，哪怕你去看一部好电影，也要多刷几遍才能彻底看懂，不是嘛？比如，Quentin Tarantino 导演的 [Pulp Fiction (1994)](https://www.imdb.com/title/tt0110912/)、David Fincher 导演的 [Fight Club (1999)](https://www.imdb.com/title/tt0137523/) 、Christopher Nolan 导演的 [Inception (2010)](https://www.imdb.com/title/tt1375666/)、或者 Martin Scorsese 导演的 [Shutter Island (2010)](https://www.imdb.com/title/tt1130884/)……
+充满了过早引用的知识结构，就不可能是一遍就读懂的。别说这种信息密度极高的复杂且重要的知识获取了，哪怕你去看一部好电影，也要多刷几遍才能彻底看懂，不是嘛？比如，Quentin Tarantino 导演的 [Pulp Fiction (1994)](https://www.imdb.com/title/tt0110912/)、David Fincher 导演的 [Fight Club (1999)](https://www.imdb.com/title/tt0137523/)、Christopher Nolan 导演的 [Inception (2010)](https://www.imdb.com/title/tt1375666/)、或者 Martin Scorsese 导演的 [Shutter Island (2010)](https://www.imdb.com/title/tt1130884/)……
 
-所以，从一开始就要做好_将要重复很多遍_的准备，从一开始就要做好_第一次只能读懂个大概_的准备。
+所以，从一开始就要做好*将要重复很多遍*的准备，从一开始就要做好*第一次只能读懂个大概*的准备。
 
 古人说，读书百遍其义自见，道理就在这里了 —— 只不过，他们那时候没有计算机术语可以借用，所以，这道理本身成了 “过早引用”，对那些根本就没有过 “读书百遍” 经历的人，绝对以为那只不过是在忽悠自己……
 
@@ -67,9 +70,9 @@ print(an_undefined_variable)
 
 所以，第一遍的正经手段是 “**囫囵吞枣**地读完”。
 
-囫囵吞枣从一开始就是贬义词。但在当前这个特殊的情况下，它是最好的策略。那些只习惯于一上来就仔细认真的人，在这里很吃亏，因为他们越是仔细认真，越是容易被各种过早引用搞得灰心丧气；相应地，他们的挫败感积累得越快；到最后弄不好最先放弃的是他们 —— 失败的原因竟然是因为 “太仔细了”…… 
+囫囵吞枣从一开始就是贬义词。但在当前这个特殊的情况下，它是最好的策略。那些只习惯于一上来就仔细认真的人，在这里很吃亏，因为他们越是仔细认真，越是容易被各种过早引用搞得灰心丧气；相应地，他们的挫败感积累得越快；到最后弄不好最先放弃的是他们 —— 失败的原因竟然是因为 “太仔细了”……
 
-第一遍囫囵吞枣，用个正面一点的描述，就是 “_为探索未知领域先画个潦草的地图_”。地图这东西，有总比没有好；虽然说它最好精确，但即便是 “不精确的地图” 也比 “完全没地图” 好一万倍，对吧？更何况，这地图总是可以不断校正的，不是吗？世界上哪个地图不是一点一点校正过来才变成今天这般精确的呢？
+第一遍囫囵吞枣，用个正面一点的描述，就是 “*为探索未知领域先画个潦草的地图*”。地图这东西，有总比没有好；虽然说它最好精确，但即便是 “不精确的地图” 也比 “完全没地图” 好一万倍，对吧？更何况，这地图总是可以不断校正的，不是吗？世界上哪个地图不是一点一点校正过来才变成今天这般精确的呢？
 
 ## 磨练 “只字不差” 的能力
 
@@ -150,9 +153,7 @@ print(an_undefined_variable)
 
 从另外一个角度，这类体系的知识书籍，对作者来说，不仅是挑战，还是摆脱不了的负担。
 
-Python 官方网站上的 [The Python Tutorial](https://docs.python.org/3/tutorial/index.html)，是公认的最好的 Python 教材 —— 因为那是 Python 语言的作者 [Guido van Rossum](https://en.wikipedia.org/wiki/Guido_van_Rossum) 写的…… 
-
-<!-- ![](../images/GuidovanRossum.png) -->
+Python 官方网站上的 [The Python Tutorial](https://docs.python.org/3/tutorial/index.html)，是公认的最好的 Python 教材 —— 因为那是 Python 语言的作者 [Guido van Rossum](https://en.wikipedia.org/wiki/Guido_van_Rossum) 写的……
 
 虽然 Guido van Rossum 已经很小心了，但还是没办法在讲解上避免大量的过早引用。他的小心体现在，在目录里就出现过五次 **More**：
 
@@ -168,9 +169,9 @@ Python 官方网站上的 [The Python Tutorial](https://docs.python.org/3/tutori
 
 于是，这只能是读者自己的工作了 —— 因为即便是最牛的作者，也只能到这一步了。
 
-第一遍囫囵吞枣之后，马上就要开始 “**总结**、**归纳**、**整理**、**组织** 关键知识点” 的工作。自己动手完成这些工作，是所谓学霸的特点。他们只不过是掌握了这样一个其他人从未想过必须掌握的简单技巧。他们一定有个本子，里面是各种_列表_、_示意图_、_表格_ —— 这些都是最常用的知识（概念）整理组织归纳工具，这些工具的用法看起来简单的要死。
+第一遍囫囵吞枣之后，马上就要开始 “**总结**、**归纳**、**整理**、**组织** 关键知识点” 的工作。自己动手完成这些工作，是所谓学霸的特点。他们只不过是掌握了这样一个其他人从未想过必须掌握的简单技巧。他们一定有个本子，里面是各种*列表*、*示意图*、*表格* —— 这些都是最常用的知识（概念）整理组织归纳工具，这些工具的用法看起来简单的要死。
 
-这个技巧说出来、看起来都非常简单。然而，也许正因为它看起来如此简单，才被绝大多数人忽略…… 与学霸们相对，绝大多数非学霸都有一模一样的糊弄自己的理由：反正有别人做好的，拿过来用就是了！—— 听起来那么理直气壮…… 
+这个技巧说出来、看起来都非常简单。然而，也许正因为它看起来如此简单，才被绝大多数人忽略…… 与学霸们相对，绝大多数非学霸都有一模一样的糊弄自己的理由：反正有别人做好的，拿过来用就是了！—— 听起来那么理直气壮……
 
 可实际上，**自己动手做做就知道了** —— 整理、归纳、组织，再次反复，是个相当麻烦的过程。非学霸们自己不动手做的真正原因只不过是：嫌麻烦、怕麻烦。一个字总结，就是，**懒**！可是，谁愿意承认自己懒呢？没有人愿意。于是，都给自己找个冠冕堂皇的理由，比如，上面说的 “反正别人已经做好了，我为什么还要再做一遍呢？” 再比如，“这世界就是懒人推进的！”
 
@@ -178,7 +179,7 @@ Python 官方网站上的 [The Python Tutorial](https://docs.python.org/3/tutori
 
 我在第一次粗略读过整个 [Python Official Tutorial](https://docs.python.org/3/tutorial/datastructures.html) 中的第五章之后，顺手整理了一下 Containers 的概念表格：
 
-![](../images/python-containers.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/python-containers.png?raw=true)
 
 **可这张图错了！**
 
@@ -186,7 +187,7 @@ Python 官方网站上的 [The Python Tutorial](https://docs.python.org/3/tutori
 
 于是肯定需要再次整理，若干次改进之后，那张图就变成了下面这个样子：
 
-![](../images/python-containers-final.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/python-containers-final.png?raw=true)
 
 > 另外，从 Python 3.7 开始，Dictionary 是 insertion ordered 了：<br />
 https://docs.python.org/3/library/collections.html#ordereddict-objects
@@ -203,7 +204,7 @@ https://docs.python.org/3/library/collections.html#ordereddict-objects
 
 人家随手做个图，都舍不得不精致：
 
-![](../images/iter-relationships.gif)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/iter-relationships.gif?raw=true)
 
 自学能力强的人有个特点，就是**不怕麻烦**。小时候经常听到母亲念叨，“怕麻烦！那还活着干嘛啊？活着多麻烦啊！” —— 深刻。
 
@@ -215,10 +216,10 @@ https://docs.python.org/3/library/collections.html#ordereddict-objects
 
 两千五六百年之前，释加牟尼用他的理解以及在那个时代有限的概念详细叙述了打坐的感受 —— 他曾连续打坐 6 年。今天，西方科学家们在深入研究脑科学的时候，发现 [Meditation](https://en.wikipedia.org/wiki/Meditation) 对大脑有特别多的好处…… 这些好处就是好处，与宗教全然没有任何关系的好处。
 
-> * [Harvard neuroscientist: Meditation not only reduces stress, here’s how it changes your brain](https://www.washingtonpost.com/news/inspired-life/wp/2015/05/26/harvard-neuroscientist-meditation-not-only-reduces-stress-it-literally-changes-your-brain/)
+> * [Harvard neuroscientist: Meditation not only reduces stress, here's how it changes your brain](https://www.washingtonpost.com/news/inspired-life/wp/2015/05/26/harvard-neuroscientist-meditation-not-only-reduces-stress-it-literally-changes-your-brain/)
 > * [This Is Your Brain on Meditation -- The science explaining why you should meditate every day](https://www.psychologytoday.com/us/blog/use-your-mind-change-your-brain/201305/is-your-brain-meditation)
 > * [Researchers study how it seems to change the brain in depressed patients](https://news.harvard.edu/gazette/story/2018/04/harvard-researchers-study-how-mindfulness-may-change-the-brain-in-depressed-patients/)
-> * [Meditation’s Calming Effects Pinpointed in the Brain](https://www.scientificamerican.com/article/meditations-calming-effects-pinpointed-in-brain/)
+> * [Meditation's Calming Effects Pinpointed in the Brain](https://www.scientificamerican.com/article/meditations-calming-effects-pinpointed-in-brain/)
 > * [Different meditation types train distinct parts of your brain](https://www.newscientist.com/article/2149489-different-meditation-types-train-distinct-parts-of-your-brain/)
 
 你看，我们原本就是可以直接使用自己并不真正理解的物件、技能、原理、知识的！可为什么后来就不行了呢？
@@ -247,7 +248,7 @@ https://docs.python.org/3/library/collections.html#ordereddict-objects
 
 对年轻人来讲，老人言确实很讨厌，尤其是与自己当下的感受相左的时候。
 
-然而，这种 “讨厌” 的感觉，更多的时候是陷阱，因为那些老人言只不过是过早引用，所以，在年轻人的脑子里 “无法执行”，“报错为类型错误”…… 
+然而，这种 “讨厌” 的感觉，更多的时候是陷阱，因为那些老人言只不过是过早引用，所以，在年轻人的脑子里 “无法执行”，“报错为类型错误”……
 
 于是，很多人一不小心就把 “不听老人言” 和 “独立思考” 混淆起来，然后最终自己吃了亏。可尴尬在于，等自己意识到自己吃亏了的时候吧，大量的时间早已飘逝，是为 “无力回天”。
 
@@ -273,5 +274,3 @@ Python 中有一个概念叫 PEP，Python Enhancement Proposals，必须找时�
 <a name='fn1'>[1]</a>：也可能真的会死…… 请看一篇 2018 年 9 月份的一则新闻，发生在旧金山的事情：[Developer goes rogue, shoots four colleagues at ERP code maker](https://www.theregister.co.uk/2018/09/20/developer_work_shooting/)
 
 <a href='#fn1b'><small>↑Back to Content↑</small></a>
-
-```
