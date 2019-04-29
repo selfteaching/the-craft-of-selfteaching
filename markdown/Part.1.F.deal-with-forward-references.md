@@ -257,7 +257,7 @@ https://docs.python.org/3/library/collections.html#ordereddict-objects
 
 比如，上面告诉你了，“必须自己动手”，那你就从现在开始老老实实地在一切必要的情况下自己动手去 “**总结**、**归纳**、**整理**、**组织** 关键知识点”…… 那你就必然能够学好。但针对这么个建议，你反复在那里问，“为什么呀？”，“有没有更简单的办法啊？”…… 那你就完了，死定了。
 
-学写代码的过程中，有很多重要的东西实际上并不属于 “编程语言范畴”。比如，如何为变量命名、如何组织代码，这些 “规范”，不是违背了就会马上死掉的<a href='#fn1' name='fn1b'><sup>[1]</sup></a>；并且，初来乍到的时候，这些东西看起来就是很啰嗦、很麻烦的…… 然而，这些东西若是不遵守，甚至干脆不了解，那么最终的结果是，你永远不可能写出大项目，永远是小打小闹 —— 至于为什么，可以用那句你最讨厌的话回答你：
+学写代码的过程中，有很多重要的东西实际上并不属于 “编程语言范畴”。比如，如何为变量命名、如何组织代码，这些 “规范”，不是违背了就会马上死掉的[^1]；并且，初来乍到的时候，这些东西看起来就是很啰嗦、很麻烦的…… 然而，这些东西若是不遵守，甚至干脆不了解，那么最终的结果是，你永远不可能写出大项目，永远是小打小闹 —— 至于为什么，可以用那句你最讨厌的话回答你：
 
 > 等你长大了就懂了……
 
@@ -270,8 +270,5 @@ Python 中有一个概念叫 PEP，Python Enhancement Proposals，必须找时�
 到最后，你会体会到，这不只是编程的事，这种东西背后的思考与体量，对整个人生都有巨大帮助。
 
 -----
-**脚注**
 
-<a name='fn1'>[1]</a>：也可能真的会死…… 请看一篇 2018 年 9 月份的一则新闻，发生在旧金山的事情：[Developer goes rogue, shoots four colleagues at ERP code maker](https://www.theregister.co.uk/2018/09/20/developer_work_shooting/)
-
-<a href='#fn1b'><small>↑Back to Content↑</small></a>
+[^1]: 也可能真的会死…… 请看一篇 2018 年 9 月份的一则新闻，发生在旧金山的事情：[Developer goes rogue, shoots four colleagues at ERP code maker](https://www.theregister.co.uk/2018/09/20/developer_work_shooting/)

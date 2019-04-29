@@ -64,7 +64,7 @@ teach_yourself(coding)
 
 我甚至经常建议我的合伙人们，在招人的时候，把这一点当作最靠谱的判断方式。少废话，少吹牛逼，给我看看你的作品。这个原则可以一下子过滤掉所有的不合格者。另外一个很自然的现象是，如果一个人能做出像样的东西来，那么他身边的聪明人密度无论如何都会比其他人的高出很多。
 
-地球上有效社交密度最高的地方，是 [Github](https://github.com)。有些程序员们常开玩笑，说 Github 是全球最大的同性社交网站，事实上，他们不知道，女性程序员的比例正在逐步提高，而且女性在科学上，从来就没有屈居二线过<a href='#fn1' name='fn1b'><sup>[1]</sup></a>。
+地球上有效社交密度最高的地方，是 [Github](https://github.com)。有些程序员们常开玩笑，说 Github 是全球最大的同性社交网站，事实上，他们不知道，女性程序员的比例正在逐步提高，而且女性在科学上，从来就没有屈居二线过[^1]。
 
 在 Github 上，找到自己感兴趣的项目，而后为那项目贡献一己之力，用自己的工作赢得社区的认同…… 这就是 Github 上的社交方式。若是自己做了有意义的项目，就会有更多人关注；若是那项目对很多人有用，那就不仅有很多人关注，更有很多人会像当初的你一样为这个项目做贡献…… 这就是程序员们的**有效社交**。
 
@@ -111,9 +111,8 @@ Github 能成为地球上最大的有效社交网络，没毛病，因为**用�
 只有这样，你才是个值得被交往的人。
 
 -----
-**脚注**
 
-<a name='fn1'>[1]</a>：NPR：[Most Beautiful Woman' By Day, Inventor By Night](https://www.npr.org/2011/11/27/142664182/most-beautiful-woman-by-day-inventor-by-night)
+[^1]: NPR：[Most Beautiful Woman' By Day, Inventor By Night](https://www.npr.org/2011/11/27/142664182/most-beautiful-woman-by-day-inventor-by-night)
 
 ![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/Lamarr_patent.png?raw=true)
 
@@ -125,4 +124,3 @@ Hedy Lamarr 是好莱坞最知名的演员之一，并且，她也是自学高�
 
 > Although Lamarr had no formal training and was primarily self-taught, she worked in her spare time on various hobbies and inventions, which included an improved traffic stoplight and a tablet that would dissolve in water to create a carbonated drink. The beverage was unsuccessful; Lamarr herself said it tasted like Alka-Seltzer.
 
-<a href='#fn1b'><small>↑Back to Content↑</small></a>

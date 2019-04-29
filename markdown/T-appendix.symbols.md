@@ -7,7 +7,7 @@
 
 于是，ASCII 码表中的字符常常在不同的地方有不同的用处。比如，`.`，在操作系统中，常常当作文件名和扩展名之间的分隔符；在很多编程语言中，都被当作调用 Class Attributes 和 Class Methods 的符号；在正则表达式中，`.` 代表除 `\r` `\n` 之外的任意字符……
 
-把下面的表格打印出来，整理一下，在表格里填写每个符号在 Python 中都是用来做什么的？<a href='#fn1' name='fn1b'><sup>[1]</sup></a>
+把下面的表格打印出来，整理一下，在表格里填写每个符号在 Python 中都是用来做什么的？[^1]
 
 > 当前文件夹之中，有 `symbols.numbers` 文件，是用来打印以下表格的……
 
@@ -26,8 +26,6 @@
 普通人花同样价钱买来的是台机器而已；可是你却不一样 —— 用同样的价钱买来的是一个特别听话的机器人，一个可以替你不分昼夜不辞辛苦干活的机器人 —— 这感觉非常神奇。
 
 -----
-**脚注**
 
-<a name='fn1'>[1]</a>：Python 语法，请参阅 The Python Language Reference [2. Lexical analysis](https://docs.python.org/3/reference/lexical_analysis.html#operators)
+[^1]: Python 语法，请参阅 The Python Language Reference [2. Lexical analysis](https://docs.python.org/3/reference/lexical_analysis.html#operators)
 
-<a href='#fn1b'><small>↑Back to Content↑</small></a>

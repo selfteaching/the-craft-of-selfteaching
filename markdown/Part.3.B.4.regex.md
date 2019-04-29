@@ -13,7 +13,7 @@ Wikipedia 上对正则表达式的说明如下：
 
 我常常觉得当初要是它被翻译成 “规则表达式”，那么很可能初学者不会感到那么大的压力 —— 谁都一样，看着由 “每个都认识的字构成的词组” 却不能直观地想到它究竟是什么东西，都会感到莫名的压力。
 
-**Regular**，其实在它的众多语义中，取以下释义最符合 Regular Expression 的原意<a href='#fn1' name='fn1b'><sup>[1]</sup></a>：
+**Regular**，其实在它的众多语义中，取以下释义最符合 Regular Expression 的原意[^1]：
 
 > ⑭ Linguistics 规则的 ▸ regular verbs 规则动词
 
@@ -569,12 +569,12 @@ re.sub(pttn, repl, str)
 
 ## 几个最常用的 Regex
 
-以下是几个常用的 Regex<a href='#fn2' name='fn2b'><sup>[2]</sup></a>，值得保存：
+以下是几个常用的 Regex[^2]，值得保存：
 
 * matching username
 > [`/^[a-z0-9_-]{3,16}$/`](https://regexper.com#/%5E[a-z0-9_-]%7B3,16%7D$/)
 
-* matching password<a href='#fn3' name='fn3b'><sup>[3]</sup></a>
+* matching password[^3]
 > [`/^[a-z0-9_-]{6,18}$/`](https://regexper.com#/%5E[a-z0-9_-]%7B6,18%7D$/)
 
 * matching a HEX value
@@ -600,7 +600,7 @@ re.sub(pttn, repl, str)
 
 写 Regex 最烧脑的地方在于 “使其全面” —— 要考虑到各种意外情况。
 
-当然，除非必要，也不要在 “全面” 这事上面花太多时间 —— 给你看一个据说是 “最大程度上能够匹配所有 email 地址的 Regex” <a href='#fn4' name='fn4b'><sup>[4]</sup></a>，我都懒得测试的一个正则表达式：
+当然，除非必要，也不要在 “全面” 这事上面花太多时间 —— 给你看一个据说是 “最大程度上能够匹配所有 email 地址的 Regex”[^4]，我都懒得测试的一个正则表达式：
 
 ```regex
 (?:(?:\r\n)?[ \t])*(?:(?:(?:[^()<>@,;:\\".\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t]
@@ -691,7 +691,7 @@ r\\]|\\.)*\](?:(?:\r\n)?[ \t])*)(?:\.(?:(?:\r\n)?[ \t])*(?:[^()<>@,;:\\".\[\]
 
 [ELIZA](https://en.wikipedia.org/wiki/ELIZA) 是人类史上第一个 “聊天机器人” 程序，上个世纪六十年代，1966 年实现的。核心就是使用正则表达式匹配对方语句中的关键词汇，再经过替换，形成看似有意义的 “回应” —— 事实上，ELIZA 完全不知道自己在说什么……
 
-几年后，就是七十年代初，1972 年，另外一个聊天机器人 [Parry](https://en.wikipedia.org/wiki/PARRY) <a href='#fn5' name='fn5b'><sup>[5]</sup></a>被写了出来…… 随后第二年，这两个聊天机器人在 ARPANET “碰面” 好好地聊了一下<a href='#fn6' name='fn6b'><sup>[6]</sup></a>：
+几年后，就是七十年代初，1972 年，另外一个聊天机器人 [Parry](https://en.wikipedia.org/wiki/PARRY) [^5]被写了出来…… 随后第二年，这两个聊天机器人在 ARPANET “碰面” 好好地聊了一下[^6]：
 
 > ELIZA: Good Evening. Tell me your problems. Please terminate input with a period or a question mark.
 >
@@ -1046,29 +1046,12 @@ if __name__ == "__main__":
     Hello.  How are you feeling today?
 
 -----
-**脚注**
 
-<a name='fn1'>[1]</a>：释义摘自苹果电脑上系统内建的《牛津英汉双解辞典》
+[^1]：释义摘自苹果电脑上系统内建的《牛津英汉双解辞典》
+[^2]: [8 Regular Expressions You Should Know](https://bit.ly/2tz8v9n) by Vasili
+[^3]: 关于校验密码强度的正则表达式，往往需要设置更为复杂的规则，Stackoverflow 上的一则答复中有很好的示例：https://stackoverflow.com/a/21456918
+[^4]: http://www.ex-parrot.com/pdw/Mail-RFC822-Address.html
+[^5]: Parry 的源代码（用 Lisp 写的）在这里：http://www.cs.cmu.edu/afs/cs/project/ai-repository/ai/areas/classics/parry/</a>
+[^6]: ELIZA 和 Parry 的完整聊天记录在这里：https://tools.ietf.org/html/rfc439</a>
 
-<a href='#fn1b'><small>↑Back to Content↑</small></a>
-
-<a name='fn2'>[2]</a>：[8 Regular Expressions You Should Know](https://bit.ly/2tz8v9n) by Vasili
-
-<a href='#fn2b'><small>↑Back to Content↑</small></a>
-
-<a name='fn3'>[3]</a>：关于校验密码强度的正则表达式，往往需要设置更为复杂的规则，Stackoverflow 上的一则答复中有很好的示例：https://stackoverflow.com/a/21456918
-
-<a href='#fn3b'><small>↑Back to Content↑</small></a>
-
-<a name='fn4'>[4]</a>：http://www.ex-parrot.com/pdw/Mail-RFC822-Address.html
-
-<a href='#fn4b'><small>↑Back to Content↑</small></a>
-
-<a name='fn5'>[5]</a>：Parry 的源代码（用 Lisp 写的）在这里：http://www.cs.cmu.edu/afs/cs/project/ai-repository/ai/areas/classics/parry/</a>
-
-<a href='#fn5b'><small>↑Back to Content↑</small></a>
-
-<a name='fn6'>[6]</a>：ELIZA 和 Parry 的完整聊天记录在这里：https://tools.ietf.org/html/rfc439</a>
-
-<a href='#fn6b'><small>↑Back to Content↑</small></a>
 

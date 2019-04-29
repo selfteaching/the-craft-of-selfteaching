@@ -1,6 +1,6 @@
 # the-craft-of-selfteaching
 
-> One has no future if one couldn't teach themself<a href='#fn1' name='fn1b'><sup>[1]</sup></a>.
+> One has no future if one couldn't teach themself[^1].
 
 # 自学是门手艺
 
@@ -152,8 +152,6 @@ td code {
 ![CC-BY-NC-ND](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/CC-BY-NC-ND.png?raw=true)
 
 -----
-**脚注**
 
-<a name='fn1'>[1]</a>：['Themselves' or 'themself'?-- Oxford Dictionary](https://en.oxforddictionaries.com/usage/themselves-or-themself)
+[^1]: ['Themselves' or 'themself'?-- Oxford Dictionary](https://en.oxforddictionaries.com/usage/themselves-or-themself)
 
-<a href='#fn1b'><small>↑Back to Content↑</small></a>
