@@ -17,7 +17,6 @@
 当我们用 Python 编程的时候，更多的情况下，我们只不过是在使用别人已经写好的函数，或者用更专业一点的词藻，叫做 “已完好封装的函数”。而我们所需要做的事情（所谓的 “学习使用函数”），其实只不过是 “通过阅读产品说明书了解如何使用产品” 而已，真的没多神秘……
 
 > [!NOTE]
-> **注意**
 > 这一章的核心目的，不是让你学会如何写函数；而是通过一些例子，让你大抵上学会 “*如何阅读官方文档中关于函数的使用说明*”。也请注意之前的那个词：“*大抵上*”，所以**千万别怕自己最初的时候理解不全面**。
 
 另外，这一章中用来举例的函数，全部来自于同一个官方文档页面，[Built-in Functions](https://docs.python.org/3/library/functions.html)：
@@ -83,7 +82,7 @@ print(a)
 
 最必须读懂的部分，就是这一行：
 
-> `print(*object, sep=' ', end='\n', file=sys.stdout, flush=False)` [1](#fn1)
+> `print(*object, sep=' ', end='\n', file=sys.stdout, flush=False)` [^1]
 
 先只注意那些有着 `=` 的参数，`sep=' '`、`end='\n'`、`file=sys.stdout`，和 `flush=False`。
 
@@ -283,15 +282,14 @@ print(bool(None))
 
 -----
 
-**脚注**
-
-（2019.02.14）[1](#fn1)：`print()` 函数的[官方文档](https://docs.python.org/3/library/functions.html#print)里，`sep=''` 肯定是 `sep=' '` 的笔误 —— 可以用以下代码验证：
+[^1]: `print()` 函数的[官方文档](https://docs.python.org/3/library/functions.html#print)里，`sep=''` 肯定是 `sep=' '` 的笔误 —— 可以用以下代码验证（写于 2019.02.14）：
 
 ```python
 print('a', 'b', sep='')
 print('a', 'b')
 ```
-（2019.03.16）有读者提醒：https://github.com/selfteaching/the-craft-of-selfteaching/issues/111
+
+2019.03.16, 有读者提醒：https://github.com/selfteaching/the-craft-of-selfteaching/issues/111
 
 > 而现在（2019.03.16）复制粘贴文档中的 `sep=' '`，会发现是有空格的。
 >
