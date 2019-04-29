@@ -12,8 +12,6 @@ Class 使用 `class` 关键字进行定义。
 让我们先看看代码，而后再逐一解释：
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
 import datetime
 
 class Golem:
@@ -26,15 +24,15 @@ class Golem:
         print('Hi!')
 
 g = Golem('Clay')
-g.name
-g.built_year
-g.say_hi
+print(g.name)
+print(g.built_year)
+print(g.say_hi)
 g.say_hi()
-type(g)
-type(g.name)
-type(g.built_year)
-type(g.__init__)
-type(g.say_hi)
+print(type(g))
+print(type(g.name))
+print(type(g.built_year))
+print(type(g.__init__))
+print(type(g.say_hi))
 ```
 
     'Clay'
@@ -82,8 +80,6 @@ class Golem:
 我们刚刚创建了一个 Golem Class，如果我们想用它 Inherite 一个新的 Class，比如，`Running_Golem`，一个能跑的机器人，那就像以下的代码那样做 —— 注意 `class Running_Golem` 之后的圆括号：
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
 import datetime
 
 class Golem:
@@ -102,10 +98,10 @@ class Running_Golem(Golem):      # 刚刚就说，这个圆括号另有用途…
 
 rg = Running_Golem('Clay')
 
-rg.run
+print(rg.run)
 rg.run()
-rg.name
-rg.built_year
+print(rg.name)
+print(rg.built_year)
 rg.say_hi()
 ```
 
@@ -122,8 +118,6 @@ rg.say_hi()
 当我们创建一个 Inherited Class 的时候，可以重写（Overriding）Parent Class 中的 Methods。比如这样：
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
 import datetime
 
 class Golem:
@@ -144,10 +138,10 @@ class runningGolem(Golem):
         print('Hey! Nice day, Huh?')
 
 rg = runningGolem('Clay')
-rg.run
+print(rg.run)
 rg.run()
-rg.name
-rg.built_year
+print(rg.name)
+print(rg.built_year)
 rg.say_hi()
 ```
 
@@ -161,15 +155,13 @@ rg.say_hi()
 
 当我们作为用户想了解一个 Class 的 Interface，即，它的 Attributes 和 Methods 的时候，常用的有三种方式：
 
-```python
+```python,ignore
 1. help(object)
 2. dir(object)
 3. object.__dict__
 ```
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
 import datetime
 
 class Golem:
@@ -190,10 +182,10 @@ class runningGolem(Golem):
         print('Hey! Nice day, Huh?')
 
 rg = runningGolem('Clay')
-help(rg)
-dir(rg)
-rg.__dict__
-hasattr(rg, 'built_year')
+print(help(rg))
+print(dir(rg))
+print(rg.__dict__)
+print(hasattr(rg, 'built_year'))
 ```
 
     Help on runningGolem in module __main__ object:
@@ -279,8 +271,6 @@ hasattr(rg, 'built_year')
 现在的你，应该一眼望过去，就已经能掌握这三个内建函数的用法 —— 还记得之前的你吗？眼睁睁看着，那些字母放在那里对你来说没任何意义…… 这才多久啊！
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
 import datetime
 
 class Golem:
@@ -306,19 +296,19 @@ class Golem:
         return self.__active
 
 g = Golem()
-hasattr(Golem, 'population')      # True
-hasattr(g, 'population')          # True
-hasattr(Golem, '__life_span')     # False
-hasattr(g, '__life_span')         # False
-hasattr(g, '__active')            # False
-Golem.population                  # 1
-setattr(Golem, 'population', 10)
-Golem.population                  # 10
+print(hasattr(Golem, 'population'))      # True
+print(hasattr(g, 'population'))          # True
+print(hasattr(Golem, '__life_span'))     # False
+print(hasattr(g, '__life_span'))         # False
+print(hasattr(g, '__active'))            # False
+print(Golem.population)                  # 1
+print(setattr(Golem, 'population', 10))
+print(Golem.population)                  # 10
 x = Golem()
-Golem.population                  # 11
+print(Golem.population)                  # 11
 x.cease()
-Golem.population                  # 10
-getattr(g, 'population')          # 10
+print(Golem.population)                  # 10
+print(getattr(g, 'population'))          # 10
 g.is_active()
 ```
 
@@ -336,7 +326,7 @@ g.is_active()
 
 如果你试过把第 13 行的 `Golem.population += 1` 改成 `population += 1`，你会被如下信息提醒：
 
-```python
+```python,ignore
      12         self.__active = True
 ---> 13         population += 1
 UnboundLocalError: local variable 'population' referenced before assignment
@@ -376,15 +366,13 @@ Scope ④ 与 Scope ③ 平行存在。所以在这里，`population` 和 `__lif
 
 到目前为止，Golem 这个 Class 看起来不错，但有个问题，它里面的数据，外面是可以随便改的 —— 虽然，我们已经通过给变量 life_span 前面加上两个下划线，变成 `__life_span`，使其成为私有变量，外部不能触达（你不能引用 `Golem.__life_span`），可 Golem.population 就不一样，外面随时可以引用，还可以随时修改它，只需要写上一句：
 
-```python
+```python,ignore
 Golem.population = 1000000
 ```
 
 我们干脆把 `population` 这个变量也改成私有的罢：`__population`，而后需要从外界查看这个变量的话，就在 Class 里面写个函数，返回那个值好了：
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
 import datetime
 
 class Golem:
@@ -413,8 +401,8 @@ class Golem:
         return Golem.__population
 
 g = Golem('Clay')
-g.population
-g.population()
+print(g.population)
+print(g.population())
 ```
 
     <bound method Golem.population of <__main__.Golem object at 0x1068da160>>
@@ -435,8 +423,6 @@ class Golem:
 如此这般之后，你就可以用 `g.population` 了：
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
 import datetime
 
 class Golem:
@@ -466,7 +452,7 @@ class Golem:
         return Golem.__population
 
 g = Golem('Clay')
-g.population
+print(g.population)
 # g.population = 100
 ```
 
@@ -488,7 +474,7 @@ AttributeError: can't set attribute
 到此为止，Encapsulation 就做得不错了。
 
 如果你非得希望从外部可以设置这个值，那么，你就得再写个函数，并且在函数之前加上一句：
-```python
+```python,ignore
     ...
 
     @property
@@ -504,8 +490,6 @@ AttributeError: can't set attribute
 这样之后，`.population` 这个 Attribute 就可以从外部被设定其值了（虽然在当前的例子中显得没必要让外部设定 `__population` 这个值…… 以下仅仅是为了举例）：
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
 import datetime
 
 class Golem:
@@ -539,18 +523,18 @@ class Golem:
         Golem.__population = value
 
 g = Golem('Clay')
-g.population
+print(g.population)
 g.population = 100
 ga = Golem('New')
-g.population
-ga.population
-help(Golem)
-Golem.__dict__
-g.__dict__
-hasattr(Golem, 'population')
-getattr(Golem, 'population')
-setattr(Golem, 'population', 10000)
-g.population    # 所以，在很多的情况下，不把数据封装在 Class 内部的话，后面会有很多麻烦。
+print(g.population)
+print(ga.population)
+print(help(Golem))
+print(Golem.__dict__)
+print(g.__dict__)
+print(hasattr(Golem, 'population'))
+print(getattr(Golem, 'population'))
+print(setattr(Golem, 'population', 10000))
+print(g.population)    # 所以，在很多的情况下，不把数据封装在 Class 内部的话，后面会有很多麻烦。
 ```
 
     1

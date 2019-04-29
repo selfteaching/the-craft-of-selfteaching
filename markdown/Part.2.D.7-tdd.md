@@ -21,6 +21,7 @@
 
 ```python
 def is_leap(year):
+    # 请在这里写下你的代码。
     pass
 ```
 
@@ -42,24 +43,19 @@ def is_leap(year):
 所以，在写 `def is_leap(year)` 中的内容之前，我只是用 `pass` 先把位置占上，而后在后面添加了四个用来测试结果的语句 —— 它们的值，现在当然都是 `False`…… 等我把整个函数写完了，写正确了，那么它们的值就都应该变成 `True`。
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-
 def is_leap(year):
+    # 请在这里写下你的代码。
     pass
 
-is_leap(4) is True
-is_leap(200) is False
-is_leap(220) is True
-is_leap(400) is True
+print(is_leap(4) is True)
+print(is_leap(200) is False)
+print(is_leap(220) is True)
+print(is_leap(400) is True)
 ```
 
     False
-    
     False
-    
     False
-    
     False
 
 考虑到更多的年份不是闰年，所以，排除顺序大抵上应该是这样：
@@ -70,17 +66,14 @@ is_leap(400) is True
 于是，先实现第一句：“先假定都不是闰年”：
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-
 def is_leap(year):
     r = False
     return r
 
-is_leap(4) is True
-is_leap(200) is False
-is_leap(220) is True
-is_leap(400) is True
+print(is_leap(4) is True)
+print(is_leap(200) is False)
+print(is_leap(220) is True)
+print(is_leap(400) is True)
 ```
 
     False
@@ -91,19 +84,16 @@ is_leap(400) is True
 然后再实现这部分：“年份应该是 4 的倍数”：
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-
 def is_leap(year):
     r = False
     if year % 4 == 0:
         r = True
     return r
 
-is_leap(4) is True
-is_leap(200) is False
-is_leap(220) is True
-is_leap(400) is True
+print(is_leap(4) is True)
+print(is_leap(200) is False)
+print(is_leap(220) is True)
+print(is_leap(400) is True)
 ```
 
     True
@@ -120,9 +110,6 @@ is_leap(400) is True
 > 如此这般，`200` 肯定使得 `r = False`。
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-
 def is_leap(year):
     r = False
     if year % 4 == 0:
@@ -132,10 +119,10 @@ def is_leap(year):
                 r = False
     return r
 
-is_leap(4) is True
-is_leap(200) is False
-is_leap(220) is True
-is_leap(400) is True
+print(is_leap(4) is True)
+print(is_leap(200) is False)
+print(is_leap(220) is True)
+print(is_leap(400) is True)
 ```
 
     True
@@ -143,7 +130,7 @@ is_leap(400) is True
     True
     True
 
-尽管整个过程读起来很直观，但真的要自己从头到尾操作，就可能四处出错，不信你就试试 —— 这一页最下面添加一个单元格，自己动手从头写到尾试试……
+尽管整个过程读起来很直观，但真的要自己从头到尾操作，就可能四处出错，不信你就试试 —— 选择这一页任何一个代码编辑器，自己动手从头写到尾试试……
 
 当然，Python 内建库中的 `datetime.py` 模块里的代码更简洁，之前给你看过：
 
@@ -151,7 +138,7 @@ is_leap(400) is True
 # cpython/Lib/datetime.py
 def _is_leap(year):
     return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
-_is_leap(300)
+print(_is_leap(300))
 ```
 
     False
@@ -258,7 +245,7 @@ BaseException
 
 拿 `FileNotFoundError` 为例 —— 当我们想要打开一个文件之前，其实应该有个办法提前验证一下那个文件是否存在。如果那个文件并不存在，就会引发 “意外”。
 
-```python
+```python,ignore
 f = open('test_file.txt', 'r')
 ```
 
@@ -273,7 +260,7 @@ f = open('test_file.txt', 'r')
 
 在 Python 中，我们可以用 `try` 语句块去执行那些可能出现 “意外” 的语句，`try` 也可以配合 `except`、`else`、`finally` 使用。从另外一个角度看，`try` 语句块也是一种特殊的流程控制，专注于 “当意外发生时应该怎么办？”
 
-```python
+```python,ignore
 try:
     f = open('test_file.txt', 'r')
 except FileNotFoundError as fnf_error:
@@ -299,7 +286,7 @@ else:
 
 或者：
 
-```python
+```python,ignore
 try:
     do_something()
 except built_in_error as name_of_error:
@@ -312,7 +299,7 @@ finally:
 
 甚至可以嵌套：
 
-```python
+```python,ignore
 try:
     do_something()
 except built_in_error as name_of_error:

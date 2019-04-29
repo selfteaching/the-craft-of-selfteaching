@@ -3,11 +3,15 @@
 
 写好的函数，当然最好保存起来，以便将来随时调用。
 
+> [!NOTE]
+> GitPress 使用的 Python 暂不支持 Module，有的代码无法运行。为了更好的阅读体验，请在本地运行 Jupyter 阅读本章内容。
+
+
 ## 模块
 
 我们可以将以下内容保存到一个名为 `mycode.py` 的文件中 —— 这样可以被外部调用的 `.py` 文件，有个专门的称呼，**模块**（Module）—— 于是，其实任何一个 `.py` 文件都可以被称为*模块*：
 
-```python
+```python,ignore
 # %load mycode.py
 # 当前这个 Code Cell 中的代码，保存在当前文件夹中的 mycode.py 文件中
 # 以下的代码，是使用 Jupyter 命令 %load mycode.py 导入到当前 Code Cell 中的：
@@ -43,7 +47,7 @@ def say_hi(*names, greeting='Hello', capitalized=False):
 
 而后，我们就可以在其它地方这样使用（以上代码现在已经保存在当前工作目录中的 `mycode.py`）：
 
-```python
+```python,ignore
 from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = "all"
 
@@ -110,13 +114,11 @@ import my_module
 你可以用以下代码获取系统内建模块的列表：
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
 import sys
 
-sys.builtin_module_names
-"_sre" in sys.builtin_module_names # True
-"math" in sys.builtin_module_names # False
+print(sys.builtin_module_names)
+print("_sre" in sys.builtin_module_names) # True
+print("math" in sys.builtin_module_names) # False
 ```
 
     ('_abc',
@@ -159,19 +161,19 @@ sys.builtin_module_names
 
 当你使用 `import mycode` 的时候，你向当前工作空间引入了 `mycode` 文件中定义的所有函数，相当于：
 
-```python
+```python,ignore
 from mycode import *
 ```
 
 你其实可以只引入当前需要的函数，比如，只引入 `is_prime()`：
 
-```python
+```python,ignore
 from mycode import is_prime
 ```
 
 这种情况下，你就不必使用 `mycode.is_prime()` 了；而是就好像这个函数就写在当前工作空间一样，直接写 `is_prime()`：
 
-```python
+```python,ignore
 from mycode import is_prime
 is_prime(3)
 ```
@@ -182,11 +184,11 @@ is_prime(3)
 
 如果我们想要导入 `foo` 这个目录中的 `bar.py` 这个模块文件，那么，可以这么写：
 
-```python
+```python,ignore
 import foo.bar
 ```
 或者
-```python
+```python,ignore
 from foo import bar
 ```
 
@@ -194,7 +196,7 @@ from foo import bar
 
 有的时候，或者为了避免混淆，或者为了避免输入太多字符，我们可以为引入的函数设定 **化名**（alias），而后使用化名调用函数。比如：
 
-```python
+```python,ignore
 from mycode import is_prime as isp
 isp(3)
 ```
@@ -203,7 +205,7 @@ isp(3)
 
 甚至干脆给整个模块取个化名：
 
-```python
+```python,ignore
 from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = "all"
 
@@ -223,7 +225,7 @@ m.say_hi('mike', 'zoe')
 
 有一个 Python 的彩蛋，恰好是可以用在此处的最佳例子 —— 这个模块是 `this`，它的文件名是 [`this.py`](https://github.com/python/cpython/blob/master/Lib/this.py)：
 
-```python
+```python,ignore
 import this
 ```
 
@@ -283,7 +285,7 @@ print("".join([d.get(c, c) for c in s]))
 
 这个 `this.py` 文件中也没有什么函数，但这个文件里所定义的变量，我们都可以在 `import this` 之后触达：
 
-```python
+```python,ignore
 from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = "all"
 
@@ -357,7 +359,7 @@ this.s
 
 你的函数，保存在模块里之后，这个函数的用户（当然也包括你），可以用 `dir()` 函数查看模块中可触达的变量名称和函数名称：
 
-```python
+```python,ignore
 import mycode
 dir(mycode)
 ```

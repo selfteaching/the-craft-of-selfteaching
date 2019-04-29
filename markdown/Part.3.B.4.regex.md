@@ -43,7 +43,7 @@ Wikipedia 上对正则表达式的说明如下：
 import re
 str = 'The quick brown fox jumps over the lazy dog'
 pttn = re.compile(r'\wo\w')
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 ```
 
     ['row', 'fox', 'dog']
@@ -101,7 +101,7 @@ import re
 with open('regex-target-text-sample.txt', 'r') as f:
     str = f.read()
 pttn = r'beg[iau]ns?'
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 ```
 
     ['begin', 'began', 'begun', 'begin']
@@ -175,12 +175,9 @@ Regex 也一样，它本身就是个迷你语言（Mini Language）。在 Regex 
 即，相当于，`string.ascii_letters` 和 `string.digits` 以及 `_`。
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-
 import string
-string.ascii_letters
-string.digits
+print(string.ascii_letters)
+print(string.digits)
 ```
 
     'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
@@ -207,7 +204,7 @@ import re
 
 str = 'begin began begun bigins begining'
 pttn = r'beg[iau]n'
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 ```
 
     ['begin', 'began', 'begun', 'begin']
@@ -256,7 +253,7 @@ import re
 
 str = '<dl>(843) 542-4256</dl> <dl>(431) 270-9664</dl>'
 pttn = r'\d\d\d\-'
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 ```
 
     ['542-', '270-']
@@ -278,9 +275,9 @@ import re
 
 str = 'never ever verb however everest'
 pttn = r'er\b'
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 pttn = r'er\B'
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 ```
 
     ['er', 'er', 'er']
@@ -331,24 +328,22 @@ re.findall(pttn, str)
 > 例如，[`go{2,5}gle`](https://regexper.com#go%7B2,5%7Dgle)，能匹配 `google` `gooogle` `goooogle` 或 `gooooogle`，但不能匹配 `gogle` 和 `gooooooogle`
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
 
 import re
 with open('regex-target-text-sample.txt', 'r') as f:
     str = f.read()
 
 pttn = r'go+gle'
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 
 pttn = r'go{2,5}gle'
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 
 pttn = r'colou?red'
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 
 pttn = r'520*'
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 ```
 
     ['google', 'gooogle', 'goooogle', 'goooooogle']
@@ -368,21 +363,18 @@ re.findall(pttn, str)
 > * `(er)` 是一个原子，`'er'`
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-
 import re
 
 str = 'error wonderer severeness'
 
 pttn = r'er'
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 
 pttn = r'[er]'
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 
 pttn = r'(er)'
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 ```
 
     ['er', 'er', 'er', 'er']
@@ -392,21 +384,18 @@ re.findall(pttn, str)
 在以上的例子中，看不出 `er` 和 `(er)` 的区别，但是，加上数量操作符就不一样了 —— 因为*数量操作符只对它之前的那一个原子进行操作*：
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-
 import re
 
 str = 'error wonderer severeness'
 
 pttn = r'er+'
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 
 pttn = r'[er]+'
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 
 pttn = r'(er)+'
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 ```
 
     ['err', 'er', 'er', 'er']
@@ -424,7 +413,7 @@ import re
 
 str = 'begin began begun begins beginn'
 pttn = r'begin|began|begun'
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 ```
 
     ['begin', 'began', 'begun', 'begin', 'begin']
@@ -434,26 +423,23 @@ re.findall(pttn, str)
 **注意**：中括号的 `|` 不被当作特殊符号，而是被当作 `|` 这个符号本身。在中括号中的圆括号，也被当作圆括号 `()` 本身，而无分组含义。
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-
 import re
 
 str = 'achroiocythaemia achroiocythemia a|e'
 pttn = r'[a|ae]'
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 
 pttn = r'[a|e]'
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 
 pttn = r'[ae]'
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 
 pttn = r'[(ae)]'
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 
 pttn = r'[a|ae|(ae)]'
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 ```
 
     ['a', 'a', 'e', 'a', 'a', 'e', 'a', 'a', '|', 'e']
@@ -468,13 +454,13 @@ re.findall(pttn, str)
 import re
 str = 'The white dog wears a black hat.'
 pttn = r'The (white|black) dog wears a (white|black) hat.'
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 
 repl = r'The \2 dog wears a \1 hat.'
-re.sub(pttn, repl, str)
+print(re.sub(pttn, repl, str))
 
 repl = r'The \1 dog wears a \1 hat.'
-re.sub(pttn, repl, str)
+print(re.sub(pttn, repl, str))
 
 ```
 
@@ -490,11 +476,11 @@ re.sub(pttn, repl, str)
 import re
 str = 'The white dog wears a black hat.'
 pttn = r'The (?:white|black) dog wears a (white|black) hat.'
-re.findall(pttn, str)                   # 只捕获了一处，也就是说只有一个值将来可以被引用
+print(re.findall(pttn, str))                   # 只捕获了一处，也就是说只有一个值将来可以被引用
 
 repl = r'The \1 dog wears a \1 hat.'    # 之前的一处捕获，在替换时可被多次引用
 書評
-re.sub(pttn, repl, str)
+print(re.sub(pttn, repl, str))
 
 ```
 
@@ -1022,19 +1008,20 @@ def command_interface():
   print('Hello.  How are you feeling today?')
 
   s = ''
+  last_resp = ''
   therapist = eliza();
   while s != 'quit':
     try:
-      s = input('> ')
+      s = input('ELIZA: %s\n(type \'quit\' to quit)> ' % (last_resp) )
     except EOFError:
       s = 'quit'
     print(s)
-    while s[-1] in '!.':
+    while s and s[-1] in '!.':
       s = s[:-1]
-    print(therapist.respond(s))
+    last_resp = therapist.respond(s)
+    print(last_resp)
 
-if __name__ == "__main__":
-  command_interface()
+command_interface()
 
 ```
 

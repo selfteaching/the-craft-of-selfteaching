@@ -156,7 +156,7 @@ print('The in_dream() function returns:', in_dream())
 
 另外，在 Python 中，若是需要将某个值与 True 或者 False 进行比较，尤其是在条件语句中，推荐写法是（参见 [PEP8](https://www.python.org/dev/peps/pep-0008/)）：
 
-```python
+```python,ignore
 if condition:
     pass
 ```
@@ -165,14 +165,14 @@ if condition:
 
 而不是（虽然这么写通常也并不妨碍程序正常运行[^1]）：
 
-```python
+```python,ignore
 if condition is True:
     pass
 ```
 
 抑或：
 
-```python
+```python,ignore
 if condition == True:
     pass
 ```
@@ -337,7 +337,7 @@ print(n, m)
 
 至此，封面上的那个 “伪代码” 应该很好理解了：
 
-```python
+```python,ignore
 def teach_yourself(anything):
     while not create():
         learn()
