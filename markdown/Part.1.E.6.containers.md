@@ -628,7 +628,7 @@ n = 10000 #@param {type:"number"}
 a = range(n)
 b = tuple(a) # 把 a 转换成元组
 c = list(a) # 把 a 转换成列表
-a.__sizeof__()
+a.__sizeof__() # GitPress 中的 Python 不支持 __sizeof__() 方法
 b.__sizeof__()
 c.__sizeof__()
 ```
@@ -670,7 +670,7 @@ print(type(b))
 
 也可以将序列数据转换（Casting）为集合。转换后，返回的是一个已**去重**的集合。
 
-```python,ignore
+```python
 a = "abcabcdeabcdbcdef"
 b = range(10)
 c = [1, 2, 2, 3, 3, 1]
@@ -720,17 +720,17 @@ moderators = {'Ann', 'Chris', 'Jane', 'Moose', 'Zero'}
 
 那么：
 
-```python,ignore
+```python
 admins = {'Moose', 'Joker', 'Joker'}
 moderators = {'Ann', 'Chris', 'Jane', 'Moose', 'Zero'}
 
-admins                 # 去重自动完成
-'Joker' in admins      # Joker 是否是 admins？
-'Joker' in moderators  # Joker 是否是 moderator？
-admins | moderators    # admins、moderator，或者身兼两职的，即，两个角色中的所有人 in admins or moderators or both
-admins & moderators    # 既是 admins 又是 moderator 的都有谁？in both admins and moderators
-admins - moderators    # 是 admins 但不是 moderator 的都有谁？in admins but not in moderators
-admins ^ moderators    # admins 和 moderator 中不是身兼两职的都有谁？in admins or moderator but not both
+print(admins)                 # 去重自动完成
+print('Joker' in admins)      # Joker 是否是 admins？
+print('Joker' in moderators)  # Joker 是否是 moderator？
+print(admins | moderators)    # admins、moderator，或者身兼两职的，即，两个角色中的所有人 in admins or moderators or both
+print(admins & moderators)    # 既是 admins 又是 moderator 的都有谁？in both admins and moderators
+print(admins - moderators)    # 是 admins 但不是 moderator 的都有谁？in admins but not in moderators
+print(admins ^ moderators)    # admins 和 moderator 中不是身兼两职的都有谁？in admins or moderator but not both
 ```
 
     {'Joker', 'Moose'}
@@ -742,7 +742,7 @@ admins ^ moderators    # admins 和 moderator 中不是身兼两职的都有谁�
     {'Ann', 'Chris', 'Jane', 'Joker', 'Zero'}
 
 ```python,ignore
-# 这个 cell 集合运算图示需要安装 matplotlib 和 matplotlib-venn
+# 这个 cell 集合运算图示需要安装 matplotlib 和 matplotlib-venn，请在本地计算机运行
 # !pip install matplotlib
 # !pip install matplotlib-venn
 import matplotlib.pyplot as plt
@@ -774,14 +774,14 @@ plt.show()
 
 对于集合，推荐更多使用 Methods 而不是操作符的主要原因是：更易读 —— 对人来说，因为有意义、有用处的代码终将需要人去维护。
 
-```python,ignore
+```python
 admins = {'Moose', 'Joker', 'Joker'}
 moderators = {'Chris', 'Moose', 'Jane', 'Zero'}
 
-admins.union(moderators)
-admins.intersection(moderators)
-admins.difference(moderators)
-admins.symmetric_difference(moderators)
+print(admins.union(moderators))
+print(admins.intersection(moderators))
+print(admins.difference(moderators))
+print(admins.symmetric_difference(moderators))
 ```
 
     {'Chris', 'Jane', 'Joker', 'Moose', 'Zero'}
@@ -947,19 +947,19 @@ print(phonebook1)
 
 ### 逻辑操作符
 
-```python,ignore
+```python
 phonebook1 = {'ann':6575, 'bob':8982, 'joe':2598, 'zoe':1225, 'ann':6585}
 
-'ann' in phonebook1
+print('ann' in phonebook1)
 
-phonebook1.keys()
-'stan' in phonebook1.keys()
+print(phonebook1.keys())
+print('stan' in phonebook1.keys())
 
-phonebook1.values()
-1225 in phonebook1.values()
+print(phonebook1.values())
+print(1225 in phonebook1.values())
 
-phonebook1.items()
-('stan', 6898) in phonebook1.items()
+print(phonebook1.items())
+print(('stan', 6898) in phonebook1.items())
 ```
 
     True
@@ -972,19 +972,19 @@ phonebook1.items()
 
 ### 可用来操作的内建函数
 
-```python,ignore
+```python
 phonebook1 = {'ann':6575, 'bob':8982, 'joe':2598, 'zoe':1225, 'ann':6585}
 phonebook2 = {'john':9876, 'mike':5603, 'stan':6898, 'eric':7898}
 phonebook1.update(phonebook2)
 
-len(phonebook1)
-max(phonebook1)
-min(phonebook1)
-list(phonebook1)
-tuple(phonebook1)
-set(phonebook1)
-sorted(phonebook1)
-sorted(phonebook1, reverse=True)
+print(len(phonebook1))
+print(max(phonebook1))
+print(min(phonebook1))
+print(list(phonebook1))
+print(tuple(phonebook1))
+print(set(phonebook1))
+print(sorted(phonebook1))
+print(sorted(phonebook1, reverse=True))
 ```
 
     8

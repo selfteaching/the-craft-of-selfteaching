@@ -102,11 +102,15 @@ Complex is better than complicated.
 
 注意，int() 在接收字符串为参数的时候，只能做整数转换。下面代码最后一行会报错：
 
-```python,ignore
-int('3')
-float('3')
-str(3.1415926)
-# int('3.1415926') # 这一行会报错
+```python
+a = int('3')
+b = float('3')
+c = str(3.1415926)
+# d = int('3.1415926') # 这一行会报错
+print(a)
+print(b)
+print(c)
+# print(d)
 ```
 
     3
@@ -227,36 +231,40 @@ print(s)                   # presentation
 
 字符串可以用空格 `' '` 或者 `+` 拼接：
 
-```python,ignore
-'Hey!' + ' ' + 'You!' # 使用操作符 +
+```python
+s = 'Hey!' + ' ' + 'You!' # 使用操作符 +
+print(s)
 ```
 
     'Hey! You!'
 
-```python,ignore
-'Hey!' 'You!' # 空格与 + 的作用是相同的。
+```python
+s = 'Hey!' 'You!' # 空格与 + 的作用是相同的。
+print(s)
 ```
 
     'Hey!You!'
 
 字符串还可以与整数倍操作符 `*` 操作，`'Ha' * 3` 的意思是说，把字符串 `'Ha'` 复制三遍：
 
-```python,ignore
-'Ha' * 3
+```python
+s = 'Ha' * 3
+print(s)
 ```
 
     'HaHaHa'
 
-```python,ignore
-'3.14' * 3
+```python
+s = '3.14' * 3
+print(s)
 ```
 
     '3.143.143.14'
 
 字符串还可以用 `in` 和 `not in` 操作符 —— 看看某个字符或者字符串是否被包含在某个字符串中，返回的是布尔值：
 
-```python,ignore
-'o' in 'Hey, You!'
+```python
+print('o' in 'Hey, You!')
 ```
 
     True
@@ -333,16 +341,16 @@ print(s[1:5:2])
 
 [Python 内建函数](https://docs.python.org/3/library/functions.html#slice)中，把字符串当做处理对象的有：`ord()`、`input()`、`int()`、`float()`、`len()`、`print()`。再次注意，`ord()` 只接收单个字符为参数。
 
-```python,ignore
-ord('\n')
-ord('\t')
-ord('\r')
-chr(65) # 与 ord() 相对的函数
+```python
+print( ord('\n') )
+print( ord('\t') )
+print( ord('\r') )
+print( chr(65) ) # 与 ord() 相对的函数
 s = input('请照抄一遍这个数字 3.14: ')
-int('3')
-# int(s) 这一句会报错…… 所以暂时注释掉了
-float(s) * 9
-len(s)
+print(int('3'))
+# print(int(s)) 这一句会报错…… 所以暂时注释掉了
+print(float(s) * 9)
+print(len(s))
 print(s*3)
 ```
 
@@ -374,33 +382,35 @@ print(s*3)
 
 转换字符串大小写的是 `str.upper()`、`str.lower()` 和 `str.swapcase()`，以及 `str.casefold()`；另外，还有专门针对行首字母大写的 `str.capitalize()` 和针对每个词的首字母大写的 `str.title()`：
 
-```python,ignore
-'Now is better than never.'.upper()
+```python
+s = 'Now is better than never.'
+print(s.upper())
 
 # 在 Python 命令行工具之中，单个下划线，是个特殊变量；
 # 保存着最近的语句或者表达式的结果
 # 上一个 Cell 执行过后，_ 中保存着 'NOW IS BETTER THAN NEVER.'
+# 如果你使用命令行工具，可以执行 _.lower()
 
-_.lower()
+print(s.lower())
 ```
 
     'NOW IS BETTER THAN NEVER.'
     
     'now is better than never.'
 
-```python,ignore
+```python
 
 # casefold() 也是转换成小写，但它能处理更多欧洲语言字符
 
-'ß'.casefold()           # 德语字符中，大写 ß 的小写形式是 ss
-len('ß'.casefold())
-'ß'.lower()              # lower() 对这类字符无能为力……
-len('ß'.lower())
+print('ß'.casefold())         # 德语字符中，大写 ß 的小写形式是 ss
+print(len('ß'.casefold()))
+print('ß'.lower())            # lower() 对这类字符无能为力……
+print(len('ß'.lower())
 # casefold
-'\u0132'                # Ĳ 这个字符的 Unicode 编码
-'\u0132'.casefold()
-'\u0132'.lower()        # 对这个字符来说，lower() 和 casefold 的效果一样
-len('\u0132'.casefold())
+print('\u0132')               # Ĳ 这个字符的 Unicode 编码
+print('\u0132'.casefold())
+print('\u0132'.lower())        # 对这个字符来说，lower() 和 casefold 的效果一样
+print(len('\u0132'.casefold()))
 
 # 这是一篇有用的文章：
 # Truths programmers should know about case
@@ -416,21 +426,31 @@ len('\u0132'.casefold())
     'ĳ'
     1
 
-```python,ignore
+```python
 
 s = 'Now is better than never.'
-s.capitalize() # 句首字母大写
-s.title() # 每个单词首字母大写
+print(s)
+s1 = s.capitalize() # 句首字母大写
+print(s1)
+s2 = s.title() # 每个单词首字母大写
+print(s2)
 ```
 
     'Now is better than never.'
     'Now Is Better Than Never.'
 
-```python,ignore
+```python
 s = 'Now is better than never.'
-s.swapcase() # 逐个字符更替大小写
-s.title()
-s.title().swapcase()
+print(s)
+
+s1 = s.swapcase() # 逐个字符更替大小写
+print(s1)
+
+s2 = s.title()
+print(s2)
+
+s3 = s.title().swapcase()
+print(s3)
 ```
 
     'nOW IS BETTER THAN NEVER.'
@@ -439,12 +459,13 @@ s.title().swapcase()
 
 另外，还有个 `str.encode()` 在处理非英文字符串（比如中文）的时候，经常会用到：
 
-```python,ignore
+```python
 # str.encode(encoding="utf-8", errors="strict")
 # 关于更多可能的 encoding list, 请参阅：
 # https://docs.python.org/3/library/codecs.html#standard-encodings
 s = '简单优于复杂。'
 s.encode()
+print(s)
 ```
 
     b'\xe7\xae\x80\xe5\x8d\x95\xe4\xbc\x98\xe4\xba\x8e\xe5\xa4\x8d\xe6\x9d\x82\xe3\x80\x82'
@@ -473,13 +494,21 @@ s.encode()
 
 注意：字符串中第一个字符的索引值是 `0`。
 
-```python,ignore
+```python
 
 s = """Simple is better than complex.
 Complex is better than complicated."""
-s.lower().count('mp')
-s.lower().count('mp', 10)
-s.lower().count('mp', 10, 30)
+
+a = s.lower().count('mp')
+
+b = s.lower().count('mp', 10)
+
+c = s.lower().count('mp', 10, 30)
+
+print(a)
+print(b)
+print(c)
+
 ```
 
     4
@@ -488,33 +517,41 @@ s.lower().count('mp', 10, 30)
 
 以下是 `str` 的搜索与替换的 Methods：`str.find()`, `str.rfind()`, `str.index()` 的示例：
 
-```python,ignore
+```python
 
 # str.find(sub[, start[, end]])
 print('Example of str.find():')
 s = """Simple is better than complex.
 Complex is better than complicated."""
-s.lower().find('mpl')
-s.lower().find('mpl', 10)
-s.lower().find('mpl', 10, 20) # 没有找到就返回 -1
+a = s.lower().find('mpl')
+b = s.lower().find('mpl', 10)
+c = s.lower().find('mpl', 10, 20) # 没有找到就返回 -1
+print(a)
+print(b)
+print(c)
 print()
 
 print('Example of str.rfind():')
 # str.rfind(sub[, start[, end]])
 # rfind() 返回最后 sub 出现的那次的位置；find()是最早的那次
-s.lower().rfind('mpl')
-s.lower().rfind('mpl', 10)
-s.lower().rfind('mpl', 10, 20) # 没有找到就返回 -1
+a = s.lower().rfind('mpl')
+b = s.lower().rfind('mpl', 10)
+c = s.lower().rfind('mpl', 10, 20) # 没有找到就返回 -1
+print(a)
+print(b)
+print(c)
 print()
 
 print('Example of str.index():')
 # str.index(sub[, start[, end]])
 # 作用与 find() 相同，但如果没找到的话，会触发 ValueError 异常
 # https://docs.python.org/3/library/exceptions.html#ValueError
-s.lower().index('mpl')
+a = s.lower().index('mpl')
 # str.rindex(sub[, start[, end]])
 # 作用与 rfind() 相同，但如果没找到的话，会触发 ValueError 异常
-s.lower().rindex('mpl')
+b = s.lower().rindex('mpl')
+print(a)
+print(b)
 print()
 ```
 
@@ -601,11 +638,11 @@ print(s.lower().replace('mp', '[ ]', 2))
 
 它的作用非常简单，就是把字符串中的 TAB（`\t`）替换成空格，默认是替换成 `8` 个空格 —— 当然你也可以指定究竟替换成几个空格
 
-```python,ignore
+```python
 # str.expandtabs(tabsize=8)
 s = "Special\tcases\taren't\tspecial\tenough\tto\tbreak\tthe\trules."
-s.expandtabs()
-s.expandtabs(2)
+print(s.expandtabs())
+print(s.expandtabs(2))
 ```
 
     "Special cases   aren't  special enough  to      break   the     rules."
@@ -617,10 +654,10 @@ s.expandtabs(2)
 
 它最常用的场景是去除一个字符串首尾的所有空白，包括空格、TAB、换行符等等。
 
-```python,ignore
+```python
 s = "\r \t Simple is better than complex.    \t \n"
-s
-s.strip()
+print(s)
+print(s.strip())
 ```
 
     '\r \t Simple is better than complex.    \t \n'
@@ -629,11 +666,11 @@ s.strip()
 
 但是，如果给定了一个字符串作为参数，那么参数字符串中的所有字母都会被当做需要从首尾剔除的对象，直到新的首尾字母不包含在参数中，就会停止剔除：
 
-```python,ignore
+```python
 s = "Simple is better than complex."
-s
-s.strip('Six.p')    # p 全部处理完之后，p 并不在首尾，所以原字符串中的 p 字母不受影响；
-s.strip('pSix.mle') # 这一次，首尾的 p 被处理了…… 参数中的字符顺序对结果没有影响，换成 Sipx.mle 也一样……
+print(s)
+print(s.strip('Six.p'))    # p 全部处理完之后，p 并不在首尾，所以原字符串中的 p 字母不受影响；
+print(s.strip('pSix.mle')) # 这一次，首尾的 p 被处理了…… 参数中的字符顺序对结果没有影响，换成 Sipx.mle 也一样……
 ```
 
     'Simple is better than complex.'
@@ -642,24 +679,24 @@ s.strip('pSix.mle') # 这一次，首尾的 p 被处理了…… 参数中的字
 
 还可以只对左侧处理，`str.lstrip()` 或者只对右侧处理，`str.rstrip()`
 
-```python,ignore
+```python
 # str.lstrip([chars])
 s = "Simple is better than complex."
-s
-s.lstrip('Six.p')    # p 全部处理完之后，p 并不在首部，所以原字符串中的 p 字母不受影响；
-s.lstrip('pSix.mle') # 这一次，首部的 p 被处理了…… 参数中的字符顺序对结果没有影响，换成 Sipx.mle 也一样……
+print(s)
+print(s.lstrip('Six.p'))    # p 全部处理完之后，p 并不在首部，所以原字符串中的 p 字母不受影响；
+print(s.lstrip('pSix.mle')) # 这一次，首部的 p 被处理了…… 参数中的字符顺序对结果没有影响，换成 Sipx.mle 也一样……
 ```
 
     'Simple is better than complex.'
     'mple is better than complex.'
     ' is better than complex.'
 
-```python,ignore
+```python
 # str.rstrip([chars])
 s = "Simple is better than complex."
-s
-s.rstrip('Six.p')    # p 全部处理完之后，p 并不在尾部，所以原字符串中的 p 字母不受影响；
-s.rstrip('pSix.mle') # 这一次，尾部的 p 被处理了…… 参数中的字符顺序对结果没有影响，换成 Sipx.mle 也一样……
+print(s)
+print(s.rstrip('Six.p'))    # p 全部处理完之后，p 并不在尾部，所以原字符串中的 p 字母不受影响；
+print(s.rstrip('pSix.mle')) # 这一次，尾部的 p 被处理了…… 参数中的字符顺序对结果没有影响，换成 Sipx.mle 也一样……
 ```
 
     'Simple is better than complex.'
@@ -693,10 +730,8 @@ Mike,22,San Francisco
 Janny,25,Miami
 Sunny,21,Shanghai"""
 
-s                 # s 被打印出来的时候，\n 都被转换成换行了
-s.splitlines()    # 注意输出结果前后的方括号，[]，表示这个返回结果是一个 List
-print(s)
-print(s.splitlines())
+print(s)                 # s 被打印出来的时候，\n 都被转换成换行了
+print(s.splitlines())    # 注意输出结果前后的方括号，[]，表示这个返回结果是一个 List
 ```
 
     'Name,Age,Location\nJohn,18,New York\nMike,22,San Francisco\nJanny,25,Miami\nSunny,21,Shanghai'
@@ -711,7 +746,7 @@ print(s.splitlines())
 
 > `str.split(sep=None, maxsplit=-1)`
 
-```python,ignore
+```python
 s = """Name,Age,Location
 John,18,New York
 Mike,22,San Francisco
@@ -719,15 +754,15 @@ Janny,25,Miami
 Sunny,21,Shanghai"""
 
 r = s.splitlines()[2]   # 取出返回列表中索引值为 2 的那一行
-r
-r.split()               # 如果没有给 str.split() 传递参数，那么默认为用 None 分割（各种空白，比如，\t 和 \r 都被当作 None）
-r.split(sep=',')
-r.split(',')            # 上一行可以这样写。
+print(r)
+print(r.split())               # 如果没有给 str.split() 传递参数，那么默认为用 None 分割（各种空白，比如，\t 和 \r 都被当作 None）
+print(r.split(sep=','))
+print(r.split(','))            # 上一行可以这样写。
 
-r.split(sep=',', maxsplit=1)  # 第二个参数指定拆分几次
+print(r.split(sep=',', maxsplit=1))  # 第二个参数指定拆分几次
 # r.split(sep=',', 1)         # 上一行不能这样写。
-r.split(sep=',', maxsplit=0)  # 0 次，即不拆分
-r.split(sep=',', maxsplit=-1) # 默认值是 -1，拆分全部
+print(r.split(sep=',', maxsplit=0))  # 0 次，即不拆分
+print(r.split(sep=',', maxsplit=-1)) # 默认值是 -1，拆分全部
 ```
 
     'Mike,22,San Francisco'
@@ -764,15 +799,15 @@ print(s.join(t))
 
 注意，第 2 个参数可选，且只接收单个字符 —— `char` 是 _character_ 的缩写。
 
-```python,ignore
+```python
 s = 'Sparse is better than dense!'
-s.title().center(60)
-s.title().center(60, '=')
-s.title().center(10) # 如果宽度参数小于字符串长度，则返回原字符串
+print(s.title().center(60))
+print(s.title().center(60, '='))
+print(s.title().center(10)) # 如果宽度参数小于字符串长度，则返回原字符串
 
 s = 'Sparse is better than dense!'
-s.title().rjust(60)
-s.title().rjust(60, '.')
+print(s.title().rjust(60))
+print(s.title().rjust(60, '.'))
 ```
 
     '                Sparse Is Better Than Dense!                '
@@ -828,10 +863,10 @@ for i in range(1, 11):
 
 占位符中可以使用由零开始的索引。
 
-```python,ignore
+```python
 name = 'John'
 age = 25
-'{} is {} years old.'.format(name, age)
+print('{} is {} years old.'.format(name, age))
 # 不写占位符索引就默认每个占位符的索引从第一个开始是 0, 1, 2 ...（占位符数量 - 1)
 # '{} {}'.format(a, b) 和 '{0} {1}'.format(a, b) 是一样的。
 
@@ -839,13 +874,13 @@ age = 25
 # 这一句会报错，因为 2 超出实际参数索引极限
 
 # 两个连续使用的大括号，不被认为是占位符；且只打印出一对大括号
-"Are you {0}? :-{{+}}".format(name)
+print("Are you {0}? :-{{+}}".format(name))
 
 # "%s is %d years old." % (name, age)
 # 上一行这是兼容 Python 2 的老式写法，可以从此忽略……
 
 # str.fomrat() 里可以直接写表达式……
-'{} is a grown up? {}'.format(name, age >= 18)
+print('{} is a grown up? {}'.format(name, age >= 18))
 ```
 
     'John is 25 years old.'
@@ -856,14 +891,14 @@ age = 25
 
 _f-string_ 与 `str.format()` 的功用差不多，只是写法简洁一些 —— 在字符串标示之前加上一个字母 `f`：
 
-```python,ignore
+```python
 # https://docs.python.org/3/library/stdtypes.html#printf-style-bytes-formatting
 # f-string
 
 name = 'John'
 age = 25
-f'{name} is {age} years old.'
-f'{name} is a grown up? {age >= 18}'
+print(f'{name} is {age} years old.')
+print(f'{name} is a grown up? {age >= 18}')
 ```
 
     'John is 25 years old.'
@@ -874,7 +909,7 @@ f'{name} is a grown up? {age >= 18}'
 ```python
 name = 'John'
 age = 25
-'{1} is {0} years old.'.format(name, age)
+print('{1} is {0} years old.'.format(name, age))
 ```
 
     '25 is John years old.'
@@ -892,9 +927,9 @@ print("'1234567890'.isalnum():", \
 print("'abcdefghij'.isalpha():", \
       'abcdefghij'.isalpha())
 
-# str.isascii()
-print("'山巅一寺一壶酒'.isascii():", \
-      '山巅一寺一壶酒'.isascii())
+# str.isascii(), GitPress 的 Python 不支持该函数
+# print("'山巅一寺一壶酒'.isascii():", \
+#       '山巅一寺一壶酒'.isascii())
 
 # str.isdecimal()
 print("'0.123456789'.isdecimal():", \
@@ -935,7 +970,6 @@ print("'for'.isidentifier():", \
 
     '1234567890'.isalnum(): True
     'abcdefghij'.isalpha(): True
-    '山巅一寺一壶酒'.isascii(): False
     '0.123456789'.isdecimal(): False
     '0.123456789'.isdigit(): False
     '0.123456789'.isnumeric(): False
