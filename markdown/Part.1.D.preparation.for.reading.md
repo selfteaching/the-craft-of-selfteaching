@@ -84,7 +84,7 @@ print(r)
 
 如果你不是直接在网站上浏览这本 “书”、或者不是在阅读印刷版，而是在本地自己搭建 Jupyterlab 环境使用，那么请参阅附录《[Jupyterlab 的安装与配置](T-appendix.jupyter-installation-and-setup.md)》。
 
-> [!NOTE]
+> [!IMPORTANT]
 > **注意**：尤其需要仔细看看《[Jupyterlab 的安装与配置](T-appendix.jupyter-installation-and-setup.md)》的《关于 Jupyter lab themes》这一小节 —— 否则，阅读体验会有很大差别。
 
 另外，如果你使用的是 [nteract](https://nteract.io) 桌面版 App 浏览 `.ipynb` 文件，那么有些使用了 `input()` 函数的代码是无法在 nteract 中执行的。
