@@ -65,7 +65,7 @@ class Golem:
 
 注意：`self` 这个变量的定义，是在 `def __init__(self, ...)` 这一句里完成的。对于这个变量的名称取名没有强制要求，你实际上可以随便用什么名字，很多 C 程序员会习惯于将这个变量命名为 `this` —— 但根据惯例，你最好还是只用 `self` 这个变量名，省得给别人造成误会。
 
-在 Class 的代码中，如果定义了 `__init__()` 函数，那么系统就会将它当作用来 Instance 在创建后被初始化的函数。这个函数名称是强制指定的，初始化函数必须使用这个名称；注意 `init` 两端各有两个下划线 `_`。
+在 Class 的代码中，如果定义了 `__init__()` 函数，那么系统就会将它当作 Instance 在创建后被初始化的函数。这个函数名称是强制指定的，初始化函数必须使用这个名称；注意 `init` 两端各有两个下划线 `_`。
 
 当我们用 `g = Golem('Clay')` 这一句创建了一个 Golem 的 Instance 的时候，以下一连串的事情发生了：
 
@@ -370,7 +370,7 @@ Scope ④ 与 Scope ③ 平行存在。所以在这里，`population` 和 `__lif
 
 在本例子中，在 `__init__(self, name=None)` 函数中 `self.population` 和 `Golem.population` 都可以使用，但使用效果是不一样的：
 
-> * `self.population` 总是去读取 `Golem` 类中 `population` 的初始值，即使后面通过 `setattr((Golem, 'population', 10)` 更改 `population` 的值后，`self.population` 的值仍为 `0`，但 `Golem.population` 值则为 `10`，你可以自己动手尝试一下。
+> * `self.population` 总是去读取 `Golem` 类中 `population` 的初始值，即使后面通过 `setattr(Golem, 'population', 10)` 更改 `population` 的值后，`self.population` 的值仍为 `0`，但 `Golem.population` 值则为 `10`，你可以自己动手尝试一下。
 
 ## Encapsulation
 
