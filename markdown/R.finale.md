@@ -142,6 +142,6 @@
 
 祝你好运！
 
-<p style="text-align: right"><strong>李笑来</strong></p>
-<p style="text-align: right">初稿完成于 <em>2019</em> 年 <em>2</em> 月 <em>27</em> 日</p>
+**李笑来**
+初稿完成于 **2019** 年 **2** 月 **27** 日
 

@@ -156,23 +156,23 @@ print('The in_dream() function returns:', in_dream())
 
 另外，在 Python 中，若是需要将某个值与 True 或者 False 进行比较，尤其是在条件语句中，推荐写法是（参见 [PEP8](https://www.python.org/dev/peps/pep-0008/)）：
 
-```python
+```python,ignore
 if condition:
     pass
 ```
 
 就好像上面代码中的 `if dead:` 一样。
 
-而不是（虽然这么写通常也并不妨碍程序正常运行<a href='#fn1' name='fn1b'><sup>[1]</sup></a>）：
+而不是（虽然这么写通常也并不妨碍程序正常运行[^1]）：
 
-```python
+```python,ignore
 if condition is True:
     pass
 ```
 
 抑或：
 
-```python
+```python,ignore
 if condition == True:
     pass
 ```
@@ -311,7 +311,7 @@ print(n, m)
 
 现在可以小小总结一下了。
 
-一个递归函数，之所以是一个有用、有效的递归函数，因为它要遵守递归三原则。正如，一个机器人之所以是个合格的机器人，因为它遵循[阿西莫夫三铁律](https://zh.wikipedia.org/wiki/%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%B8%89%E5%AE%9A%E5%BE%8B)（Three Laws of Robotics）一样<a href='#fn2' name='fn2b'><sup>[2]</sup></a>。
+一个递归函数，之所以是一个有用、有效的递归函数，是因为它要遵守递归三原则。正如，一个机器人之所以是个合格的机器人，是因为它遵循[阿西莫夫三铁律](https://zh.wikipedia.org/wiki/%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%B8%89%E5%AE%9A%E5%BE%8B)（Three Laws of Robotics）一样[^2]。
 
 > 1. 根据定义，递归函数必须在内部调用自己；
 > 2. 必须设定一个退出条件；
@@ -337,7 +337,7 @@ print(n, m)
 
 至此，封面上的那个 “伪代码” 应该很好理解了：
 
-```python
+```python,ignore
 def teach_yourself(anything):
     while not create():
         learn()
@@ -356,12 +356,7 @@ teach_yourself(coding)
 https://introcs.cs.princeton.edu/java/23recursion/
 
 -----
-**脚注**
 
-<a name='fn1'>[1]</a>：参见 Stackoverflow 上的讨论：[Boolean identity == True vs is True](https://stackoverflow.com/questions/27276610/boolean-identity-true-vs-is-true)
+[^1]: 参见 Stackoverflow 上的讨论：[Boolean identity == True vs is True](https://stackoverflow.com/questions/27276610/boolean-identity-true-vs-is-true)
+[^2]: 关于[阿西莫夫三铁律](https://zh.wikipedia.org/wiki/%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%B8%89%E5%AE%9A%E5%BE%8B)（Three Laws of Robotics）的类比，来自著名的 Python 教程，[Think Python: How to Think Like a Computer Scientist](http://greenteapress.com/thinkpython2/html/index.html)
 
-<a href='#fn1b'><small>↑Back to Content↑</small></a>
-
-<a name='fn2'>[2]</a>：关于[阿西莫夫三铁律](https://zh.wikipedia.org/wiki/%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%B8%89%E5%AE%9A%E5%BE%8B)（Three Laws of Robotics）的类比，来自著名的 Python 教程，[Think Python: How to Think Like a Computer Scientist](http://greenteapress.com/thinkpython2/html/index.html)
-
-<a href='#fn2b'><small>↑Back to Content↑</small>

@@ -13,7 +13,7 @@ Wikipedia 上对正则表达式的说明如下：
 
 我常常觉得当初要是它被翻译成 “规则表达式”，那么很可能初学者不会感到那么大的压力 —— 谁都一样，看着由 “每个都认识的字构成的词组” 却不能直观地想到它究竟是什么东西，都会感到莫名的压力。
 
-**Regular**，其实在它的众多语义中，取以下释义最符合 Regular Expression 的原意<a href='#fn1' name='fn1b'><sup>[1]</sup></a>：
+**Regular**，其实在它的众多语义中，取以下释义最符合 Regular Expression 的原意[^1]：
 
 > ⑭ Linguistics 规则的 ▸ regular verbs 规则动词
 
@@ -43,7 +43,7 @@ Wikipedia 上对正则表达式的说明如下：
 import re
 str = 'The quick brown fox jumps over the lazy dog'
 pttn = re.compile(r'\wo\w')
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 ```
 
     ['row', 'fox', 'dog']
@@ -101,7 +101,7 @@ import re
 with open('regex-target-text-sample.txt', 'r') as f:
     str = f.read()
 pttn = r'beg[iau]ns?'
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 ```
 
     ['begin', 'began', 'begun', 'begin']
@@ -175,12 +175,9 @@ Regex 也一样，它本身就是个迷你语言（Mini Language）。在 Regex 
 即，相当于，`string.ascii_letters` 和 `string.digits` 以及 `_`。
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-
 import string
-string.ascii_letters
-string.digits
+print(string.ascii_letters)
+print(string.digits)
 ```
 
     'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
@@ -207,7 +204,7 @@ import re
 
 str = 'begin began begun bigins begining'
 pttn = r'beg[iau]n'
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 ```
 
     ['begin', 'began', 'begun', 'begin']
@@ -256,7 +253,7 @@ import re
 
 str = '<dl>(843) 542-4256</dl> <dl>(431) 270-9664</dl>'
 pttn = r'\d\d\d\-'
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 ```
 
     ['542-', '270-']
@@ -278,9 +275,9 @@ import re
 
 str = 'never ever verb however everest'
 pttn = r'er\b'
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 pttn = r'er\B'
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 ```
 
     ['er', 'er', 'er']
@@ -331,24 +328,22 @@ re.findall(pttn, str)
 > 例如，[`go{2,5}gle`](https://regexper.com#go%7B2,5%7Dgle)，能匹配 `google` `gooogle` `goooogle` 或 `gooooogle`，但不能匹配 `gogle` 和 `gooooooogle`
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
 
 import re
 with open('regex-target-text-sample.txt', 'r') as f:
     str = f.read()
 
 pttn = r'go+gle'
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 
 pttn = r'go{2,5}gle'
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 
 pttn = r'colou?red'
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 
 pttn = r'520*'
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 ```
 
     ['google', 'gooogle', 'goooogle', 'goooooogle']
@@ -368,21 +363,18 @@ re.findall(pttn, str)
 > * `(er)` 是一个原子，`'er'`
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-
 import re
 
 str = 'error wonderer severeness'
 
 pttn = r'er'
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 
 pttn = r'[er]'
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 
 pttn = r'(er)'
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 ```
 
     ['er', 'er', 'er', 'er']
@@ -392,21 +384,18 @@ re.findall(pttn, str)
 在以上的例子中，看不出 `er` 和 `(er)` 的区别，但是，加上数量操作符就不一样了 —— 因为*数量操作符只对它之前的那一个原子进行操作*：
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-
 import re
 
 str = 'error wonderer severeness'
 
 pttn = r'er+'
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 
 pttn = r'[er]+'
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 
 pttn = r'(er)+'
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 ```
 
     ['err', 'er', 'er', 'er']
@@ -424,7 +413,7 @@ import re
 
 str = 'begin began begun begins beginn'
 pttn = r'begin|began|begun'
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 ```
 
     ['begin', 'began', 'begun', 'begin', 'begin']
@@ -434,26 +423,23 @@ re.findall(pttn, str)
 **注意**：中括号的 `|` 不被当作特殊符号，而是被当作 `|` 这个符号本身。在中括号中的圆括号，也被当作圆括号 `()` 本身，而无分组含义。
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-
 import re
 
 str = 'achroiocythaemia achroiocythemia a|e'
 pttn = r'[a|ae]'
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 
 pttn = r'[a|e]'
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 
 pttn = r'[ae]'
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 
 pttn = r'[(ae)]'
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 
 pttn = r'[a|ae|(ae)]'
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 ```
 
     ['a', 'a', 'e', 'a', 'a', 'e', 'a', 'a', '|', 'e']
@@ -468,13 +454,13 @@ re.findall(pttn, str)
 import re
 str = 'The white dog wears a black hat.'
 pttn = r'The (white|black) dog wears a (white|black) hat.'
-re.findall(pttn, str)
+print(re.findall(pttn, str))
 
 repl = r'The \2 dog wears a \1 hat.'
-re.sub(pttn, repl, str)
+print(re.sub(pttn, repl, str))
 
 repl = r'The \1 dog wears a \1 hat.'
-re.sub(pttn, repl, str)
+print(re.sub(pttn, repl, str))
 
 ```
 
@@ -490,11 +476,11 @@ re.sub(pttn, repl, str)
 import re
 str = 'The white dog wears a black hat.'
 pttn = r'The (?:white|black) dog wears a (white|black) hat.'
-re.findall(pttn, str)                   # 只捕获了一处，也就是说只有一个值将来可以被引用
+print(re.findall(pttn, str))                   # 只捕获了一处，也就是说只有一个值将来可以被引用
 
 repl = r'The \1 dog wears a \1 hat.'    # 之前的一处捕获，在替换时可被多次引用
 書評
-re.sub(pttn, repl, str)
+print(re.sub(pttn, repl, str))
 
 ```
 
@@ -569,12 +555,12 @@ re.sub(pttn, repl, str)
 
 ## 几个最常用的 Regex
 
-以下是几个常用的 Regex<a href='#fn2' name='fn2b'><sup>[2]</sup></a>，值得保存：
+以下是几个常用的 Regex[^2]，值得保存：
 
 * matching username
 > [`/^[a-z0-9_-]{3,16}$/`](https://regexper.com#/%5E[a-z0-9_-]%7B3,16%7D$/)
 
-* matching password<a href='#fn3' name='fn3b'><sup>[3]</sup></a>
+* matching password[^3]
 > [`/^[a-z0-9_-]{6,18}$/`](https://regexper.com#/%5E[a-z0-9_-]%7B6,18%7D$/)
 
 * matching a HEX value
@@ -600,7 +586,7 @@ re.sub(pttn, repl, str)
 
 写 Regex 最烧脑的地方在于 “使其全面” —— 要考虑到各种意外情况。
 
-当然，除非必要，也不要在 “全面” 这事上面花太多时间 —— 给你看一个据说是 “最大程度上能够匹配所有 email 地址的 Regex” <a href='#fn4' name='fn4b'><sup>[4]</sup></a>，我都懒得测试的一个正则表达式：
+当然，除非必要，也不要在 “全面” 这事上面花太多时间 —— 给你看一个据说是 “最大程度上能够匹配所有 email 地址的 Regex”[^4]，我都懒得测试的一个正则表达式：
 
 ```regex
 (?:(?:\r\n)?[ \t])*(?:(?:(?:[^()<>@,;:\\".\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t]
@@ -691,7 +677,7 @@ r\\]|\\.)*\](?:(?:\r\n)?[ \t])*)(?:\.(?:(?:\r\n)?[ \t])*(?:[^()<>@,;:\\".\[\]
 
 [ELIZA](https://en.wikipedia.org/wiki/ELIZA) 是人类史上第一个 “聊天机器人” 程序，上个世纪六十年代，1966 年实现的。核心就是使用正则表达式匹配对方语句中的关键词汇，再经过替换，形成看似有意义的 “回应” —— 事实上，ELIZA 完全不知道自己在说什么……
 
-几年后，就是七十年代初，1972 年，另外一个聊天机器人 [Parry](https://en.wikipedia.org/wiki/PARRY) <a href='#fn5' name='fn5b'><sup>[5]</sup></a>被写了出来…… 随后第二年，这两个聊天机器人在 ARPANET “碰面” 好好地聊了一下<a href='#fn6' name='fn6b'><sup>[6]</sup></a>：
+几年后，就是七十年代初，1972 年，另外一个聊天机器人 [Parry](https://en.wikipedia.org/wiki/PARRY) [^5]被写了出来…… 随后第二年，这两个聊天机器人在 ARPANET “碰面” 好好地聊了一下[^6]：
 
 > ELIZA: Good Evening. Tell me your problems. Please terminate input with a period or a question mark.
 >
@@ -1022,19 +1008,20 @@ def command_interface():
   print('Hello.  How are you feeling today?')
 
   s = ''
+  last_resp = ''
   therapist = eliza();
   while s != 'quit':
     try:
-      s = input('> ')
+      s = input('ELIZA: %s\n(type \'quit\' to quit)> ' % (last_resp) )
     except EOFError:
       s = 'quit'
     print(s)
-    while s[-1] in '!.':
+    while s and s[-1] in '!.':
       s = s[:-1]
-    print(therapist.respond(s))
+    last_resp = therapist.respond(s)
+    print(last_resp)
 
-if __name__ == "__main__":
-  command_interface()
+command_interface()
 
 ```
 
@@ -1046,29 +1033,12 @@ if __name__ == "__main__":
     Hello.  How are you feeling today?
 
 -----
-**脚注**
 
-<a name='fn1'>[1]</a>：释义摘自苹果电脑上系统内建的《牛津英汉双解辞典》
+[^1]：释义摘自苹果电脑上系统内建的《牛津英汉双解辞典》
+[^2]: [8 Regular Expressions You Should Know](https://bit.ly/2tz8v9n) by Vasili
+[^3]: 关于校验密码强度的正则表达式，往往需要设置更为复杂的规则，Stackoverflow 上的一则答复中有很好的示例：https://stackoverflow.com/a/21456918
+[^4]: http://www.ex-parrot.com/pdw/Mail-RFC822-Address.html
+[^5]: Parry 的源代码（用 Lisp 写的）在这里：http://www.cs.cmu.edu/afs/cs/project/ai-repository/ai/areas/classics/parry/</a>
+[^6]: ELIZA 和 Parry 的完整聊天记录在这里：https://tools.ietf.org/html/rfc439</a>
 
-<a href='#fn1b'><small>↑Back to Content↑</small></a>
-
-<a name='fn2'>[2]</a>：[8 Regular Expressions You Should Know](https://bit.ly/2tz8v9n) by Vasili
-
-<a href='#fn2b'><small>↑Back to Content↑</small></a>
-
-<a name='fn3'>[3]</a>：关于校验密码强度的正则表达式，往往需要设置更为复杂的规则，Stackoverflow 上的一则答复中有很好的示例：https://stackoverflow.com/a/21456918
-
-<a href='#fn3b'><small>↑Back to Content↑</small></a>
-
-<a name='fn4'>[4]</a>：http://www.ex-parrot.com/pdw/Mail-RFC822-Address.html
-
-<a href='#fn4b'><small>↑Back to Content↑</small></a>
-
-<a name='fn5'>[5]</a>：Parry 的源代码（用 Lisp 写的）在这里：http://www.cs.cmu.edu/afs/cs/project/ai-repository/ai/areas/classics/parry/</a>
-
-<a href='#fn5b'><small>↑Back to Content↑</small></a>
-
-<a name='fn6'>[6]</a>：ELIZA 和 Parry 的完整聊天记录在这里：https://tools.ietf.org/html/rfc439</a>
-
-<a href='#fn6b'><small>↑Back to Content↑</small></a>
 

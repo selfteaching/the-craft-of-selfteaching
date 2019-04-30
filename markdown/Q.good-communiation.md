@@ -153,19 +153,9 @@
 
 这个方法着实简单，然而却非常有效。这有点像什么呢？这有点像人家弹个吉他是 “蹦单音”，可你弹的却是 “曲调与和弦” 相辅相成的音乐…… 给你看一个 Youtube 上的《一生所爱》—— 这首曲子是我最喜欢的指弹版本 —— 这种弹法，不仅有旋律，还有和弦，并且还有打击乐器效果 “伴奏”：
 
-```python
-from IPython.display import IFrame
-
-IFrame('https://www.youtube.com/embed/AjWTop5O5jo?', width='800', height='450')
+```javascript
+window.open('https://www.youtube.com/embed/AjWTop5O5jo?')
 ```
-
-        <iframe
-            width="800"
-            height="450"
-            src="https://www.youtube.com/embed/AjWTop5O5jo?"
-            frameborder="0"
-            allowfullscreen
-        ></iframe>
 
 最初的时候，有个看起来很难以跨越的障碍：
 
@@ -181,19 +171,9 @@ IFrame('https://www.youtube.com/embed/AjWTop5O5jo?', width='800', height='450')
 
 给你看一段视频，加州伯克利大学的 Brian Harvey 在课堂上告诉学生，“为什么不要作弊” 的真正原因：
 
-```python
-from IPython.display import IFrame
-
-IFrame('https://www.youtube.com/embed/hMloyp6NI4E?', width='800', height='450')
+```javascript
+window.open('https://www.youtube.com/embed/hMloyp6NI4E?')
 ```
-
-        <iframe
-            width="800"
-            height="450"
-            src="https://www.youtube.com/embed/hMloyp6NI4E?"
-            frameborder="0"
-            allowfullscreen
-        ></iframe>
 
 于是，千万别扭曲了自己，是什么样就是什么样，该怎么做就怎么做。而另外一件事是确定的：
 
@@ -217,19 +197,10 @@ IFrame('https://www.youtube.com/embed/hMloyp6NI4E?', width='800', height='450')
 
 现在大家已经熟悉了的吉他演奏中的 “指弹”（Percussive Guitar），可这种玩法在没有 Youtube 的时代里并不多见 —— 在我长大的年代里，甚至 “前所未闻”。不知道是谁，把打击乐器的手法融合到吉他演奏手法中去了，于是，在 Youtube 这样的视频工具出现之后，人们的 “见识” 成本降低了（过去也许要 “去西天取经才行”），很快就有人模仿，很快就有人更为擅长……
 
-```python
-from IPython.display import IFrame
-
-IFrame('https://www.youtube.com/embed/nY7GnAq6Znw?', width='800', height='450')
+```javascript
+window.open('https://www.youtube.com/embed/nY7GnAq6Znw?')
 ```
 
-        <iframe
-            width="800"
-            height="450"
-            src="https://www.youtube.com/embed/nY7GnAq6Znw?"
-            frameborder="0"
-            allowfullscreen
-        ></iframe>
 
 有这种能力的人，普遍有两个特征：
 
@@ -252,19 +223,9 @@ IFrame('https://www.youtube.com/embed/nY7GnAq6Znw?', width='800', height='450')
 
 这么多年来，在互联网上我最喜爱的老师，是麻省理工大学的 Walter Lewin 教授。
 
-```python
-from IPython.display import IFrame
-
-IFrame('https://www.youtube.com/embed/sJG-rXBbmCc?', width='800', height='450')
+```javascript
+window.open('https://www.youtube.com/embed/sJG-rXBbmCc?')
 ```
-
-        <iframe
-            width="800"
-            height="450"
-            src="https://www.youtube.com/embed/sJG-rXBbmCc?"
-            frameborder="0"
-            allowfullscreen
-        ></iframe>
 
 十多年前，MIT 出了一套 Open Course，在线的免费课程。授课老师绝大多数都是本校的著名教授 —— 在那么多课程里，我一下子就爱上了这位教授。建议你有时间把他的所有课程看完，虽然你可能觉得物理这东西你并不感兴趣 —— 可事实上，看完你就知道了，你只不过是运气不好，你从来没遇到过这么可爱牛逼的教授而已…… 在他身上，你可以学到无数，甚至是 “不可言说” 的技巧、秘密和手艺。
 

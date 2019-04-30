@@ -30,21 +30,11 @@
 
 如此这般，最终就把这个很难的曲子弹出来了 —— 其实所有的初学者都是这么干的。
 
-可以听听这个曲子放松一下（当然肯定不是我弹的哈哈）：
+可以听听[这个曲子](https://www.youtube.com/embed/OOsRMECWKAE?)放松一下（当然肯定不是我弹的哈哈）：
 
-```python
-from IPython.display import IFrame
-
-IFrame('https://www.youtube.com/embed/OOsRMECWKAE?', width='800', height='450')
+```javascript
+window.open('https://www.youtube.com/embed/OOsRMECWKAE?')
 ```
-
-        <iframe
-            width="800"
-            height="450"
-            src="https://www.youtube.com/embed/OOsRMECWKAE?"
-            frameborder="0"
-            allowfullscreen
-        ></iframe>
 
 提起这事，总是会不由自主地叹口气 —— 因为在这事上我运气太差，刚把这个曲子练完没多久，还没来得及找人显摆，就摔断了掌骨和指骨，给我的手指灵活性造成了不可修复的损伤，于是，后来只能用拨片玩玩吉他了……
 

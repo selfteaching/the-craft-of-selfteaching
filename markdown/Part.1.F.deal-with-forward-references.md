@@ -58,7 +58,7 @@ print(an_undefined_variable)
 
 这是最重要的起点。听起来简单，甚至有点莫名其妙 —— 但以后你就会越来越深刻地体会到，这么简单的策略，绝大多数人竟然不懂，也因此吃了很多很多亏。
 
-充满了过早引用的知识讲解，就不可能是一遍就读懂的。别说这种信息密度极高的复杂且重要的知识获取了，哪怕你去看一部好电影，也要多刷几遍才能彻底看懂，不是嘛？比如，Quentin Tarantino 导演的 [Pulp Fiction (1994)](https://www.imdb.com/title/tt0110912/)、David Fincher 导演的 [Fight Club (1999)](https://www.imdb.com/title/tt0137523/)、Christopher Nolan 导演的 [Inception (2010)](https://www.imdb.com/title/tt1375666/)、或者 Martin Scorsese 导演的 [Shutter Island (2010)](https://www.imdb.com/title/tt1130884/)……
+充满了过早引用的知识结构，就不可能是一遍就读懂的。别说这种信息密度极高的复杂且重要的知识获取了，哪怕你去看一部好电影，也要多刷几遍才能彻底看懂，不是嘛？比如，Quentin Tarantino 导演的 [Pulp Fiction (1994)](https://www.imdb.com/title/tt0110912/)、David Fincher 导演的 [Fight Club (1999)](https://www.imdb.com/title/tt0137523/)、Christopher Nolan 导演的 [Inception (2010)](https://www.imdb.com/title/tt1375666/)、或者 Martin Scorsese 导演的 [Shutter Island (2010)](https://www.imdb.com/title/tt1130884/)……
 
 所以，从一开始就要做好*将要重复很多遍*的准备，从一开始就要做好*第一次只能读懂个大概*的准备。
 
@@ -94,22 +94,23 @@ print(an_undefined_variable)
 
 在学习 Python 语言的过程中，有个例子可以说明以上的现象。
 
-在 Python 语言中，`for` 循环可以附加一个 `else` 部分。你到 Google 上搜索一下 [`for else python`](https://www.google.com/search?q=for+else+python) 就能看到有多少人在 “追问” 这是干什么的？还有另外一些链接，会告诉你 “for... else” 这个 “秘密” 的含义，将其称为 “语法糖” 什么的……
+在 Python 语言中，`for` 循环可以附加一个 `else` 部分。你到 Google 上搜索一下 [for else python](https://www.google.com/search?q=for+else+python) 就能看到有多少人在 “追问” 这是干什么的？还有另外一些链接，会告诉你 “for... else” 这个 “秘密” 的含义，将其称为 “语法糖” 什么的……
 
 其实，[官方教程](https://docs.python.org/3/tutorial/controlflow.html#break-and-continue-statements-and-else-clauses-on-loops)里写的非常清楚的，并且还给出了一个例子：
 
 > Loop statements may have an else clause; it is executed when the loop terminates through exhaustion of the list (with for) or when the condition becomes false (with while), but not when the loop is terminated by a break statement. This is exemplified by the following loop, which searches for prime numbers:
->
-> ```python
-> >>> for n in range(2, 10):
-> ...     for x in range(2, n):
-> ...         if n % x == 0:
-> ...             print(n, 'equals', x, '*', n//x)
-> ...             break
-> ...     else:
-> ...         # loop fell through without finding a factor
-> ...         print(n, 'is a prime number')
-> ...
+
+```python
+for n in range(2, 10):
+    for x in range(2, n):
+        if n % x == 0:
+            print(n, 'equals', x, '*', n//x)
+            break
+    else:
+        # loop fell through without finding a factor
+        print(n, 'is a prime number')
+```
+
 > 2 is a prime number
 > 3 is a prime number
 > 4 equals 2 * 2
@@ -118,9 +119,9 @@ print(an_undefined_variable)
 > 7 is a prime number
 > 8 equals 2 * 4
 > 9 equals 3 * 3
-> ```
 
-只有两种情况，
+
+只有两种情况：
 
 > * 要么干脆就没读过，
 > * 要么是读了，却没读到这个细节……
@@ -129,7 +130,7 @@ print(an_undefined_variable)
 
 为什么说 “只字不差地阅读” 是一项专门的技能呢？你自己试过就知道了。明明你已经刻意让自己慢下来，也刻意揣摩每个字每个词的含义，甚至为了理解正确，做了很多笔记…… 可是，当你再一次 “只字不差地阅读” 的时候，你经常会 “惊讶地发现”，自己竟然有若干处遗漏的地方！对，这就是一种需要多次练习、长期训练才能真正掌握的技能。绝对不像听起来那么简单。
 
-所以，_到了第二遍第三遍就必须施展 “只字不差地阅读” 这项专门的技能了_，只此一点，你就已然**与众不同**了。
+所以，**到了第二遍第三遍就必须施展 “只字不差地阅读” 这项专门的技能了**，只此一点，你就已然**与众不同**了。
 
 ## 好的记忆力很重要
 
@@ -256,7 +257,7 @@ https://docs.python.org/3/library/collections.html#ordereddict-objects
 
 比如，上面告诉你了，“必须自己动手”，那你就从现在开始老老实实地在一切必要的情况下自己动手去 “**总结**、**归纳**、**整理**、**组织** 关键知识点”…… 那你就必然能够学好。但针对这么个建议，你反复在那里问，“为什么呀？”，“有没有更简单的办法啊？”…… 那你就完了，死定了。
 
-学写代码的过程中，有很多重要的东西实际上并不属于 “编程语言范畴”。比如，如何为变量命名、如何组织代码，这些 “规范”，不是违背了就会马上死掉的<a href='#fn1' name='fn1b'><sup>[1]</sup></a>；并且，初来乍到的时候，这些东西看起来就是很啰嗦、很麻烦的…… 然而，这些东西若是不遵守，甚至干脆不了解，那么最终的结果是，你永远不可能写出大项目，永远是小打小闹 —— 至于为什么，可以用那句你最讨厌的话回答你：
+学写代码的过程中，有很多重要的东西实际上并不属于 “编程语言范畴”。比如，如何为变量命名、如何组织代码，这些 “规范”，不是违背了就会马上死掉的[^1]；并且，初来乍到的时候，这些东西看起来就是很啰嗦、很麻烦的…… 然而，这些东西若是不遵守，甚至干脆不了解，那么最终的结果是，你永远不可能写出大项目，永远是小打小闹 —— 至于为什么，可以用那句你最讨厌的话回答你：
 
 > 等你长大了就懂了……
 
@@ -269,8 +270,5 @@ Python 中有一个概念叫 PEP，Python Enhancement Proposals，必须找时�
 到最后，你会体会到，这不只是编程的事，这种东西背后的思考与体量，对整个人生都有巨大帮助。
 
 -----
-**脚注**
 
-<a name='fn1'>[1]</a>：也可能真的会死…… 请看一篇 2018 年 9 月份的一则新闻，发生在旧金山的事情：[Developer goes rogue, shoots four colleagues at ERP code maker](https://www.theregister.co.uk/2018/09/20/developer_work_shooting/)
-
-<a href='#fn1b'><small>↑Back to Content↑</small></a>
+[^1]: 也可能真的会死…… 请看一篇 2018 年 9 月份的一则新闻，发生在旧金山的事情：[Developer goes rogue, shoots four colleagues at ERP code maker](https://www.theregister.co.uk/2018/09/20/developer_work_shooting/)

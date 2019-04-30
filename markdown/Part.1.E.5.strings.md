@@ -6,7 +6,7 @@
 在计算机里，所有的东西最终都要被转换成数值。又由于计算机靠的是电路，所以，最终只能处理 `1` 和 `0`，于是，最基本的数值是二进制；于是，连整数、浮点数字，都要最终转换成二进制数值。这就是为什么在所有编程语言中 `1.1 + 2.2` 并不是你所想象的 `3.3` 的原因。
 
 ```python
-1.1 + 2.2
+print(1.1 + 2.2)
 ```
 
     3.3000000000000003
@@ -17,19 +17,22 @@
 
 ## 字符码表的转换
 
-很久以前，计算机的中央处理器最多只能够处理 8 位二进制数值，所以，那时候的计算机只能处理 256 个字符，即，2<sup>8</sup> 个字符。那个时候计算机所使用的码表叫 ASCII。现在计算机的中央处理器，大多是 64 位的，所以可以使用 2<sup>64</sup> 容量的码表，叫做 [Unicode](https://zh.wikipedia.org/wiki/Unicode)。随着多年的收集，2018 年 6 月 5 日公布的 `11.0.0` 版本已经包含了 13 万个字符 —— 突破 10 万字符是在 2005 年<a href='#fn1' name='fn1b'><sup>[1]</sup></a>。
+很久以前，计算机的中央处理器最多只能够处理 8 位二进制数值，所以，那时候的计算机只能处理 256 个字符，即，2<sup>8</sup> 个字符。那个时候计算机所使用的码表叫 ASCII。现在计算机的中央处理器，大多是 64 位的，所以可以使用 2<sup>64</sup> 容量的码表，叫做 [Unicode](https://zh.wikipedia.org/wiki/Unicode)。随着多年的收集，2018 年 6 月 5 日公布的 `11.0.0` 版本已经包含了 13 万个字符 —— 突破 10 万字符是在 2005 年[^1]。
 
 把单个字符转换成码值的函数是 `ord()`，它只接收单个字符，否则会报错；它返回该字符的  unicode 编码。与 `ord()` 相对的函数是 `chr()`，它接收且只接收一个整数作为参数，而后返回相应的字符。`ord()` 接收多个字符的话会报错。
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
+a = ord('a')
+b = chr(122)
 
-ord('a')
-chr(122)
+print(a)
+print(b)
 
-ord('氅')  # 完了，汉字也有你不认识的吧？
-chr(25354) # 这个字估计你也不认识……
+a = ord('氅')  # 完了，汉字也有你不认识的吧？
+b = chr(25354) # 这个字估计你也不认识……
+
+print(a)
+print(b)
 
 # ord('Python') # 这一句会报错
 ```
@@ -43,19 +46,19 @@ chr(25354) # 这个字估计你也不认识……
 
 标示一个字符串，有 4 种方式，用单引号、用双引号，用三个单引号或者三个双引号：
 
-```python
+```python,ignore
 'Simple is better than complex.' # 用单引号
 ```
 
     'Simple is better than complex.'
 
-```python
+```python,ignore
 "Simple is better than complex." # 用双引号
 ```
 
     'Simple is better than complex.'
 
-```python
+```python,ignore
 # 用三个单引号。注意输出结果中的 \n
 # 这个字符串，看起来是两行，保存在内存或者变量之中的时候，
 # 是一整串，其中的换行是用 \n 表示的。
@@ -67,7 +70,7 @@ Complex is better than complicated.
 
     '\nSimple is better than complex.\nComplex is better than complicated.\n'
 
-```python
+```python,ignore
 #用三个双引号。注意输出结果中的 \n
 """
 Simple is better than complex.
@@ -100,13 +103,14 @@ Complex is better than complicated.
 注意，int() 在接收字符串为参数的时候，只能做整数转换。下面代码最后一行会报错：
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-
-int('3')
-float('3')
-str(3.1415926)
-# int('3.1415926') # 这一行会报错
+a = int('3')
+b = float('3')
+c = str(3.1415926)
+# d = int('3.1415926') # 这一行会报错
+print(a)
+print(b)
+print(c)
+# print(d)
 ```
 
     3
@@ -156,19 +160,18 @@ else:
     Please tell me your age:  19
     Have a nice drink!
 
-**注意**：如果你用来浏览当前 `.ipynb` 文件的是那个桌面 App [Nteract](https://nteract.io/)，它目前不支持 input() 这个函数的调用……
 
 ## 转义符
 
 有一个重要的字符，叫做 “转义符”，`\`，也有的地方把它称为 “脱字符”，因为它的英文原文是 _Escaping Character_。它本身不被当作字符，你要想在字符串里含有这个字符，得这样写 `\\`：
 
-```python
+```python,ignore
 '\\'
 ```
 
     '\\'
 
-```python
+```python,ignore
 '\'
 ```
 
@@ -181,7 +184,7 @@ else:
 
 如果你想输出这么个字符串，`He said, it's fine.`，如果用双引号扩起来 `"` 倒没啥问题，但是如果用单引号扩起来就麻烦了，因为编译器会把 `it` 后面的那个单引号 `'` 当作字符串结尾。
 
-```python
+```python,ignore
 'He said, it's fine.'
 ```
 
@@ -192,10 +195,7 @@ else:
 
 于是你就得用转义符 `\`：
 
-```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-
+```python,ignore
 # 要么你这么写：
 'He said, it\'s fine.'
 # 要么你这么写：
@@ -232,13 +232,15 @@ print(s)                   # presentation
 字符串可以用空格 `' '` 或者 `+` 拼接：
 
 ```python
-'Hey!' + ' ' + 'You!' # 使用操作符 +
+s = 'Hey!' + ' ' + 'You!' # 使用操作符 +
+print(s)
 ```
 
     'Hey! You!'
 
 ```python
-'Hey!' 'You!' # 空格与 + 的作用是相同的。
+s = 'Hey!' 'You!' # 空格与 + 的作用是相同的。
+print(s)
 ```
 
     'Hey!You!'
@@ -246,13 +248,15 @@ print(s)                   # presentation
 字符串还可以与整数倍操作符 `*` 操作，`'Ha' * 3` 的意思是说，把字符串 `'Ha'` 复制三遍：
 
 ```python
-'Ha' * 3
+s = 'Ha' * 3
+print(s)
 ```
 
     'HaHaHa'
 
 ```python
-'3.14' * 3
+s = '3.14' * 3
+print(s)
 ```
 
     '3.143.143.14'
@@ -260,7 +264,7 @@ print(s)                   # presentation
 字符串还可以用 `in` 和 `not in` 操作符 —— 看看某个字符或者字符串是否被包含在某个字符串中，返回的是布尔值：
 
 ```python
-'o' in 'Hey, You!'
+print('o' in 'Hey, You!')
 ```
 
     True
@@ -319,15 +323,12 @@ for i in s:
 提醒：无论是 `range(1,2)`，或者 `random.randrange(100, 1000)` 又或者 `s[start:stop]` 都有一个相似的规律，包含左侧的 `1`, `100`, `start`，不包含右侧的 `2`, `1000`, `stop`。
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-
 s = 'Python'
-s[1]
-s[2:]
-s[2:5]
-s[:5]
-s[1:5:2]
+print(s[1])
+print(s[2:])
+print(s[2:5])
+print(s[:5])
+print(s[1:5:2])
 ```
 
     'y'
@@ -341,18 +342,15 @@ s[1:5:2]
 [Python 内建函数](https://docs.python.org/3/library/functions.html#slice)中，把字符串当做处理对象的有：`ord()`、`input()`、`int()`、`float()`、`len()`、`print()`。再次注意，`ord()` 只接收单个字符为参数。
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-
-ord('\n')
-ord('\t')
-ord('\r')
-chr(65) # 与 ord() 相对的函数
+print( ord('\n') )
+print( ord('\t') )
+print( ord('\r') )
+print( chr(65) ) # 与 ord() 相对的函数
 s = input('请照抄一遍这个数字 3.14: ')
-int('3')
-# int(s) 这一句会报错…… 所以暂时注释掉了
-float(s) * 9
-len(s)
+print(int('3'))
+# print(int(s)) 这一句会报错…… 所以暂时注释掉了
+print(float(s) * 9)
+print(len(s))
 print(s*3)
 ```
 
@@ -376,7 +374,7 @@ print(s*3)
 
 调用 str 类的 Methods 是使用 `.` 这个符号，比如：
 
-```python
+```python,ignore
 'Python'.upper()
 ```
 
@@ -385,16 +383,15 @@ print(s*3)
 转换字符串大小写的是 `str.upper()`、`str.lower()` 和 `str.swapcase()`，以及 `str.casefold()`；另外，还有专门针对行首字母大写的 `str.capitalize()` 和针对每个词的首字母大写的 `str.title()`：
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-
-'Now is better than never.'.upper()
+s = 'Now is better than never.'
+print(s.upper())
 
 # 在 Python 命令行工具之中，单个下划线，是个特殊变量；
 # 保存着最近的语句或者表达式的结果
 # 上一个 Cell 执行过后，_ 中保存着 'NOW IS BETTER THAN NEVER.'
+# 如果你使用命令行工具，可以执行 _.lower()
 
-_.lower()
+print(s.lower())
 ```
 
     'NOW IS BETTER THAN NEVER.'
@@ -402,20 +399,18 @@ _.lower()
     'now is better than never.'
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
 
 # casefold() 也是转换成小写，但它能处理更多欧洲语言字符
 
-'ß'.casefold()           # 德语字符中，大写 ß 的小写形式是 ss
-len('ß'.casefold())
-'ß'.lower()              # lower() 对这类字符无能为力……
-len('ß'.lower())
+print('ß'.casefold())         # 德语字符中，大写 ß 的小写形式是 ss
+print(len('ß'.casefold()))
+print('ß'.lower())            # lower() 对这类字符无能为力……
+print(len('ß'.lower())
 # casefold
-'\u0132'                # Ĳ 这个字符的 Unicode 编码
-'\u0132'.casefold()
-'\u0132'.lower()        # 对这个字符来说，lower() 和 casefold 的效果一样
-len('\u0132'.casefold())
+print('\u0132')               # Ĳ 这个字符的 Unicode 编码
+print('\u0132'.casefold())
+print('\u0132'.lower())        # 对这个字符来说，lower() 和 casefold 的效果一样
+print(len('\u0132'.casefold()))
 
 # 这是一篇有用的文章：
 # Truths programmers should know about case
@@ -432,12 +427,13 @@ len('\u0132'.casefold())
     1
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
 
 s = 'Now is better than never.'
-s.capitalize() # 句首字母大写
-s.title() # 每个单词首字母大写
+print(s)
+s1 = s.capitalize() # 句首字母大写
+print(s1)
+s2 = s.title() # 每个单词首字母大写
+print(s2)
 ```
 
     'Now is better than never.'
@@ -445,9 +441,16 @@ s.title() # 每个单词首字母大写
 
 ```python
 s = 'Now is better than never.'
-s.swapcase() # 逐个字符更替大小写
-s.title()
-s.title().swapcase()
+print(s)
+
+s1 = s.swapcase() # 逐个字符更替大小写
+print(s1)
+
+s2 = s.title()
+print(s2)
+
+s3 = s.title().swapcase()
+print(s3)
 ```
 
     'nOW IS BETTER THAN NEVER.'
@@ -462,6 +465,7 @@ s.title().swapcase()
 # https://docs.python.org/3/library/codecs.html#standard-encodings
 s = '简单优于复杂。'
 s.encode()
+print(s)
 ```
 
     b'\xe7\xae\x80\xe5\x8d\x95\xe4\xbc\x98\xe4\xba\x8e\xe5\xa4\x8d\xe6\x9d\x82\xe3\x80\x82'
@@ -491,14 +495,20 @@ s.encode()
 注意：字符串中第一个字符的索引值是 `0`。
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
 
 s = """Simple is better than complex.
 Complex is better than complicated."""
-s.lower().count('mp')
-s.lower().count('mp', 10)
-s.lower().count('mp', 10, 30)
+
+a = s.lower().count('mp')
+
+b = s.lower().count('mp', 10)
+
+c = s.lower().count('mp', 10, 30)
+
+print(a)
+print(b)
+print(c)
+
 ```
 
     4
@@ -508,34 +518,40 @@ s.lower().count('mp', 10, 30)
 以下是 `str` 的搜索与替换的 Methods：`str.find()`, `str.rfind()`, `str.index()` 的示例：
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
 
 # str.find(sub[, start[, end]])
 print('Example of str.find():')
 s = """Simple is better than complex.
 Complex is better than complicated."""
-s.lower().find('mpl')
-s.lower().find('mpl', 10)
-s.lower().find('mpl', 10, 20) # 没有找到就返回 -1
+a = s.lower().find('mpl')
+b = s.lower().find('mpl', 10)
+c = s.lower().find('mpl', 10, 20) # 没有找到就返回 -1
+print(a)
+print(b)
+print(c)
 print()
 
 print('Example of str.rfind():')
 # str.rfind(sub[, start[, end]])
 # rfind() 返回最后 sub 出现的那次的位置；find()是最早的那次
-s.lower().rfind('mpl')
-s.lower().rfind('mpl', 10)
-s.lower().rfind('mpl', 10, 20) # 没有找到就返回 -1
+a = s.lower().rfind('mpl')
+b = s.lower().rfind('mpl', 10)
+c = s.lower().rfind('mpl', 10, 20) # 没有找到就返回 -1
+print(a)
+print(b)
+print(c)
 print()
 
 print('Example of str.index():')
 # str.index(sub[, start[, end]])
 # 作用与 find() 相同，但如果没找到的话，会触发 ValueError 异常
 # https://docs.python.org/3/library/exceptions.html#ValueError
-s.lower().index('mpl')
+a = s.lower().index('mpl')
 # str.rindex(sub[, start[, end]])
 # 作用与 rfind() 相同，但如果没找到的话，会触发 ValueError 异常
-s.lower().rindex('mpl')
+b = s.lower().rindex('mpl')
+print(a)
+print(b)
 print()
 ```
 
@@ -623,13 +639,10 @@ print(s.lower().replace('mp', '[ ]', 2))
 它的作用非常简单，就是把字符串中的 TAB（`\t`）替换成空格，默认是替换成 `8` 个空格 —— 当然你也可以指定究竟替换成几个空格
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-
 # str.expandtabs(tabsize=8)
 s = "Special\tcases\taren't\tspecial\tenough\tto\tbreak\tthe\trules."
-s.expandtabs()
-s.expandtabs(2)
+print(s.expandtabs())
+print(s.expandtabs(2))
 ```
 
     "Special cases   aren't  special enough  to      break   the     rules."
@@ -642,12 +655,9 @@ s.expandtabs(2)
 它最常用的场景是去除一个字符串首尾的所有空白，包括空格、TAB、换行符等等。
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-
 s = "\r \t Simple is better than complex.    \t \n"
-s
-s.strip()
+print(s)
+print(s.strip())
 ```
 
     '\r \t Simple is better than complex.    \t \n'
@@ -657,13 +667,10 @@ s.strip()
 但是，如果给定了一个字符串作为参数，那么参数字符串中的所有字母都会被当做需要从首尾剔除的对象，直到新的首尾字母不包含在参数中，就会停止剔除：
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-
 s = "Simple is better than complex."
-s
-s.strip('Six.p')    # p 全部处理完之后，p 并不在首尾，所以原字符串中的 p 字母不受影响；
-s.strip('pSix.mle') # 这一次，首尾的 p 被处理了…… 参数中的字符顺序对结果没有影响，换成 Sipx.mle 也一样……
+print(s)
+print(s.strip('Six.p'))    # p 全部处理完之后，p 并不在首尾，所以原字符串中的 p 字母不受影响；
+print(s.strip('pSix.mle')) # 这一次，首尾的 p 被处理了…… 参数中的字符顺序对结果没有影响，换成 Sipx.mle 也一样……
 ```
 
     'Simple is better than complex.'
@@ -673,14 +680,11 @@ s.strip('pSix.mle') # 这一次，首尾的 p 被处理了…… 参数中的字
 还可以只对左侧处理，`str.lstrip()` 或者只对右侧处理，`str.rstrip()`
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-
 # str.lstrip([chars])
 s = "Simple is better than complex."
-s
-s.lstrip('Six.p')    # p 全部处理完之后，p 并不在首部，所以原字符串中的 p 字母不受影响；
-s.lstrip('pSix.mle') # 这一次，首部的 p 被处理了…… 参数中的字符顺序对结果没有影响，换成 Sipx.mle 也一样……
+print(s)
+print(s.lstrip('Six.p'))    # p 全部处理完之后，p 并不在首部，所以原字符串中的 p 字母不受影响；
+print(s.lstrip('pSix.mle')) # 这一次，首部的 p 被处理了…… 参数中的字符顺序对结果没有影响，换成 Sipx.mle 也一样……
 ```
 
     'Simple is better than complex.'
@@ -688,14 +692,11 @@ s.lstrip('pSix.mle') # 这一次，首部的 p 被处理了…… 参数中的�
     ' is better than complex.'
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-
 # str.rstrip([chars])
 s = "Simple is better than complex."
-s
-s.rstrip('Six.p')    # p 全部处理完之后，p 并不在尾部，所以原字符串中的 p 字母不受影响；
-s.rstrip('pSix.mle') # 这一次，尾部的 p 被处理了…… 参数中的字符顺序对结果没有影响，换成 Sipx.mle 也一样……
+print(s)
+print(s.rstrip('Six.p'))    # p 全部处理完之后，p 并不在尾部，所以原字符串中的 p 字母不受影响；
+print(s.rstrip('pSix.mle')) # 这一次，尾部的 p 被处理了…… 参数中的字符顺序对结果没有影响，换成 Sipx.mle 也一样……
 ```
 
     'Simple is better than complex.'
@@ -723,17 +724,14 @@ Sunny,21,Shanghai
 `str.splitlines()` 返回的是个列表（List）—— 这又是一个前面曾简要提起过，但会在后面的章节才能详细讲解的概念 —— 由被拆分的每一行作为其中的元素。
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-
 s = """Name,Age,Location
 John,18,New York
 Mike,22,San Francisco
 Janny,25,Miami
 Sunny,21,Shanghai"""
 
-s                 # s 被打印出来的时候，\n 都被转换成换行了
-s.splitlines()    # 注意输出结果前后的方括号，[]，表示这个返回结果是一个 List
+print(s)                 # s 被打印出来的时候，\n 都被转换成换行了
+print(s.splitlines())    # 注意输出结果前后的方括号，[]，表示这个返回结果是一个 List
 ```
 
     'Name,Age,Location\nJohn,18,New York\nMike,22,San Francisco\nJanny,25,Miami\nSunny,21,Shanghai'
@@ -749,9 +747,6 @@ s.splitlines()    # 注意输出结果前后的方括号，[]，表示这个返�
 > `str.split(sep=None, maxsplit=-1)`
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-
 s = """Name,Age,Location
 John,18,New York
 Mike,22,San Francisco
@@ -759,15 +754,15 @@ Janny,25,Miami
 Sunny,21,Shanghai"""
 
 r = s.splitlines()[2]   # 取出返回列表中索引值为 2 的那一行
-r
-r.split()               # 如果没有给 str.split() 传递参数，那么默认为用 None 分割（各种空白，比如，\t 和 \r 都被当作 None）
-r.split(sep=',')
-r.split(',')            # 上一行可以这样写。
+print(r)
+print(r.split())               # 如果没有给 str.split() 传递参数，那么默认为用 None 分割（各种空白，比如，\t 和 \r 都被当作 None）
+print(r.split(sep=','))
+print(r.split(','))            # 上一行可以这样写。
 
-r.split(sep=',', maxsplit=1)  # 第二个参数指定拆分几次
+print(r.split(sep=',', maxsplit=1))  # 第二个参数指定拆分几次
 # r.split(sep=',', 1)         # 上一行不能这样写。
-r.split(sep=',', maxsplit=0)  # 0 次，即不拆分
-r.split(sep=',', maxsplit=-1) # 默认值是 -1，拆分全部
+print(r.split(sep=',', maxsplit=0))  # 0 次，即不拆分
+print(r.split(sep=',', maxsplit=-1)) # 默认值是 -1，拆分全部
 ```
 
     'Mike,22,San Francisco'
@@ -791,7 +786,7 @@ r.split(sep=',', maxsplit=-1) # 默认值是 -1，拆分全部
 ```python
 s = ''
 t = ['P', 'y', 't', 'h', 'o', 'n']
-s.join(t)
+print(s.join(t))
 ```
 
     'Python'
@@ -805,17 +800,14 @@ s.join(t)
 注意，第 2 个参数可选，且只接收单个字符 —— `char` 是 _character_ 的缩写。
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
+s = 'Sparse is better than dense!'
+print(s.title().center(60))
+print(s.title().center(60, '='))
+print(s.title().center(10)) # 如果宽度参数小于字符串长度，则返回原字符串
 
 s = 'Sparse is better than dense!'
-s.title().center(60)
-s.title().center(60, '=')
-s.title().center(10) # 如果宽度参数小于字符串长度，则返回原字符串
-
-s = 'Sparse is better than dense!'
-s.title().rjust(60)
-s.title().rjust(60, '.')
+print(s.title().rjust(60))
+print(s.title().rjust(60, '.'))
 ```
 
     '                Sparse Is Better Than Dense!                '
@@ -872,12 +864,9 @@ for i in range(1, 11):
 占位符中可以使用由零开始的索引。
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-
 name = 'John'
 age = 25
-'{} is {} years old.'.format(name, age)
+print('{} is {} years old.'.format(name, age))
 # 不写占位符索引就默认每个占位符的索引从第一个开始是 0, 1, 2 ...（占位符数量 - 1)
 # '{} {}'.format(a, b) 和 '{0} {1}'.format(a, b) 是一样的。
 
@@ -885,13 +874,13 @@ age = 25
 # 这一句会报错，因为 2 超出实际参数索引极限
 
 # 两个连续使用的大括号，不被认为是占位符；且只打印出一对大括号
-"Are you {0}? :-{{+}}".format(name)
+print("Are you {0}? :-{{+}}".format(name))
 
 # "%s is %d years old." % (name, age)
 # 上一行这是兼容 Python 2 的老式写法，可以从此忽略……
 
 # str.fomrat() 里可以直接写表达式……
-'{} is a grown up? {}'.format(name, age >= 18)
+print('{} is a grown up? {}'.format(name, age >= 18))
 ```
 
     'John is 25 years old.'
@@ -903,16 +892,13 @@ age = 25
 _f-string_ 与 `str.format()` 的功用差不多，只是写法简洁一些 —— 在字符串标示之前加上一个字母 `f`：
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-
 # https://docs.python.org/3/library/stdtypes.html#printf-style-bytes-formatting
 # f-string
 
 name = 'John'
 age = 25
-f'{name} is {age} years old.'
-f'{name} is a grown up? {age >= 18}'
+print(f'{name} is {age} years old.')
+print(f'{name} is a grown up? {age >= 18}')
 ```
 
     'John is 25 years old.'
@@ -923,7 +909,7 @@ f'{name} is a grown up? {age >= 18}'
 ```python
 name = 'John'
 age = 25
-'{1} is {0} years old.'.format(name, age)
+print('{1} is {0} years old.'.format(name, age))
 ```
 
     '25 is John years old.'
@@ -941,9 +927,9 @@ print("'1234567890'.isalnum():", \
 print("'abcdefghij'.isalpha():", \
       'abcdefghij'.isalpha())
 
-# str.isascii()
-print("'山巅一寺一壶酒'.isascii():", \
-      '山巅一寺一壶酒'.isascii())
+# str.isascii(), GitPress 的 Python 不支持该函数
+# print("'山巅一寺一壶酒'.isascii():", \
+#       '山巅一寺一壶酒'.isascii())
 
 # str.isdecimal()
 print("'0.123456789'.isdecimal():", \
@@ -984,7 +970,6 @@ print("'for'.isidentifier():", \
 
     '1234567890'.isalnum(): True
     'abcdefghij'.isalpha(): True
-    '山巅一寺一壶酒'.isascii(): False
     '0.123456789'.isdecimal(): False
     '0.123456789'.isdigit(): False
     '0.123456789'.isnumeric(): False
@@ -1047,8 +1032,7 @@ Python 做更为复杂的数学计算的模块（Module）是 math module，参�
 > https://docs.python.org/3/library/math.html
 
 -----
-**脚注**
 
-<a name='fn1'>[1]</a>：请查阅 https://en.wikipedia.org/wiki/Unicode
 
-<a href='#fn1b'><small>↑Back to Content↑</small></a>
+[^1]: 请查阅 https://en.wikipedia.org/wiki/Unicode
+

@@ -8,33 +8,25 @@
 以下的代码，我们先是定义了一个名为 `_is_leap` 的函数，而后为它另取了一个化名：
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-
 def _is_leap(year):
     return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
 
 year_leap_bool = _is_leap
-year_leap_bool              #<function __main__._is_leap(year)>
-year_leap_bool(800)         # _is_leap(800) -> True
+print(year_leap_bool)              #<function __main__._is_leap(year)>
+print(year_leap_bool(800))         # _is_leap(800) -> True
 
-id(year_leap_bool)          # id() 这个函数可以查询某对象的内存地址
-id(_is_leap)                # year_leap_bool 和 _is_leap 其实保存在同一个地址中，也就是说，它们是同一个对象。
+print(id(year_leap_bool))          # id() 这个函数可以查询某对象的内存地址
+print(id(_is_leap))                # year_leap_bool 和 _is_leap 其实保存在同一个地址中，也就是说，它们是同一个对象。
 
-type(year_leap_bool)
-type(_is_leap)              # 它们都是 function
+print(type(year_leap_bool))
+print(type(_is_leap))              # 它们都是 function
 ```
 
     <function __main__._is_leap(year)>
-
     True
-
     4547071648
-
     4547071648
-
     function
-
     function
 
 我们可以看到的是，`id(year_leap_bool)` 和 `id(_is_leap)` 的内存地址是一样的 —— 它们是同一个对象，它们都是函数。所以，当你写 `year_leap_bool = _is_leap` 的时候，相当于给 `_is_leap()` 这个函数取了个化名。
@@ -56,7 +48,7 @@ type(_is_leap)              # 它们都是 function
 ```python
 def add(x, y):
     return x + y
-add(3, 5)
+print(add(3, 5))
 ```
 
     8
@@ -65,7 +57,7 @@ add(3, 5)
 
 ```python
 add = lambda x, y: x + y
-add(3, 5)
+print(add(3, 5))
 ```
 
     8
@@ -78,7 +70,7 @@ lambda 的语法结构如下：
 
 反正你已经见到示例了：
 
-```python
+```python,ignore
 lambda x, y: x + y
 ```
 
@@ -107,13 +99,11 @@ def make_incrementor(n):
     return lambda x: x + n
 
 f = make_incrementor(42)
-f(0)
-
-f(1)
+print(f(0))
+print(f(1))
 ```
 
     42
-
     43
 
 这个例子乍看起来很令人迷惑。我们先看看 `f = make_incrementor(42)` 之后，`f` 究竟是什么东西：
@@ -123,21 +113,19 @@ def make_incrementor(n):
     return lambda x: x + n
 
 f = make_incrementor(42)
-f
+print(f)
 
-id(make_incrementor)
-id(f)
+print(id(make_incrementor))
+print(id(f))
 ```
 
     <function __main__.make_incrementor.<locals>.<lambda>(x)>
-
     4428443296
-
     4428726888
 
 首先，要注意，`f` 并不是 `make_incrementor()` 这个函数的化名，如果是给这个函数取个化名，写法应该是：
 
-```python
+```python,ignore
 f = make_incrementor
 ```
 
@@ -165,14 +153,13 @@ def double_it(n):
 a_list = [1, 2, 3, 4, 5, 6]
 
 b_list = list(map(double_it, a_list))
-b_list
+print(b_list)
 
 c_list = list(map(lambda x: x * 2, a_list))
-c_list
+print(c_list)
 ```
 
     [2, 4, 6, 8, 10, 12]
-
     [2, 4, 6, 8, 10, 12]
 
 显然用 `lambda` 更为简洁。另外，类似完成 `double_it(n)` 这种简单功能的函数，常常有 “用过即弃” 的必要。
@@ -197,9 +184,9 @@ phonebook = [
     }
 ]
 
-phonebook
-list(map(lambda x: x['name'], phonebook))
-list(map(lambda x: x['phone'], phonebook))
+print(phonebook)
+print(list(map(lambda x: x['name'], phonebook)))
+print(list(map(lambda x: x['phone'], phonebook)))
 ```
 
     [{'name': 'john', 'phone': 9876},
@@ -217,7 +204,7 @@ list(map(lambda x: x['phone'], phonebook))
 a_list = [1, 3, 5]
 b_list = [2, 4, 6]
 
-list(map(lambda x, y: x * y, a_list, b_list))
+print(list(map(lambda x, y: x * y, a_list, b_list)))
 ```
 
     [2, 12, 30]
@@ -227,7 +214,7 @@ list(map(lambda x, y: x * y, a_list, b_list))
 ```python
 pairs = [(1, 'one'), (2, 'two'), (3, 'three'), (4, 'four')]
 pairs.sort(key=lambda p: p[1])
-pairs
+print(pairs)
 ```
 
     [(4, 'four'), (1, 'one'), (3, 'three'), (2, 'two')]

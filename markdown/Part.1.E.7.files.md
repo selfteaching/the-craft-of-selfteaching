@@ -3,6 +3,9 @@
 
 我们需要处理的数据，一定是很多，所以才必须由计算机帮我们处理 —— 大量的数据保存、读取、写入，需要的就是文件（Files）。在这一章里，我们只介绍最简单的文本文件。
 
+> [!NOTE]
+> 注意：本章涉及的文件操作不被 GitPress 支持，因此在本地运行 Jupyter 阅读本章获得更好的体验。
+
 ## 创建文件
 
 创建一个文件，最简单的方式就是用 Python 的内建函数 `open()`。
@@ -25,16 +28,16 @@
 
 创建一个新文件，用这样一个语句就可以：
 
-```python
-open('test-file.txt', 'w')
+```python,ignore
+open('/tmp/test-file.txt', 'w')
 ```
 
     <_io.TextIOWrapper name='test-file.txt' mode='w' encoding='UTF-8'>
 
 当然，更多的时候，我们会把这个函数的返回值，一个所谓的 [file object](https://docs.python.org/3/glossary.html#term-file-object)，保存到一个变量中，以便后面调用这个 file object 的各种 Methods，比如获取文件名 `file.name`，比如关闭文件 `file.close()`：
 
-```python
-f = open('test-file.txt', 'w')
+```python,ignore
+f = open('/tmp/test-file.txt', 'w')
 print(f.name)
 f.close()
 ```
@@ -45,10 +48,10 @@ f.close()
 
 删除文件，就得调用 `os` 模块了。删除文件之前，要先确认文件是否存在，否则删除命令会失败。
 
-```python
+```python,ignore
 import os
 
-f = open('test-file1.txt', 'w')
+f = open('/tmp/test-file1.txt', 'w')
 print(f.name)
 f.close() #关闭文件，否则无法删除文件
 if os.path.exists(f.name):
@@ -65,12 +68,12 @@ else:
 
 创建文件之后，我们可以用 `f.write()` 把数据写入文件，也可以用 `f.read()` 读取文件。
 
-```python
-f = open('test-file.txt', 'w')
+```python,ignore
+f = open('/tmp/test-file.txt', 'w')
 f.write('first line\nsecond line\nthird line\n')
 f.close()
 
-f = open('test-file.txt', 'r')
+f = open('/tmp/test-file.txt', 'r')
 s = f.read()
 print(s)
 f.close()
@@ -82,12 +85,12 @@ f.close()
 
 文件有很多行的时候，我们可以用 `file.readline()` 操作，这个 Method 每次调用，都会返回文件中的新一行。
 
-```python
-f = open('test-file.txt', 'w')
+```python,ignore
+f = open('/tmp/test-file.txt', 'w')
 f.write('first line\nsecond line\nthird line\n')
 f.close()
 
-f = open('test-file.txt', 'r')
+f = open('/tmp/test-file.txt', 'r')
 s = f.readline()    # 返回的是 'first line\n'
 print(s)
 s = f.readline()    # 返回的是 'second line\n'
@@ -100,12 +103,12 @@ f.close()
 
 **注意**，返回结果好像跟你想的不太一样。这时候，之前见过的 `str.strip()` 就派上用场了：
 
-```python
-f = open('test-file.txt', 'w')
+```python,ignore
+f = open('/tmp/test-file.txt', 'w')
 f.write('first line\nsecond line\nthird line\n')
 f.close()
 
-f = open('test-file.txt', 'r')
+f = open('/tmp/test-file.txt', 'r')
 s = f.readline().strip()    # 返回的是 'first line'，'\n' 被去掉了……
 print(s)
 s = f.readline().strip()    # 返回的是 'second line'，'\n' 被去掉了……
@@ -116,14 +119,14 @@ f.close()
     first line
     second line
 
-与之相对的，我们可以使用 `file.readlins()` 这个命令，将文件作为一个列表返回，列表中的每个元素对应着文件中的每一行：
+与之相对的，我们可以使用 `file.readlines()` 这个命令，将文件作为一个列表返回，列表中的每个元素对应着文件中的每一行：
 
-```python
-f = open('test-file.txt', 'w')
+```python,ignore
+f = open('/tmp/test-file.txt', 'w')
 f.write('first line\nsecond line\nthird line\n')
 f.close()
 
-f = open('test-file.txt', 'r')
+f = open('/tmp/test-file.txt', 'r')
 s = f.readlines()    # 返回的是一个列表，注意，readlines，最后的 's'
 print(s)
 f.close()
@@ -133,12 +136,12 @@ f.close()
 
 既然返回的是列表，那么就可以被迭代，逐一访问每一行：
 
-```python
-f = open('test-file.txt', 'w')
+```python,ignore
+f = open('/tmp/test-file.txt', 'w')
 f.write('first line\nsecond line\nthird line\n')
 f.close()
 
-f = open('test-file.txt', 'r')
+f = open('/tmp/test-file.txt', 'r')
 for line in f.readlines():
     print(line)
 f.close()
@@ -148,15 +151,15 @@ f.close()
     second line
     third line
 
-与之相对的，我们也可以用 `file.writelines()` 把一个列表写入到一个文件中，按顺序每一行写入列表的对应元素：
+与之相对的，我们也可以用 `file.writelines()` 把一个列表写入到一个文件中，按索引顺序（从 0 开始）逐行写入列表的对应元素：：
 
-```python
+```python,ignore
 a_list = ['first line\n', 'second line\n', 'third line\n']
-f = open('test-file.txt', 'w')
+f = open('/tmp/test-file.txt', 'w')
 f.writelines(a_list)
 f.close()
 
-f = open('test-file.txt', 'r')
+f = open('/tmp/test-file.txt', 'r')
 for line in f.readlines():
     print(line)
 f.close()
@@ -170,7 +173,7 @@ f.close()
 
 针对文件操作，Python 有个另外的语句块写法，更便于阅读：
 
-```python
+```python,ignore
 with open(...) as f:
     f.write(...)
     ...
@@ -178,13 +181,13 @@ with open(...) as f:
 
 这样，就可以把针对当前以特定模式打开的某个文件的各种操作都写入同一个语句块了：
 
-```python
+```python,ignore
 import os
 
-with open('test-file.txt', 'w') as f:
+with open('/tmp/test-file.txt', 'w') as f:
     f.write('first line\nsecond line\nthird line\n')
 
-with open('test-file.txt', 'r') as f:
+with open('/tmp/test-file.txt', 'r') as f:
     for line in f.readlines():
         print(line)
 
@@ -249,7 +252,7 @@ else:
 
 因为文件里每行一个单词，所以，就让程序打开文件，将文件读入一个列表，而后迭代这个列表，逐一计算那个单词每个字母所代表的数字，并加起来看看是否等于 100？如果是，就将它们输出到屏幕…… 好像不是很难。
 
-```python
+```python,ignore
 with open('words_alpha.txt', 'r') as file:
     for word in file.readlines():
         pass # 先用 pass 占个位，一会儿再写计算过程
@@ -258,7 +261,7 @@ with open('words_alpha.txt', 'r') as file:
 按照上面那说法，把 `a` 记为 `1`，直至把 `z` 记为 `26`，这事并不难，因为有 `ord()` 函数啊 —— 这个函数返回字符的 Unicode 编码：`ord('a')` 的值是 `97`，那按上面的说法，用 `ord('a') - 96` 就相当于得到了 `1` 这个数值…… 而 `ord('z') - 96` 就会得到 `26` 这个数值。
 
 ```python
-ord('a')
+print(ord('a'))
 ```
 
     97
@@ -291,7 +294,7 @@ sum_of_word('attitude')
 
 那让程序就算把几十万行都算一遍也好像很简单了：
 
-```python
+```python,ignore
 def sum_of_word(word):
     sum = 0
     for char in word:
@@ -316,7 +319,7 @@ with open('words_alpha.txt', 'r') as file:
 
 插入个中止语句，`break`，把找到的第一个词中的每个字符和它所对应的值都拿出来看看？
 
-```python
+```python,ignore
 def sum_of_word(word):
     sum = 0
     for char in word:
@@ -354,14 +357,14 @@ with open('words_alpha.txt', 'r') as file:
 怎么有个 `-86`？！仔细看看输出结果，看到每一行之间都被插入了一个空行，想到应该是从文件里读出的行中，包含 `\n` 这种换行符…… 如果是那样的话，那么 `ord('\n') -96` 返回的结果是 `-86` 呢，怪不得找到的词都 “奇形怪状” 的……
 
 ```python
-ord('\n') -96
+print(ord('\n') -96)
 ```
 
     -86
 
 改进一下呗 —— 倒也简单，在计算前把读入字符串前后的空白字符都给删掉就好了，用 `str.strip()` 就可以了：
 
-```python
+```python,ignore
 def sum_of_word(word):
     sum = 0
     for char in word:
@@ -384,7 +387,7 @@ with open('words_alpha.txt', 'r') as file:
 
 如果想把符合条件的词保存到一个文件 `results.txt` 里的话，那么：
 
-```python
+```python,ignore
 def sum_of_word(word):
     sum = 0
     for char in word:
@@ -400,7 +403,7 @@ with open('results.txt', 'w') as result:
 
 竟然这么简单就搞定了？！
 
-这 10 行的代码，在几秒钟内从 370,099 个英文单词中找到 3,770 个如此计算等于 100 的词汇。
+这 10 行的代码，在几秒钟内从 370,101 个英文单词中找到 3,771 个如此计算等于 100 的词汇。
 
 喝着咖啡翻一翻 `results.txt`，很快就找到了那些用来做反例格外恰当的词汇。
 

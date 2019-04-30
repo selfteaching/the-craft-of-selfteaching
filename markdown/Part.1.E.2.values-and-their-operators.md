@@ -8,7 +8,7 @@
 
 没有流程控制的是计算器而已；有流程控制的才是可编程设备。
 
-看看之前我们见过的计算质数的程序：（按一下 `⎋`，即 `ESC`，确保已经进入命令模式，`⇧ L` 可以切换是否显示代码行号）
+看看之前我们见过的计算质数的程序：
 
 ```python
 def is_prime(n):            # 定义 is_prime()，接收一个参数
@@ -93,12 +93,12 @@ print(print(f())) # 这一行最外围的 print() 调用了一次 print(f())，�
 比如，`abs()` 函数，就会返回传递给它的*值*的*绝对值*；`int()` 函数，会将传递给它的值的小数部分砍掉；`float()` 接到整数参数之后，会返回这个整数的浮点数形式：
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-
-abs(-3.14159)
-int(abs(-3.14159))
-float(int(abs(-3.14159)))
+a = abs(-3.14159)
+b = int(abs(-3.14159))
+c = float(int(abs(-3.14159)))
+print(a)
+print(b)
+print(c)
 ```
 
     3.14159
@@ -120,11 +120,8 @@ float(int(abs(-3.14159)))
 显然，数字与数字之间的运算是合理的，但你让 `+` 这个操作符对一个字符串和一个数字进行运算就不行：
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-
-11 + 10 - 9 * 8 / 7 // 6 % 5
-'3.14' + 3                  # 这一句会报错
+a = 11 + 10 - 9 * 8 / 7 // 6 % 5
+b = '3.14' + 3                  # 这一句会报错
 ```
 
     20.0
@@ -152,18 +149,15 @@ InteractiveShell.ast_node_interactivity = "all"
 有个函数，`type()`，可以用来查看某个值属于什么类型：
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-
-type(3)
-type(3.0)
-type('3.14')
-type(True)
-type(range(10))
-type([1,2,3])
-type((1,2,3))
-type({1,2,3})
-type({'a':1, 'b':2, 'c':3})
+print(type(3))
+print(type(3.0))
+print(type('3.14'))
+print(type(True))
+print(type(range(10)))
+print(type([1,2,3]))
+print(type((1,2,3)))
+print(type({1,2,3}))
+print(type({'a':1, 'b':2, 'c':3}))
 ```
 
     int
@@ -204,7 +198,7 @@ type({'a':1, 'b':2, 'c':3})
 它们之中，优先级最低的是或 `or`，然后是与 `and`, 优先级最高的是非 `not`：
 
 ```python
-True and False or not True
+print(True and False or not True)
 ```
 
     False
@@ -224,7 +218,7 @@ True and False or not True
 
 ```python
 n = -95
-n < 0 and (n + 1) % 2 == 0
+print(n < 0 and (n + 1) % 2 == 0)
 ```
 
     True
@@ -238,13 +232,10 @@ n < 0 and (n + 1) % 2 == 0
 > * 逻辑运算：`in`、`not in`；以及，`<`、`<=`、`>`、`>=`、`!=`、`==`
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-
-'Awesome' + 'Python'
-'Awesome' 'Python'
-'Python, ' + 'Awesome! ' * 3
-'o' in 'Awesome' and 'o' not in 'Python'
+print('Awesome' + 'Python')
+print('Awesome' 'Python')
+print('Python, ' + 'Awesome! ' * 3)
+print('o' in 'Awesome' and 'o' not in 'Python')
 ```
 
     'AwesomePython'
@@ -255,7 +246,7 @@ InteractiveShell.ast_node_interactivity = "all"
 字符之间，字符串之间，除了 `==` 和 `!=` 之外，也都可以被逻辑操作符 `<`、`<=`、`>`、`>=` 运算：
 
 ```python
-'a' < 'b'
+print('a' < 'b')
 ```
 
     True
@@ -263,12 +254,9 @@ InteractiveShell.ast_node_interactivity = "all"
 这是因为字符对应着 Unicode 码，字符在被比较的时候，被比较的是对应的 Unicode 码。
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-
-'A' > 'a'
-ord('A')
-ord('a')
+print('A' > 'a')
+print(ord('A'))
+print(ord('a'))
 ```
 
     False
@@ -278,7 +266,7 @@ ord('a')
 当字符串被比较的时候，将从两个字符串各自的第一个字符开始逐个比较，“一旦决出胜负马上停止”：
 
 ```python
-'PYTHON' > 'Python 3'
+print('PYTHON' > 'Python 3')
 ```
 
     False
@@ -302,15 +290,12 @@ Python 的容器有很多种 —— 字符串，其实也是容器的一种，�
 两个列表在比较时（前提是两个列表中的数据元素类型相同），遵循的还是跟字符串比较相同的规则：“一旦决出胜负马上停止”。但实际上，由于列表中可以包含不同类型的元素，所以，通常情况下没有实际需求对他们进行 “大于、小于” 的比较。（比较时，类型不同会引发 `TypeError`……）
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-
 a_list = [1, 2, 3, 4, 5]
 b_list = [1, 2, 3, 5]
 c_list = ['ann', 'bob', 'cindy', 'dude', 'eric']
-a_list > b_list
-10 not in a_list
-'ann' in c_list
+print(a_list > b_list)
+print(10 not in a_list)
+print('ann' in c_list)
 ```
 
     False
@@ -347,11 +332,8 @@ a_list > b_list
 这其中，针对数字，有计算绝对值的函数 `abs()`，有计算商余的函数 `divmod()` 等等。
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-
-abs(-3.1415926)
-divmod(11, 3)
+print(abs(-3.1415926))
+print(divmod(11, 3))
 ```
 
     3.1415926
@@ -361,7 +343,7 @@ divmod(11, 3)
 
 ```python
 import math
-math.sin(5)
+print(math.sin(5))
 ```
 
     -0.9589242746631385
@@ -379,7 +361,7 @@ math.sin(5)
 比如，数字，其实属于一个类，所以，我们可以调用那个类里所定义的函数，比如，`float.as_integer_ratio()`，它将返回两个值，第一个值除以第二个值，恰好等于传递给它的那个浮点数字参数：
 
 ```python
-3.1415926.as_integer_ratio()
+print(3.1415926.as_integer_ratio())
 ```
 
     (3537118815677477, 1125899906842624)
@@ -389,7 +371,7 @@ math.sin(5)
 当你看到以下这样的表达式，而后再看看它的结果，你可能会多少有点迷惑：
 
 ```python
-True or 'Python'
+print(True or 'Python')
 ```
 
     True
@@ -420,7 +402,7 @@ True or 'Python'
 
 它们都是基础数据类型的各种组合 —— 现实生活中，更多需要的是把基础类型组合起来构成的数据。比如，一个通讯簿，里面是一系列字符串分别对应着若干字符串和数字。
 
-``` python
+``` python,ignore
 entry[3662] = {
     'first_name': 'Michael',
     'last_name': 'Willington',
@@ -439,15 +421,12 @@ entry[3662] = {
 这些类型之间有时也有不得不相互运算的需求，于是，在相互运算之前同样要 _Type Casting_，比如将 List 转换为 Set，或者反之：
 
 ```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-
 a = [1, 2, 3, 4, 5, 6, 7]
 b = set(a)
 c = list(b)
-a
-b
-c
+print(a)
+print(b)
+print(c)
 ```
 
     [1, 2, 3, 4, 5, 6, 7]

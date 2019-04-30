@@ -67,29 +67,24 @@
 
 ## 关于这一部分内容中的代码
 
-所有的代码，都可以在选中代码单元格（Code Cell）之后，按快捷键 `⇧ ⏎` 或 `^ ⏎` 执行，查看结果。
+这本书的该版本的大部分代码都针对 GitPress 优化过，可以点击 "run" 按钮执行，查看结果。
 
-少量执行结果太长的代码，其输出被设置成了 “Scrolled”，是可以通过触摸板或鼠标滑轮上下滑动的。
-
-为了避免大量使用 `print()` 才能看到输出结果，在很多的代码单元格中，开头插入了以下代码：
-
-```python
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
-```
-你可以暂时忽略它们的意义和工作原理。注意：有时，你需要在执行第二次的时候，才能看到全部输出结果。
+> [!NOTE]
+> 注意：有时，你需要在执行第二次的时候，才能看到全部输出结果。
 
 另外，有少量代码示例，为了让读者每次执行的时候看到不同的结果，使用了随机函数，为其中的变量赋值，比如：
 
 ```python
 import random
 r = random.randrange(1, 1000)
+print(r)
 ```
 
 同样，你可以暂时忽略它们的意义和工作原理；只需要知道因为有它们在，所以每次执行那个单元格中的代码会有不同的结果就可以了。
 
 如果你不是直接在网站上浏览这本 “书”、或者不是在阅读印刷版，而是在本地自己搭建 Jupyterlab 环境使用，那么请参阅附录《[Jupyterlab 的安装与配置](T-appendix.jupyter-installation-and-setup.md)》。
 
+> [!IMPORTANT]
 > **注意**：尤其需要仔细看看《[Jupyterlab 的安装与配置](T-appendix.jupyter-installation-and-setup.md)》的《关于 Jupyter lab themes》这一小节 —— 否则，阅读体验会有很大差别。
 
 另外，如果你使用的是 [nteract](https://nteract.io) 桌面版 App 浏览 `.ipynb` 文件，那么有些使用了 `input()` 函数的代码是无法在 nteract 中执行的。

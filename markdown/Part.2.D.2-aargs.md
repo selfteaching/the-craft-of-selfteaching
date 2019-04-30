@@ -271,18 +271,18 @@ say_hi('mike', 'john', 'zeo', greeting='Hi')
 
 所以，即便你在定义里写成
 
-```python
+```python,ignore
 def say_hi(greeting='Hello', *names, capitalized=False):
     ...
 ```
 
 在调用该函数的时候，无论你写的是
-```python
+```python,ignore
 say_hi('Hi', 'mike', 'john', 'zeo')
 ```
 
 还是
-```python
+```python,ignore
 say_hi('mike', 'john', 'zeo')
 ```
 

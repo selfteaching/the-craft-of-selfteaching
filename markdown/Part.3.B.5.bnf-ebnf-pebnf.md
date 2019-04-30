@@ -87,7 +87,7 @@ digit   ::=  "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
 
 也许那些在此之前已经熟悉 BNF 范式的人会有点惊讶，“你怎么连 ‘*终结符*’ 和 ‘*非终结符*’ 这种最基本的概念都跳过了？” —— 是呀，即便不讲那俩概念也能把这事讲清楚到 “能马上开始用” 了的地步…… 这就是我经常说的，“人类有这个神奇的本领，擅长使用自己并不懂的东西……”
 
-Python 对 BNF 的拓展，借鉴了正则表达式<a href='#fn1' name='fn1b'><sup>[1]</sup></a> —— 从最后两个符号的使用（`*` `+`）你可以看得出来。顺带说，这也是为什么这本 “书” 里非要讲其他入门书籍里不讲的正则表达式的原因之一。
+Python 对 BNF 的拓展，借鉴了正则表达式[^1] —— 从最后两个符号的使用（`*` `+`）你可以看得出来。顺带说，这也是为什么这本 “书” 里非要讲其他入门书籍里不讲的正则表达式的原因之一。
 
 又由于 Python 的社区文档是二十来年长期积累的，有时标注方法并不一致。比如，在描述 [Python Full Grammar specification](https://docs.python.org/3/reference/grammar.html) 的时候，他们用的语法标注符号体系就跟上面描述 String 的语法不一样了，是这样的：
 
@@ -253,7 +253,7 @@ yield_expr: 'yield' [yield_arg]
 yield_arg: 'from' test | testlist
 ```
 
-现在你已经能读懂 BNF 了，那么，可以再读读用 BNF 描述的 Regex 语法<a href='#fn2' name='fn2b'><sup>[2]</sup></a>，就当复习了 —— 很短的：
+现在你已经能读懂 BNF 了，那么，可以再读读用 BNF 描述的 Regex 语法[^2]，就当复习了 —— 很短的：
 
 ```html
 BNF grammar for Perl-style regular expressions
@@ -278,7 +278,7 @@ BNF grammar for Perl-style regular expressions
 <range>          ::=  <char> "-" <char>
 ```
 
-真的没原来以为得那么神秘，是不？<a href='#fn3' name='fn3b'><sup>[3]</sup></a>
+真的没原来以为得那么神秘，是不？[^3]
 
 都学到这儿了…… 顺带再自学个东西吧。
 
@@ -313,16 +313,7 @@ glob 的主要符号只有这么几个：
 -----
 **脚注**
 
-<a name='fn1'>[1]</a>：[The Python Language Reference » 1.2 Notation](https://docs.python.org/3/reference/introduction.html#notation) —— 这个链接必须去看一看……
-
-<a href='#fn1b'><small>↑Back to Content↑</small></a>
-
-<a name='fn2'>[2]</a>：[Perl Style Regular Expressions in Prolog](http://www.cs.sfu.ca/~cameron/Teaching/384/99-3/regexp-plg.html) CMPT 384 Lecture Notes
+[^1]: [The Python Language Reference » 1.2 Notation](https://docs.python.org/3/reference/introduction.html#notation) —— 这个链接必须去看一看……
+[^2]: [Perl Style Regular Expressions in Prolog](http://www.cs.sfu.ca/~cameron/Teaching/384/99-3/regexp-plg.html) CMPT 384 Lecture Notes
 Robert D. Cameron November 29 - December 1, 1999
-
-<a href='#fn2b'><small>↑Back to Content↑</small></a>
-
-<a name='fn3'>[3]</a>：很少有人注意到：在很多编程语言的文法文档中，`"$"` 被称为 `<eos>` —— 2017 年 5 月我投资了一个初创公司，听说他们的资产名称叫做 `eos`…… 我当场就被这个梗逗乐了。
-
-<a href='#fn3b'><small>↑Back to Content↑</small></a>
-
+[^3]: 很少有人注意到：在很多编程语言的文法文档中，`"$"` 被称为 `<eos>` —— 2017 年 5 月我投资了一个初创公司，听说他们的资产名称叫做 `eos`…… 我当场就被这个梗逗乐了。

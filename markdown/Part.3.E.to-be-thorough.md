@@ -83,7 +83,7 @@
 
 另外，这本书的目标里有更重要的另外一个：“让你有能力靠自己能够理解所有的官方文档” —— 书里不用讲官方标准库里的每个模块、每个函数究竟如何使用，因为那些在官方文档里定义得非常清楚……
 
-而其他人写的呢？比如 [Think Python](http://greenteapress.com/wp/think-python-2e/)，比如 [A Bite of Python](https://python.swaroopch.com/)，再比如 [Dive into Python](https://linux.die.net/diveintopython/html/)<a href='#fn1' name='fn1b'><sup>[1]</sup></a>，以及网上很多很多免费的 Python 教程都写得很好呢！
+而其他人写的呢？比如 [Think Python](http://greenteapress.com/wp/think-python-2e/)，比如 [A Bite of Python](https://python.swaroopch.com/)，再比如 [Dive into Python](https://linux.die.net/diveintopython/html/)[^1]，以及网上很多很多免费的 Python 教程都写得很好呢！
 
 没有经验的人不懂而已。当你搞明白了一本书，后面再多读哪怕很多本的时间精力成本都是很低的，但每多读一本，都能让你在这个话题中变得**更为完整**。
 
@@ -119,7 +119,7 @@
 
 > “学学半者，上学为教，下学者谓习也……”
 
-许嘉璐先生<a href='#fn2' name='fn2b'><sup>[2]</sup></a>有一本书，《未央续集》，提到这段解读的时候讲了个自己的例子：
+许嘉璐先生[^2]有一本书，《未央续集》，提到这段解读的时候讲了个自己的例子：
 
 > “我当了五十年的教师，经常遇到这种情况：
 >
@@ -157,7 +157,7 @@
 
 这一次写这本 “书” 的过程中，同样的 “奇迹” 再次发生在我身上。
 
-说实话，正则表达式我一直没有完全掌握 —— 虽然偶尔用用，也都是边查边用。实在解决不了，就算了…… 现在回头想想，多少就是因为 “[仅凭感觉，并没觉得那绝对是刚需](Part.3.D.indispensable-illusion.md)” <a href='#fn3' name='fn3b'><sup>[3]</sup></a> —— 当然，真正会了之后，马上开始时时刻刻都有可能使用，离开它简直活不下去 —— 写这书的后半程，有大量的重新组织的需要，很多文字替换，若是没有正则表达式，就干脆没法干……
+说实话，正则表达式我一直没有完全掌握 —— 虽然偶尔用用，也都是边查边用。实在解决不了，就算了…… 现在回头想想，多少就是因为 “[仅凭感觉，并没觉得那绝对是刚需](Part.3.D.indispensable-illusion.md)” [3] —— 当然，真正会了之后，马上开始时时刻刻都有可能使用，离开它简直活不下去 —— 写这书的后半程，有大量的重新组织的需要，很多文字替换，若是没有正则表达式，就干脆没法干……
 
 我是如何完全掌握正则表达式的呢？就是因为写这本书。既然是写书，当然害怕自己在不经意中出错，此为其一。更为重要的是，必须先完整掌握之后才能有诸如 “为读者提供更好一点的理解起点”，“理解起来相对更简单直接的组织结构”，以及 “挖掘必须习得它的真正原因以便鼓励读者” 之类的畅销书卖点 —— 对作者来说，有什么比销量更重要的呢？
 
@@ -178,16 +178,8 @@
 当然，最直接的方法是把自己变成 “上学” 者，保持开放，乐于分享，而孩子只需通过 “耳闻目染” 就可以了。
 
 -----
-**脚注**
 
-<a name='fn1'>[1]</a>：一点八卦：Dive into Python 的作者是 [Mark Pilgrim](https://en.wikipedia.org/wiki/Mark_Pilgrim)；他是互联网上最著名的自绝于信息世界（[infosuicide](https://www.urbandictionary.com/define.php?term=infosuicide)）的三人之一。另外两位分别是比特币的作者 [Satoshi Nakamoto](https://en.wikipedia.org/wiki/Satoshi_Nakamoto)，和 [Why the lucky stiff](https://whytheluckystiff.net/) 的作者 [Jonathan Gillette](https://en.wikipedia.org/wiki/Why_the_lucky_stiff)。
+[^1]: 一点八卦：Dive into Python 的作者是 [Mark Pilgrim](https://en.wikipedia.org/wiki/Mark_Pilgrim)；他是互联网上最著名的自绝于信息世界（[infosuicide](https://www.urbandictionary.com/define.php?term=infosuicide)）的三人之一。另外两位分别是比特币的作者 [Satoshi Nakamoto](https://en.wikipedia.org/wiki/Satoshi_Nakamoto)，和 [Why the lucky stiff](https://whytheluckystiff.net/) 的作者 [Jonathan Gillette](https://en.wikipedia.org/wiki/Why_the_lucky_stiff)。
+[^2]: 许嘉璐，1998 年至 2000 年全国人大常委会副委员长，民进中央主席，国家语言文字工作委员会主任。
+[^3]: 写完这一段，给霍炬看，他当场嘲笑我，“哈！当年我就说，你应该学学 Vim，是不是到现在你都没学？” 我无言以对，因为真的就没学…… 然后，我想了想，回复他说，“好吧，我决定写一个 Vim 教程出来，嗯。”
 
-<a href='#fn1b'><small>↑Back to Content↑</small></a>
-
-<a name='fn2'>[2]</a>：许嘉璐，1998 年至 2000 年全国人大常委会副委员长，民进中央主席，国家语言文字工作委员会主任。
-
-<a href='#fn2b'><small>↑Back to Content↑</small></a>
-
-<a name='fn3'>[3]</a>：写完这一段，给霍炬看，他当场嘲笑我，“哈！当年我就说，你应该学学 Vim，是不是到现在你都没学？” 我无言以对，因为真的就没学…… 然后，我想了想，回复他说，“好吧，我决定写一个 Vim 教程出来，嗯。”
-
-<a href='#fn3b'><small>↑Back to Content↑</small></a>
