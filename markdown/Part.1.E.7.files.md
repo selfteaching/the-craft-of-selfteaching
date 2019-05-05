@@ -26,7 +26,7 @@
 创建一个新文件，用这样一个语句就可以：
 
 ```python
-open('test-file.txt', 'w')
+open('/tmp/test-file.txt', 'w')
 ```
 
     <_io.TextIOWrapper name='test-file.txt' mode='w' encoding='UTF-8'>
@@ -34,7 +34,7 @@ open('test-file.txt', 'w')
 当然，更多的时候，我们会把这个函数的返回值，一个所谓的 [file object](https://docs.python.org/3/glossary.html#term-file-object)，保存到一个变量中，以便后面调用这个 file object 的各种 Methods，比如获取文件名 `file.name`，比如关闭文件 `file.close()`：
 
 ```python
-f = open('test-file.txt', 'w')
+f = open('/tmp/test-file.txt', 'w')
 print(f.name)
 f.close()
 ```
@@ -48,7 +48,7 @@ f.close()
 ```python
 import os
 
-f = open('test-file1.txt', 'w')
+f = open('/tmp/test-file1.txt', 'w')
 print(f.name)
 f.close() #关闭文件，否则无法删除文件
 if os.path.exists(f.name):
@@ -66,11 +66,11 @@ else:
 创建文件之后，我们可以用 `f.write()` 把数据写入文件，也可以用 `f.read()` 读取文件。
 
 ```python
-f = open('test-file.txt', 'w')
+f = open('/tmp/test-file.txt', 'w')
 f.write('first line\nsecond line\nthird line\n')
 f.close()
 
-f = open('test-file.txt', 'r')
+f = open('/tmp/test-file.txt', 'r')
 s = f.read()
 print(s)
 f.close()
@@ -83,11 +83,11 @@ f.close()
 文件有很多行的时候，我们可以用 `file.readline()` 操作，这个 Method 每次调用，都会返回文件中的新一行。
 
 ```python
-f = open('test-file.txt', 'w')
+f = open('/tmp/test-file.txt', 'w')
 f.write('first line\nsecond line\nthird line\n')
 f.close()
 
-f = open('test-file.txt', 'r')
+f = open('/tmp/test-file.txt', 'r')
 s = f.readline()    # 返回的是 'first line\n'
 print(s)
 s = f.readline()    # 返回的是 'second line\n'
@@ -101,11 +101,11 @@ f.close()
 **注意**，返回结果好像跟你想的不太一样。这时候，之前见过的 `str.strip()` 就派上用场了：
 
 ```python
-f = open('test-file.txt', 'w')
+f = open('/tmp/test-file.txt', 'w')
 f.write('first line\nsecond line\nthird line\n')
 f.close()
 
-f = open('test-file.txt', 'r')
+f = open('/tmp/test-file.txt', 'r')
 s = f.readline().strip()    # 返回的是 'first line'，'\n' 被去掉了……
 print(s)
 s = f.readline().strip()    # 返回的是 'second line'，'\n' 被去掉了……
@@ -119,11 +119,11 @@ f.close()
 与之相对的，我们可以使用 `file.readlines()` 这个命令，将文件作为一个列表返回，列表中的每个元素对应着文件中的每一行：
 
 ```python
-f = open('test-file.txt', 'w')
+f = open('/tmp/test-file.txt', 'w')
 f.write('first line\nsecond line\nthird line\n')
 f.close()
 
-f = open('test-file.txt', 'r')
+f = open('/tmp/test-file.txt', 'r')
 s = f.readlines()    # 返回的是一个列表，注意，readlines，最后的 's'
 print(s)
 f.close()
@@ -134,11 +134,11 @@ f.close()
 既然返回的是列表，那么就可以被迭代，逐一访问每一行：
 
 ```python
-f = open('test-file.txt', 'w')
+f = open('/tmp/test-file.txt', 'w')
 f.write('first line\nsecond line\nthird line\n')
 f.close()
 
-f = open('test-file.txt', 'r')
+f = open('/tmp/test-file.txt', 'r')
 for line in f.readlines():
     print(line)
 f.close()
@@ -152,11 +152,11 @@ f.close()
 
 ```python
 a_list = ['first line\n', 'second line\n', 'third line\n']
-f = open('test-file.txt', 'w')
+f = open('/tmp/test-file.txt', 'w')
 f.writelines(a_list)
 f.close()
 
-f = open('test-file.txt', 'r')
+f = open('/tmp/test-file.txt', 'r')
 for line in f.readlines():
     print(line)
 f.close()
@@ -181,10 +181,10 @@ with open(...) as f:
 ```python
 import os
 
-with open('test-file.txt', 'w') as f:
+with open('/tmp/test-file.txt', 'w') as f:
     f.write('first line\nsecond line\nthird line\n')
 
-with open('test-file.txt', 'r') as f:
+with open('/tmp/test-file.txt', 'r') as f:
     for line in f.readlines():
         print(line)
 
