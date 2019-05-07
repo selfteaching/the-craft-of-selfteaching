@@ -95,7 +95,7 @@ next(c)
 next(c)
 next(c)
 for c in Counter(101, 105):
-    print(c, sep=', ')
+    print(c, end=', ')
 type(Counter)
 ```
 
