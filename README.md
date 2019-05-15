@@ -84,6 +84,8 @@ teach_yourself(coding)
 
 ![CC-BY-NC-ND](images/CC-BY-NC-ND.png?raw=true)
 
+> 我就试一试
+
 -----
 **脚注**
 
