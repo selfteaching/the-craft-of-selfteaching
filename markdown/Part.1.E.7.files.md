@@ -29,7 +29,7 @@
 open('/tmp/test-file.txt', 'w')
 ```
 
-    <_io.TextIOWrapper name='test-file.txt' mode='w' encoding='UTF-8'>
+    <_io.TextIOWrapper name='/tmp/test-file.txt' mode='w' encoding='UTF-8'>
 
 当然，更多的时候，我们会把这个函数的返回值，一个所谓的 [file object](https://docs.python.org/3/glossary.html#term-file-object)，保存到一个变量中，以便后面调用这个 file object 的各种 Methods，比如获取文件名 `file.name`，比如关闭文件 `file.close()`：
 
@@ -39,7 +39,7 @@ print(f.name)
 f.close()
 ```
 
-    test-file.txt
+    /tmp/test-file.txt
 
 ## 删除文件
 
@@ -58,8 +58,8 @@ else:
     print(f'{f.name} does not exist.')
 ```
 
-    test-file1.txt
-    test-file1.txt deleted.
+    /tmp/test-file1.txt
+    /tmp/test-file1.txt deleted.
 
 ## 读写文件
 
