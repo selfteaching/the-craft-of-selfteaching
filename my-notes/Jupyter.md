@@ -6,3 +6,7 @@ conda install -c conda-forge jupyterlab # 这是用来升级 jupyter lab 到最�
 jupyter notebook list                   # 查看正在运行的 jupyter lab/notebook
 jupyter notebook stop                   # 停止 jupyter lab/notebook 服务
 ```
+
+看到file
+
+读Part.2.C.why-start-from-writing-functions当中的代码
