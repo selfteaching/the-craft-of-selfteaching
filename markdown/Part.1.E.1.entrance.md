@@ -37,7 +37,7 @@
 
 乔治・布尔在世的时候，人们并未对他的布尔代数产生什么兴趣。直到 70 年后，克劳德・香农（[Claude Elwood Shannon](https://en.wikipedia.org/wiki/Claude_Shannon)）发表那篇著名论文，[A SYMBOLIC ANALYSIS OF RELAY AND SWITCHING CIRCUITS](https://www.cs.virginia.edu/~evans/greatworks/shannon38.pdf) 之后，布尔代数才算是开始被大规模应用到实处。
 
-有本书可以闲暇时间翻翻，[The Logician and the Engineer: How George Boole and Claude Shannon Created the Information Age](https://www.amazon.com/gp/product/B0091XBUTM/ref=dbs_a_def_rwt_hsch_vapi_tkin_p1_i4)。可以说，没有乔治・布尔的**布尔代数**，没有克劳德・香农的**逻辑电路**，就没有后来的计算机，就没有后来的互联网，就没有今天的信息时代 —— 世界将会怎样？
+这本书可以闲暇时间翻翻，[The Logician and the Engineer: How George Boole and Claude Shannon Created the Information Age](https://www.amazon.com/gp/product/B0091XBUTM/ref=dbs_a_def_rwt_hsch_vapi_tkin_p1_i4)。可以说，没有乔治・布尔的**布尔代数**，没有克劳德・香农的**逻辑电路**，就没有后来的计算机，就没有后来的互联网，就没有今天的信息时代 —— 世界将会怎样？
 
 2015 年，乔治・布尔诞辰 200 周年，Google 设计了[专门的 Logo](https://www.google.com/doodles/george-booles-200th-birthday) 纪念这位为人类作出巨大贡献的自学奇才。
 
