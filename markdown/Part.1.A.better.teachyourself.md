@@ -50,7 +50,7 @@ plt.show()
 # https://databank.worldbank.org/data/reports.aspx?source=2&series=SP.DYN.LE00.IN
 ```
 
-![png](../images/Part.1.A.better.teachyourself_2_0.png)
+![png](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/Part.1.A.better.teachyourself_2_0.png?raw=true)
 
 如此发展下去，虽然人类不大可能永生不死，但平均寿命依然在持续延长是个不争的事实。与上一代不同，现在的千禧一代，需要面对的是百岁人生 —— 毫无疑问，不容置疑。
 
@@ -100,7 +100,7 @@ plt.show()
 # blob:https://ourworldindata.org/44b6da71-f79e-42ab-ab37-871e4bd256e9
 ```
 
-![png](../images/Part.1.A.better.teachyourself_4_0.png)
+![png](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/Part.1.A.better.teachyourself_4_0.png?raw=true)
 
 社会发展越来越快，你要面对的人生越来越长，在那一段与你的直觉猜想并不相同的漫漫人生路上，你居然没有磨练过自学能力，竟然只能眼睁睁地看着自己被甩下且无能为力，难道接下来要在那么长的时间里 “苦中作乐” 吗？
 
@@ -132,7 +132,7 @@ plt.show()
 # https://libertystreeteconomics.newyorkfed.org/2013/05/do-big-cities-help-college-graduates-find-better-jobs.html
 ```
 
-![png](../images/Part.1.A.better.teachyourself_6_0.png)
+![png](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/Part.1.A.better.teachyourself_6_0.png?raw=true)
 
 绝大多数人终生都饱受**时间幻觉**的拖累。
 
@@ -156,7 +156,7 @@ plt.show()
 
 但我过得一直不算差。
 
-靠什么呢？人么，一个都靠不上。到最后，我觉得只有一样东西真正可靠 —— **自学能力**。于是，经年累月，我磨练出了一套属于我自己的本领：只要我觉得有必要，我什么都肯学，学什么都能学会到够用的程度…… 编程，我不是靠上课学会的；英语，不是哪个老师教我的；写作，也不是谁能教会我的；教书，更没有上过师范课程；投资，更没人能教我 —— 我猜，也没人愿意教我…… 自己用的东西自己琢磨，挺好。
+靠什么呢？人么，一个都靠不上。到最后，我觉得只有一样东西真正可靠 —— **自学能力**。于是，经年累月，我磨练出了一套属于我自己的本领：只要我觉得有必要，我什么都肯学，学什么都能学会到够用的程度…… 编程，我不是靠上课学会的；英语，不是哪个老师教我的；写作，也不是谁能教会我的；教书，没有上过师范课程；投资，更没人能教我 —— 我猜，也没人愿意教我…… 自己用的东西自己琢磨，挺好。
 
 关键在于，自学这事并不难，也不复杂，挺简单的，因为它所需要的一切都很朴素。
 

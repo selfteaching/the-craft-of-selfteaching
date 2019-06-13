@@ -5,7 +5,7 @@
 
 ## 模块
 
-我们可以将以下内容保存到一个名为 `mycode.py` 的文件中 —— 这样可以被外部调用的 `.py` 文件，有个专门的称呼，**模块**（Module）—— 于是，其实任何一个 `.py` 文件都可以被称为*模块*：
+我们可以将以下内容保存到一个名为 `mycode.py` 的文件中 —— 这样可以被外部调用的 `.py` 文件，有个专门的称呼，**模块**（Module）—— 于是，它（任何一个 `.py` 文件）也可以被称为*模块*：
 
 ```python
 # %load mycode.py
@@ -116,7 +116,7 @@ import sys
 
 sys.builtin_module_names
 "_sre" in sys.builtin_module_names # True
-"math" in sys.builtin_module_names # False
+"math" in sys.builtin_module_names # False （根据自己电脑库的安装情况，结果会有不同）
 ```
 
     ('_abc',
@@ -178,7 +178,7 @@ is_prime(3)
 
     True
 
-注意，如果当前目录中并没有 `mycode.py` 这个文件，那么，`mycode` 会被当作目录名再被尝试一次，如果当前目录内，有个叫做 `mycode` 的目录（或称文件夹），那么，`from mycode import *` 的作用就是把 `mycode` 这个文件夹中的所有 `.py` 文件全部导入……
+注意，如果当前目录中并没有 `mycode.py` 这个文件，那么，`mycode` 会被当作目录名再被尝试一次 —— 如果当前目录内，有个叫做 `mycode` 的目录（或称文件夹）且该目录下同时要存在一个 [`__init__.py`](https://docs.python.org/3/reference/import.html#regular-packages) 文件（通常为空文件，用于标识本目录形成一个包含多个模块的 **包**（[packages](https://docs.python.org/3/reference/import.html#regular-packages)），它们处在一个独立的 **命名空间**（[namespace](https://docs.python.org/3/glossary.html#term-namespace-package)）），那么，`from mycode import *` 的作用就是把 `mycode` 这个文件夹中的所有 `.py` 文件全部导入……
 
 如果我们想要导入 `foo` 这个目录中的 `bar.py` 这个模块文件，那么，可以这么写：
 

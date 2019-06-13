@@ -561,7 +561,7 @@ Complex is better than complicated."""
 # str.startswith(prefix[, start[, end]])
 print("s.lower().startswith('S'):", \
       s.lower().startswith('S'))
-print("s.lower().startswith('b'):", \
+print("s.lower().startswith('b', 10):", \
       s.lower().startswith('b', 10))
 print("s.lower().startswith('e', 11, 20):", \
       s.lower().startswith('e', 11, 20))
@@ -579,7 +579,7 @@ print("s.lower().endswith('.', 10, 20):", \
 ```
 
     s.lower().startswith('S'): False
-    s.lower().startswith('b'): True
+    s.lower().startswith('b', 10): True
     s.lower().startswith('e', 11, 20): True
     s.lower().endswith('.'): True
     s.lower().endswith('.', 10): True
@@ -600,7 +600,7 @@ print('mpl' in s)
 
 > `str.replace(old, new[, count])`
 
-用 `new` 替换 `old`，替换 `count` 个实例，其中，`count` 这个参数是可选的。
+用 `new` 替换 `old`，替换 `count` 个实例（实例：exmpale，每次处理的对象就是实例，即具体的操作对象），其中，`count` 这个参数是可选的。
 
 ```python
 s = """Simple is better than complex.
@@ -654,7 +654,7 @@ s.strip()
     
     'Simple is better than complex.'
 
-但是，如果给定了一个字符串作为参数，那么参数字符串中的所有字母都会被当做需要从首尾剔除的对象：
+但是，如果给定了一个字符串作为参数，那么参数字符串中的所有字母都会被当做需要从首尾剔除的对象，直到新的首尾字母不包含在参数中，就会停止剔除：
 
 ```python
 from IPython.core.interactiveshell import InteractiveShell
@@ -1006,7 +1006,7 @@ print("'for'.isidentifier():", \
 > * 为了表格在一屏中可以正确显示，本来应该规规矩矩写 `str.xxx`，但写成了 `s.xxx`……
 > * 另外，操作那一行，为了分类记忆方便，把 `len()` 和 `s.join()` 也放进去了……
 
-![](../images/string-concepts.png)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/string-concepts.png?raw=true)
 
 “记住” 的方法并不是马上就只盯着表格看…… 正确方法是反复阅读这一章内容中的代码，并逐一运行，查看输出结果；还要顺手改改看看，多多体会。多次之后，再看着表格回忆知识点，直到牢记为止。
 
@@ -1036,7 +1036,7 @@ Python 针对数字常用的操作符和内建函数，按照**优先级**从低
 Python 用来处理数值的内建函数：
 
 > * `abs(n)` 函数返回参数 `n` 的*绝对值*；
-> * `int(n)` 用来将*浮点数字* `n` 换成*整数*；
+> * `int(n)` 用来将*浮点数字* `n` 转换成*整数*；
 > * `float(n)` 用来将*整数* `n` 转换成*浮点数字*；
 > * `divmod(n, m)` 用来计算  `n`  除以  `m`，返回两个整数，一个是*商*，另外一个是*余*；
 > * `pow(n, m)` 用来做乘方运算，返回 `n` 的 `m` *次方*；
