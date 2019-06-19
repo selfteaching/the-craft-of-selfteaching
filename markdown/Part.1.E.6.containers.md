@@ -159,9 +159,9 @@ InteractiveShell.ast_node_interactivity = "all"
 a_list = [1, 2, 3]
 b_list = [4, 5, 6]
 c_list = a_list + b_list * 3
-c_list
-7 not in c_list
-a_list > b_list
+print(c_list)
+print(7 not in c_list)
+print(a_list > b_list)
 ```
 
     [1, 2, 3, 4, 5, 6, 4, 5, 6, 4, 5, 6]
