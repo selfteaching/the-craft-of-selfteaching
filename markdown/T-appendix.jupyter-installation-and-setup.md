@@ -31,6 +31,27 @@ conda install -c conda-forge nodejs
 conda install -c conda-forge jupyterlab # 这是用来升级 jupyter lab 到最新版的方法
 ```
 
+如果之前就使用zsh而不是bash的同学。执行以上几个命令会不起作用。可以参考[Getting Anaconda to work with Oh My ZSH on Mac OS X](https://medium.com/@sumitmenon/how-to-get-anaconda-to-work-with-oh-my-zsh-on-mac-os-x-7c1c7247d896)，也就是将`~/.bash_profile`中生成的类似以下配置复制粘贴到`~/.zshrc`,再在Terminal中执行`source ~/.zshrc即可执行以上几个命令
+
+```bash
+# added by Anaconda3 5.3.0 installer
+# >>> conda init >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$(CONDA_REPORT_ERRORS=false '/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
+if [ $? -eq 0 ]; then
+	 \eval "$__conda_setup"
+else
+	 if [ -f "/anaconda3/etc/profile.d/conda.sh" ]; then
+		 . "/anaconda3/etc/profile.d/conda.sh"
+		 CONDA_CHANGEPS1=false conda activate base
+	 else
+		 \export PATH="/anaconda3/bin:$PATH"
+	 fi
+fi
+unset __conda_setup
+# <<< conda init <<<
+```
+
 安装完毕之后，可以看看各个你将要用到的可执行命令都在什么地方，用 `which` 命令（windows下用 `where` 命令）：
 
 ```bash
