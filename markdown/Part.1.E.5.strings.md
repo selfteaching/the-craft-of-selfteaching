@@ -512,10 +512,11 @@ s.lower().count('mp', 10, 30)
 from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = "all"
 
-# str.find(sub[, start[, end]])
-print('Example of str.find():')
 s = """Simple is better than complex.
 Complex is better than complicated."""
+
+print('Example of str.find():')
+# str.find(sub[, start[, end]])
 s.lower().find('mpl')
 s.lower().find('mpl', 10)
 s.lower().find('mpl', 10, 20) # 没有找到就返回 -1
