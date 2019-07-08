@@ -64,14 +64,7 @@ step 6、执行命令 `git checkout master` 切换到 master 分支：
 
 ![image](https://user-images.githubusercontent.com/31027645/54448759-6dcfc200-4787-11e9-8bbc-a5beef23ea88.png)
 
-step 7、执行命令 `git merge upstream/master` 合并远程的master分支：
-
-![image](https://user-images.githubusercontent.com/31027645/54449526-47128b00-4789-11e9-9add-09217eb91a68.png)
-
-
-step 8、执行命令 `git push ` 把本地仓库向github仓库（你fork到自己名下的仓库）推送修改
-
-如果担心自己不小心改了哪里，可以再次执行命令 `git status` 检查哪些文件有变化。这个操作仅是检查，不会改变任何状态，放心用。
+变化。这个操作仅是检查，不会改变任何状态，放心用。
 
 ![image](https://user-images.githubusercontent.com/31027645/54449665-a07aba00-4789-11e9-9181-bdcc814fffe6.png)
 
