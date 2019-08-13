@@ -79,7 +79,7 @@ teach_yourself(coding)
 > - [T-appendix.jupyter-installation-and-setup（**Jupyterlab 的安装与配置**）](T-appendix.jupyter-installation-and-setup.ipynb)
 > - [T-appendix.symbols（**这些符号都代表什么？**）](T-appendix.symbols.ipynb)
 
-[<img align="right" height="24" src="https://beta.deepnote.com/buttons/launch-in-deepnote.svg">](https://beta.deepnote.com/launch?template=deepnote&url=https%3A%2F%2Fgithub.com%2Fselfteaching%2Fthe-craft-of-selfteaching%2Fblob%2Fmaster%2F00.cover.ipynb)
+[<img height="30" src="https://beta.deepnote.com/buttons/launch-in-deepnote.svg">](https://beta.deepnote.com/launch?template=deepnote&url=https%3A%2F%2Fgithub.com%2Fselfteaching%2Fthe-craft-of-selfteaching%2Fblob%2Fmaster%2F00.cover.ipynb)
 
 本书的版权协议为 [CC-BY-NC-ND license](https://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh)。
 
