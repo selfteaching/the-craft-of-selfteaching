@@ -1,4 +1,4 @@
-# the-craft-of-selfteaching
+# the-craft-of-selfteaching   by fujm day 1
 
 > One has no future if one couldn't teach themself<a href='#fn1' name='fn1b'><sup>[1]</sup></a>.
 
