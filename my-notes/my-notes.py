@@ -1,7 +1,8 @@
+# Part.1.E.1.entrance note-chaxiaoli
 逻辑操作符（Logical Operators）
-		比较操作符:== != > >= < <= in
-		运算对象（Operands）:数字值和字符串值
-		返回值：布尔值		
+	比较操作符:== != > >= < <= in
+	运算对象（Operands）:数字值和字符串值
+	返回值：布尔值		
 
 布尔运算操作符:
 	与and 或or 非not
@@ -30,3 +31,108 @@
 		加+、减-、乘*、除/、商//、余%、幂**
 		x = x + 1可以写为X += 1
 		被除数÷除数=商··· ···余数
+
+# Part.1.E.2.values-and-their-operators note-chaxiaoli
+1 计算机程序，都由且只由两个最基本的成分构成：
+	运算（Evaluation）
+	流程控制（Control Flow）
+	
+2 值：
+	运算（Evaluation）：算出某个值究竟是什么，如a = 1 + 2 * 3
+	常量（Literals）：如1,2,3
+	变量（Variables）：必须先赋值才能使用，如a
+	操作符（Operators）：对其左右的值进行相应的运算而后得到一个值，如+，*
+	赋值（Assignment）：将它右边的值保存到左边的变量中，如=
+	python中，每个函数都有返回值，即便你在定义一个函数的时候没有设定返回值，它会加上默认的返回值 None
+	调用（Call）：我们把一个值交给某个函数，请函数根据它内部的运算和流程控制对其进行操作而后返回另外一个值。
+	
+3 值的类型：
+	最基本的三种数据类型：
+		布尔值（Boolean Value)
+		数字（Numbers）：整数（Int）、浮点数（Float）、复数（Complex Numbers）
+		字符串（Strings）
+		# range,list,tuple,set,dict
+	运算的默认法则：通常情况下应该是相同类型的值才能相互运算
+	Type Casting（类型转换）：
+		将字符串转换为数字用 int()、float()；
+		将数字转换成字符串用 str()；
+	数字间转换：
+		将整数转换成浮点数字用 float()
+		将浮点数字转换成整数用 int()
+	查看数据类型：
+		type()
+
+4 操作符：
+	针对不同类型的数据，有各自专用的操作符：
+		如对于数字进行加、减、乘、除、商、余、幂的操作，对于字符串进行拼接、拷贝、属于的操作，对布尔值进行或、与、非的操作。
+	数值操作符：数字
+		加减乘除商余幂：+、-、*、/、//、%、**（+，-可以对单个值进行操作）
+		优先级：+、- （两个值）小于 *、/、//、% 小于+、- （单个值）小于 **
+	布尔值操作符：布尔值
+		优先级：最低的是或 or，然后是与 and, 最高的是非 not
+	逻辑操作符：数值比较，返回布尔值
+		<（小于）、<=（小于等于）、>（大于）、>=（大于等于）、!=（不等于）、==（等于）
+	优先级：数值计算的操作符最高>逻辑操作符>布尔值的操作符
+	
+	字符串操作符：
+		拼接：+ 和 ' '（后者是空格）
+		拷贝：*
+		逻辑运算：in、not in；以及逻辑操作符，<、<=、>、>=、!=、==
+			字符对应着 Unicode 码，字符在被比较的时候，被比较的是对应的 Unicode 码
+			当字符串被比较的时候，将从两个字符串各自的第一个字符开始逐个比较，“一旦决出胜负马上停止”
+
+	列表的操作符：
+		容器（Container）：用来容纳批量的数据
+		字符串：也是容器的一种，它的里面容纳着批量的字符，有序容器
+		列表（List）：[]，有序容器
+		列表的操作符：
+			拼接：+ 和 ' '（后者是空格）
+			拷贝：*
+			逻辑运算：in、not in；以及，<、<=、>、>=、!=、==
+			两个列表在比较时（前提是两个列表中的数据元素类型相同），遵循的还是跟字符串比较相同的规则：“一旦决出胜负马上停止”；
+			比较时，类型不同会引发 TypeError
+	
+	更复杂的运算:
+		内建函数（Built-in Functions）：
+			abs()绝对值	delattr()	hash()	memoryview()	set()
+			all()	dict()	help()	min()	setattr()
+			any()	dir()	hex()	next()	slice()
+			ascii()	divmod()	id()	object()	sorted()
+			bin()	enumerate()	input()	oct()	staticmethod()
+			bool()	eval()	int()	open()	str()
+			breakpoint()	exec()	isinstance()	ord()	sum()
+			bytearray()	filter()	issubclass()	pow()	super()
+			bytes()	float()	iter()	print()	tuple()
+			callable()	format()	len()	property()	type()
+			chr()	frozenset()	list()	range()	vars()
+			classmethod()	getattr()	locals()	repr()	zip()
+			compile()	globals()	map()	reversed()	import()
+			complex()	hasattr()	max()	round()	
+		调用标准库（Standard Library）中的 math 模块（Module）：
+			import math
+			math.sin(5)  # .可以被理解为 “操作符”，它的作用是：从其它模块中调用函数。
+			# 把 5 这个值，传递给 math 这个模块里的 sin() 函数，让 sin() 根据它内部的代码对这个值进行运算，而后返回一个值（即，计算结果）
+		类（Class）中定义的函数，也可以这样被调用
+	
+	布尔值的补充：
+		每个变量或者常量，除了它们的值之外，同时还相当于有一个对应的布尔值。
+		Here are most of the built-in objects considered False:
+			constants defined to be false: None and False.
+			zero of any numeric type: 0, 0.0, 0j, Decimal(0), Fraction(0, 1)
+			empty sequences and collections: '', (), [], {}, set(), range(0)
+	
+	值的类型的补充：
+		基础数据类型：数字、布尔值、字符串
+		基础数据类型的组合：列表（list），还有range()（等差数列）、tuple（元组）、set（集合）、dictionary（字典），Date Type（日期）等等。
+			相互运算前要 _Type Casting_，比如将 List 转换为 Set：set()，反之，list()
+		
+	备注：
+		关于表达式：https://docs.python.org/3/reference/expressions.html
+		关于所有操作的优先级：https://docs.python.org/3/reference/expressions.html#operator-precedence
+		上一条链接不懂 BNF 的话根本读不懂：https://en.wikipedia.org/wiki/Backus-Naur_form
+		Python 的内建函数：https://docs.python.org/3/library/functions.html
+		Python 的标准数据类型：https://docs.python.org/3/library/stdtypes.html
+			
+			
+	
+# Part.1.E.2.values-and-their-operators note-chaxiaoli
