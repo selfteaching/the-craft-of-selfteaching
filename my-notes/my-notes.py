@@ -1,24 +1,24 @@
 # Part.1.E.1.entrance note-chaxiaoli
-逻辑操作符（Logical Operators）
+1 逻辑操作符（Logical Operators）
 	比较操作符:== != > >= < <= in
 	运算对象（Operands）:数字值和字符串值
 	返回值：布尔值		
 
-布尔运算操作符:
+2 布尔运算操作符:
 	与and 或or 非not
 	布尔值：True False
 	
-流程控制（Control Flow）:
+3 流程控制（Control Flow）:
 	分支：if/else 语句
-	r=2 #将整数常量（Literal）2赋值（Assignment）给变量（Variable）r
 	for循环（loop）
+	r=2 #将整数常量（Literal）2赋值（Assignment）给变量（Variable）r
 
-函数（Functions）
+4 函数（Functions）
 	函数名（Function Name）、参数（Parameters）、返回值（Return Value）、调用（Call）
 	程序：核心构成部分就是输入、处理、输出。
 	子程序（Sub-Program）：主程序执行到函数调用时，就开始执行实现函数的那些代码，而后再返回主程序
 	
-其他：
+5 其他：
 	语句：
 		一个完整的程序，由1个或多个语句（statements）构成
 	语句块：
@@ -92,7 +92,7 @@
 			两个列表在比较时（前提是两个列表中的数据元素类型相同），遵循的还是跟字符串比较相同的规则：“一旦决出胜负马上停止”；
 			比较时，类型不同会引发 TypeError
 	
-	更复杂的运算:
+5 更复杂的运算:
 		内建函数（Built-in Functions）：
 			abs()绝对值	delattr()	hash()	memoryview()	set()
 			all()	dict()	help()	min()	setattr()
@@ -114,25 +114,43 @@
 			# 把 5 这个值，传递给 math 这个模块里的 sin() 函数，让 sin() 根据它内部的代码对这个值进行运算，而后返回一个值（即，计算结果）
 		类（Class）中定义的函数，也可以这样被调用
 	
-	布尔值的补充：
+6 布尔值的补充：
 		每个变量或者常量，除了它们的值之外，同时还相当于有一个对应的布尔值。
 		Here are most of the built-in objects considered False:
 			constants defined to be false: None and False.
 			zero of any numeric type: 0, 0.0, 0j, Decimal(0), Fraction(0, 1)
 			empty sequences and collections: '', (), [], {}, set(), range(0)
 	
-	值的类型的补充：
+7 值的类型的补充：
 		基础数据类型：数字、布尔值、字符串
 		基础数据类型的组合：列表（list），还有range()（等差数列）、tuple（元组）、set（集合）、dictionary（字典），Date Type（日期）等等。
 			相互运算前要 _Type Casting_，比如将 List 转换为 Set：set()，反之，list()
 		
-	备注：
+8 备注：
 		关于表达式：https://docs.python.org/3/reference/expressions.html
 		关于所有操作的优先级：https://docs.python.org/3/reference/expressions.html#operator-precedence
 		上一条链接不懂 BNF 的话根本读不懂：https://en.wikipedia.org/wiki/Backus-Naur_form
 		Python 的内建函数：https://docs.python.org/3/library/functions.html
 		Python 的标准数据类型：https://docs.python.org/3/library/stdtypes.html
-			
-			
 	
-# Part.1.E.2.values-and-their-operators note-chaxiaoli
+# Part.1.E.3.controlflow note-chaxiaoli
+1 流程控制
+	 分支与循环
+
+2 if 语句
+3 for 循环：Python 语言中，for 循环不使用其它语言中那样的计数器，取而代之的是 range() 这个我称其为 “整数等差数列生成器” 的函数。
+4 range() 函数
+	range(_stop_) #只有一个参数的时候，这个参数被理解为 stop，生成一个从 0 开始，到 stop - 1 的整数数列。
+	range(_start, stop[, step]_)
+5 Continue、Break 和 Pass
+	在循环的过程中，还可以用 continue 和 break 控制流程走向，通常是在某条件判断发生的情况下
+	continue 语句：将忽略其后的语句开始下次循环
+	break 语句：将从此结束当前循环，开始执行循环之后的语句.
+		for 语句块还可以附加一个 else,附加在 for 结尾的 else 语句块，_在没有 break 发生的情况下会运行_。
+	pass语句：什么都不干，更多是给写程序的人用的，可以用 pass 占位，而后先写别的部分。
+6 while循环
+	两种循环结构：
+	Collection-controlled loops（以集合为基础的循环）：for ... in ...
+	Condition-controlled loops（以条件为基础的循环）:while循环
+
+# Part.1.E.3.controlflow note-chaxiaoli
