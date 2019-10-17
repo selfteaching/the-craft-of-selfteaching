@@ -134,9 +134,7 @@
 		Python 的标准数据类型：https://docs.python.org/3/library/stdtypes.html
 	
 # Part.1.E.3.controlflow note-chaxiaoli
-1 流程控制
-	 分支与循环
-
+1 流程控制：分支与循环
 2 if 语句
 3 for 循环：Python 语言中，for 循环不使用其它语言中那样的计数器，取而代之的是 range() 这个我称其为 “整数等差数列生成器” 的函数。
 4 range() 函数
@@ -150,7 +148,15 @@
 	pass语句：什么都不干，更多是给写程序的人用的，可以用 pass 占位，而后先写别的部分。
 6 while循环
 	两种循环结构：
-	Collection-controlled loops（以集合为基础的循环）：for ... in ...
-	Condition-controlled loops（以条件为基础的循环）:while循环
+	Collection-controlled loops（以集合为基础的循环）：for ... in ...。更适合处理序列类型的数据（Sequence Type）的迭代
+	Condition-controlled loops（以条件为基础的循环）:while循环。更为灵活，因为它后面只需要接上一个逻辑表达式即可。
+7 总结：
+	只处理一种情况，用 if ...
+	处理 True/False 两种情况，用 if ... else ...
+	处理多种情况，用 if ... elif ... elif ... else ...
+	迭代有序数据类型，用 for ... in ...，如果需要处理没有 break 发生的情况，用 for ... else ...
+	其它循环，用 while ...
+	与循环相关的语句还有 continue、break、pass
+	函数从控制流角度去看其实就是子程序
 
 # Part.1.E.3.controlflow note-chaxiaoli
