@@ -93,45 +93,45 @@
 			比较时，类型不同会引发 TypeError
 	
 5 更复杂的运算:
-		内建函数（Built-in Functions）：
-			abs()绝对值	delattr()	hash()	memoryview()	set()
-			all()	dict()	help()	min()	setattr()
-			any()	dir()	hex()	next()	slice()
-			ascii()	divmod()	id()	object()	sorted()
-			bin()	enumerate()	input()	oct()	staticmethod()
-			bool()	eval()	int()	open()	str()
-			breakpoint()	exec()	isinstance()	ord()	sum()
-			bytearray()	filter()	issubclass()	pow()	super()
-			bytes()	float()	iter()	print()	tuple()
-			callable()	format()	len()	property()	type()
-			chr()	frozenset()	list()	range()	vars()
-			classmethod()	getattr()	locals()	repr()	zip()
-			compile()	globals()	map()	reversed()	import()
-			complex()	hasattr()	max()	round()	
-		调用标准库（Standard Library）中的 math 模块（Module）：
-			import math
-			math.sin(5)  # .可以被理解为 “操作符”，它的作用是：从其它模块中调用函数。
-			# 把 5 这个值，传递给 math 这个模块里的 sin() 函数，让 sin() 根据它内部的代码对这个值进行运算，而后返回一个值（即，计算结果）
-		类（Class）中定义的函数，也可以这样被调用
+	内建函数（Built-in Functions）：
+		abs()绝对值	delattr()	hash()	memoryview()	set()
+		all()	dict()	help()	min()	setattr()
+		any()	dir()	hex()	next()	slice()
+		ascii()	divmod()	id()	object()	sorted()
+		bin()	enumerate()	input()	oct()	staticmethod()
+		bool()	eval()	int()	open()	str()
+		breakpoint()	exec()	isinstance()	ord()	sum()
+		bytearray()	filter()	issubclass()	pow()	super()
+		bytes()	float()	iter()	print()	tuple()
+		callable()	format()	len()	property()	type()
+		chr()	frozenset()	list()	range()	vars()
+		classmethod()	getattr()	locals()	repr()	zip()
+		compile()	globals()	map()	reversed()	import()
+		complex()	hasattr()	max()	round()	
+	调用标准库（Standard Library）中的 math 模块（Module）：
+		import math
+		math.sin(5)  # .可以被理解为 “操作符”，它的作用是：从其它模块中调用函数。
+		# 把 5 这个值，传递给 math 这个模块里的 sin() 函数，让 sin() 根据它内部的代码对这个值进行运算，而后返回一个值（即，计算结果）
+	类（Class）中定义的函数，也可以这样被调用
 	
 6 布尔值的补充：
-		每个变量或者常量，除了它们的值之外，同时还相当于有一个对应的布尔值。
-		Here are most of the built-in objects considered False:
-			constants defined to be false: None and False.
-			zero of any numeric type: 0, 0.0, 0j, Decimal(0), Fraction(0, 1)
-			empty sequences and collections: '', (), [], {}, set(), range(0)
+	每个变量或者常量，除了它们的值之外，同时还相当于有一个对应的布尔值。
+	Here are most of the built-in objects considered False:
+		constants defined to be false: None and False.
+		zero of any numeric type: 0, 0.0, 0j, Decimal(0), Fraction(0, 1)
+		empty sequences and collections: '', (), [], {}, set(), range(0)
 	
 7 值的类型的补充：
-		基础数据类型：数字、布尔值、字符串
-		基础数据类型的组合：列表（list），还有range()（等差数列）、tuple（元组）、set（集合）、dictionary（字典），Date Type（日期）等等。
-			相互运算前要 _Type Casting_，比如将 List 转换为 Set：set()，反之，list()
+	基础数据类型：数字、布尔值、字符串
+	基础数据类型的组合：列表（list），还有range()（等差数列）、tuple（元组）、set（集合）、dictionary（字典），Date Type（日期）等等。
+		相互运算前要 _Type Casting_，比如将 List 转换为 Set：set()，反之，list()
 		
 8 备注：
-		关于表达式：https://docs.python.org/3/reference/expressions.html
-		关于所有操作的优先级：https://docs.python.org/3/reference/expressions.html#operator-precedence
-		上一条链接不懂 BNF 的话根本读不懂：https://en.wikipedia.org/wiki/Backus-Naur_form
-		Python 的内建函数：https://docs.python.org/3/library/functions.html
-		Python 的标准数据类型：https://docs.python.org/3/library/stdtypes.html
+	关于表达式：https://docs.python.org/3/reference/expressions.html
+	关于所有操作的优先级：https://docs.python.org/3/reference/expressions.html#operator-precedence
+	上一条链接不懂 BNF 的话根本读不懂：https://en.wikipedia.org/wiki/Backus-Naur_form
+	Python 的内建函数：https://docs.python.org/3/library/functions.html
+	Python 的标准数据类型：https://docs.python.org/3/library/stdtypes.html
 	
 # Part.1.E.3.controlflow note-chaxiaoli
 1 流程控制：分支与循环
@@ -159,4 +159,37 @@
 	与循环相关的语句还有 continue、break、pass
 	函数从控制流角度去看其实就是子程序
 
-# Part.1.E.3.controlflow note-chaxiaoli
+# Part.1.E.4.functions note-chaxiaoli
+1 函数：是可被调用的完整的程序。它具备输入(参数)、处理、输出(返回值)的功能。又因为它经常在主程序里被调用，所以它总是更像是个子程序。
+2 print():最基本的作用就是把传递给它的值输出到屏幕上，如果不给它任何参数，那么它就输出一个空行
+	print(*object, sep=' ', end='\n', file=sys.stdout, flush=False)
+		sep=' '：接收多个参数之后，输出时，分隔符号默认为空格，' '；
+		end='\n'：输出行的末尾默认是换行符号 '\n'；
+		file=sys.stdout：默认的输出对象是 sys.stdout（即用户正在使用的屏幕）,可以往文件里写数据的，指定file参数为一个已经打开的文件对象
+	print() 这个函数的返回值是 None
+		print(print(1)):print() 
+		# 这个函数被调用了两次，第一次是 print(1)，它向屏幕输出了一次，完整的输出值实际上是 str(1) + '\n'，而后返回一个值，None；
+		# 而第二次调用 print()，这相当于是向屏幕输出这个 None：
+3 关键字参数：
+	位置参数（Positional Arguments，在官方文档里常被缩写为 arg）： 由位置决定其值的参数，被传递的值的意义就是由参数的位置决定的
+	关键字参数（Keyword Arguments，在官方文档里常被缩写为 kwarg）：带有 = 的，即已为其设定了默认值的参数
+	可选位置参数（Optional Positional Arguments）:
+		pow(x,y[,z])。pow(x, y)：返回值是 x ** y；pow(x, y, z)：返回值是 x ** y % z；\
+		exec(object[, globals[, locals]])
+			object：必选参数，表示需要被指定的Python代码。它必须是字符串或code对象。
+			globals：可选参数，表示全局命名空间（存放全局变量），如果被提供，则必须是一个字典对象。
+			locals：可选参数，表示当前局部命名空间（存放局部变量），如果被提供，可以是任何映射对象。
+	可接收很多值的位置参数:print(*object, ...)
+		可以接收很多个参数（或者说，这个位置可以接收一个列表或者元组）；
+		一个函数里最多只有一个这种可以接收很多值的位置参数；
+		若还有若干个位置参数，那么，能够接收很多值的位置参数只能放置最后；如max(arg1,arg2,*arg[,key])
+	Class 也是函数:class bool([x])
+4 总结
+	你可以把函数当作一个产品，而你自己是这个产品的用户；
+	既然你是产品的用户，你要养成好习惯，一定要亲自阅读产品说明书；
+	调用函数的时候，注意可选位置参数的使用方法和关键字参数的默认值；
+	函数定义部分，注意两个符号就行了，[] 和 =；
+	所有的函数都有返回值，即便它内部不指定返回值，也有一个默认返回值：None；
+	另外，一定要耐心阅读该函数在使用的时候需要注意什么 —— 产品说明书的主要作用就在这里
+		
+# Part.1.E.4.functions note-chaxiaoli
