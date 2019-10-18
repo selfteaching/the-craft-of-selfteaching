@@ -174,7 +174,7 @@
 	位置参数（Positional Arguments，在官方文档里常被缩写为 arg）： 由位置决定其值的参数，被传递的值的意义就是由参数的位置决定的
 	关键字参数（Keyword Arguments，在官方文档里常被缩写为 kwarg）：带有 = 的，即已为其设定了默认值的参数
 	可选位置参数（Optional Positional Arguments）:
-		pow(x,y[,z])。pow(x, y)：返回值是 x ** y；pow(x, y, z)：返回值是 x ** y % z；\
+		pow(x,y[,z])。pow(x, y)：返回值是 x ** y；pow(x, y, z)：返回值是 x ** y % z；
 		exec(object[, globals[, locals]])
 			object：必选参数，表示需要被指定的Python代码。它必须是字符串或code对象。
 			globals：可选参数，表示全局命名空间（存放全局变量），如果被提供，则必须是一个字典对象。
@@ -192,4 +192,108 @@
 	所有的函数都有返回值，即便它内部不指定返回值，也有一个默认返回值：None；
 	另外，一定要耐心阅读该函数在使用的时候需要注意什么 —— 产品说明书的主要作用就在这里
 		
-# Part.1.E.4.functions note-chaxiaoli
+# Part.1.E.5.strings note-chaxiaoli
+1 字符串
+	In [1]:1+2
+	Out[1]:3.3000000000000003 #最终所有的值都要转换成二进制.此时小数的精度就有损耗，多次浮点数字转换成二进制相互运算之后
+		 # 再从二进制转换为十进制之后返回的结果，精度损耗就更大了。因此，在计算机上，浮点数字的精度总有极限。
+	字符串：由 0 个字符或者多个字符构成，最终也要被转换成数值，再进一步被转换成二进制数值。
+	空字符串的值是 None，即便是这个 None —— 也最终还是要被转换成二进制的 0。
+2 字符码表的转换
+	ASCII码表：以前计算机的中央处理器最多只能够处理 8 位二进制数值，所以，那时候的计算机只能处理 2^8 个字符
+	Unicode码表：现在计算机的中央处理器，大多是 64 位的，所以可以使用 2^64 容量的码表
+	ord():把单个字符转换成码值的函数,只接收单个字符，否则会报错
+	chr():只接收一个整数作为参数，而后返回相应的字符
+3 字符串的标识
+	单引号、用双引号，用三个单引号或者三个双引号
+4 字符串与数值之间的转换
+	由数字构成的字符串，可以被转换成数值，转换整数用 int(只能是整数)，转换浮点数字用 float()。
+		注：int() 在接收字符串为参数的时候，只能做整数转换。
+	str()，可以将数值转换成字符串类型。
+	input() 接收用户的键盘输入，返回字符串。# 它可以接收一个字符串作为参数，会把这个参数输出到屏幕，作为给用户的提示语。
+	# 这个参数是可选参数，直接写 input()，即没有提供参数，那么它在要求用户输入的时候，就没有提示语。
+5 转义符（Escaping Character）
+	也称为 “脱字符”，\
+	\t 代表制表符（就是用 TAB ⇥ 键敲出来的东西），\n 代表换行符（就是用 Enter ⏎ 敲出来的东西）
+6 字符串的操作符：
+	拼接：空格“ ”或“+”
+	复制：与整数倍操作符 * 操作
+	逻辑：用in和not in操作符，看某个字符或者字符串是否被包含在某个字符串中，返回的是布尔值
+7 字符串的索引
+	字符串是由一系列的字符构成的。容器（Container）可分为有序的和无序的，字符串是容器的一种，属于有序容器。
+	字符串里的每个字符，对应着一个从 0 开始的索引。比较有趣的是，索引可以是负数：
+	索引操作符：[] #可提取字符串这个有序容器中的一个或多个元素，即其中的字符或字符串。 “提取” 的动作叫做 “Slicing”（切片）。
+	 #索引操作符 [] 中可以有一个、两个或者三个整数参数，如果有两个参数，需要用 : 隔开。它最终可以写成以下 4 种形式：
+		s[index] —— 返回索引值为 index 的那个字符
+		s[start:] —— 返回从索引值为 start 开始一直到字符串末尾的所有字符
+		s[start:stop] —— 返回从索引值为 start 开始一直到索引值为 stop 的那个字符之前的所有字符
+		s[:stop] —— 返回从字符串开头一直到索引值为 stop 的那个字符之前的所有字符
+		s[start:stop:step] —— 返回从索引值为 start 开始一直到索引值为 stop 的那个字符之前的，以 step 为步长提取的所有字符
+		 注：无论是 range(1,2)，或者 random.randrange(100, 1000) 又或者 s[start:stop] 都有一个相似的规律：
+			包含左侧的 1, 100, start，不包含右侧的 2, 1000, stop。
+8 处理字符串的内建函数
+	把字符串当做处理对象的有：ord()、input()、int()、float()、len()、print()
+9 处理字符串的 Method
+	字符串是一个对象，是 str 类（Class str）的对象。
+	一个对象的内部有很多函数，叫做类的方法（Method）。
+	字符串有很多可以调用的 Methods。str 类的 Methods 是使用 . 这个符号
+	（1）大小写转换：
+		转换字符串大小写的是 str.upper(转大写)、 str.lower(转小写) ，以及 str.casefold(转换成小写，多处理欧洲语言字符)
+		句首字母大写的 str.capitalize() 和每个单词首字母大写的 str.title()，逐个字符更替大小写的 str.swapcase()
+		 注：在 Python 命令行工具之中，单个下划线，是个特殊变量，保存着最近的语句或者表达式的结果，如_.lower()
+		处理非英文字符串（比如中文），编码：str.encode()
+	（2）搜索和替换
+		str.count(sub [,start=0[, end=len(str)]])：搜寻子字符串出现次数的 Method，返回值为字符串中 sub 出现的次数。
+			只给定 sub 一个参数的话，于是从第一个字符开始搜索到字符串结束；
+			如果，随后给定了一个可选参数的话，那么它是 start，于是从 start 开始，搜索到字符串结束；
+			如果 start 之后还有参数的话，那么它是 end；于是从 start 开始，搜索到 end - 1 结束（即不包含索引值为 end 的那个字符）。
+		str.find(sub[, start[, end]])：返回字符串sub最早出现的位置index,没有找到就返回 -1
+		str.rfind(sub[, start[, end]])：返回字符串sub最后出现的那次的位置,没有找到就返回 -1
+		str.index(sub[, start[, end]]):作用与 find() 相同，但如果没找到的话，会触发 ValueError 异常
+		str.rindex(sub[, start[, end]]):作用与 rfind() 相同，但如果没找到的话，会触发 ValueError 异常
+		str.startswith(prefix[, start[, end]])：判断一个字符串是否以某个子字符串起始的
+		str.endswith(suffix[, start[, end]])：判断一个字符串是否以某个子字符串结束的
+		in 操作符：为了找到位置而进行搜索之前，先确认需要寻找的字符串在寻找对象中是否存在，返回布尔值
+		str.replace(old, new[, count])：用 new 替换 old，替换 count 个实例
+		str.expandtabs(tabsize=8)：把字符串中的 TAB（\t）替换成空格，默认是替换成 8 个空格
+	 （3）去除子字符
+		str.strip([chars])：参数字符串中的所有字母都会被当做需要从首尾剔除的对象，直到新的首尾字母不包含在参数中，
+		参数中的字符顺序对结果没影响；没有参数，默认去除一个字符串首尾的所有空白，包括空格、TAB、换行符等。
+		str.lstrip([chars])：只对左侧处理；str.rstrip([chars])：只对右侧处理。
+	 （4）拆分字符串
+		str.splitlines()：返回的是个列表（List）
+		str.split(sep=None, maxsplit=-1)：将一个字符串，根据分隔符进行拆分，返回值是列表。
+		 sep未传递参数，那么默认为用None分割（各种空白，比如，\t 和 \r 都被当作 None）；maxsplit默认值是 -1，拆分全部，0不拆分；
+		str.partition()：用来根据指定的分隔符将字符串进行分割。返回一个3元的元组（分隔符左边的子串，分隔符本身，分隔符右边的子串）
+	 （5）拼接字符串
+		str.join(_iterable_)
+	 （6）字符串排版
+		str.center(width[, fillchar])：将字符串居中放置，前提是设定整行的长度；如果宽度参数小于字符串长度，则返回原字符串；
+						第2个参数可选，且只接收单个字符，表示空白处的填充字符
+		str.ljust(width[, fillchar]),str.rjust(width[, fillchar]):将字符串靠左或者靠右对齐放置
+		str(i).zfill(num):将字符串转换成左侧由 0填充的指定长度num字符串,这在批量生成文件名的时候就很有用
+	 （7）格式化字符串:
+		str.format(*args, **kwargs):将特定变量插入字符串特定位置的过程
+			在一个字符串中，插入一个或者多个占位符,大括号 {} 括起来；占位符中可以使用由零开始的索引
+			而后将 str.format() 相应的参数，依次插入占位符中；()里可以直接写表达式
+			不写占位符索引就默认每个占位符的索引从第一个开始是 0, 1, 2 ...（占位符数量 - 1)
+			两个连续使用的大括号，不被认为是占位符,且只打印出一对大括号
+		f-string：与 str.format() 的功用差不多，写法简洁些，在字符串标示前加字母f。但str.format()中，索引顺序可以任意指定。
+		'{1} is a grown up? {0}'.format(name, age >= 18)
+		f'{name} is a grown up? {age >= 18}'
+	 （8）字符串属性
+		返回的是布尔值，用来判断字符串的构成属性
+			'1234567890'.isalnum(): True
+			'abcdefghij'.isalpha(): True
+			'山巅一寺一壶酒'.isascii(): False
+			'0.123456789'.isdecimal(): False
+			'0.123456789'.isdigit(): False
+			'0.123456789'.isnumeric(): False
+			'Continue'.islower(): False
+			'Simple Is Better Than Complex'.isupper(): False
+			'Simple Is Better Than Complex'.istitle(): True
+			'	'.isprintable(): False
+			'	'.isspace(): True
+			'for'.isidentifier(): True
+
+# Part.1.E.5.strings note-chaxiaoli
