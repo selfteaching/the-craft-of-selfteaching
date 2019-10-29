@@ -1,0 +1,16 @@
+该目录包含一组演示脚本
+Python编程的各个方面。
+
+beer.py着名的编程示例：瓶装啤酒。
+eiffel.py Python高级魔法：埃菲尔后期/先决条件的元类。
+hanoi.py着名的编程示例：河内的塔。
+life.py Curses编程：简单的游戏生活。
+markov.py算法：马尔可夫链模拟。
+mcast.py网络编程：发送和接收UDP多播数据包。
+queens.py众所周知的编程示例：N-Queens问题。
+redemo.py正则表达式：用于测试正则表达式的GUI脚本。
+rpython.py网络编程：用于远程代码执行的小型客户端。
+rpythond.py网络编程：用于远程代码执行的小型服务器。
+sortvisu.py GUI编程：不同排序算法的可视化。
+ss1.py GUI /应用程序编程：一个简单的电子表格应用程序。
+vector.py Python基础知识：一个展示特殊方法的矢量类。

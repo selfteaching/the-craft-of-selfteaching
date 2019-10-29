@@ -465,6 +465,9 @@ print(an_output())
 def an_output():
 ...
 ```
+```
+<STRONG>THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.</STRONG>
+```
 装饰器的执行顺序是 “自下而上” —— 其实是 “由里到外” 更为准确。体会一下。
 
 ### 装饰带有参数函数
