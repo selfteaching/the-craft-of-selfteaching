@@ -296,4 +296,63 @@
 			'	'.isspace(): True
 			'for'.isidentifier(): True
 
-# Part.1.E.5.strings note-chaxiaoli
+# Part.1.E.6.containers
+1 数据容器（Container）
+	 包括字符串、由 range() 函数生成的等差数列、列表（List）、元组（Tuple）、集合（Set）、字典（Dictionary）
+	 （1）可变容器（Mutable）：列表、集合、字典
+	      不可变容器（Immutable）：字符串、range() 生成的等差数列、元组。
+	      集合：分为 Set 和 Frozen Set，其中，Set 是可变的，Frozen Set 是不可变的。
+	 （2）有序类型（Sequence Type）：字符串、由 range() 函数生成的等差数列、列表、元组
+	      无序：集合、字典
+2 迭代（Iterate）
+	 （1）数据容器里的元素是可以被迭代的（Iterable），它们其中包含的元素，可以被逐个访问，以便被处理。
+	 （2）数据容器，有一个操作符in，用来判断某个元素是否属于某个容器。
+3 列表（List）:有序类型（Sequence Type）的容器，其中包含着有索引编号的元素。
+	数据清洗:遇到由不同类型数据构成的列表，想办法把不同类型的数据分门别类地拆分出来，整理清楚
+	列表生成：
+	a_list = []
+	b_list = [1, 2, 3]
+	list(), or list(iterable)            # 这是 Type Casting类型转换
+	[(expression with x) for x in iterable] # List Comprehension列表生成式,可以嵌套使用 for、加上条件 if.
+	eg:
+	a_list = [random.randrange(1, 100) for i in range(n)]
+	b_list = [x for x in a_list if x % 2 == 0]
+4 列表的操作符——有序容器，同 字符串
+	拼接：+（与字符串不一样的地方是，不能用空格 ' ' 了）
+	复制：*
+	逻辑运算：in 和 not in，<、<=、>、>=、!=、==
+5 根据索引提取列表元素——可变序列，不同 字符串
+	可以根据索引操作：提取、删除、替换（字符串可根据索引提取，不可删除或替换）
+	# 根据索引提取（Slicing）
+		print(c_list[a:b])      # 从索引 a 开始，直到索引 b 之前（不包括 6）
+		print(c_list[a])        # 返回索引值为 3 的元素值
+	# 根据索引删除
+	del c_list[3] # del 是个命令，del c_list[3] 是一个语句；不能这么写：print(del c_list[3])
+	del c_list[5:8]         
+	# 根据索引替换
+	c_list[1:5:2] = ['a', 2]  # s[start:stop:step] = t，跟 range 的三个参数类似；
+				 # len(t) = len([start:stop:step]) 必须为真
+	注：
+	字符串常量（String Literal）：不可变有序容器，操作都不改变它们自身，而是在操作后返回一个值给另外一个变量。
+	列表：可变容器，可以对它进行操作，结果是它本身被改变了。
+6 列表可用的内建函数——容器，同字符串
+	len()
+	max() # 内建函数内部做了异常处理，可以在字符之间或者数字之间进行比较
+	min() # 内建函数内部做了异常处理，可以在字符之间或者数字之间进行比较
+7 Methods——可变类型（Mutable type），可以被排序 —— 使用 sort() Method（字符串常量和 range() 都是不可变的（Immutable））
+	list.sort(reverse=True) #从大到小排序；reverse 参数，默认是 False，从小到大排序；同一种数据类型元素构成的列表可以使用。
+	a.append() # 在末尾追加一个元素
+	a.clear() # 清空序列，列表为空
+	a.copy() # 对一个拷贝操作，不会更改 “原件”；与赋值 = 的不同，会同时更改 “原件”
+	a.extend(t) # 在末尾追加一个列表，相当于 a_list += c_list
+	a.insert(i，x) # 在某索引位置i插入一个元素x
+	a.reverse() # reverse() 只对当前序列操作，并不返回一个逆序列表；返回值是 None
+	删除单个元素
+		一个命令：
+		del a.[i] #对可变序列中元素下边进行检索删除，不返回删除值
+		两个 Methods：
+		a.pop([i]) # 去除索引为i的元素，且返回元素的值
+		a.remove(x) # 去除元素x，如果有多个只删除第一个, 返回值是 None
+
+
+# Part.1.E.6.containers
