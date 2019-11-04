@@ -317,11 +317,11 @@
 	eg:
 	a_list = [random.randrange(1, 100) for i in range(n)]
 	b_list = [x for x in a_list if x % 2 == 0]
-4 列表的操作符——有序容器，同 字符串
+3.1 列表的操作符——有序容器，同 字符串
 	拼接：+（与字符串不一样的地方是，不能用空格 ' ' 了）
 	复制：*
 	逻辑运算：in 和 not in，<、<=、>、>=、!=、==
-5 根据索引提取列表元素——可变序列，不同 字符串
+3.2 根据索引提取列表元素——可变序列，不同 字符串
 	可以根据索引操作：提取、删除、替换（字符串可根据索引提取，不可删除或替换）
 	# 根据索引提取（Slicing）
 		print(c_list[a:b])      # 从索引 a 开始，直到索引 b 之前（不包括 6）
@@ -335,11 +335,11 @@
 	注：
 	字符串常量（String Literal）：不可变有序容器，操作都不改变它们自身，而是在操作后返回一个值给另外一个变量。
 	列表：可变容器，可以对它进行操作，结果是它本身被改变了。
-6 列表可用的内建函数——容器，同字符串
+3.3 列表可用的内建函数——容器，同字符串
 	len()
 	max() # 内建函数内部做了异常处理，可以在字符之间或者数字之间进行比较
 	min() # 内建函数内部做了异常处理，可以在字符之间或者数字之间进行比较
-7 Methods——可变类型（Mutable type），可以被排序 —— 使用 sort() Method（字符串常量和 range() 都是不可变的（Immutable））
+3.4 Methods——可变类型（Mutable type），可以被排序 —— 使用 sort() Method（字符串常量和 range() 都是不可变的（Immutable））
 	list.sort(reverse=True) #从大到小排序；reverse 参数，默认是 False，从小到大排序；同一种数据类型元素构成的列表可以使用。
 	a.append() # 在末尾追加一个元素
 	a.clear() # 清空序列，列表为空
@@ -353,6 +353,78 @@
 		两个 Methods：
 		a.pop([i]) # 去除索引为i的元素，且返回元素的值
 		a.remove(x) # 去除元素x，如果有多个只删除第一个, 返回值是 None
+4 元组（Tuple）
+	List 是可变有序容器，Tuple 是不可变有序容器。
+	List 用方括号标识 []，Tuple 用圆括号 标识 ()
+4.1 元组表达式
+	创建一个元组：a = () # 创建了一个空元组
+	多个元素之间，用 , 分离，且可以省略括号 # a = 1, 2, 3   # 不建议这种写法，b = (1, 2, 3)，a==b为true
+	创建单个元素的元组，无论是否使用圆括号，在那唯一的元素后面一定要补上一个逗号 ,
+4.2 元组操作——不可变序列=“当前已有部分不可变”，无法删除但可在末尾追加元素
+	a = 1, #(1,)
+	id(a) #元组的id,4593032496
+	a += 3,5 #(1, 3, 5)
+	id(a) #4592468976
+4.3 列表List和元组Tuple的区别
+	使用场景:在将来需要更改的时候，创建 List ；在将来不需要更改的时候，创建 Tuple;
+	计算机的角度:Tuple 相对于 List 占用更小的内存
+	a=range(1000) # class range  a.__sizeof__() #48 （单位：字节），range()函数返回的等差数列，就是一个tuple
+	b=tuple(a) #换成元组 b.__sizeof__() #80024
+	c=list(a) #换成列表 c.__sizeof__() #90088
+5 集合（set）
+	不同于列表，首先它不包含重合元素，其次它是无序的
+	分为两种:Set，可变的，Frozen Set，不可变的
+5.1 创建
+	用花括号 {} 把元素括起来，用 , 把元素隔开；去重自动完成
+	注：空集合，必须用set()，不能用{}
+	a = {} # 注意这样创建的是一个 dict（字典）
+	b = set() # 这样创建的才是空集合
+5.2 序列数据转换（Casting）—— 返回一个已去重的集合
+	set(a) # a可以为任何序列数据，字符串、range()函数生成的等差数列、列表、元组
+	set:——可变的，可以进行Comprehension集合生成式，如 b = {x for x in a if x not in 'abc'}
+5.3 操作
+	(1)序列数据转换（Casting）—— 返回一个已去重的集合
+		set(a) # a可以为任何序列数据，字符串、range()函数生成的等差数列、列表、元组
+	(2)in:判断某个元素是否属于这个集合
+	(3)len()、max()、min()。del不行，因为 Set 中的元素没有索引（它不是有序容器）；
+	Set 里删除元素，用 set.remove(elem)；而 Frozen Set 是不可变的，所以不能用 set.remove(elem) 操作。
+	(4)集合运算的操作符： Methods
+	并集：A | B # 是A或是B
+	交集：A & B # 是A且是B
+	差集：A - B # 是A不是B
+	对称差集：A ^ B #A和B中非共同部分，等价于 A+B-(A&B)
+	(5)Set类的 Methods 
+	意义	操作符		Methods				Methods 相当于
+	并集	|	  set.union(*others)			set | other | ...
+	交集	&	  set.intersection(*others)		set & other & ...
+	差集	-	  set.difference(*others)		set - other - ...
+	对称差集	^	set.symmetric_difference(other)		set ^ other
+	注意，并集、交集、差集的 Methods，可以接收多个集合作为参数 (*other)，但对称差集 Method 只接收一个参数 (other)。
+	(6)集合:推荐使用 Methods，更易读
+5.4 逻辑运算：两个集合之间可以进行逻辑比较，返回布尔值
+	set == other # True: set 与 other 相同
+	set != other # True: set 与 other 不同
+	isdisjoint(_other_) # True: set 与 other 非重合；即set & other == None
+	issubset(_other_)，set <= other # True: set 是 other 的子集
+	set < other # True: set 是 other 的真子集，相当于 set <= other && set != other
+	issuperset(_other_)，set >= other # True: set 是 other 的超集
+	set > other # True: set 是 other 的真超集，相当于 set >= other && set != other
+5.5 更新：更新自身的Method
+	add(elem) # 把 elem 加入集合
+	remove(elem) # 从集合中删除elem；如果集合中不包含该 elem，会产生 KeyError 错误。
+	discard(elem) # 如果该元素存在于集合中，删除它。
+	pop(elem) # 从集合中删除 elem，并返回 elem 的值，针对空集合做此操作会产生 KeyError 错误。
+	clear() # 从集合中删除所有元素
+	set.update(*_others_)，相当于 set |= other | ...
+更新 set, 加入 others 中的所有元素；
+set.intersection_update(*_others_)，相当于 set &= other & ...
+更新 set, 保留同时存在于 set 和所有 others 之中的元素；
+set.difference_update(*_others_)，相当于 set -= other | ...
+更新 set, 删除所有在 others 中存在的元素；
+set.symmetric_difference_update(_other_)，相当于 set ^= other
+更新 set, 只保留存在于 set 或 other 中的元素，但不保留同时存在于 set 和 other 中的元素；注意，该 Method 只接收一个参数。
 
+	
+	
 
 # Part.1.E.6.containers
