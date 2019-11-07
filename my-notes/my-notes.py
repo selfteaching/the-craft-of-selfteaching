@@ -353,6 +353,7 @@
 		两个 Methods：
 		a.pop([i]) # 去除索引为i的元素，且返回元素的值
 		a.remove(x) # 去除元素x，如果有多个只删除第一个, 返回值是 None
+
 4 元组（Tuple）
 	List 是可变有序容器，Tuple 是不可变有序容器。
 	List 用方括号标识 []，Tuple 用圆括号 标识 ()
@@ -371,6 +372,7 @@
 	a=range(1000) # class range  a.__sizeof__() #48 （单位：字节），range()函数返回的等差数列，就是一个tuple
 	b=tuple(a) #换成元组 b.__sizeof__() #80024
 	c=list(a) #换成列表 c.__sizeof__() #90088
+
 5 集合（set）
 	不同于列表，首先它不包含重合元素，其次它是无序的
 	分为两种:Set，可变的，Frozen Set，不可变的
@@ -415,16 +417,72 @@
 	discard(elem) # 如果该元素存在于集合中，删除它。
 	pop(elem) # 从集合中删除 elem，并返回 elem 的值，针对空集合做此操作会产生 KeyError 错误。
 	clear() # 从集合中删除所有元素
-	set.update(*_others_)，相当于 set |= other | ...
-更新 set, 加入 others 中的所有元素；
-set.intersection_update(*_others_)，相当于 set &= other & ...
-更新 set, 保留同时存在于 set 和所有 others 之中的元素；
-set.difference_update(*_others_)，相当于 set -= other | ...
-更新 set, 删除所有在 others 中存在的元素；
-set.symmetric_difference_update(_other_)，相当于 set ^= other
-更新 set, 只保留存在于 set 或 other 中的元素，但不保留同时存在于 set 和 other 中的元素；注意，该 Method 只接收一个参数。
+	set.update(*_others_)，相当于 set |= other | ... # 更新 set, 加入 others 中的所有元素；
+	set.intersection_update(*_others_)，相当于 set &= other & ... # 更新 set, 保留同时存在于 set 和所有 others 之中的元素；
+	set.difference_update(*_others_)，相当于 set -= other | ... # 更新 set, 删除所有在 others 中存在的元素；
+	set.symmetric_difference_update(_other_)，相当于 set ^= other  # 更新 set, 只保留存在于 set 或 other 中的元素，但不保留同时存在的元素；注：该Method只接收一个参数。
+5.6 冻结集合（Frozen Set）
+	Frozen Set 之于 Set，正如 Tuple 之于 List；
+	前者是不可变容器（Immutable），后者是可变容器（Mutable），为了节省内存使用而设计的类别
 
-	
-	
+6 字典（Dictionary）
+	映射容器：字典（Dictionary）是唯一的映射（Map）容器，因为字典里的 key 都映射且只映射一个对应的 _value_
+	键值组成：字典里的每个元素，由两部分组成，_key_（键）和 _value_（值），二者由一个冒号连接，字典直接使用 key 作为索引，并映射到与它匹配的 _value_
+	唯一：在同一个字典里，key 都是唯一的。若有重复的 key，像Set 那样会 “自动去重” —— 保留重复key中的最后一个key的value，位置是第一个key
+	注：键必须独一无二，但值则不必；值可以取任何数据类型，但必须是不可变的，如字符串，数组或元组。
+6.1 字典的生成和操作
+	a = {} # 注意这样创建的是一个 dict（字典）
+	a = {key1:value1, key2:value2}, b = {key3:value3, key4:value4}
+	a[key1]= value3 # 更新某个元素
+	a.update(b) # 添加元素
+	del a[key1] #删除某个元素
+6.2 逻辑操作符
+	key in a，value in a #返回布尔值
+	a.keys() #返回所有的key值，dict_keys([key1, key2])
+	a.values() #返回所有的value值，dict_values([values1, values2])
+	a.items() #返回dict_items([(key1,value1), (key2,value2)])
+6.3 可用来操作的内建函数
+	len(a), max(a), min(a)
+	list(a), tuple(a), set(a)
+	sorted(a), sorted(a, reverse=True)
+6.4 常用 Methods
+	a.copy() # .copy() 的 “原件” 不会发生变化
+	a.clear() # 清空字典
+	a.popitem() # 随机删除一个
+	a.pop(key, value) # 删除，并返回值。必须要传值，因为字典是无序的
+	a.get(key,'not find ') # 取值，速度快，性能好；找不到，返回第2个参数，无默认None
+	a.setdefault('key',value) # 只能新增,可以保证把一个不存在的键初始化为一个指定的默认值，或者什么也不做（也就是说，已有的键的关联值将保持不变）
+	# 访问一个键之前，可以通过确保字典中的每个键都有一个关联值来避免keyerror。尽管这里in和not in 操作符可以提供帮助，不过更成熟的技术是使用setdault方法
 
-# Part.1.E.6.containers
+7 迭代各种容器中的元素——for 循环
+	对容器中的元素逐一进行处理（运算）：用 for 循环去迭代它们
+	迭代 range() 中的元素：for i in range(3):
+	迭代 list 中的元素：for i in [1, 2, 3]:
+7.1 迭代的同时获取索引——enumerate() 函数
+	同时得到有序容器中的元素及其索引：
+		for i, c in enumerate(string): # i:索引，c:元素
+		for i, v in enumerate(range(3)):
+		for i, L in enumerate(List):
+		for i, L in enumerate(Tuple):
+7.2 迭代前排序
+	在迭代前先排好序:
+		sorted(Tuple) # 从小到大
+		sorted(Tuple, reverse=True) # 从大到小，不写默认true
+		reversed(seq)  #seq -- 要转换的序列，可以是 tuple, string, list 或 range,返回一个反转的迭代器。
+7.3 同时迭代多个容器——zip()函数
+	同时迭代两个或者两个以上的容器中的元素（前提：多个容器中的元素数量最好相同）
+	 a = "abc", b = range(2)
+	 for i,j in zip(b,a)
+		print(i,j) # 0 a
+			   # 1 b
+			   # 2 c
+7.4 迭代字典中的元素
+	迭代 dict 中的key：for i in {key1:value1, key2:value2}:
+	迭代 dict 中的元素：for i,j in {key1:value1, key2:value2}:
+			
+# Part.1.E.7.files
+
+
+
+# Part.1.E.7.files
+
