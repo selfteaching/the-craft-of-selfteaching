@@ -495,13 +495,23 @@
 		'+'	读写模式（更新）
 	 file object：即函数的返回值，一般保存到一个变量中，以便调用这个 file object 的各种 Methods
 1.2 删除文件
-删除文件，就得调用 os 模块了。删除文件之前，要先确认文件是否存在，否则删除命令会失败。
-	
-
-
-
-
-
+删除文件，就得调用 os 模块了。需先确认文件是否存在，且是否关闭，否则删除命令会失败。
+	import os
+	f = open('/tmp/test-file1.txt', 'w')
+	f.close() #关闭文件，否则无法删除文件
+	if os.path.exists(f.name): #确认删除
+		os.remove(f.name)
+1.3 读写文件
+	file.write() #把数据写入文件
+	file.read() #读取文件
+	file.readline() #这个 Method 每次调用，都会返回文件中的新一行，返回“该行内容\n”
+	file.readline().strip() # 返回的是'该行内容'，'\n' 被去掉了……
+	file.readlines() #将文件作为一个列表返回，列表中的每个元素对应着文件中的每一行
+	file.writelines() #把一个列表写入到一个文件中，按索引顺序（从 0 开始）逐行写入列表的对应元素：
+1.4 with 语句块——把相关操作都放入同一个语句块
+	with open(...) as f:
+	    f.write(...)
+	    ...
 
 # Part.1.E.7.files
 
