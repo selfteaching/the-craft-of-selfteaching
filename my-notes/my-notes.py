@@ -513,5 +513,15 @@
 	    f.write(...)
 	    ...
 
-# Part.1.E.7.files
+# Part.1.F.deal-with-forward-references
+1 “过早引用”（Forward References，另译为 “前置引用”）
+	在几乎所有的编程语言中，必须“先声明再使用”，直接使用未声明的变量是被禁止的，否则会报错：NameError: name 'xx' is not defined。
+	读不懂也要读完，然后重复很多遍
+	只字不差地阅读
+	就算不明白也要先记住,反复做整理归纳总结
+	总结、归纳、整理、组织 关键知识点——知识（概念）整理组织归纳工具：列表、示意图、表格
+	不管怎么样，先用起来，反正，研究透原理，不可能马上做到，需要时间漫漫。
+2 Python 中有一个概念叫 PEP，Python Enhancement Proposals
+	https://www.python.org/dev/peps/pep-0008/
 
+# Part.1.G.The-Python-Tutorial-local.ipynb
