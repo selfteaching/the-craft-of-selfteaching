@@ -1,0 +1,562 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LoadTest Name="ScaleModel_SingleAPI_New" Description="" Owner="" storage="c:\scaletest.goldenthreads_singleapi_new\scalemodel_singleapi_new.loadtest" Priority="2147483647" Enabled="true" CssProjectStructure="" CssIteration="" DeploymentItemsEditable="" WorkItemIds="" TraceLevel="None" CurrentRunConfig="Run Settings1" Id="9ce1e001-fa1c-4e89-a77a-7eb604e13c33" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Scenarios>
+    <Scenario Name="Reach Client Scenarios" DelayBetweenIterations="0" PercentNewUsers="0" IPSwitching="false" TestMixType="UserPacing" ApplyDistributionToPacingDelay="true" MaxTestIterations="0" DisableDuringWarmup="false" DelayStartTime="0" AllowedAgents="">
+      <ThinkProfile Value="0.2" Pattern="NormalDistribution" />
+      <LoadProfile Pattern="Constant" InitialUsers="20000" />
+      <TestMix>
+        <TestProfile Name="AnalyticsKafkaCollection_PostRealTimeReports" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="57bde795-8459-1c01-29ec-6e4270294213" Percentage="0.000" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="Discovery_GetDynamicFeeds" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="8e20f61d-e344-788a-21e9-a6b624982f52" Percentage="39.024" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="Discovery_GetDynamicHubs" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="402696a7-3bf0-cf41-e4d9-c87461609284" Percentage="45.085" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="Discovery_GetProgramById" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="7f50ae4d-6f71-8dde-4827-a8aa6bfe2194" Percentage="43.383" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="Discovery_Search_Search" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="6cc21b1c-7093-c5b6-d0a3-2ac5e98a55c4" Percentage="1.751" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="DvrProxy_GetSubscriptionGroups" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="1021814f-c917-cc0f-d49f-1d8128a71d44" Percentage="2.507" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="SecurityToken_GetActive" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="ba185db1-50f3-67ed-6a6c-00f1b95a308c" Percentage="55.279" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="SecurityToken_GetBootstrapV2" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="1ec60e1e-4fd3-730f-1d46-0795c9648487" Percentage="10.054" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="SecurityToken_GetCertActive" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="cd02492b-6e7a-ba16-c6b6-89c749824cd5" Percentage="3.644" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="SecurityToken_GetMe" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="c56968d3-6c59-d559-391d-641a2f668617" Percentage="12.676" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="SecurityToken_GetVerifyToken" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="d40e1cfc-f4ac-4fa7-073c-e8181cecbabf" Percentage="4.853" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="Subscriber_GetAccount" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="032f4254-c78a-aeff-96de-a531cbea5143" Percentage="43.841" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="SubscriberBookmark_CreateBookmark" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="1e79541e-097d-2a54-1ac4-6a3ef5b83ff1" Percentage="7.657" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="Subscriber_CreateDevicePairings" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="d3a36eb3-a315-1e4a-e9d9-cf47281d78da" Percentage="60.287" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="Subscriber_GetLibraryById_V3" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="fcdfbf2a-0615-c242-02fe-a08ffb4ffc7a" Percentage="20.745" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="Subscriber_GetPackagesActionsById" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="921f0a4e-10ae-c827-1b25-0ce6308f4ad6" Percentage="1.033" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="Subscriber_GetPairingHosts" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="943c8528-75c4-7ee8-1aaf-aac6873f300b" Percentage="26.631" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="Subscriber_GetProgramPlayOptions" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="eb900d40-98c8-c65f-1847-1db23c179e99" Percentage="23.191" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="Subscriber_GetProgramTitles" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="215874a0-6e7a-d640-20c2-899b4889fa57" Percentage="3.324" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="Subscriber_GetSeriesById" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="b36423c8-ee28-b32c-9aa1-45add83db555" Percentage="18.764" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="Subscriber_GetVideoActionsById" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="501cdbaf-a2fe-b620-8eca-67ce60eb1493" Percentage="17.309" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="PlayAzukiLiveMedia" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="eb45026e-1c50-f556-60c0-b19a45719340" Percentage="15.523" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="Subscriber_GetAccountPasscodesByType" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="cac40961-5691-5770-dbf3-58f71b02548e" Percentage="11.975" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="Subscriber_GetClientIPOutOfCountryInHome" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="d45654fd-5d98-2148-0081-abb0048c042e" Percentage="7.061" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="SubscriberBookmark_GetBookmark" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="e30f85cb-d8f0-5096-3636-297cb8233561" Percentage="32.754" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="PlayAzukiVodMedia" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="95e95fe3-8f33-0004-50a8-2d25d66f9d19" Percentage="3.881" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="Subscriber_CatchupDisable_Update" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="abc6baa5-4b8c-4751-10ba-2a9e6ece5c8d" Percentage="0.001" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="Subscriber_CreatePurchase" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="8be91ca3-d605-0416-c345-de7628357c29" Percentage="0.016" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="SubscriberMgmt_GetRoutingGroupStats" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="f55673a4-1746-67b8-ad13-89630acba40e" Percentage="0.001" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="Subscriber_GetSeriesPlayOptions" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="893bc56c-e61c-40f0-c7ee-35cb62927de2" Percentage="0.593" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="UCLicense_Gms_ChannelMapPageKeys" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="28777dca-a59b-c5f2-1598-6f8fbe9c587d" Percentage="0.000" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="UCLicense_Gms_ChannelMapPages" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="a3d3d29a-0deb-a2fc-c8d0-7c0fd383e793" Percentage="0.000" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="UCLicense_Gms_ChannelTimeshiftKeys" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="b8184205-ac33-36fd-cef0-6e2757daadaf" Percentage="0.000" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="Discovery_GetPivotsList" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="1a307cad-5c64-a505-3569-3f79566a0134" Percentage="26.108" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="Discovery_GetSchedulesByProgramId" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="9fb400c8-0cff-a56a-d959-e709d33da03e" Percentage="10.505" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="Discovery_GetSeriesById" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="f95f39ee-3211-34ca-3421-4400a874d98e" Percentage="12.002" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="Discovery_SearchSwimlane" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="74b5c2c6-ea97-7769-308c-ef7064e63a1f" Percentage="2.599" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="DvrProxy_AccountDvrCapability" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="4fcb5447-aeae-a629-bbdd-67dd83d2431f" Percentage="3.307" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="Subscriber_GetSeasonsPlayOptions" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="26409bdd-178c-3366-f250-dbc9c8db1253" Percentage="11.759" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="Subscriber_GetLiveChannelMapRights" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="2afbcbbb-f282-d16b-889d-5514518d447d" Percentage="6.667" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="Subscriber_GetSimilarItemsByProgramId" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="d92a315d-3452-2d77-ac50-ecddfb9af78c" Percentage="4.022" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="Subscriber_GetIsPinned" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="d84acf04-3974-cc33-63fc-fea32d7ade94" Percentage="2.775" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="SubscriberBookmark_GetAllRecordingBookmarks" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="927013d5-0704-bee3-de6d-497a4ab72218" Percentage="1.132" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="SecurityToken_VerifyRevocation" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="1ca73ca1-35ca-1d6a-738e-2f8cd4022020" Percentage="3.036" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      </TestMix>
+      <BrowserMix>
+        <BrowserProfile Percentage="100">
+          <Browser Name="Internet Explorer 9.0" MaxConnections="6">
+            <Headers>
+              <Header Name="User-Agent" Value="Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)" />
+              <Header Name="Accept" Value="*/*" />
+              <Header Name="Accept-Language" Value="{{$IEAcceptLanguage}}" />
+              <Header Name="Accept-Encoding" Value="GZIP" />
+            </Headers>
+          </Browser>
+        </BrowserProfile>
+      </BrowserMix>
+      <NetworkMix>
+        <NetworkProfile Percentage="100">
+          <Network Name="LAN" BandwidthInKbps="1000000" NetworkProfileConfigurationXml="&lt;Emulation&gt;&lt;VirtualChannel name=&quot;defaultChannel&quot;&gt;&lt;FilterList/&gt;&lt;VirtualLink instances=&quot;1&quot; name=&quot;defaultLink&quot;&gt;&lt;LinkRule dir=&quot;upstream&quot;&gt;&lt;Bandwidth&gt;&lt;Speed unit=&quot;kbps&quot;&gt;1000000&lt;/Speed&gt;&lt;/Bandwidth&gt;&lt;/LinkRule&gt;&lt;LinkRule dir=&quot;downstream&quot;&gt;&lt;Bandwidth&gt;&lt;Speed unit=&quot;kbps&quot;&gt;1000000&lt;/Speed&gt;&lt;/Bandwidth&gt;&lt;/LinkRule&gt;&lt;/VirtualLink&gt;&lt;/VirtualChannel&gt;&lt;/Emulation&gt;" />
+        </NetworkProfile>
+      </NetworkMix>
+    </Scenario>
+    <Scenario Name="Oss Scenarios" DelayBetweenIterations="0" PercentNewUsers="0" IPSwitching="false" TestMixType="UserPacing" ApplyDistributionToPacingDelay="true" MaxTestIterations="0" DisableDuringWarmup="false" DelayStartTime="0" AllowedAgents="">
+      <ThinkProfile Value="0.2" Pattern="NormalDistribution" />
+      <LoadProfile Pattern="Constant" InitialUsers="100" />
+      <TestMix>
+        <TestProfile Name="OssProxy_GetAccount" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="c23f37d9-b7fb-03b7-fa57-b0c93f604650" Percentage="660.430" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="OssProxy_GetAccountDevices" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="6b791f14-5e0d-0bb4-5b2d-58772f052da7" Percentage="433.850" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="OssProxy_GetChannelMapGroupByAccount" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="83ea1ab5-6028-3994-5d67-cad92109fd47" Percentage="28.430" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="OssProxy_GetCreditLimitByAccount" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="aea7c55d-20e4-9223-ad2c-0faa0230ec84" Percentage="25.360" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="OssProxy_GetOfferGroupByAccount" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="f17fa2d1-2380-341d-d8e1-22c1422864d4" Percentage="34.270" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="OssProxy_GetRoutingGroupByAccount" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="471bd49a-bdcf-4428-701b-e04ca53a1af8" Percentage="46.530" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="OssProxy_GetServerClusterGroupsByAccountId" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="3e1431b5-eb60-bcff-4a32-e7d69c6c9e4a" Percentage="87.650" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="OssProxy_AddPurchaseRecordToAccount" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="7d666a6c-b96a-990b-2da8-c800ef75e8ab" Percentage="11.430" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="OssProxy_GetAccountPurchaseRecords" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="044b425f-4fb3-31b1-26f9-9b9e00965726" Percentage="26.705" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="OssProxy_GetStreamingReports" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="8154c199-ee97-342b-cd10-4ab57163dd55" Percentage="2.460" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="OssProxy_GetUpgradeGroupByAccount" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="7aa90081-4364-72b7-3d24-7ffe1c16d614" Percentage="37.785" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="OssProxy_GetFeatureGroupByAccount" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="af61382c-3afb-a69f-06bf-b88bd6cbe726" Percentage="37.795" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="OssProxy_GetExperienceGroupByAccount" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="10acb6ca-3371-f37a-5a72-cc12f1c56c25" Percentage="37.760" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="OssProxy_GetNotificationGroupByAccount" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="fc26c9cf-ff2f-2617-bc90-1b85ee405346" Percentage="37.820" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="OssProxy_CreateBulkAccountOperation" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="7b921db9-4d44-7e33-2c1e-0520364d7626" Percentage="4.600" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="OssProxy_GetAccountRecorders" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="ab3e993d-3e30-b9b2-f337-a4b329e65baf" Percentage="8.735" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      </TestMix>
+      <BrowserMix>
+        <BrowserProfile Percentage="100">
+          <Browser Name="Internet Explorer 9.0" MaxConnections="6">
+            <Headers>
+              <Header Name="User-Agent" Value="Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)" />
+              <Header Name="Accept" Value="*/*" />
+              <Header Name="Accept-Language" Value="{{$IEAcceptLanguage}}" />
+              <Header Name="Accept-Encoding" Value="GZIP" />
+            </Headers>
+          </Browser>
+        </BrowserProfile>
+      </BrowserMix>
+      <NetworkMix>
+        <NetworkProfile Percentage="100">
+          <Network Name="LAN" BandwidthInKbps="1000000" NetworkProfileConfigurationXml="&lt;Emulation&gt;&lt;VirtualChannel name=&quot;defaultChannel&quot;&gt;&lt;FilterList/&gt;&lt;VirtualLink instances=&quot;1&quot; name=&quot;defaultLink&quot;&gt;&lt;LinkRule dir=&quot;upstream&quot;&gt;&lt;Bandwidth&gt;&lt;Speed unit=&quot;kbps&quot;&gt;1000000&lt;/Speed&gt;&lt;/Bandwidth&gt;&lt;/LinkRule&gt;&lt;LinkRule dir=&quot;downstream&quot;&gt;&lt;Bandwidth&gt;&lt;Speed unit=&quot;kbps&quot;&gt;1000000&lt;/Speed&gt;&lt;/Bandwidth&gt;&lt;/LinkRule&gt;&lt;/VirtualLink&gt;&lt;/VirtualChannel&gt;&lt;/Emulation&gt;" />
+        </NetworkProfile>
+      </NetworkMix>
+    </Scenario>
+    <Scenario Name="Oss Scenarios Low RPS Part" DelayBetweenIterations="0" PercentNewUsers="0" IPSwitching="false" TestMixType="UserPacing" ApplyDistributionToPacingDelay="true" MaxTestIterations="0" DisableDuringWarmup="false" DelayStartTime="0" AllowedAgents="">
+      <ThinkProfile Value="0.2" Pattern="NormalDistribution" />
+      <LoadProfile Pattern="Constant" InitialUsers="10" />
+      <TestMix>
+        <TestProfile Name="FeatureToggles_Service_Feature_GetAsync_All" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="c0a19188-7be8-9117-8be5-c3712d726872" Percentage="0.001" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="OssProxy_AddOrUpdateSeriesImages" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="a96bbd05-201e-3169-7498-84a1e7d6ca37" Percentage="0.001" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="OssProxy_AddOrUpdateTitleImages" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="a6c9d7e8-8022-85b1-2c16-c6e51d37eab3" Percentage="7.950" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="OssProxy_DownloadTsvReport" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="3a173be3-9ec9-3d18-1765-4be78e56b31b" Percentage="6.500" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="OssProxy_GetAllChannelMaps" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="4e04663c-b91a-99e7-191e-1fb78d65cba6" Percentage="0.100" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="OssProxy_GetTitleIngestStatus" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="76771ee9-b452-9356-20bc-090ed7c7dc23" Percentage="8.200" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="OssProxy_PromotionalCategoryItem" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="e21f7e3b-6f46-d822-62ca-85268f5d8560" Percentage="0.400" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="OssProxy_PutMatchStatusAsync" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="bf113f95-a4d3-28d5-ab92-eed70af856f0" Percentage="0.018" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="OssProxy_PutSeriesAsync" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="b5ce325f-5496-b0e4-22ec-043d63485d92" Percentage="0.002" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="OssProxy_PutTitleAsync" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="34410b7d-1a32-561a-c480-f4b5c0f4af1c" Percentage="0.900" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="OssProxy_PutTitleV2Async" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="ecaba379-d411-7fba-e812-018f0880ad90" Percentage="4.350" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="OssProxy_UpdateChannelMapAsync" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="b215d3ec-fac3-47fb-f030-c4fa7f52b61a" Percentage="0.045" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="OssProxy_CreateAndUpdatePromotionalCategory" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="e08e84cd-e504-999a-39af-83669a9e42e7" Percentage="0.100" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="OssProxy_CreateSvodPackageOffers" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="85015ab2-d18b-e1ce-ea3f-485537cd81b0" Percentage="0.003" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      </TestMix>
+      <BrowserMix>
+        <BrowserProfile Percentage="100">
+          <Browser Name="Internet Explorer 9.0" MaxConnections="6">
+            <Headers>
+              <Header Name="User-Agent" Value="Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)" />
+              <Header Name="Accept" Value="*/*" />
+              <Header Name="Accept-Language" Value="{{$IEAcceptLanguage}}" />
+              <Header Name="Accept-Encoding" Value="GZIP" />
+            </Headers>
+          </Browser>
+        </BrowserProfile>
+      </BrowserMix>
+      <NetworkMix>
+        <NetworkProfile Percentage="100">
+          <Network Name="LAN" BandwidthInKbps="1000000" NetworkProfileConfigurationXml="&lt;Emulation&gt;&lt;VirtualChannel name=&quot;defaultChannel&quot;&gt;&lt;FilterList/&gt;&lt;VirtualLink instances=&quot;1&quot; name=&quot;defaultLink&quot;&gt;&lt;LinkRule dir=&quot;upstream&quot;&gt;&lt;Bandwidth&gt;&lt;Speed unit=&quot;kbps&quot;&gt;1000000&lt;/Speed&gt;&lt;/Bandwidth&gt;&lt;/LinkRule&gt;&lt;LinkRule dir=&quot;downstream&quot;&gt;&lt;Bandwidth&gt;&lt;Speed unit=&quot;kbps&quot;&gt;1000000&lt;/Speed&gt;&lt;/Bandwidth&gt;&lt;/LinkRule&gt;&lt;/VirtualLink&gt;&lt;/VirtualChannel&gt;&lt;/Emulation&gt;" />
+        </NetworkProfile>
+      </NetworkMix>
+    </Scenario>
+  </Scenarios>
+  <CounterSets>
+    <CounterSet Name="LoadTest" CounterSetType="LoadTest" LocId="">
+      <CounterCategories>
+        <CounterCategory Name="LoadTest:Scenario">
+          <Counters>
+            <Counter Name="User Load" HigherIsBetter="true" />
+            <Counter Name="Tests Running" HigherIsBetter="true" />
+          </Counters>
+        </CounterCategory>
+        <CounterCategory Name="LoadTest:Test">
+          <Counters>
+            <Counter Name="Total Tests" HigherIsBetter="true" />
+            <Counter Name="Passed Tests" HigherIsBetter="true" />
+            <Counter Name="Failed Tests" />
+            <Counter Name="Tests/Sec" HigherIsBetter="true" />
+            <Counter Name="Passed Tests/Sec" HigherIsBetter="true" />
+            <Counter Name="Failed Tests/Sec" />
+            <Counter Name="Avg. Requests/Test" HigherIsBetter="true" />
+            <Counter Name="Avg. Test Time" />
+            <Counter Name="% Time in LoadTestPlugin" />
+            <Counter Name="% Time in WebTest code" />
+            <Counter Name="% Time in Rules" />
+          </Counters>
+        </CounterCategory>
+        <CounterCategory Name="LoadTest:Transaction">
+          <Counters>
+            <Counter Name="Total Transactions" HigherIsBetter="true" />
+            <Counter Name="Avg. Transaction Time" />
+            <Counter Name="Avg. Response Time" />
+            <Counter Name="Transactions/Sec" HigherIsBetter="true" />
+          </Counters>
+        </CounterCategory>
+        <CounterCategory Name="LoadTest:Errors">
+          <Counters>
+            <Counter Name="Http Errors" />
+            <Counter Name="Validation Rule Errors" />
+            <Counter Name="Extraction Rule Errors" />
+            <Counter Name="Requests Timed Out" />
+            <Counter Name="Exceptions" />
+            <Counter Name="Total Errors" />
+            <Counter Name="Errors/Sec" />
+            <Counter Name="Threshold Violations/Sec" />
+          </Counters>
+        </CounterCategory>
+        <CounterCategory Name="LoadTest:Page">
+          <Counters>
+            <Counter Name="Total Pages" HigherIsBetter="true" />
+            <Counter Name="Avg. Page Time" />
+            <Counter Name="Page Response Time Goal" HigherIsBetter="true" />
+            <Counter Name="% Pages Meeting Goal" HigherIsBetter="true" />
+            <Counter Name="Pages/Sec" HigherIsBetter="true" />
+          </Counters>
+        </CounterCategory>
+        <CounterCategory Name="LoadTest:Request">
+          <Counters>
+            <Counter Name="Total Requests" HigherIsBetter="true" />
+            <Counter Name="Passed Requests" HigherIsBetter="true" />
+            <Counter Name="Failed Requests" />
+            <Counter Name="Cached Requests" HigherIsBetter="true" />
+            <Counter Name="Requests/Sec" HigherIsBetter="true" />
+            <Counter Name="Passed Requests/Sec" HigherIsBetter="true" />
+            <Counter Name="Failed Requests/Sec" />
+            <Counter Name="Avg. First Byte Time" />
+            <Counter Name="Avg. Response Time" />
+            <Counter Name="Avg. Connection Wait Time">
+              <ThresholdRules>
+                <ThresholdRule Classname="Microsoft.VisualStudio.TestTools.WebStress.Rules.ThresholdRuleCompareCounters, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+                  <RuleParameters>
+                    <RuleParameter Name="DependentCategory" Value="LoadTest:Page" />
+                    <RuleParameter Name="DependentCounter" Value="Avg. Page Time" />
+                    <RuleParameter Name="DependentInstance" Value="_Total" />
+                    <RuleParameter Name="AlertIfOver" Value="True" />
+                    <RuleParameter Name="WarningThreshold" Value="0.25" />
+                    <RuleParameter Name="CriticalThreshold" Value="0.5" />
+                  </RuleParameters>
+                </ThresholdRule>
+              </ThresholdRules>
+            </Counter>
+            <Counter Name="Avg. Content Length" />
+          </Counters>
+        </CounterCategory>
+        <CounterCategory Name="LoadTest:LogEntries">
+          <Counters>
+            <Counter Name="Total Log Entries" />
+            <Counter Name="Log Entries/Sec" />
+          </Counters>
+        </CounterCategory>
+      </CounterCategories>
+    </CounterSet>
+    <CounterSet Name="Controller" CounterSetType="Controller" LocId="CounterSet_Controller">
+      <CounterCategories>
+        <CounterCategory Name="Memory">
+          <Counters>
+            <Counter Name="% Committed Bytes In Use" Range="100" />
+            <Counter Name="Available MBytes" RangeGroup="Memory Bytes" HigherIsBetter="true">
+              <ThresholdRules>
+                <ThresholdRule Classname="Microsoft.VisualStudio.TestTools.WebStress.Rules.ThresholdRuleCompareConstant, Microsoft.VisualStudio.QualityTools.LoadTest">
+                  <RuleParameters>
+                    <RuleParameter Name="AlertIfOver" Value="False" />
+                    <RuleParameter Name="WarningThreshold" Value="100" />
+                    <RuleParameter Name="CriticalThreshold" Value="50" />
+                  </RuleParameters>
+                </ThresholdRule>
+              </ThresholdRules>
+            </Counter>
+            <Counter Name="Page Faults/sec" />
+            <Counter Name="Pages/sec" />
+            <Counter Name="Pool Paged Bytes" RangeGroup="Memory Bytes" />
+            <Counter Name="Pool Nonpaged bytes" RangeGroup="Memory Bytes" />
+          </Counters>
+        </CounterCategory>
+        <CounterCategory Name="Network Interface">
+          <Counters>
+            <Counter Name="Bytes Received/sec" RangeGroup="Network Bytes" />
+            <Counter Name="Bytes Sent/sec" RangeGroup="Network Bytes" />
+            <Counter Name="Output Queue Length">
+              <ThresholdRules>
+                <ThresholdRule Classname="Microsoft.VisualStudio.TestTools.WebStress.Rules.ThresholdRuleCompareConstant, Microsoft.VisualStudio.QualityTools.LoadTest">
+                  <RuleParameters>
+                    <RuleParameter Name="AlertIfOver" Value="True" />
+                    <RuleParameter Name="WarningThreshold" Value="1.5" />
+                    <RuleParameter Name="CriticalThreshold" Value="2" />
+                  </RuleParameters>
+                </ThresholdRule>
+              </ThresholdRules>
+            </Counter>
+            <Counter Name="Packets Received/sec" RangeGroup="Network Packets" />
+            <Counter Name="Packets Sent/sec" RangeGroup="Network Packets" />
+            <Counter Name="Current Bandwidth" RangeGroup="Network Bytes" />
+            <Counter Name="Bytes Total/sec" RangeGroup="Network Bytes">
+              <ThresholdRules>
+                <ThresholdRule Classname="Microsoft.VisualStudio.TestTools.WebStress.Rules.ThresholdRuleCompareCounters, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+                  <RuleParameters>
+                    <RuleParameter Name="DependentCategory" Value="Network Interface" />
+                    <RuleParameter Name="DependentCounter" Value="Current Bandwidth" />
+                    <RuleParameter Name="DependentInstance" Value="" />
+                    <RuleParameter Name="AlertIfOver" Value="True" />
+                    <RuleParameter Name="WarningThreshold" Value="0.6" />
+                    <RuleParameter Name="CriticalThreshold" Value="0.7" />
+                  </RuleParameters>
+                </ThresholdRule>
+              </ThresholdRules>
+            </Counter>
+          </Counters>
+          <Instances>
+            <Instance Name="*" />
+          </Instances>
+        </CounterCategory>
+        <CounterCategory Name="PhysicalDisk">
+          <Counters>
+            <Counter Name="% Disk Read Time" Range="100" />
+            <Counter Name="% Disk Time" Range="100" />
+            <Counter Name="% Disk Write Time" Range="100" />
+            <Counter Name="% Idle Time" Range="100" HigherIsBetter="true">
+              <ThresholdRules>
+                <ThresholdRule Classname="Microsoft.VisualStudio.TestTools.WebStress.Rules.ThresholdRuleCompareConstant, Microsoft.VisualStudio.QualityTools.LoadTest">
+                  <RuleParameters>
+                    <RuleParameter Name="AlertIfOver" Value="False" />
+                    <RuleParameter Name="WarningThreshold" Value="40" />
+                    <RuleParameter Name="CriticalThreshold" Value="20" />
+                  </RuleParameters>
+                </ThresholdRule>
+              </ThresholdRules>
+            </Counter>
+            <Counter Name="Avg. Disk Bytes/Read" RangeGroup="DiskBytesRate" />
+            <Counter Name="Avg. Disk Bytes/Transfer" RangeGroup="DiskBytesRate" />
+            <Counter Name="Avg. Disk Bytes/Write" RangeGroup="DiskBytesRate" />
+            <Counter Name="Avg. Disk Queue Length" RangeGroup="Disk Queue Length" />
+            <Counter Name="Avg. Disk Read Queue Length" RangeGroup="Disk Queue Length" />
+            <Counter Name="Avg. Disk Write Queue Length" RangeGroup="Disk Queue Length" />
+            <Counter Name="Current Disk Queue Length" RangeGroup="Disk Queue Length" />
+            <Counter Name="Avg. Disk sec/Read" RangeGroup="Disk sec" />
+            <Counter Name="Avg. Disk sec/Transfer" RangeGroup="Disk sec" />
+            <Counter Name="Avg. Disk sec/Write" RangeGroup="Disk sec" />
+            <Counter Name="Disk Bytes/sec" RangeGroup="Disk Bytes sec" />
+            <Counter Name="Disk Read Bytes/sec" RangeGroup="Disk Bytes sec" />
+            <Counter Name="Disk Reads/sec" RangeGroup="Disk Transfers sec" />
+            <Counter Name="Disk Transfers/sec" RangeGroup="Disk Transfers sec" />
+            <Counter Name="Disk Write Bytes/sec" RangeGroup="Disk Bytes sec" />
+            <Counter Name="Disk Writes/sec" RangeGroup="Disk Transfers sec" />
+            <Counter Name="Split IO/Sec" RangeGroup="Disk Transfers sec" />
+          </Counters>
+          <Instances>
+            <Instance Name="*" />
+          </Instances>
+        </CounterCategory>
+        <CounterCategory Name="Processor">
+          <Counters>
+            <Counter Name="% Processor Time" Range="100">
+              <ThresholdRules>
+                <ThresholdRule Classname="Microsoft.VisualStudio.TestTools.WebStress.Rules.ThresholdRuleCompareConstant, Microsoft.VisualStudio.QualityTools.LoadTest">
+                  <RuleParameters>
+                    <RuleParameter Name="AlertIfOver" Value="True" />
+                    <RuleParameter Name="WarningThreshold" Value="75" />
+                    <RuleParameter Name="CriticalThreshold" Value="90" />
+                  </RuleParameters>
+                </ThresholdRule>
+              </ThresholdRules>
+            </Counter>
+            <Counter Name="% Privileged Time" Range="100" />
+            <Counter Name="% User Time" Range="100" />
+          </Counters>
+          <Instances>
+            <Instance Name="_Total" />
+          </Instances>
+        </CounterCategory>
+        <CounterCategory Name="System">
+          <Counters>
+            <Counter Name="Context Switches/sec" />
+            <Counter Name="Processes" />
+            <Counter Name="Processor Queue Length" />
+            <Counter Name="Threads" />
+          </Counters>
+        </CounterCategory>
+        <CounterCategory Name="Process">
+          <Counters>
+            <Counter Name="% Processor Time" RangeGroup="Processor Time" />
+            <Counter Name="% Privileged Time" RangeGroup="Processor Time" />
+            <Counter Name="% User Time" RangeGroup="Processor Time" />
+            <Counter Name="Handle Count" />
+            <Counter Name="Thread Count" />
+            <Counter Name="Private Bytes" RangeGroup="Memory Bytes" />
+            <Counter Name="Virtual Bytes" RangeGroup="Memory Bytes" />
+            <Counter Name="Working Set" RangeGroup="Memory Bytes" />
+          </Counters>
+          <Instances>
+            <Instance Name="QTController" />
+            <Instance Name="QTController64" />
+          </Instances>
+        </CounterCategory>
+      </CounterCategories>
+      <DefaultCountersForAutomaticGraphs>
+        <DefaultCounter CategoryName="Processor" CounterName="% Processor Time" InstanceName="_Total" GraphName="" />
+        <DefaultCounter CategoryName="Memory" CounterName="Available MBytes" InstanceName="" GraphName="" />
+      </DefaultCountersForAutomaticGraphs>
+    </CounterSet>
+    <CounterSet Name="Agent" CounterSetType="Agent" LocId="CounterSet_Agent">
+      <CounterCategories>
+        <CounterCategory Name="Memory">
+          <Counters>
+            <Counter Name="% Committed Bytes In Use" Range="100" />
+            <Counter Name="Available MBytes" RangeGroup="Memory Bytes" HigherIsBetter="true">
+              <ThresholdRules>
+                <ThresholdRule Classname="Microsoft.VisualStudio.TestTools.WebStress.Rules.ThresholdRuleCompareConstant, Microsoft.VisualStudio.QualityTools.LoadTest">
+                  <RuleParameters>
+                    <RuleParameter Name="AlertIfOver" Value="False" />
+                    <RuleParameter Name="WarningThreshold" Value="100" />
+                    <RuleParameter Name="CriticalThreshold" Value="50" />
+                  </RuleParameters>
+                </ThresholdRule>
+              </ThresholdRules>
+            </Counter>
+            <Counter Name="Page Faults/sec" />
+            <Counter Name="Pages/sec" />
+            <Counter Name="Pool Paged Bytes" RangeGroup="Memory Bytes" />
+            <Counter Name="Pool Nonpaged bytes" RangeGroup="Memory Bytes" />
+          </Counters>
+        </CounterCategory>
+        <CounterCategory Name="Network Interface">
+          <Counters>
+            <Counter Name="Bytes Received/sec" RangeGroup="Network Bytes" />
+            <Counter Name="Bytes Sent/sec" RangeGroup="Network Bytes" />
+            <Counter Name="Output Queue Length">
+              <ThresholdRules>
+                <ThresholdRule Classname="Microsoft.VisualStudio.TestTools.WebStress.Rules.ThresholdRuleCompareConstant, Microsoft.VisualStudio.QualityTools.LoadTest">
+                  <RuleParameters>
+                    <RuleParameter Name="AlertIfOver" Value="True" />
+                    <RuleParameter Name="WarningThreshold" Value="1.5" />
+                    <RuleParameter Name="CriticalThreshold" Value="2" />
+                  </RuleParameters>
+                </ThresholdRule>
+              </ThresholdRules>
+            </Counter>
+            <Counter Name="Packets Received/sec" RangeGroup="Network Packets" />
+            <Counter Name="Packets Sent/sec" RangeGroup="Network Packets" />
+            <Counter Name="Current Bandwidth" RangeGroup="Network Bytes" />
+            <Counter Name="Bytes Total/sec" RangeGroup="Network Bytes">
+              <ThresholdRules>
+                <ThresholdRule Classname="Microsoft.VisualStudio.TestTools.WebStress.Rules.ThresholdRuleCompareCounters, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+                  <RuleParameters>
+                    <RuleParameter Name="DependentCategory" Value="Network Interface" />
+                    <RuleParameter Name="DependentCounter" Value="Current Bandwidth" />
+                    <RuleParameter Name="DependentInstance" Value="" />
+                    <RuleParameter Name="AlertIfOver" Value="True" />
+                    <RuleParameter Name="WarningThreshold" Value="0.6" />
+                    <RuleParameter Name="CriticalThreshold" Value="0.7" />
+                  </RuleParameters>
+                </ThresholdRule>
+              </ThresholdRules>
+            </Counter>
+          </Counters>
+          <Instances>
+            <Instance Name="*" />
+          </Instances>
+        </CounterCategory>
+        <CounterCategory Name="PhysicalDisk">
+          <Counters>
+            <Counter Name="% Disk Read Time" Range="100" />
+            <Counter Name="% Disk Time" Range="100" />
+            <Counter Name="% Disk Write Time" Range="100" />
+            <Counter Name="% Idle Time" Range="100" HigherIsBetter="true">
+              <ThresholdRules>
+                <ThresholdRule Classname="Microsoft.VisualStudio.TestTools.WebStress.Rules.ThresholdRuleCompareConstant, Microsoft.VisualStudio.QualityTools.LoadTest">
+                  <RuleParameters>
+                    <RuleParameter Name="AlertIfOver" Value="False" />
+                    <RuleParameter Name="WarningThreshold" Value="40" />
+                    <RuleParameter Name="CriticalThreshold" Value="20" />
+                  </RuleParameters>
+                </ThresholdRule>
+              </ThresholdRules>
+            </Counter>
+            <Counter Name="Avg. Disk Bytes/Read" RangeGroup="DiskBytesRate" />
+            <Counter Name="Avg. Disk Bytes/Transfer" RangeGroup="DiskBytesRate" />
+            <Counter Name="Avg. Disk Bytes/Write" RangeGroup="DiskBytesRate" />
+            <Counter Name="Avg. Disk Queue Length" RangeGroup="Disk Queue Length" />
+            <Counter Name="Avg. Disk Read Queue Length" RangeGroup="Disk Queue Length" />
+            <Counter Name="Avg. Disk Write Queue Length" RangeGroup="Disk Queue Length" />
+            <Counter Name="Current Disk Queue Length" RangeGroup="Disk Queue Length" />
+            <Counter Name="Avg. Disk sec/Read" RangeGroup="Disk sec" />
+            <Counter Name="Avg. Disk sec/Transfer" RangeGroup="Disk sec" />
+            <Counter Name="Avg. Disk sec/Write" RangeGroup="Disk sec" />
+            <Counter Name="Disk Bytes/sec" RangeGroup="Disk Bytes sec" />
+            <Counter Name="Disk Read Bytes/sec" RangeGroup="Disk Bytes sec" />
+            <Counter Name="Disk Reads/sec" RangeGroup="Disk Transfers sec" />
+            <Counter Name="Disk Transfers/sec" RangeGroup="Disk Transfers sec" />
+            <Counter Name="Disk Write Bytes/sec" RangeGroup="Disk Bytes sec" />
+            <Counter Name="Disk Writes/sec" RangeGroup="Disk Transfers sec" />
+            <Counter Name="Split IO/Sec" RangeGroup="Disk Transfers sec" />
+          </Counters>
+          <Instances>
+            <Instance Name="*" />
+          </Instances>
+        </CounterCategory>
+        <CounterCategory Name="Processor">
+          <Counters>
+            <Counter Name="% Processor Time" Range="100">
+              <ThresholdRules>
+                <ThresholdRule Classname="Microsoft.VisualStudio.TestTools.WebStress.Rules.ThresholdRuleCompareConstant, Microsoft.VisualStudio.QualityTools.LoadTest">
+                  <RuleParameters>
+                    <RuleParameter Name="AlertIfOver" Value="True" />
+                    <RuleParameter Name="WarningThreshold" Value="75" />
+                    <RuleParameter Name="CriticalThreshold" Value="90" />
+                  </RuleParameters>
+                </ThresholdRule>
+              </ThresholdRules>
+            </Counter>
+            <Counter Name="% Privileged Time" Range="100" />
+            <Counter Name="% User Time" Range="100" />
+          </Counters>
+          <Instances>
+            <Instance Name="0" />
+            <Instance Name="_Total" />
+          </Instances>
+        </CounterCategory>
+        <CounterCategory Name="System">
+          <Counters>
+            <Counter Name="Context Switches/sec" />
+            <Counter Name="Processes" />
+            <Counter Name="Processor Queue Length" />
+            <Counter Name="Threads" />
+          </Counters>
+        </CounterCategory>
+        <CounterCategory Name="Process">
+          <Counters>
+            <Counter Name="% Processor Time" RangeGroup="Processor Time" />
+            <Counter Name="% Privileged Time" RangeGroup="Processor Time" />
+            <Counter Name="% User Time" RangeGroup="Processor Time" />
+            <Counter Name="Handle Count" />
+            <Counter Name="Thread Count" />
+            <Counter Name="Private Bytes" RangeGroup="Memory Bytes" />
+            <Counter Name="Virtual Bytes" RangeGroup="Memory Bytes" />
+            <Counter Name="Working Set" RangeGroup="Memory Bytes" />
+          </Counters>
+          <Instances>
+            <Instance Name="devenv" />
+            <Instance Name="QTAgentService" />
+            <Instance Name="QTAgent" />
+            <Instance Name="QTAgent32" />
+            <Instance Name="QTDCAgent" />
+            <Instance Name="QTDCAgent32" />
+            <Instance Name="QTAgent_35" />
+            <Instance Name="QTAgent_40" />
+            <Instance Name="QTAgent32_35" />
+            <Instance Name="QTAgent32_40" />
+          </Instances>
+        </CounterCategory>
+      </CounterCategories>
+      <DefaultCountersForAutomaticGraphs>
+        <DefaultCounter CategoryName="Processor" CounterName="% Processor Time" InstanceName="0" GraphName="" RunType="Local" />
+        <DefaultCounter CategoryName="Processor" CounterName="% Processor Time" InstanceName="_Total" GraphName="" RunType="Remote" />
+        <DefaultCounter CategoryName="Memory" CounterName="Available MBytes" InstanceName="" GraphName="" />
+      </DefaultCountersForAutomaticGraphs>
+    </CounterSet>
+  </CounterSets>
+  <RunConfigurations>
+    <RunConfiguration Name="Run Settings1" Description="" ResultsStoreType="Database" TimingDetailsStorage="None" SaveTestLogsOnError="true" SaveTestLogsFrequency="0" MaxErrorDetails="200" MaxErrorsPerType="1000" MaxThresholdViolations="1000" MaxRequestUrlsReported="2000" UseTestIterations="false" RunDuration="86400" WarmupTime="3600" CoolDownTime="0" TestIterations="1" WebTestConnectionModel="ConnectionPerUser" WebTestConnectionPoolSize="50" SampleRate="300" ValidationLevel="High" SqlTracingConnectString="" SqlTracingConnectStringDisplayValue="" SqlTracingDirectory="" SqlTracingEnabled="false" SqlTracingFileCount="2" SqlTracingRolloverEnabled="true" SqlTracingMinimumDuration="500" RunUnitTestsInAppDomain="true" CoreCount="0" ResourcesRetentionTimeInMinutes="0" UseMultipleIPs="false" TestAgentConfiguration="Default" AgentDiagnosticsLevel="Warning">
+      <CounterSetMappings>
+        <CounterSetMapping ComputerName="[CONTROLLER MACHINE]">
+          <CounterSetReferences>
+            <CounterSetReference CounterSetName="LoadTest" />
+            <CounterSetReference CounterSetName="Controller" />
+          </CounterSetReferences>
+        </CounterSetMapping>
+        <CounterSetMapping ComputerName="[AGENT MACHINES]">
+          <CounterSetReferences>
+            <CounterSetReference CounterSetName="Agent" />
+          </CounterSetReferences>
+        </CounterSetMapping>
+      </CounterSetMappings>
+      <LoadGeneratorLocations>
+        <GeoLocation Location="Default" Percentage="100" />
+      </LoadGeneratorLocations>
+    </RunConfiguration>
+  </RunConfigurations>
+</LoadTest>

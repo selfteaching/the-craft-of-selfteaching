@@ -1,0 +1,1 @@
+﻿<TestProfile Name="AnalyticsKafkaCollection_PostRealTimeReports" Path="bin\debug\mediafirst.scaletest.goldenthreads.dll" Id="57bde795-8459-1c01-29ec-6e4270294213" Percentage="0.000" Type="Microsoft.VisualStudio.TestTools.WebStress.CodedWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
