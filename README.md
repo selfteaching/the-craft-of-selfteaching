@@ -24,6 +24,10 @@ def teach_yourself(anything):
 teach_yourself(coding)
 ```
 
+> 在没能创造出一些新东西之前，就不断地学习，不断地实践，如此这般循环，坚持去做，知道自己领悟出一些新的东西，是为创造。
+>
+> 学习的结果，不只是要已知了旧有的东西，更是要基于旧有的知识有新的体会、新的长进才行。
+
 请先行阅读 [T-appendix.jupyter-installation-and-setup](T-appendix.jupyter-installation-and-setup.ipynb) 以便在本地安装 [Jupyterlab](https://github.com/jupyterlab/jupyterlab) 而后用更好的体验阅读本书。
 
 有兴趣帮忙的朋友，请先行阅读 [如何使用 Pull Request 为这本书校对](02.proof-of-work.ipynb)。
