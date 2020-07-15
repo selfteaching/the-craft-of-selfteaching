@@ -1,10 +1,9 @@
 .python-version
-
 .DS_Store
 .ipynb_checkpoints/
 __pycache__
 **/.DS_Store
-**/.ipynb_chechpoints
-**/__pycache__
+** /。ipynb_chechpoints
+** / __ pycache__
 log.txt
-**/log.txt
+** /日志。
