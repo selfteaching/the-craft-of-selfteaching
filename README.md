@@ -1,5 +1,5 @@
 # the-craft-of-selfteaching
-# have a try.
+# have a try. #尝试
 
 > One has no future if he couldn't teach himself.
 
