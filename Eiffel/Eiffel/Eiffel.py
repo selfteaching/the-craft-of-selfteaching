@@ -164,7 +164,7 @@ with open('ScaleModel_SingleAPI_New.csv', 'w') as fw:
 # int totalThreads = TC201800001_Napa_DVR_WatchAndTricks_Threads + ...
 # props.put("totalThreads", String.valueOf(totalThreads));
 
-with open('TestTPMCalculateCode.txt', 'w') as fw:
+with open('TestTPSCalculateCode.txt', 'w') as fw:
     fw.write(f'props.put("RPSTimes", "1");\n')
     fw.write(f'double rpmPerThreads = 60.0 / (3 * ${{apiCount}});\n')
     totalThreadsStr = 'int totalThreads = '
@@ -174,12 +174,14 @@ with open('TestTPMCalculateCode.txt', 'w') as fw:
                 name = name.replace('\n', '')
                 totalThreadsStr += name+'_Threads'
                 totalThreadsStr += ' + '
-                fw.write(f'int {name}_Threads = (int)Math.ceil(${{{name}_baselineTPM}} * ${{devicesCount}} / ${{agentCount}} /rpmPerThreads);')
+                fw.write(f'int {name}_Threads = (int)Math.ceil(${{{name}_baselineTPS}} * ${{devicesCount}} / ${{agentCount}} * 60 /rpmPerThreads);')
                 fw.write('\n')
-                fw.write(f'double {name}_TPM = ${{{name}_baselineTPM}} * ${{devicesCount}} / ${{agentCount}};')
+                fw.write(f'double {name}_TPS = ${{{name}_baselineTPS}} * ${{devicesCount}} * 60 / ${{agentCount}};')
                 fw.write('\n')
-                fw.write(f'props.put("{name}_TPM", String.valueOf({name}_TPM));')
-                fw.write('\n')
+                fw.write(f'props.put("{name}_Threads", String.valueOf({name}_Threads));')
+                fw.write('\n') 
+                fw.write(f'props.put("{name}_TPS", String.valueOf({name}_TPS));')
+                fw.write('\n') 
     print(totalThreadsStr)
     fw.write(totalThreadsStr[:-3]+';\n')
     fw.write(f'props.put("totalThreads", String.valueOf(totalThreads));')
@@ -193,7 +195,7 @@ with open('TestTPMCalculateCode.txt', 'w') as fw:
 # 	//rpsTime=0.01*rpsTime;
 # Double TC201800001_Napa_DVR_WatchAndTricks_TPS = Double.parseDouble(props.get("TC201800001_Napa_DVR_WatchAndTricks_TPS")) * rpsTime;
 # props.put("TC201800001_Napa_DVR_WatchAndTricks_TPS", String.valueOf(TC201800001_Napa_DVR_WatchAndTricks_TPS));
-with open('TestTPMRampupCode.txt', 'w') as fw:
+with open('TestTPSRampupCode.txt', 'w') as fw:
     fw.write(f'props.put("RPSTimes", "1");\n')
     fw.write(f'Double rpsTime = 0.1;\n')
     fw.write(f'int rampUpTime = Integer.parseInt(vars.get("Rampup"));\n')
@@ -203,7 +205,7 @@ with open('TestTPMRampupCode.txt', 'w') as fw:
         for name in f.readlines():
             if (len(name)) :
                 name = name.replace('\n', '')
-                # fw.write(f'int {name}_Threads = (int)Math.ceil(${{{name}_baselineTPM}} * ${{devicesCount}} / ${{agentCount}} /rpmPerThreads);')
-                fw.write(f'Double {name}_TPM = Double.parseDouble(props.get("{name}_TPM")) * rpsTime;\n')
-                fw.write(f'props.put("{name}_TPM", String.valueOf({name}_TPM));\n')
+                # fw.write(f'int {name}_Threads = (int)Math.ceil(${{{name}_baselineTPS}} * ${{devicesCount}} / ${{agentCount}} /rpmPerThreads);')
+                fw.write(f'Double {name}_TPS = Double.parseDouble(props.get("{name}_TPS")) * rpsTime;\n')
+                fw.write(f'props.put("{name}_TPS", String.valueOf({name}_TPS));\n')
     fw.write(f'}}\n')
