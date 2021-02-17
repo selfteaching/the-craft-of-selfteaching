@@ -3,10 +3,10 @@
 > One has no future if one couldn't teach themself<a href='#fn1' name='fn1b'><sup>[1]</sup></a>.
 
 # 自学是门手艺
-
+fccccc
 > 没有自学能力的人没有未来
 
-**作者：李笑来**
+**作者：李笑来*
 
 特别感谢**霍炬**（[@virushuo](https://github.com/virushuo)）、**洪强宁**（[@hongqn](https://github.com/hongqn)) 两位良师诤友在此书写作过程中给予我的巨大帮助！
 
