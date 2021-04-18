@@ -1,0 +1,26 @@
+<ol>
+    <li><pre>begin began begun begins beginning</pre></li>
+    <li><pre>google gooogle goooogle goooooogle</pre></li>
+    <li><pre>coloured color coloring  colouring colored</pre></li>
+    <li><pre>never ever verb however everest</pre></li>
+    <li><pre>520 52000 5200000 520000000 520000000000</pre></li>
+    <li><pre>error wonderer achroiocythaemia achroiocythemia</pre></li>
+    <li><pre>The white dog wears a black hat.</pre></li>
+    <li><pre>Handel, Händel, Haendel</pre></li>
+</ol>
+<dl>(843) 542-4256</dl> <dl>(431) 270-9664</dl>
+<dl>3336741162</dl> <dl>3454953965</dl>
+<ul>
+<li>peoplesr@live.com</li> <li>jaxweb@hotmail.com</li>
+<li>dhwon@comcast.net</li> <li>krueger@me.com</li>
+</ul>
+<h3>URLs</h3>
+https://docs.python.org/3/howto/regex.html
+https://docs.python.org/3/library/re.html
+<h3>passwords</h3>
+Pasw0rd~
+i*Eh,GF67E
+a$4Bh9XE&E
+<h3>duplicate words</h3>
+<p>It's very very big.</p>
+<p>Keep it simple, simple, simple!</p>
