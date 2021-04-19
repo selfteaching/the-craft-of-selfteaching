@@ -1,3 +1,5 @@
+[Jupyterlab](https://github.com/jupyterlab)
+
 # the-craft-of-selfteaching
 
 > One has no future if one couldn't teach themself<a href='#fn1' name='fn1b'><sup>[1]</sup></a>.
