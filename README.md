@@ -78,7 +78,7 @@ teach_yourself(coding)
 > - [T-appendix.git-introduction（**Git 简介**）](T-appendix.git-introduction.ipynb)
 > - [T-appendix.jupyter-installation-and-setup（**Jupyterlab 的安装与配置**）](T-appendix.jupyter-installation-and-setup.ipynb)
 > - [T-appendix.symbols（**这些符号都代表什么？**）](T-appendix.symbols.ipynb)
->- 增加一个索引
+>- 增加一个索引,可以的
 
 本书的版权协议为 [CC-BY-NC-ND license](https://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh)。
 
