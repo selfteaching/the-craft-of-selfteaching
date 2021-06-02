@@ -13,7 +13,7 @@
 
 但是，从另外一个角度，反对 OOP 的人群中，牛人比例更高 —— 这也是个看起来颇为吊诡的事实。
 
-比如，Erlang 的发明者，[Joe Armstrong](https://en.wikipedia.org/wiki/Joe_Armstrong_(programmer) 就很讨厌 OOP，觉得它效率低下。他用的类比也确实令人忍俊不禁，说得也挺准的：
+比如，Erlang 的发明者，[Joe Armstrong](https://en.wikipedia.org/wiki/Joe_Armstrong_(programmer)) 就很讨厌 OOP，觉得它效率低下。他用的类比也确实令人忍俊不禁，说得也挺准的：
 
 > 支持 OOP 的语言的问题在于，它们总是随身携带着一堆并不明确的环境 —— 你明明只不过想要个香蕉，可你所获得的是一个大猩猩手里拿着香蕉…… 以及那大猩猩身后的整个丛林！<br /> —— [Coders at Work](http://www.codersatwork.com)
 
