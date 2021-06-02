@@ -1,4 +1,5 @@
 # the-craft-of-selfteaching
+test
 
 > One has no future if one couldn't teach themself<a href='#fn1' name='fn1b'><sup>[1]</sup></a>.
 
@@ -71,7 +72,7 @@ teach_yourself(coding)
 > - [Part.3.F.social-selfteaching（**自学者的社交**）](Part.3.F.social-selfteaching.ipynb)
 > - [Part.3.G.the-golden-age-and-google（**这是自学者的黄金时代**）](Part.3.G.the-golden-age-and-google.ipynb)
 > - [Part.3.H.prevent-focus-drifting（**避免注意力漂移**）](Part.3.H.prevent-focus-drifting.ipynb)
-> - [Q.good-communiation（**如何成为优秀沟通者**）](Q.good-communiation.ipynb)
+> - [Q.good-communiation（**如何成为优秀沟通者**）](Q.good-communication.ipynb)
 > - [R.finale（**自学者的终点**）](R.finale.ipynb)
 > - [S.whats-next（**下一步干什么？**）](S.whats-next.ipynb)
 > - [T-appendix.editor.vscode（**Visual Studio Code 的安装与配置**）](T-appendix.editor.vscode.ipynb)

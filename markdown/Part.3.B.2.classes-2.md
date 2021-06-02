@@ -65,7 +65,7 @@ class Golem:
 
 注意：`self` 这个变量的定义，是在 `def __init__(self, ...)` 这一句里完成的。对于这个变量的名称取名没有强制要求，你实际上可以随便用什么名字，很多 C 程序员会习惯于将这个变量命名为 `this` —— 但根据惯例，你最好还是只用 `self` 这个变量名，省得给别人造成误会。
 
-在 Class 的代码中，如果定义了 `__init__()` 函数，那么系统就会将它当作用来 Instance 在创建后被初始化的函数。这个函数名称是强制指定的，初始化函数必须使用这个名称；注意 `init` 两端各有两个下划线 `_`。
+在 Class 的代码中，如果定义了 `__init__()` 函数，那么系统就会将它当作 Instance 在创建后被初始化的函数。这个函数名称是强制指定的，初始化函数必须使用这个名称；注意 `init` 两端各有两个下划线 `_`。
 
 当我们用 `g = Golem('Clay')` 这一句创建了一个 Golem 的 Instance 的时候，以下一连串的事情发生了：
 
@@ -345,7 +345,7 @@ UnboundLocalError: local variable 'population' referenced before assignment
 
 如果你足够细心，你会发现这个版本中，有些变量前面有两个下划线 `__`，比如，`__life_span` 和 `self.__active`。这是 Python 的定义，变量名前面加上一个以上下划线（Underscore）`_` 的话，那么该变量是 “私有变量”（Private Variables），不能被外部引用。而按照 Python 的惯例，我们会使用两个下划线起始，去命名私有变量，如：`__life_span`。你可以回去试试，把所有的 `__life_span` 改成 `_life_span`（即，变量名开头只有一个 `_`，那么，`hasattr(Golem, '_life_span')` 和 `hasattr(g, '_life_span')` 的返回值就都变成了 `True`。
 
-看看下面的图示，理解起来更为直观一些：
+看看下面的图示，理解起来更为直观一些，其中每个方框代表一个 Scope：
 
 ![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/class-variables-scope.png?raw=true)
 
@@ -370,7 +370,7 @@ Scope ④ 与 Scope ③ 平行存在。所以在这里，`population` 和 `__lif
 
 在本例子中，在 `__init__(self, name=None)` 函数中 `self.population` 和 `Golem.population` 都可以使用，但使用效果是不一样的：
 
-> * `self.population` 总是去读取 `Golem` 类中 `population` 的初始值，即使后面通过 `setattr((Golem, 'population', 10)` 更改 `population` 的值后，`self.population` 的值仍为 `0`，但 `Golem.population` 值则为 `10`，你可以自己动手尝试一下。
+> * `self.population` 总是去读取 `Golem` 类中 `population` 的初始值，即使后面通过 `setattr(Golem, 'population', 10)` 更改 `population` 的值后，`self.population` 的值仍为 `0`，但 `Golem.population` 值则为 `10`，你可以自己动手尝试一下。
 
 ## Encapsulation
 

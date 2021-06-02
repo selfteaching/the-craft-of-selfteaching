@@ -5,7 +5,7 @@
 
 ## 模块
 
-我们可以将以下内容保存到一个名为 `mycode.py` 的文件中 —— 这样可以被外部调用的 `.py` 文件，有个专门的称呼，**模块**（Module）—— 于是，其实任何一个 `.py` 文件都可以被称为*模块*：
+我们可以将以下内容保存到一个名为 `mycode.py` 的文件中 —— 这样可以被外部调用的 `.py` 文件，有个专门的称呼，**模块**（Module）—— 于是，它（任何一个 `.py` 文件）也可以被称为*模块*：
 
 ```python
 # %load mycode.py
@@ -116,7 +116,7 @@ import sys
 
 sys.builtin_module_names
 "_sre" in sys.builtin_module_names # True
-"math" in sys.builtin_module_names # False
+"math" in sys.builtin_module_names # False （根据自己电脑库的安装情况，结果会有不同）
 ```
 
     ('_abc',
