@@ -66,7 +66,7 @@ re.findall(pttn, str)
 
 我们最好先直接看看 Regex 的工作过程。以下，是用微软发行的代码编辑工具 Visual Studio Code 针对一小段文本使用若干条 Regex 进行匹配的过程：
 
-![](../images/regex-test.gif?raw=true)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/regex-test.gif?raw=true)
 
 Python 的项目代码仓库里有一个很简短的 Demo 程序，叫 [`redemo.py`](https://github.com/python/cpython/blob/master/Tools/demo/redemo.py)，它使用 [Tcl/Tk](https://docs.python.org/3/library/tkinter.html) 作为图形界面，也可以用来测试正则表达式。
 
@@ -76,13 +76,13 @@ Python 的项目代码仓库里有一个很简短的 Demo 程序，叫 [`redemo.
 
 它运行起来长成这样：
 
-![](../images/redemo.png?raw=true)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/redemo.png?raw=true)
 
 目前（2019）网上最方便的 Regex 测试器，是 [regex101.com](https://regex101.com)：
 
-以下，就是在一段文本中，找出所有首写字母大写的词汇的*过程*，并将其先全部替换成小写，再将其全部替换为大写的过程；使用的正则表达式是 `([A-Z])\w+`，替换表达式分别是 `\L$1` 和 `\U$1`：
+以下，就是在一段文本中，找出所有首写字母大写的词汇的*过程*，并将其先全部替换成小写，再将其全部替换为大写的过程；使用的正则表达式是 `([A-Z]\w+)`，替换表达式分别是 `\L$1` 和 `\U$1`：
 
-![](../images/regex101.gif?raw=true)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/regex101.gif?raw=true)
 
 这个网站太好了，所以，平日里我是用 [Nativefier](https://github.com/jiahaog/nativefier) 工具将这个网站打包为一个 Mac Desktop App 使用。不过，它也有局限，就是被搜索文件略微大点就报错，说 `timeout`……
 
@@ -243,7 +243,7 @@ re.findall(pttn, str)
 > * `w` 是 word characters
 > * `s` 是 spaces
 
-另外，在空白的集合 `[ \f\n\r\t\v]` 中：`f` 是分页符；`\n` `\r` 是换行符；`\t` 是制表符；`\v` 是纵向制表符（很少用到）。各种关于空白的转义符也同样挺好记忆的，如果你知道各个字母是那个词的首字母的话：
+另外，在空白的集合 `[ \f\n\r\t\v]` 中：`\f` 是分页符；`\n` `\r` 是换行符；`\t` 是制表符；`\v` 是纵向制表符（很少用到）。各种关于空白的转义符也同样挺好记忆的，如果你知道各个字母是那个词的首字母的话：
 
 > * `f` 是 flip
 > * `n` 是 new line
@@ -431,7 +431,7 @@ re.findall(pttn, str)
 
 在集合原子中（即，`[]` 内的原子）各个原子之间的关系，只有 “或” —— 相当于方括号中的每个原子之间都有一个被省略的 `|`。
 
-**注意**：中括号的 `|` 不被当作特殊符号，而是被当作 `|` 这个符号本身。在中括号中的圆括号，也被当作圆括号 `()` 本身，而无分组含义。
+**注意**：方括号的 `|` 不被当作特殊符号，而是被当作 `|` 这个符号本身。在方括号中的圆括号，也被当作圆括号 `()` 本身，而无分组含义。
 
 ```python
 from IPython.core.interactiveshell import InteractiveShell

@@ -15,7 +15,7 @@
 
 有个曲子很难（当然也非常好听），曲名是 [Recrerdes Da La Alhambra](https://www.youtube.com/watch?v=OOsRMECWKAE) 阿罕布拉宫的回忆。你看看曲谱就知道它多难了：
 
-![](../images/guitar-tab.gif?raw=true)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/guitar-tab.gif?raw=true)
 
 那怎么办？怎么办？！—— 我的办法听起来看起来都很笨：
 
@@ -73,11 +73,11 @@ IFrame('https://www.youtube.com/embed/OOsRMECWKAE?', width='800', height='450')
 
 拆解的第一种方法是把某个任务拆分成若干个小任务，正如上面的讲解那样，我称它为 “横向拆解”。
 
-![](../images/decompose-x.png?raw=true)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/decompose-x.png?raw=true)
 
 另外一种方法，我称它为 “纵向拆解”（有时，我也会用 “分层拆解” 这个说法）。
 
-![](../images/decompose-y.png?raw=true)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/decompose-y.png?raw=true)
 
 这种方式在自学复杂的概念体系时特别管用。
 

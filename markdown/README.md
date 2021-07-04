@@ -84,9 +84,9 @@ $ jupyter nbconvert --to markdown *.ipynb
 `README.md` 文件复制一份到 `markdown/` 目录之下，而后编辑为当前文件
 
 # 需使用 VSCode 批量 Find and Replace:
-将所有 (images/ 替换为 (../images/
-将所有 (Part.1.A.better.teachyourself_files/ 替换为 (../images/
-将所有 (Part.1.E.6.containers_files/ 替换为 (../images/
+将所有 (https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/ 替换为 (https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/
+将所有 (Part.1.A.better.teachyourself_files/ 替换为 (https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/
+将所有 (Part.1.E.6.containers_files/ 替换为 (https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/
 将所有 ```\n\n 替换为 ```\n
 将所有	\n\n```	替换为 \n```
 将所有 .ipynb) 替换为 .md)
@@ -99,7 +99,7 @@ $ jupyter nbconvert --to markdown *.ipynb
 
 推荐读者在自己的浏览器上安装 [Stylus](https://github.com/openstyles/stylus) 这类终端 CSS 定制插件，Chrome/Firefox/Opera 都支持 Stylus 插件。以便拥有更好的阅读体验。以下 gif 图片展示的是使用自定义 css 前后的效果：
 
-> ![](../images/github-markdown-style.gif?raw=true)
+> ![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/github-markdown-style.gif?raw=true)
 
 
 我用的 Stylus 定制 CSS（针对 github.com）是这样的：
@@ -149,7 +149,7 @@ td code {
 
 本书的版权协议为 [CC-BY-NC-ND license](https://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh)。
 
-![CC-BY-NC-ND](../images/CC-BY-NC-ND.png?raw=true)
+![CC-BY-NC-ND](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/CC-BY-NC-ND.png?raw=true)
 
 -----
 **脚注**

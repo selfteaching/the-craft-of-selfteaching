@@ -31,7 +31,7 @@ print(f(5))
 
 以 factorial(5) 为例，让我们看看程序的流程：
 
-![](../images/recursive-function-call.png?raw=true)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/recursive-function-call.png?raw=true)
 
 当 f(5) 被调用之后，函数开始运行……
 * 因为 `5 > 1`，所以，在计算 `n * f(n-1)` 的时候要再次调用自己 `f(4)`；所以必须等待 `f(4)` 的值返回；
@@ -311,7 +311,7 @@ print(n, m)
 
 现在可以小小总结一下了。
 
-一个递归函数，之所以是一个有用、有效的递归函数，因为它要遵守递归三原则。正如，一个机器人之所以是个合格的机器人，因为它遵循[阿西莫夫三铁律](https://zh.wikipedia.org/wiki/%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%B8%89%E5%AE%9A%E5%BE%8B)（Three Laws of Robotics）一样<a href='#fn2' name='fn2b'><sup>[2]</sup></a>。
+一个递归函数，之所以是一个有用、有效的递归函数，是因为它要遵守递归三原则。正如，一个机器人之所以是个合格的机器人，是因为它遵循[阿西莫夫三铁律](https://zh.wikipedia.org/wiki/%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%B8%89%E5%AE%9A%E5%BE%8B)（Three Laws of Robotics）一样<a href='#fn2' name='fn2b'><sup>[2]</sup></a>。
 
 > 1. 根据定义，递归函数必须在内部调用自己；
 > 2. 必须设定一个退出条件；

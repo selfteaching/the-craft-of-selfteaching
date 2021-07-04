@@ -76,7 +76,7 @@
 
 于是，我们终于可以好好总结一下了：
 
-![](../images/seflteaching-model.png?raw=true)
+![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/seflteaching-model.png?raw=true)
 
 > * 你一定要想办法启动自学，否则你没有未来；
 > * 你把自学当作一门手艺，长期反复磨练它；

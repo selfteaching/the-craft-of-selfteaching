@@ -90,7 +90,7 @@ code jupyter_notebook_config.py
 
 > `c.NotebookApp.token = ''`
 
-每次打开 Jupter，它都会给你生成一个新的 Token —— 这是安全策略。但是，如果你只是在自己的电脑上使用，那么，这就给你制造了麻烦，因为若是你想同时用另外一个浏览器打开它，那你就需要从 Terminal 里拷贝那个 Token 出来。所以，你可以在配置文件里直接把它设置为空。
+每次打开 jupyter，它都会给你生成一个新的 Token —— 这是安全策略。但是，如果你只是在自己的电脑上使用，那么，这就给你制造了麻烦，因为若是你想同时用另外一个浏览器打开它，那你就需要从 Terminal 里拷贝那个 Token 出来。所以，你可以在配置文件里直接把它设置为空。
 
 > `c.NotebookApp.open_browser = False`
 
@@ -104,7 +104,7 @@ code jupyter_notebook_config.py
 
 > `c.NotebookApp.default_url = '/tree'`
 
-这一项留给那些依然习惯于使用 jupter notebook 的人，这样设置之后，即便是输入 `jupyter lab` 命令，打开的还是 jupyter notebook。
+这一项留给那些依然习惯于使用 jupyter notebook 的人，这样设置之后，即便是输入 `jupyter lab` 命令，打开的还是 jupyter notebook。
 
 在 Terminal 里常用的与 Jupyter 有关的命令有：
 
@@ -234,7 +234,7 @@ Jupyter notebook 经过很多年的发展，现在有很多扩展插件，但也
 > * [@jupyterlab/toc](https://github.com/jupyterlab/jupyterlab-toc)
 > * [ryantam626/jupyterlab_sublime](https://github.com/ryantam626/jupyterlab_sublime)
 
-首先在用快捷键 `⌘ ,` 打开 Jupter lab 的 Advanced Settings，在 Extension Manager 中，添加 User Overrides：
+首先在用快捷键 `⌘ ,` 打开 jupyter lab 的 Advanced Settings，在 Extension Manager 中，添加 User Overrides：
 
 ```json
 {
