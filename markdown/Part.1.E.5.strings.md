@@ -83,7 +83,8 @@ print(
 Simple is better than complex.
 Complex is better than complicated.
 """
-) #用 print() 输出的时候，\n 就是不可见字符，字符串本身如下：
+) 
+# 用 print() 输出的时候，\n 就是不可见字符，字符串本身如下：
 # '\nSimple is better than complex.\nComplex is better than complicated.\n'
 # 其中的 \n 被打印出来的时候显示成换行
 ```
