@@ -96,7 +96,9 @@ f.close()
 ```
 
     first line
+    
     second line
+    
 
 **注意**，返回结果好像跟你想的不太一样。这时候，之前见过的 `str.strip()` 就派上用场了：
 
