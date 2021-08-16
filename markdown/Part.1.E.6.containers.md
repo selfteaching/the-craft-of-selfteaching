@@ -832,8 +832,8 @@ admins.symmetric_difference(moderators)
 **discard**(*elem*)
 > 如果该元素存在于集合中，删除它。
 
-**pop**(*elem*)
-> 从集合中删除 elem，并返回 elem 的值，针对空集合做此操作会产生 KeyError 错误。
+**pop**()
+> 从集合中随机删除一个元素，并返回删除的元素的值，针对空集合做此操作会产生 KeyError 错误。
 
 **clear**()
 从集合中删除所有元素。
