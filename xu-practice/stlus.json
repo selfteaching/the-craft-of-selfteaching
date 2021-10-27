@@ -1,0 +1,37 @@
+a {color: #2456A4 !important;}
+strong {color:#6392BF;}
+em {color: #A9312A; font-style: normal !important;}
+table {font-size: 90% !important;}
+
+#jp-main-dock-panel {background-color: #f9f9f9;}
+.jp-RenderedHTMLCommon {font-family: "Yuanti SC"; font-size: 100%;}
+.jp-Notebook {background-color: #fbfafa;}
+.CodeMirror, .jp-RenderedHTMLCommon pre {font-size: 90%;}
+.jp-RenderedHTMLCommon pre {
+    padding: 10px 25px;
+    background-color: #fafafa;
+    border-left: 4px solid #dadada;
+    border-radius: 10px;
+}
+
+.jp-RenderedHTMLCommon pre code {
+    background-color: #fafafa;
+}
+
+.jp-RenderedHTMLCommon h1 code,
+.jp-RenderedHTMLCommon h2 code,
+.jp-RenderedHTMLCommon h3 code,
+.jp-RenderedHTMLCommon h4 code,
+.jp-RenderedHTMLCommon p code, 
+.jp-RenderedHTMLCommon li code,
+.jp-RenderedHTMLCommon blockquote p code, 
+.jp-RenderedHTMLCommon blockquote li code,
+.jp-RenderedHTMLCommon td code {
+    background-color: #f6f6f6;
+    font-size: 90%;
+    color:#2e2e2e;
+    padding: 4px 4px;
+    margin: 0 8px;
+    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.2);
+    border-radius: 4px;
+}
