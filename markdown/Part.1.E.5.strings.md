@@ -600,7 +600,7 @@ print('mpl' in s)
 
 > `str.replace(old, new[, count])`
 
-用 `new` 替换 `old`，替换 `count` 个实例（实例：exmpale，每次处理的对象就是实例，即具体的操作对象），其中，`count` 这个参数是可选的。
+用 `new` 替换 `old`，替换 `count` 个实例（实例：example，每次处理的对象就是实例，即具体的操作对象），其中，`count` 这个参数是可选的。
 
 ```python
 s = """Simple is better than complex.
