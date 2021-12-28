@@ -6,7 +6,7 @@
 > * 但 github 不会自动帮你把 xiaolai 的仓库同步给你 fork 后的仓库；
 > * 导致你提交 pull request 时的版本和 xiaolai 的版本不一致。
 
-这个问题，用显得更“专业”的说法，叫做：`Github进行fork后如何与原仓库同步 `。那到底怎么做呢？
+这个问题，用显得更“专业”的说法，叫做：`Github进行fork后如何与原仓库同步`。那到底怎么做呢？
 
 最省事的办法可能是：
 
@@ -21,14 +21,13 @@
 
 那要不然，就多练练？以下是傻瓜版操作步骤，还细心配了截图，保管你从 0 也能上手。至于原理嘛，慢慢再搞懂吧。
 
-### merge前的设定
+## merge前的设定
 
 step 1、进入到本地仓库的目录。
 
 下面所有操作，如无特别说明，都是在你的本地仓库的目录下操作。比如我的本地仓库为 `/from-liujuanjuan-the-craft-of-selfteaching`
 
 ![image](https://user-images.githubusercontent.com/31027645/54422899-6938e880-474a-11e9-8768-27ac24673e28.png)
-
 
 step 2、执行命令 `git remote -v` 查看你的远程仓库的路径：
 
@@ -42,7 +41,7 @@ step 3、执行命令 `git remote add upstream https://github.com/selfteaching/t
 
 step 4、执行命令 `git status` 检查本地是否有未提交的修改。如果有，则把你本地的有效修改，先从本地仓库推送到你的github仓库。最后再执行一次 `git status` 检查本地已无未提交的修改。
 
-`git add -A` 或者 `git add filename` 
+`git add -A` 或者 `git add filename`
 `git commit -m "your note"`
 `git push origin master`
 `git status`
@@ -50,7 +49,6 @@ step 4、执行命令 `git status` 检查本地是否有未提交的修改。如
 注1：作为新手，这一步建议严格执行，是为了避免大量无效修改或文本冲突带来的更复杂局面。
 
 注2：如果你已经在fork后的仓库提交了大量对 xiaolai 的仓库并没有价值的修改，那么想要pull request，还是重新回到本文最初的“最省事办法”吧。
-
 
 ### merge 的关键命令
 
@@ -68,13 +66,10 @@ step 7、执行命令 `git merge upstream/master` 合并远程的master分支：
 
 ![image](https://user-images.githubusercontent.com/31027645/54449526-47128b00-4789-11e9-9add-09217eb91a68.png)
 
-
-step 8、执行命令 `git push ` 把本地仓库向github仓库（你fork到自己名下的仓库）推送修改
+step 8、执行命令 `git push` 把本地仓库向github仓库（你fork到自己名下的仓库）推送修改
 
 如果担心自己不小心改了哪里，可以再次执行命令 `git status` 检查哪些文件有变化。这个操作仅是检查，不会改变任何状态，放心用。
 
 ![image](https://user-images.githubusercontent.com/31027645/54449665-a07aba00-4789-11e9-9181-bdcc814fffe6.png)
 
-
 现在你已经解决了fork的仓库和原仓库版本不一致的问题。可以放心向 xiaolai 发起 pull request 了。如果以上操作你花了不少时间，而 xiaolai 的仓库又恰好更新了。很好，一次新的练习机会来了……
-
