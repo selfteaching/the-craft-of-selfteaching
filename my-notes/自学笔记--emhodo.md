@@ -48,3 +48,22 @@ One has no future if one couldn't teach themself
 > -5.相对完整地了解字符串的操作
 > -6.了解各种容器的基础操作
 > -7.简要了解文件的读写操作
+
+## 1.E.1入口
+**逻辑操作符**Logic Operators
+> -==  等于
+> -!=  不等于
+> ->   大于
+> ->=  大于等于
+> -<   小于
+> -<=  小于等于
+> -in  属于
+执行页面中程序的方法:选中程序块，按shift+Enter
+赋值 Assignment
+变量 Variable
+常量 Literal
+函数 Functions
+> -函数名 Function Name
+> -参数   Parameters
+> -返回值 Return Value
+> -调用   Call
