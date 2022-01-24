@@ -67,3 +67,26 @@ One has no future if one couldn't teach themself
 > -参数   Parameters
 > -返回值 Return Value
 > -调用   Call
+
+## 1.E.2值与其相应的运算
+> -运算 Evaluation
+> -流程控制 Contrl Flow
+if……和for……条件语句可以并列使用
+literal的意思是字面的
+运算的一个默认法则就是，通常情况下应该是*相同类型的值才能相互运算*。
+> -Type Casting(类型转换)
+
+运算优先级从高到低：
+操作符
+> -数值运算符 高于 逻辑操作符 高于 布尔值操作符
+
+数值
+> -幂
+> -自加、自减
+> -乘除商余
+> -加减
+
+逻辑操作符
+
+布尔值
+> -非 与 或，not and or
