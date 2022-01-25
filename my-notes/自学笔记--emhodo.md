@@ -90,3 +90,10 @@ literal的意思是字面的
 
 布尔值
 > -非 与 或，not and or
+
+## 1.E.3流程控制
+> -1.`for` 语句块还可以附加一个 `else` —— 这是 Python 的一个比较有个性的地方。附加在 `for`结 > -尾的 `else` 语句块，_在没有 `break` 发生的情况下会运行_。
+> -2.写嵌套的判断语句或循环语句的时候，最常用 `pass`，因为写嵌套挺费脑子的，一不小心就弄乱了。 > -所以，经常需要先用 `pass` 占位，而后逐一突破。
+绝大多数编程语言都提供两种循环结构：
+>-Collection-controlled loops(以集合为基础的循环) for……in循环
+>-Condition-controlled loops(以条件为基础的循环) while循环
