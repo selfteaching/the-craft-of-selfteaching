@@ -120,3 +120,95 @@ literal的意思是字面的
 > * 所有的函数都有返回值，即便它内部不指定返回值，也有一个默认返回值：`None`；
 > * 另外，一定要耐心阅读该函数在使用的时候需要注意什么 —— 产品说明书的主要作用就在这里……
 
+## 1.E.5字符串
+字符串属于有序容器
+> -例：
+> -s='Python'
+> -for char in s:
+> -    print(s.index(char),char)
+s[start:stop:step]返回从索引值为start到stop的那个字符之前的，以step为步长的所有字符
+包含左侧的start，不含右边的stop。
+
+
+###处理字符串的内建函数
+写在类的内部了函数，有个专门的名称，类的方法***Method***.
+ord()
+input()
+int()
+float()
+len()
+print()
+chr() 这是与ord()相对的函数，即把Unicode码转为字符
+
+调用str类的Methods是使用`.`这个符号，'Python'.upper()
+> -str.upper()     
+> -str.lower()
+> -str.capitallize()  句首字母大写
+> -str.title()        每个单词首字母大写
+> -str.swapcase()     逐个字符更替大小写  
+> -str.casefold()     转换成小写，能处理更多欧洲语言字符
+> -str.capitalize()   专门针对行首字母大写的方法
+> -str.title()        针对每个词首字母大写的方法
+> -str.encode()       处理非英文字符串时经常会用到
+
+***在Python命令行工具之中，单个下刬线是个特殊的变量，保存着最近的语句或者表达式的结果***
+
+###搜索与替换
+str.count(sub[,start=0[,stop=len(str)]])
+给sub一个参数的话，默认从第一个字符搜索到字符串结束，返回值为字符串中sub出现的次数
+没有找到就返回 -1.
+
+str.find(sub[,start[,stop]])   返回最早sub出现的那次位置
+str.rfind(sub[,start[,stop]])  返回最后sub出现的那次位置
+str.index(sub[,start[,stop]])  作用与find（）相同，但如果没找到，会触发ValueError异常
+str.rindex(sub[,start[,stop]]) 作用与rfind（）相同，但如果没找到，会触发ValueError异常
+
+判断一个字符串是否以某个子字符串起始或者结束的：
+str.startswith(prefix[,start[,stop]])
+str.endswith(suffix[,start[,stop]])
+
+替换：
+str.replace(old,new[,count])
+用new替换old，替换count个实例
+
+专门替换TAB(\t)的Method
+str.expandtabs(tabsize=8)
+将TAB替换成空格，默认是8个空格，也可自己指定
+
+去除子字符
+str.strip([chars])
+去除一个字符串首尾的所有空白，但如果给定了一个字符串作为参数，那么参数字符串中的所有
+字母都会被当做需要从首尾剔除的对象，直到新的首尾字母不包含在参数中，就会停止剔除。
+str.lstrip()只对左侧处理
+str.rstrip()只对右侧处理
+
+###拆分字符串
+
+str.splitlines() 按行拆分，返回一个列表，被拆分的每一行作为其中的元素
+str.split()将一个字符串根据分隔符拆分
+> -str.split(sep=None,maxsplit=-1)  默认用各种空白分割，maxsplit是拆分次数，
+> -默认-1指全部拆分
+
+###拼接字符串
+
+str.join(_iterable_)
+
+###字符串排版
+
+str.center(width[,fillchar]),第二个参数可选，且只接收单个字符
+将字符串靠左或者靠右对齐放置：
+> -str.ljust(width[,fillchar])
+> -str.rjust(width[,fillchar])
+
+将字符串转换为左侧由0填充的指定长度字符串str.zfill(length)
+
+###格式化字符串
+
+str.format()
+
+f-string
+
+###字符串属性
+
+
+
