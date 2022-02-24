@@ -1,5 +1,5 @@
 # the-craft-of-selfteaching
-
+4322223242424234344326644632413265464324423443244326454632464532443265234645
 > One has no future if one couldn't teach themself<a href='#fn1' name='fn1b'><sup>[1]</sup></a>.
 
 # 自学是门手艺
