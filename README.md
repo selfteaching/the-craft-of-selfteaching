@@ -1,7 +1,7 @@
 # the-craft-of-selfteaching
 
 > One has no future if one couldn't teach themself<a href='#fn1' name='fn1b'><sup>[1]</sup></a>.
-
+#文件更改测试
 # 自学是门手艺
 
 > 没有自学能力的人没有未来
