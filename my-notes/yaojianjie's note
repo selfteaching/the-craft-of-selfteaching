@@ -1,3 +1,4 @@
 通过自学是门手艺来学习python
 学会这个，未来会是怎么样的呢？
 在jupyterlab上开始学习Python 20220702
+在jupyterlab上编辑后，其实修改的是本地的代码库，打开github desktop可以看到数据修改的动态，点击commit就能够将本地修改数据同步到github上，但要注意你是用的是master主干还是study分支，千万不要commit（投送）错了 20220702
