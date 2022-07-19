@@ -85,7 +85,7 @@ teach_yourself(coding)
 ![CC-BY-NC-ND](images/CC-BY-NC-ND.png?raw=true)
 
 -----
-**脚注**
+**脚注1**
 
 <a name='fn1'>[1]</a>：['Themselves' or 'themself'? -- Oxford Dictionary](https://en.oxforddictionaries.com/usage/themselves-or-themself)
 
