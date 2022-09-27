@@ -8,6 +8,8 @@
 
 **作者：李笑来**
 
+#感谢李老师！
+
 特别感谢**霍炬**（[@virushuo](https://github.com/virushuo)）、**洪强宁**（[@hongqn](https://github.com/hongqn)) 两位良师诤友在此书写作过程中给予我的巨大帮助！
 
 ```python
