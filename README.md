@@ -2,6 +2,11 @@
 
 > One has no future if one couldn't teach themself<a href='#fn1' name='fn1b'><sup>[1]</sup></a>.
 
+
+
+
+撒都是绝代风华撒了绝代风华即可撒的房间卡上打飞机快回家啊
+
 # 自学是门手艺
 
 > 没有自学能力的人没有未来
