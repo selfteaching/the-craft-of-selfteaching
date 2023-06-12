@@ -143,7 +143,7 @@ print('(not False) yields:',  not False)
     (not True) yields: False
     (not False) yields: True
 
-千万不要误以为布尔运算是*理科生*才必须会、才能用得上的东西…… 文理艺分科是中国的特殊分类方式，真挺害人的。比如，设计师们在计算机上创作图像的时候，也要频繁使用*或与非*的布尔运算操作才能完成各种图案的拼接…… 抽空看看这个网页：[Boolean Operations used by Sketch App](https://sketchapp.com/docs/shapes/boolean-operations/) —— 这类设计软件，到最后是每个人都用得上的东西呢。另，难道艺术生不需要学习文科或者理科？—— 事实上，他们也有文化课……
+千万不要误以为布尔运算是*理科生*才必须会、才能用得上的东西…… 文理艺分科是中国的特殊分类方式，真挺害人的。比如，设计师们在计算机上创作图像的时候，也要频繁使用*或与非*的布尔运算操作才能完成各种图案的拼接…… 抽空看看这个网页：[Boolean Operations used by Sketch App](https://www.sketch.com/docs/designing/shapes/boolean-operations/) —— 这类设计软件，到最后是每个人都用得上的东西呢。另，难道艺术生不需要学习文科或者理科？—— 事实上，他们也有文化课……
 
 ![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/operations@2x.png?raw=true)
 
