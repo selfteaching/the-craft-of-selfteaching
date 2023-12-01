@@ -4,7 +4,7 @@
 .ipynb_checkpoints/
 __pycache__
 **/.DS_Store
-**/.ipynb_chechpoints
+**/.ipynb_checkpoints
 **/__pycache__
 log.txt
 **/log.txt
