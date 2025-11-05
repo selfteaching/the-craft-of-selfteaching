@@ -12,12 +12,11 @@
 
   // 放大镜元素
   let magnifier = null;
-  let canvas = null;
-  let ctx = null;
+  let magnifierLens = null;
 
   // 创建放大镜元素
   function createMagnifier() {
-    // 创建容器
+    // 创建放大镜容器
     magnifier = document.createElement('div');
     magnifier.id = 'page-magnifier';
     magnifier.style.cssText = `
@@ -26,27 +25,26 @@
       height: ${config.magnifierSize}px;
       border-radius: 50%;
       border: ${config.borderWidth}px solid #333;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(0, 0, 0, 0.1);
       pointer-events: none;
       z-index: 2147483647;
       display: none;
       overflow: hidden;
+      background: white;
     `;
 
-    // 创建canvas用于绘制放大内容
-    canvas = document.createElement('canvas');
-    canvas.width = config.magnifierSize;
-    canvas.height = config.magnifierSize;
-    canvas.style.cssText = `
+    // 创建放大镜内容容器（用于显示放大的页面内容）
+    magnifierLens = document.createElement('div');
+    magnifierLens.id = 'page-magnifier-lens';
+    magnifierLens.style.cssText = `
+      position: absolute;
       width: 100%;
       height: 100%;
-      border-radius: 50%;
+      transform-origin: 0 0;
     `;
 
-    magnifier.appendChild(canvas);
+    magnifier.appendChild(magnifierLens);
     document.body.appendChild(magnifier);
-
-    ctx = canvas.getContext('2d');
   }
 
   // 移除放大镜
@@ -54,128 +52,258 @@
     if (magnifier && magnifier.parentNode) {
       magnifier.parentNode.removeChild(magnifier);
       magnifier = null;
-      canvas = null;
-      ctx = null;
+      magnifierLens = null;
     }
   }
 
   // 更新放大镜位置和内容
   function updateMagnifier(e) {
-    if (!config.isActive || !magnifier) return;
+    if (!config.isActive || !magnifier || !magnifierLens) return;
 
-    const x = e.clientX;
-    const y = e.clientY;
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
 
     // 设置放大镜位置（中心跟随鼠标）
-    magnifier.style.left = (x - config.magnifierSize / 2) + 'px';
-    magnifier.style.top = (y - config.magnifierSize / 2) + 'px';
+    const magnifierX = mouseX - config.magnifierSize / 2;
+    const magnifierY = mouseY - config.magnifierSize / 2;
 
-    // 获取页面的滚动位置
-    const scrollX = window.pageXOffset || document.documentElement.scrollLeft;
-    const scrollY = window.pageYOffset || document.documentElement.scrollTop;
-
-    // 计算源区域的中心点（在整个页面上的位置）
-    const sourceX = x + scrollX;
-    const sourceY = y + scrollY;
-
-    // 计算要捕获的区域大小（放大前的区域）
-    const sourceSize = config.magnifierSize / config.zoomLevel;
-
-    // 清除画布
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    // 保存上下文状态
-    ctx.save();
-
-    // 创建圆形裁剪路径
-    ctx.beginPath();
-    ctx.arc(config.magnifierSize / 2, config.magnifierSize / 2, config.magnifierSize / 2, 0, Math.PI * 2);
-    ctx.clip();
-
-    // 使用 drawImage 进行放大
-    // 由于我们不能直接捕获整个页面，我们使用一个技巧：
-    // 将鼠标下的区域通过 CSS 变换来模拟放大效果
-    try {
-      // 绘制背景
-      ctx.fillStyle = '#ffffff';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-      // 使用 html2canvas 或类似库会更好，但为了保持轻量级
-      // 我们使用 CSS transform 来实现基本的放大效果
-      // 这里我们创建一个视觉提示
-      ctx.font = '16px Arial';
-      ctx.fillStyle = '#333';
-      ctx.textAlign = 'center';
-      ctx.fillText('放大区域', config.magnifierSize / 2, config.magnifierSize / 2);
-
-      // 绘制十字准星
-      ctx.strokeStyle = 'rgba(0, 0, 0, 0.3)';
-      ctx.lineWidth = 1;
-      ctx.beginPath();
-      ctx.moveTo(config.magnifierSize / 2, 0);
-      ctx.lineTo(config.magnifierSize / 2, config.magnifierSize);
-      ctx.moveTo(0, config.magnifierSize / 2);
-      ctx.lineTo(config.magnifierSize, config.magnifierSize / 2);
-      ctx.stroke();
-
-    } catch (error) {
-      console.error('绘制放大镜内容时出错:', error);
-    }
-
-    // 恢复上下文状态
-    ctx.restore();
-  }
-
-  // 使用 foreignObject 和 SVG 来实现真实的页面放大
-  function updateMagnifierWithSVG(e) {
-    if (!config.isActive || !magnifier) return;
-
-    const x = e.clientX;
-    const y = e.clientY;
-
-    // 设置放大镜位置
-    magnifier.style.left = (x - config.magnifierSize / 2) + 'px';
-    magnifier.style.top = (y - config.magnifierSize / 2) + 'px';
+    magnifier.style.left = magnifierX + 'px';
+    magnifier.style.top = magnifierY + 'px';
     magnifier.style.display = 'block';
 
-    // 计算要捕获的区域大小
+    // 计算要放大的源区域大小
     const sourceSize = config.magnifierSize / config.zoomLevel;
-    const sourceX = x - sourceSize / 2;
-    const sourceY = y - sourceSize / 2;
 
-    // 使用 CSS transform 进行放大
-    const scale = config.zoomLevel;
-    const translateX = -(sourceX * scale - config.magnifierSize / 2);
-    const translateY = -(sourceY * scale - config.magnifierSize / 2);
+    // 计算源区域的左上角位置（鼠标为中心）
+    const sourceX = mouseX - sourceSize / 2;
+    const sourceY = mouseY - sourceSize / 2;
 
-    // 克隆鼠标下的元素并放大显示
-    // 这是一个简化版本，实际实现需要更复杂的逻辑
-    ctx.save();
-    ctx.beginPath();
-    ctx.arc(config.magnifierSize / 2, config.magnifierSize / 2, config.magnifierSize / 2 - config.borderWidth, 0, Math.PI * 2);
-    ctx.clip();
+    // 使用 transform 来实现放大效果
+    // 1. 缩放页面内容
+    // 2. 平移使得鼠标位置的内容显示在放大镜中心
+    const translateX = -sourceX * config.zoomLevel;
+    const translateY = -sourceY * config.zoomLevel;
 
-    // 绘制网格背景
-    ctx.fillStyle = '#f0f0f0';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    magnifierLens.style.transform = `scale(${config.zoomLevel}) translate(${translateX / config.zoomLevel}px, ${translateY / config.zoomLevel}px)`;
 
-    // 绘制提示文字
-    ctx.fillStyle = '#666';
-    ctx.font = '14px sans-serif';
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'middle';
-    ctx.fillText(`${config.zoomLevel}x 放大`, config.magnifierSize / 2, config.magnifierSize / 2 - 20);
-    ctx.fillText('鼠标位置: ' + Math.round(x) + ', ' + Math.round(y), config.magnifierSize / 2, config.magnifierSize / 2 + 20);
-
-    ctx.restore();
+    // 复制页面内容到放大镜中
+    updateLensContent();
   }
+
+  // 更新放大镜镜头内容
+  let lastUpdateTime = 0;
+  const updateInterval = 50; // 限制更新频率为20fps，避免性能问题
+
+  function updateLensContent() {
+    const now = Date.now();
+    if (now - lastUpdateTime < updateInterval) {
+      return;
+    }
+    lastUpdateTime = now;
+
+    // 清空之前的内容
+    if (magnifierLens.children.length === 0) {
+      // 创建一个克隆的文档内容
+      // 我们使用一个技巧：通过CSS来显示页面的镜像
+      const clonedContent = document.body.cloneNode(true);
+
+      // 移除克隆内容中的放大镜元素，避免递归
+      const magnifierClone = clonedContent.querySelector('#page-magnifier');
+      if (magnifierClone) {
+        magnifierClone.remove();
+      }
+
+      // 清空lens并添加克隆内容
+      magnifierLens.innerHTML = '';
+      magnifierLens.appendChild(clonedContent);
+    }
+  }
+
+  // 使用更高效的方法：通过背景层克隆实现
+  function createMagnifierEfficient() {
+    // 创建放大镜容器
+    magnifier = document.createElement('div');
+    magnifier.id = 'page-magnifier';
+
+    // 创建用于显示放大内容的iframe（更好的隔离）
+    const magnifierContent = document.createElement('div');
+    magnifierContent.className = 'magnifier-content';
+
+    magnifier.appendChild(magnifierContent);
+    document.body.appendChild(magnifier);
+
+    magnifierLens = magnifierContent;
+  }
+
+  // 使用CSS实现的高效放大镜更新
+  function updateMagnifierEfficient(e) {
+    if (!config.isActive || !magnifier) return;
+
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
+
+    // 放大镜位置
+    magnifier.style.left = (mouseX - config.magnifierSize / 2) + 'px';
+    magnifier.style.top = (mouseY - config.magnifierSize / 2) + 'px';
+    magnifier.style.display = 'block';
+
+    // 计算背景位置
+    const zoom = config.zoomLevel;
+    const bgX = -mouseX * zoom + config.magnifierSize / 2;
+    const bgY = -mouseY * zoom + config.magnifierSize / 2;
+
+    // 更新放大镜样式
+    magnifier.style.cssText = `
+      position: fixed;
+      left: ${mouseX - config.magnifierSize / 2}px;
+      top: ${mouseY - config.magnifierSize / 2}px;
+      width: ${config.magnifierSize}px;
+      height: ${config.magnifierSize}px;
+      border-radius: 50%;
+      border: ${config.borderWidth}px solid #333;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(255, 255, 255, 0.1);
+      pointer-events: none;
+      z-index: 2147483647;
+      display: block;
+      overflow: hidden;
+      background: white;
+      background-image: var(--page-screenshot);
+      background-position: ${bgX}px ${bgY}px;
+      background-size: ${document.documentElement.scrollWidth * zoom}px ${document.documentElement.scrollHeight * zoom}px;
+      background-repeat: no-repeat;
+    `;
+  }
+
+  // 重新实现：使用绝对定位和缩放
+  function createMagnifierV2() {
+    // 创建放大镜外层容器
+    magnifier = document.createElement('div');
+    magnifier.id = 'page-magnifier';
+
+    // 创建内层容器，用于放大内容
+    magnifierLens = document.createElement('div');
+    magnifierLens.id = 'page-magnifier-lens';
+
+    magnifier.appendChild(magnifierLens);
+
+    // 添加到body，但不是body的子元素，而是添加到html
+    // 这样可以避免一些样式继承问题
+    if (document.body) {
+      document.body.appendChild(magnifier);
+    } else {
+      document.documentElement.appendChild(magnifier);
+    }
+
+    // 应用样式
+    updateMagnifierStyles();
+  }
+
+  // 更新放大镜样式
+  function updateMagnifierStyles() {
+    if (!magnifier) return;
+
+    magnifier.style.cssText = `
+      position: fixed;
+      width: ${config.magnifierSize}px;
+      height: ${config.magnifierSize}px;
+      border-radius: 50%;
+      border: ${config.borderWidth}px solid #333;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5), inset 0 0 8px rgba(255, 255, 255, 0.2);
+      pointer-events: none;
+      z-index: 2147483647;
+      display: none;
+      overflow: hidden;
+      background: white;
+    `;
+
+    if (magnifierLens) {
+      magnifierLens.style.cssText = `
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        transform-origin: 0 0;
+        pointer-events: none;
+      `;
+    }
+  }
+
+  // 更新放大镜 V2
+  function updateMagnifierV2(e) {
+    if (!config.isActive || !magnifier || !magnifierLens) return;
+
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
+
+    // 放大镜位置
+    magnifier.style.left = (mouseX - config.magnifierSize / 2) + 'px';
+    magnifier.style.top = (mouseY - config.magnifierSize / 2) + 'px';
+    magnifier.style.display = 'block';
+
+    // 计算缩放和平移
+    const zoom = config.zoomLevel;
+
+    // 计算需要平移的距离，使得鼠标位置显示在放大镜中心
+    const translateX = -mouseX * zoom + config.magnifierSize / 2;
+    const translateY = -mouseY * zoom + config.magnifierSize / 2;
+
+    // 应用变换
+    magnifierLens.style.transform = `scale(${zoom}) translate(${translateX / zoom}px, ${translateY / zoom}px)`;
+
+    // 同步页面内容
+    syncPageContent();
+  }
+
+  // 同步页面内容到放大镜
+  function syncPageContent() {
+    if (!magnifierLens) return;
+
+    // 只在第一次或内容改变时更新
+    if (magnifierLens.children.length === 0 || needsUpdate) {
+      requestAnimationFrame(() => {
+        // 克隆整个HTML元素
+        const htmlClone = document.documentElement.cloneNode(true);
+
+        // 移除克隆中的放大镜本身
+        const magnifierInClone = htmlClone.querySelector('#page-magnifier');
+        if (magnifierInClone) {
+          magnifierInClone.remove();
+        }
+
+        // 移除克隆中的script标签，避免执行
+        const scripts = htmlClone.querySelectorAll('script');
+        scripts.forEach(script => script.remove());
+
+        // 清空并添加新内容
+        magnifierLens.innerHTML = '';
+
+        // 只克隆body内容
+        const bodyClone = htmlClone.querySelector('body');
+        if (bodyClone) {
+          // 移除body clone中的放大镜
+          const magInBody = bodyClone.querySelector('#page-magnifier');
+          if (magInBody) {
+            magInBody.remove();
+          }
+
+          magnifierLens.appendChild(bodyClone);
+        }
+
+        needsUpdate = false;
+      });
+    }
+  }
+
+  let needsUpdate = true;
 
   // 激活放大镜
   function activateMagnifier() {
     if (!magnifier) {
-      createMagnifier();
+      createMagnifierV2();
     }
     config.isActive = true;
+    needsUpdate = true; // 标记需要更新内容
     if (magnifier) {
       magnifier.style.display = 'block';
     }
@@ -200,7 +328,24 @@
   }
 
   // 监听鼠标移动事件
-  document.addEventListener('mousemove', updateMagnifierWithSVG);
+  document.addEventListener('mousemove', updateMagnifierV2);
+
+  // 监听页面变化，标记需要更新
+  const observer = new MutationObserver(() => {
+    if (config.isActive) {
+      needsUpdate = true;
+    }
+  });
+
+  // 开始观察DOM变化
+  if (document.body) {
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+      attributes: true,
+      characterData: true
+    });
+  }
 
   // 监听来自popup的消息
   chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
@@ -215,10 +360,7 @@
     } else if (request.action === 'setMagnifierSize') {
       config.magnifierSize = request.size;
       if (magnifier) {
-        magnifier.style.width = config.magnifierSize + 'px';
-        magnifier.style.height = config.magnifierSize + 'px';
-        canvas.width = config.magnifierSize;
-        canvas.height = config.magnifierSize;
+        updateMagnifierStyles();
       }
       sendResponse({ success: true });
     }
