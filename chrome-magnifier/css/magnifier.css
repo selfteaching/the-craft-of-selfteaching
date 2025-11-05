@@ -1,0 +1,25 @@
+/* 网页放大镜样式 */
+
+#page-magnifier {
+  /* 所有样式都在 JS 中内联设置，以确保优先级 */
+  /* 这个文件用于任何额外的全局样式 */
+}
+
+/* 确保放大镜在所有元素之上 */
+#page-magnifier {
+  position: fixed !important;
+  z-index: 2147483647 !important;
+  pointer-events: none !important;
+}
+
+/* 平滑过渡效果 */
+#page-magnifier canvas {
+  transition: none;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* 防止页面元素干扰放大镜 */
+body.magnifier-active {
+  cursor: crosshair;
+}

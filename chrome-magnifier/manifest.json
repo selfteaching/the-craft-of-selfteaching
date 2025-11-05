@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "网页放大镜",
+  "version": "1.0.0",
+  "description": "一个简单实用的网页放大镜工具，鼠标移动即可放大查看网页内容",
+  "permissions": [
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["js/magnifier.js"],
+      "css": ["css/magnifier.css"],
+      "run_at": "document_end"
+    }
+  ]
+}
