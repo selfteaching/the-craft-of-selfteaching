@@ -7,3 +7,8 @@
   "SelectedNode": "\\my-notes\\how-to-merge.md",
   "PreviewInSolutionExplorer": false
 }
+#这是一个 JSON 格式的文件内容，来自项目 ne-craft-of-selfteaching 中 .vs 目录下的 VSWorkspaceState.json 文件，处于 master 分支 。
+#实体信息解析：
+#ExpandedNodes：记录了展开的节点路径，如空字符串（可能代表根节点）、\\from-readers\\lyric-self-teaching-stories、\\my-notes 。
+#SelectedNode：当前选中的节点路径为 \\my-notes\\how-to-merge.md 。
+#PreviewInSolutionExplorer：值为 false ，表示在解决方案资源管理器中不预览 。 这些配置用于记录 Visual Studio 工作区的状态，方便下次打开时恢复节点展开、选中及预览等设置 。
