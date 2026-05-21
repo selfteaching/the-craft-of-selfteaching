@@ -1,0 +1,3 @@
+# Ken notes
+
+- kickoff
