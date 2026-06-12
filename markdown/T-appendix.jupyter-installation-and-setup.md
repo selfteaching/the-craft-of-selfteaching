@@ -242,6 +242,8 @@ Jupyter notebook 经过很多年的发展，现在有很多扩展插件，但也
 }
 ```
 
+> **注**：JupyterLab 3.x / 4.x 的 Extension Manager 已支持在 Settings 界面中直接勾选启用，不再需要手动添加上面这段 JSON 配置。
+
 而后在 Terminal 执行以下命令安装插件：
 
 ```bash

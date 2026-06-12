@@ -23,7 +23,7 @@ Python 的代码是开源的，它的代码仓库在 Github 上：
 
 在这个代码仓库中，有一个目录下，保存着若干 Python Demo 程序：
 
-> https://github.com/python/cpython/tree/master/Tools/demo
+> https://github.com/python/cpython/tree/3.6/Tools/demo
 
 这个目录下的 README 中有说明：
 
@@ -46,12 +46,12 @@ Python 的代码是开源的，它的代码仓库在 Github 上：
 
 最起码把这其中的以下几个程序都精读一下，看看自己的理解能力：
 
-> * [beer.py](https://github.com/python/cpython/blob/master/Tools/demo/beer.py)        Well-known programming example: Bottles of beer.
-> * [eiffel.py](https://github.com/python/cpython/blob/master/Tools/demo/eiffel.py)      Python advanced magic: A metaclass for Eiffel post/preconditions.
-> * [hanoi.py](https://github.com/python/cpython/blob/master/Tools/demo/hanoi.py)       Well-known programming example: Towers of Hanoi.
-> * [life.py](https://github.com/python/cpython/blob/master/Tools/demo/life.py)        Curses programming: Simple game-of-life.
-> * [markov.py](https://github.com/python/cpython/blob/master/Tools/demo/markov.py)      Algorithms: Markov chain simulation.
-> * [queens.py](https://github.com/python/cpython/blob/master/Tools/demo/queens.py)      Well-known programming example: N-Queens problem.
+> * [beer.py](https://github.com/python/cpython/blob/3.6/Tools/demo/beer.py)        Well-known programming example: Bottles of beer.
+> * [eiffel.py](https://github.com/python/cpython/blob/3.6/Tools/demo/eiffel.py)      Python advanced magic: A metaclass for Eiffel post/preconditions.
+> * [hanoi.py](https://github.com/python/cpython/blob/3.6/Tools/demo/hanoi.py)       Well-known programming example: Towers of Hanoi.
+> * [life.py](https://github.com/python/cpython/blob/3.6/Tools/demo/life.py)        Curses programming: Simple game-of-life.
+> * [markov.py](https://github.com/python/cpython/blob/3.6/Tools/demo/markov.py)      Algorithms: Markov chain simulation.
+> * [queens.py](https://github.com/python/cpython/blob/3.6/Tools/demo/queens.py)      Well-known programming example: N-Queens problem.
 
 就算读不懂也没关系，把读不懂的部分标记下来，接下来就可以 “带着问题学习”……
 

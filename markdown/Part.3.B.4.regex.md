@@ -68,11 +68,11 @@ re.findall(pttn, str)
 
 ![](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/regex-test.gif?raw=true)
 
-Python 的项目代码仓库里有一个很简短的 Demo 程序，叫 [`redemo.py`](https://github.com/python/cpython/blob/master/Tools/demo/redemo.py)，它使用 [Tcl/Tk](https://docs.python.org/3/library/tkinter.html) 作为图形界面，也可以用来测试正则表达式。
+Python 的项目代码仓库里有一个很简短的 Demo 程序，叫 [`redemo.py`](https://github.com/python/cpython/blob/3.6/Tools/demo/redemo.py)，它使用 [Tcl/Tk](https://docs.python.org/3/library/tkinter.html) 作为图形界面，也可以用来测试正则表达式。
 
 它的代码地址是：
 
-> https://raw.githubusercontent.com/python/cpython/master/Tools/demo/redemo.py
+> https://raw.githubusercontent.com/python/cpython/3.6/Tools/demo/redemo.py
 
 它运行起来长成这样：
 
