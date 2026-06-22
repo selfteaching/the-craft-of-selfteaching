@@ -372,6 +372,8 @@ Scope ④ 与 Scope ③ 平行存在。所以在这里，`population` 和 `__lif
 
 > * `self.population` 总是去读取 `Golem` 类中 `population` 的初始值，即使后面通过 `setattr(Golem, 'population', 10)` 更改 `population` 的值后，`self.population` 的值仍为 `0`，但 `Golem.population` 值则为 `10`，你可以自己动手尝试一下。
 
+经过测试，在类__init__()中使用self.population += 1,后文中用setattr(Golem,'population',5)以后，在创建Golem的实例，x = Golem(),x.population输出是6，但在setattr修改前创建的实例g的population是1。因此，严谨的讲，`setattr(Golem, 'population', 5)` 更改 `Golem` 类中 `population` 的初始值。
+
 ## Encapsulation
 
 到目前为止，Golem 这个 Class 看起来不错，但有个问题，它里面的数据，外面是可以随便改的 —— 虽然，我们已经通过给变量 life_span 前面加上两个下划线，变成 `__life_span`，使其成为私有变量，外部不能触达（你不能引用 `Golem.__life_span`），可 Golem.population 就不一样，外面随时可以引用，还可以随时修改它，只需要写上一句：
