@@ -1,5 +1,27 @@
 def is_prime(n):
     """
+    返回一个布尔值，判断参数n是否为质数
+
+    参数:
+        n (int): 需要检查的整数
+
+    返回值:
+        bool: 如果n是质数，返回True；否则返回False
+
+    """
+    if n < 2:
+        return False
+    if n == 2:
+        return True
+    for m in range(2, int(n**0.5)+1):
+        if (n % m) == 0:
+            return False
+    else:
+        return True
+
+print(is_prime(11)) 
+def is_prime(n):
+    """
     Return a boolean value based upon
     whether the argument n is a prime number.
     """
