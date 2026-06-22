@@ -4,7 +4,7 @@
 
 # 自学是门手艺
 
-> 没有自学能力的人没有未来
+> 没有自学能力的人没有未来 one has no future if one couldn't teach themself
 
 **作者：李笑来**
 
