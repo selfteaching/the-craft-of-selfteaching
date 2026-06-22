@@ -1,0 +1,5 @@
+git clone --下载代码
+git status --查看本地仓库的状态
+git add 添加本地改动到下一次commit中
+git commit  提交本地commit到本地仓库
+git push  提交本地仓库的commit list到github远程仓库中
