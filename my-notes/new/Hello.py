@@ -1,0 +1,1 @@
+print('(True and False) yields:',  True and False)
