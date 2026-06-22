@@ -10,6 +10,8 @@
 
 特别感谢**霍炬**（[@virushuo](https://github.com/virushuo)）、**洪强宁**（[@hongqn](https://github.com/hongqn)) 两位良师诤友在此书写作过程中给予我的巨大帮助！
 
+Runaway-bot 2025 年 2 月 14 日
+
 ```python
 # pseudo-code of selfteaching in Python
 
