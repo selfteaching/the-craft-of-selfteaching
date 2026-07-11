@@ -6,3 +6,5 @@ Developing new feature for issue 53...
 Finished the new feature [issue 53].
 
 [Develop] System base initialized.
+
+[dumbidea] What if we do this crazy thing?
