@@ -2,3 +2,5 @@
 我又修改了内容
 git status -sLearning Git pickaxe option today.
 This is the unique history of the master branch.
+Developing new feature for issue 53...
+Finished the new feature [issue 53].
