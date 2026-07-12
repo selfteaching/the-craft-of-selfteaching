@@ -7,4 +7,5 @@ __pycache__
 **/.ipynb_chechpoints
 **/__pycache__
 log.txt
-**/log.txt
+*.o
+config.log

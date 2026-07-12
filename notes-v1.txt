@@ -1,0 +1,12 @@
+这是我修改的内容
+我又修改了内容
+git status -sLearning Git pickaxe option today.
+This is the unique history of the master branch.
+Developing new feature for issue 53...
+Finished the new feature [issue 53].
+
+[Master] Stable checkpoint.
+[Develop] System base initialized.
+[iss91v2] Solution B is much better!
+[dumbidea] What if we do this crazy thing?
+[Develop] Experimental patch.
