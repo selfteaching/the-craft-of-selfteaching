@@ -1,0 +1,17 @@
+[project]
+name = "the-craft-of-selfteaching"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Jiaying Kou", email = "98994288+jiayingK@users.noreply.github.com" }
+]
+requires-python = ">=3.14"
+dependencies = []
+
+[project.scripts]
+the-craft-of-selfteaching = "the_craft_of_selfteaching:main"
+
+[build-system]
+requires = ["uv_build>=0.12.1,<0.13.0"]
+build-backend = "uv_build"
