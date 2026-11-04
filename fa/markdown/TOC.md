@@ -8,7 +8,11 @@
 
 ## پیش از بخش اول
 
+- [جلد، معرفی نویسنده و فهرست کامل](00.cover.md) · [Notebook فارسی](../00.cover.ipynb)
 - [پیشگفتار](01.preface.md)
+- [چطور ثابت کنید که واقعاً این کتاب را خوانده‌اید؟](02.proof-of-work.md) · [Notebook فارسی](../02.proof-of-work.ipynb)
+
+> **یادداشت مترجم — توضیح تکمیلی:** جلد و بخش اثبات مطالعه با اصل مقابله و بازبینی شده‌اند، اما نهایی نیستند. کدها و دستورها حفظ شده و اجرا نشده‌اند؛ ساختار و metadata نسخه‌های Notebook حفظ شده است. نمایش بصری و پیوندهای بیرونی به‌صورت زنده آزمایش نشده‌اند. راهنمای مشارکت و دستورهای انتشار در متن اصلی، مجوز انتشار ترجمه نیستند.
 
 ## بخش اول
 
@@ -25,6 +29,23 @@
 11. **E7** — [فایل‌ها](Part.1.E.7.files.md)
 12. **F** — [چطور با دانشی که پر از Forward Reference است، با آرامش روبه‌رو شویم؟](Part.1.F.deal-with-forward-references.md)
 13. **G** — [آموزش رسمی: The Python Tutorial](Part.1.G.The-Python-Tutorial-local.md)
+
+## بخش دوم
+
+**وضعیت بخش دوم: هر ۱۲ فصل ترجمه و بازبینی‌شده‌اند؛ نهایی نیستند.** دامنهٔ بررسی‌ها، محدودیت‌ها و واژه‌نامهٔ کوتاه در [گزارش وضعیت بخش دوم](Part.2.translation-status.md) آمده است.
+
+1. **A** — [دست‌وپاچلفتی بودن و صبوری](Part.2.A.clumsy-and-patience.md)
+2. **B** — [تمرین هدفمند](Part.2.B.deliberate-practicing.md)
+3. **C** — [چرا از نوشتن function شروع کنیم؟](Part.2.C.why-start-from-writing-functions.md)
+4. **D.1** — [دربارهٔ parameterها و argumentها (بخش اول)](Part.2.D.1-args.md)
+5. **D.2** — [دربارهٔ parameterها و argumentها (بخش دوم)](Part.2.D.2-aargs.md)
+6. **D.3** — [نام دیگر و function بی‌نام](Part.2.D.3-lambda.md)
+7. **D.4** — [functionهای دارای recursion](Part.2.D.4-recursion.md)
+8. **D.5** — [مستندات function](Part.2.D.5-docstrings.md)
+9. **D.6** — [ذخیره کردن functionها در فایل](Part.2.D.6-modules.md)
+10. **D.7** — [توسعه با روش Test Driven Development](Part.2.D.7-tdd.md)
+11. **D.8** — [فایل‌های اجرایی Python](Part.2.D.8-main.md)
+12. **E** — [فکر کردن هدفمند](Part.2.E.deliberate-thinking.md)
 
 ## دامنهٔ بازبینی و محدودیت‌ها
 
