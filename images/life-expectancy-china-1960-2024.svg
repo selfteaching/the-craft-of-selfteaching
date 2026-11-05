@@ -22,8 +22,6 @@
 <text x="363.4" y="475" text-anchor="middle" font-size="13">1980</text>
 <line class="axis" x1="636.9" x2="636.9" y1="450" y2="455"/>
 <text x="636.9" y="475" text-anchor="middle" font-size="13">2000</text>
-<line class="axis" x1="910.3" x2="910.3" y1="450" y2="455"/>
-<text x="910.3" y="475" text-anchor="middle" font-size="13">2020</text>
 <line class="axis" x1="965.0" x2="965.0" y1="450" y2="455"/>
 <text x="965.0" y="475" text-anchor="middle" font-size="13">2024</text>
 <text x="527.5" y="505" text-anchor="middle" font-size="15">Year</text>

@@ -39,6 +39,8 @@ note = 'from {:.2f} in 1960 to {:.2f} in 2024, increased {:.2%}'\
 
 plt.figure(figsize=(10, 5))
 plt.plot(data['x'], data['y'])
+plt.xlim(1960, 2024)
+plt.xticks([1960, 1980, 2000, 2024])
 plt.ylabel('Life Expectancy from Birth')
 plt.tick_params(axis='x', rotation=70)
 plt.title('CHINA\n' + note)
@@ -75,7 +77,6 @@ plt.show()
 ```python
 import matplotlib.pyplot as plt
 import numpy as np
-plt.figure(figsize=(10, 5))
 
 lebdata = np.genfromtxt('life-expectancy-china-1960-2024.txt',
                         delimiter=',',
@@ -89,6 +90,9 @@ fig, ax_hdi = plt.subplots(figsize=(10, 5))
 line_hdi, = ax_hdi.plot(hdidata['x'], hdidata['y'], color='tab:blue', label='Human Development Index')
 ax_hdi.set_ylabel('Human Development Index')
 ax_hdi.set_xlabel('Year')
+ax_hdi.set_xlim(1870, 2024)
+ax_hdi.set_xticks([1870, 1980, 2000, 2024])
+ax_hdi.set_yticks(np.arange(0, 1.01, 0.2))
 ax_hdi.tick_params(axis='x', rotation=70)
 
 ax_life = ax_hdi.twinx()

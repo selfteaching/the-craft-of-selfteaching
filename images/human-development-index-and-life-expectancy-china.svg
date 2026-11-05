@@ -3,22 +3,22 @@
 <style>text{font-family:Arial,sans-serif;fill:#222}.grid{stroke:#ddd;stroke-width:1}.axis{stroke:#444;stroke-width:1.5}</style>
 <text x="500.0" y="34" text-anchor="middle" font-size="20" font-weight="bold">China: HDI (1870–2015) and Life Expectancy (1960–2024)</text>
 <line class="grid" x1="90" x2="910" y1="450.0" y2="450.0"/>
-<text x="78" y="455.0" text-anchor="end" font-size="13">0</text>
+<text x="78" y="455.0" text-anchor="end" font-size="13">0.0</text>
 <text x="922" y="455.0" font-size="13">30</text>
 <line class="grid" x1="90" x2="910" y1="374.4" y2="374.4"/>
-<text x="78" y="379.4" text-anchor="end" font-size="13">0</text>
+<text x="78" y="379.4" text-anchor="end" font-size="13">0.2</text>
 <text x="922" y="379.4" font-size="13">40</text>
 <line class="grid" x1="90" x2="910" y1="298.8" y2="298.8"/>
-<text x="78" y="303.8" text-anchor="end" font-size="13">0</text>
+<text x="78" y="303.8" text-anchor="end" font-size="13">0.4</text>
 <text x="922" y="303.8" font-size="13">50</text>
 <line class="grid" x1="90" x2="910" y1="223.2" y2="223.2"/>
-<text x="78" y="228.2" text-anchor="end" font-size="13">1</text>
+<text x="78" y="228.2" text-anchor="end" font-size="13">0.6</text>
 <text x="922" y="228.2" font-size="13">60</text>
 <line class="grid" x1="90" x2="910" y1="147.6" y2="147.6"/>
-<text x="78" y="152.6" text-anchor="end" font-size="13">1</text>
+<text x="78" y="152.6" text-anchor="end" font-size="13">0.8</text>
 <text x="922" y="152.6" font-size="13">70</text>
 <line class="grid" x1="90" x2="910" y1="72.0" y2="72.0"/>
-<text x="78" y="77.0" text-anchor="end" font-size="13">1</text>
+<text x="78" y="77.0" text-anchor="end" font-size="13">1.0</text>
 <text x="922" y="77.0" font-size="13">80</text>
 <line class="axis" x1="90" x2="910" y1="450" y2="450"/>
 <line class="axis" x1="90" x2="90" y1="72" y2="450"/>
@@ -29,8 +29,6 @@
 <text x="675.7" y="475" text-anchor="middle" font-size="13">1980</text>
 <line class="axis" x1="782.2" x2="782.2" y1="450" y2="455"/>
 <text x="782.2" y="475" text-anchor="middle" font-size="13">2000</text>
-<line class="axis" x1="888.7" x2="888.7" y1="450" y2="455"/>
-<text x="888.7" y="475" text-anchor="middle" font-size="13">2020</text>
 <line class="axis" x1="910.0" x2="910.0" y1="450" y2="455"/>
 <text x="910.0" y="475" text-anchor="middle" font-size="13">2024</text>
 <text x="500.0" y="505" text-anchor="middle" font-size="15">Year</text>
