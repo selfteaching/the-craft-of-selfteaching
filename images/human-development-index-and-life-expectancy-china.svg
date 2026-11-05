@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520">
+<rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:Arial,sans-serif;fill:#222}.grid{stroke:#ddd;stroke-width:1}.axis{stroke:#444;stroke-width:1.5}</style>
+<text x="500.0" y="34" text-anchor="middle" font-size="20" font-weight="bold">China: HDI (1870–2015) and Life Expectancy (1960–2024)</text>
+<line class="grid" x1="90" x2="910" y1="450.0" y2="450.0"/>
+<text x="78" y="455.0" text-anchor="end" font-size="13">0.0</text>
+<text x="922" y="455.0" font-size="13">30</text>
+<line class="grid" x1="90" x2="910" y1="374.4" y2="374.4"/>
+<text x="78" y="379.4" text-anchor="end" font-size="13">0.2</text>
+<text x="922" y="379.4" font-size="13">40</text>
+<line class="grid" x1="90" x2="910" y1="298.8" y2="298.8"/>
+<text x="78" y="303.8" text-anchor="end" font-size="13">0.4</text>
+<text x="922" y="303.8" font-size="13">50</text>
+<line class="grid" x1="90" x2="910" y1="223.2" y2="223.2"/>
+<text x="78" y="228.2" text-anchor="end" font-size="13">0.6</text>
+<text x="922" y="228.2" font-size="13">60</text>
+<line class="grid" x1="90" x2="910" y1="147.6" y2="147.6"/>
+<text x="78" y="152.6" text-anchor="end" font-size="13">0.8</text>
+<text x="922" y="152.6" font-size="13">70</text>
+<line class="grid" x1="90" x2="910" y1="72.0" y2="72.0"/>
+<text x="78" y="77.0" text-anchor="end" font-size="13">1.0</text>
+<text x="922" y="77.0" font-size="13">80</text>
+<line class="axis" x1="90" x2="910" y1="450" y2="450"/>
+<line class="axis" x1="90" x2="90" y1="72" y2="450"/>
+<line class="axis" x1="910" x2="910" y1="72" y2="450"/>
+<line class="axis" x1="90.0" x2="90.0" y1="450" y2="455"/>
+<text x="90.0" y="475" text-anchor="middle" font-size="13">1870</text>
+<line class="axis" x1="675.7" x2="675.7" y1="450" y2="455"/>
+<text x="675.7" y="475" text-anchor="middle" font-size="13">1980</text>
+<line class="axis" x1="782.2" x2="782.2" y1="450" y2="455"/>
+<text x="782.2" y="475" text-anchor="middle" font-size="13">2000</text>
+<line class="axis" x1="910.0" x2="910.0" y1="450" y2="455"/>
+<text x="910.0" y="475" text-anchor="middle" font-size="13">2024</text>
+<text x="500.0" y="505" text-anchor="middle" font-size="15">Year</text>
+<text transform="translate(22 261.0) rotate(-90)" text-anchor="middle" font-size="15">Human Development Index</text>
+<text transform="translate(978 261.0) rotate(90)" text-anchor="middle" font-size="15">Life expectancy at birth (years)</text>
+<polyline points="90.00,434.88 143.25,434.88 196.49,431.10 249.74,434.88 318.96,434.88 382.86,431.10 404.16,423.54 425.45,419.76 452.08,415.98 515.97,404.64 542.60,389.52 569.22,393.30 595.84,363.06 622.47,355.50 649.09,344.16 675.71,340.38 702.34,336.60 728.96,332.82 755.58,317.70 782.21,302.58 808.83,291.24 819.48,276.12 835.45,268.56 862.08,245.88" fill="none" stroke="#2563eb" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="569.22,424.15 574.55,373.21 579.87,291.55 585.19,286.17 590.52,281.09 595.84,276.11 601.17,271.12 606.49,265.53 611.82,259.56 617.14,253.53 622.47,247.21 627.79,240.35 633.12,233.94 638.44,227.01 643.77,221.38 649.09,216.00 654.42,213.94 659.74,204.62 665.06,199.75 670.39,195.20 675.71,191.12 681.04,187.08 686.36,183.52 691.69,179.90 697.01,176.72 702.34,173.82 707.66,171.13 712.99,168.29 718.31,165.69 723.64,163.25 728.96,161.55 734.29,158.11 739.61,154.71 744.94,151.44 750.26,148.85 755.58,144.86 760.91,141.38 766.23,138.32 771.56,135.50 776.88,132.84 782.21,130.30 787.53,127.38 792.86,124.66 798.18,122.01 803.51,119.42 808.83,116.72 814.16,114.31 819.48,111.40 824.81,111.06 830.13,107.40 835.45,104.75 840.78,103.08 846.10,100.73 851.43,98.82 856.75,96.84 862.08,94.87 867.40,93.06 872.73,92.90 878.05,89.32 883.38,87.57 888.70,86.98 894.03,86.24 899.35,85.59 904.68,87.48 910.00,86.99" fill="none" stroke="#f97316" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+</svg>
