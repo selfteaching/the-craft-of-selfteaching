@@ -22,20 +22,20 @@
 
 > 全球范围内都一样，在过去的五十年里，人们的平均寿命预期增长得非常惊人……
 
-拿中国地区做例子，根据世界银行的数据统计，中国人在出生时的寿命预期，从 1960 年的 _43.73_ 岁，增长到了 2016 年的 _76.25_ 岁，56 年间的增幅竟然有 **74.39%** 之多！
+拿中国地区做例子，根据世界银行目前发布的这条序列，中国人口出生时预期寿命从 1960 年的 _33.42_ 岁增长到 2024 年的 _78.02_ 岁，64 年间增长了 **133.45%**。
 
 ```python
 import matplotlib.pyplot as plt
 import numpy as np
 
-data = np.genfromtxt('life-expectancy-china-1960-2016.txt',
+data = np.genfromtxt('life-expectancy-china-1960-2024.txt',
                      delimiter=',',
                      names=['x', 'y'])
 da1960  = data[0][1]
-da2016  = data[-1][1]
-increase = (da2016 - da1960) / da1960
-note = 'from {:.2f} in 1960 to {:.2f} in 2016, increased  {:.2%}'\
-    .format(da1960, da2016, increase)
+da2024  = data[-1][1]
+increase = (da2024 - da1960) / da1960
+note = 'from {:.2f} in 1960 to {:.2f} in 2024, increased {:.2%}'\
+    .format(da1960, da2024, increase)
 
 plt.figure(figsize=(10, 5))
 plt.plot(data['x'], data['y'])
@@ -43,14 +43,18 @@ plt.ylabel('Life Expectancy from Birth')
 plt.tick_params(axis='x', rotation=70)
 plt.title('CHINA\n' + note)
 
-# plt.savefig('life-expectancy-china-1960-2016.png', transparent=True)
+# plt.savefig('life-expectancy-china-1960-2024.png', transparent=True)
 plt.show()
 
 # data from:
-# https://databank.worldbank.org/data/reports.aspx?source=2&series=SP.DYN.LE00.IN
+# https://api.worldbank.org/v2/country/CHN/indicator/SP.DYN.LE00.IN?date=1960:2024&format=json
 ```
 
-![png](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/Part.1.A.better.teachyourself_2_0.png?raw=true)
+![China life expectancy at birth, 1960–2024](../images/life-expectancy-china-1960-2024.svg)
+
+**数据核查说明：** 指标为世界银行 World Development Indicators（WDI，世界发展指标）`SP.DYN.LE00.IN`，单位为年，数据国家代码 `CHN`。图中使用 API 标注于 2026-10-08 的当前序列（于 2026-11-05 获取）；它对历史年份也有修订，因此旧版本中的 1960 年 43.73 岁、2016 年 76.25 岁已不再是当前序列值。可在[世界银行中国指标页](https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=CN)查看系列和定义，并通过[世界银行 API](https://api.worldbank.org/v2/country/CHN/indicator/SP.DYN.LE00.IN?date=1960:2024&format=json)复核逐年数据。
+
+国家卫生健康委报告 2023 年中国“人均预期寿命”为 78.6 岁；这是另一项官方公布值，与世界银行 WDI 的估算序列数值不同，不应拼接或互换。参见[国家卫生健康委《2023年我国卫生健康事业发展统计公报解读》](https://www.nhc.gov.cn/guihuaxxs/c100132/202408/66cc93f27cd34285b9fe808a966326c4.shtml)。
 
 如此发展下去，虽然人类不大可能永生不死，但平均寿命依然在持续延长是个不争的事实。与上一代不同，现在的千禧一代，需要面对的是百岁人生 —— 毫无疑问，不容置疑。
 
@@ -73,7 +77,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 plt.figure(figsize=(10, 5))
 
-lebdata = np.genfromtxt('life-expectancy-china-1960-2016.txt',
+lebdata = np.genfromtxt('life-expectancy-china-1960-2024.txt',
                         delimiter=',',
                         names=['x', 'y'])
 
@@ -81,26 +85,29 @@ hdidata = np.genfromtxt('hdi-china-1870-2015.txt',
                         delimiter=',',
                         names=['x', 'y'])
 
-plt.plot(hdidata['x'], hdidata['y'], label='Human Development Index')
-plt.tick_params(axis='x', rotation=70)
-plt.title('China: 1870 - 2015')
+fig, ax_hdi = plt.subplots(figsize=(10, 5))
+line_hdi, = ax_hdi.plot(hdidata['x'], hdidata['y'], color='tab:blue', label='Human Development Index')
+ax_hdi.set_ylabel('Human Development Index')
+ax_hdi.set_xlabel('Year')
+ax_hdi.tick_params(axis='x', rotation=70)
 
-plt.plot(lebdata['x'], lebdata['y'] * 0.005, label='Life Expectancy from Birth')
-plt.plot(secondary_y=True)
+ax_life = ax_hdi.twinx()
+line_life, = ax_life.plot(lebdata['x'], lebdata['y'], color='tab:orange', label='Life Expectancy at Birth (years)')
+ax_life.set_ylabel('Life Expectancy at Birth (years)')
+ax_hdi.set_title('China: HDI (1870–2015) and Life Expectancy (1960–2024)')
+ax_hdi.legend([line_hdi, line_life], [line_hdi.get_label(), line_life.get_label()], loc='upper left')
 
-plt.legend()
-
-# plt.savefig('human-development-index-china-1870-2015.png', transparent=True)
+# plt.savefig('human-development-index-and-life-expectancy-china.svg', transparent=True)
 plt.show()
 
 # link:
 # https://ourworldindata.org/human-development-index
 
-# data from:
-# blob:https://ourworldindata.org/44b6da71-f79e-42ab-ab37-871e4bd256e9
+# HDI data from: https://ourworldindata.org/human-development-index
+# Life expectancy data from: https://api.worldbank.org/v2/country/CHN/indicator/SP.DYN.LE00.IN?date=1960:2024&format=json
 ```
 
-![png](https://raw.githubusercontent.com/selfteaching/the-craft-of-selfteaching/master/images/Part.1.A.better.teachyourself_4_0.png?raw=true)
+![China HDI, 1870–2015, and life expectancy, 1960–2024](../images/human-development-index-and-life-expectancy-china.svg)
 
 社会发展越来越快，你要面对的人生越来越长，在那一段与你的直觉猜想并不相同的漫漫人生路上，你居然没有磨练过自学能力，竟然只能眼睁睁地看着自己被甩下且无能为力，难道接下来要在那么长的时间里 “苦中作乐” 吗？
 

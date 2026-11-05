@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520">
+<rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:Arial,sans-serif;fill:#222}.grid{stroke:#ddd;stroke-width:1}.axis{stroke:#444;stroke-width:1.5}</style>
+<text x="500.0" y="34" text-anchor="middle" font-size="20" font-weight="bold">China: Life Expectancy at Birth (1960–2024)</text>
+<line class="grid" x1="90" x2="965" y1="450.0" y2="450.0"/>
+<text x="78" y="455.0" text-anchor="end" font-size="13">30</text>
+<line class="grid" x1="90" x2="965" y1="374.4" y2="374.4"/>
+<text x="78" y="379.4" text-anchor="end" font-size="13">40</text>
+<line class="grid" x1="90" x2="965" y1="298.8" y2="298.8"/>
+<text x="78" y="303.8" text-anchor="end" font-size="13">50</text>
+<line class="grid" x1="90" x2="965" y1="223.2" y2="223.2"/>
+<text x="78" y="228.2" text-anchor="end" font-size="13">60</text>
+<line class="grid" x1="90" x2="965" y1="147.6" y2="147.6"/>
+<text x="78" y="152.6" text-anchor="end" font-size="13">70</text>
+<line class="grid" x1="90" x2="965" y1="72.0" y2="72.0"/>
+<text x="78" y="77.0" text-anchor="end" font-size="13">80</text>
+<line class="axis" x1="90" x2="965" y1="450" y2="450"/>
+<line class="axis" x1="90" x2="90" y1="72" y2="450"/>
+<line class="axis" x1="90.0" x2="90.0" y1="450" y2="455"/>
+<text x="90.0" y="475" text-anchor="middle" font-size="13">1960</text>
+<line class="axis" x1="363.4" x2="363.4" y1="450" y2="455"/>
+<text x="363.4" y="475" text-anchor="middle" font-size="13">1980</text>
+<line class="axis" x1="636.9" x2="636.9" y1="450" y2="455"/>
+<text x="636.9" y="475" text-anchor="middle" font-size="13">2000</text>
+<line class="axis" x1="910.3" x2="910.3" y1="450" y2="455"/>
+<text x="910.3" y="475" text-anchor="middle" font-size="13">2020</text>
+<line class="axis" x1="965.0" x2="965.0" y1="450" y2="455"/>
+<text x="965.0" y="475" text-anchor="middle" font-size="13">2024</text>
+<text x="527.5" y="505" text-anchor="middle" font-size="15">Year</text>
+<text transform="translate(22 261.0) rotate(-90)" text-anchor="middle" font-size="15">Life expectancy at birth (years)</text>
+<polyline points="90.00,424.15 103.67,373.21 117.34,291.55 131.02,286.17 144.69,281.09 158.36,276.11 172.03,271.12 185.70,265.53 199.38,259.56 213.05,253.53 226.72,247.21 240.39,240.35 254.06,233.94 267.73,227.01 281.41,221.38 295.08,216.00 308.75,213.94 322.42,204.62 336.09,199.75 349.77,195.20 363.44,191.12 377.11,187.08 390.78,183.52 404.45,179.90 418.12,176.72 431.80,173.82 445.47,171.13 459.14,168.29 472.81,165.69 486.48,163.25 500.16,161.55 513.83,158.11 527.50,154.71 541.17,151.44 554.84,148.85 568.52,144.86 582.19,141.38 595.86,138.32 609.53,135.50 623.20,132.84 636.88,130.30 650.55,127.38 664.22,124.66 677.89,122.01 691.56,119.42 705.23,116.72 718.91,114.31 732.58,111.40 746.25,111.06 759.92,107.40 773.59,104.75 787.27,103.08 800.94,100.73 814.61,98.82 828.28,96.84 841.95,94.87 855.62,93.06 869.30,92.90 882.97,89.32 896.64,87.57 910.31,86.98 923.98,86.24 937.66,85.59 951.33,87.48 965.00,86.99" fill="none" stroke="#2563eb" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+</svg>
