@@ -1,3 +1,13 @@
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: نام دیگر و function بی‌نام](Part.2.D.3-lambda.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: مستندات function](Part.2.D.5-docstrings.md)
+
+</div>
+
+<!-- reading-navigation:end -->
+
 
 # functionهای دارای recursion
 
@@ -389,3 +399,14 @@ https://introcs.cs.princeton.edu/java/23recursion/
 <a name='fn2'>[2]</a>: تشبیهِ [سه قانون رباتیکِ آسیموف](https://zh.wikipedia.org/wiki/%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%B8%89%E5%AE%9A%E5%BE%8B) (Three Laws of Robotics) از آموزش مشهور Python، یعنی [Think Python: How to Think Like a Computer Scientist](http://greenteapress.com/thinkpython2/html/index.html)، گرفته شده است.
 
 <a href='#fn2b'><small>↑بازگشت به متن↑</small></a>
+
+
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: نام دیگر و function بی‌نام](Part.2.D.3-lambda.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: مستندات function](Part.2.D.5-docstrings.md)
+
+</div>
+
+<!-- reading-navigation:end -->

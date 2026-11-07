@@ -1,3 +1,13 @@
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: توسعه با روش Test Driven Development](Part.2.D.7-tdd.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: فکر کردن هدفمند](Part.2.E.deliberate-thinking.md)
+
+</div>
+
+<!-- reading-navigation:end -->
+
 
 # فایل‌های اجرایی Python
 
@@ -289,3 +299,14 @@ love is not True
 Easter eggهای بیشترِ Python:
 
 > [Python Easter Eggs](https://github.com/OrkoHunter/python-easter-eggs)
+
+
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: توسعه با روش Test Driven Development](Part.2.D.7-tdd.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: فکر کردن هدفمند](Part.2.E.deliberate-thinking.md)
+
+</div>
+
+<!-- reading-navigation:end -->

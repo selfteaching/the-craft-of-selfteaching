@@ -1,3 +1,13 @@
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: دربارهٔ parameterها و argumentها (بخش اول)](Part.2.D.1-args.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: نام دیگر و function بی‌نام](Part.2.D.3-lambda.md)
+
+</div>
+
+<!-- reading-navigation:end -->
+
 
 # دربارهٔ parameterها و argumentها (بخش دوم)
 
@@ -299,3 +309,14 @@ say_hi('mike', 'john', 'zeo')
 Python نخستین مقدار دریافتی را یک Positional Argument در نظر می‌گیرد؛ چون در تعریف، `greeting` پیش از Arbitrary Positional Arguments قرار گرفته است.
 
 > **یادداشت مترجم — توضیح تکمیلی:** greeting در تعریفِ دارای مقدار پیش‌فرض واقعاً قابل حذف است؛ مثلاً فراخوانی بدون argument مجاز است، هرچند این function در آن حالت چیزی چاپ نمی‌کند. مشکل این است که نمی‌توانید اولین positional parameter را «رد کنید» و نخستین مقدار positional را مستقیماً به names بدهید؛ آن مقدار ابتدا به greeting می‌رسد. انتقال greeting به بعد از parameterِ ستاره‌دار آن را keyword-only می‌کند و مسئلهٔ مثال را حل می‌کند. فهرست چهارگانهٔ بالا نیز راهنمای ساده‌شدهٔ همین مثال‌هاست، نه تمام قواعد syntaxِ تعریف و فراخوانی در Python؛ positional-only parameterها و جزئیات دیگر در [آموزش رسمی parameterهای ویژه](https://docs.python.org/3/tutorial/controlflow.html#special-parameters) و [مرجع رسمی فراخوانی‌ها](https://docs.python.org/3/reference/expressions.html#calls) آمده‌اند.
+
+
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: دربارهٔ parameterها و argumentها (بخش اول)](Part.2.D.1-args.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: نام دیگر و function بی‌نام](Part.2.D.3-lambda.md)
+
+</div>
+
+<!-- reading-navigation:end -->

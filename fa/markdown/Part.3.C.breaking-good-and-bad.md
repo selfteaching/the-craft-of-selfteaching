@@ -1,3 +1,13 @@
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: BNF و EBNF](Part.3.B.5.bnf-ebnf-pebnf.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: توهمِ نیاز ضروری](Part.3.D.indispensable-illusion.md)
+
+</div>
+
+<!-- reading-navigation:end -->
+
 
 # خردکردن مسئله
 
@@ -206,3 +216,14 @@ for (i = 0; i < n; i++) {
 حتی وقتی توضیح می‌دهیم چطور بنویسید، از «نوشتن function» شروع می‌کنیم، نه از «بیایید یک برنامه بنویسیم…». این تفاوت کوچک و به‌ظاهر ناچیز، اثر بزرگی دارد؛ چون شروع هر کاری از چیزی «کوچک و کامل» بسیار مهم است.
 
 [«کوچک‌بودن» مهم نیست؛ «کامل‌بودن» اصل ماجراست ــ فصل معاشرتِ خودآموزها](Part.3.F.social-selfteaching.md).
+
+
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: BNF و EBNF](Part.3.B.5.bnf-ebnf-pebnf.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: توهمِ نیاز ضروری](Part.3.D.indispensable-illusion.md)
+
+</div>
+
+<!-- reading-navigation:end -->

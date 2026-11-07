@@ -1,3 +1,13 @@
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: تمرین هدفمند](Part.2.B.deliberate-practicing.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: دربارهٔ parameterها و argumentها (بخش اول)](Part.2.D.1-args.md)
+
+</div>
+
+<!-- reading-navigation:end -->
+
 
 # چرا از نوشتن function شروع کنیم؟
 
@@ -92,3 +102,14 @@
 از نظر روش‌شناسیِ امروزی برنامه‌نویسی هم شروع بخش «نوشتن» از function واقعاً انتخاب «درست‌تری» است؛ چون هستهٔ structured programming شکستن کار به کارهای کوچک‌تر است، تا جایی که دیگر نتوان آن را خردتر کرد. چه زمانی به آن نقطه می‌رسیم؟ زمانی که هر function فقط یک کار انجام دهد…
 
 > **یادداشت مترجم — توضیح تکمیلی:** structured programming رویکردی برای سازمان‌دهی روشن برنامه با ساختارهای مشخصِ ترتیب، شرط و تکرار است. نویسنده در اینجا بر خرد کردن کارها تأکید دارد؛ توصیهٔ «هر function فقط یک کار انجام دهد» یک راهنمای طراحی است، نه اینکه کار را در همهٔ شرایط نتوان از نظر فنی باز هم خردتر کرد.
+
+
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: تمرین هدفمند](Part.2.B.deliberate-practicing.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: دربارهٔ parameterها و argumentها (بخش اول)](Part.2.D.1-args.md)
+
+</div>
+
+<!-- reading-navigation:end -->

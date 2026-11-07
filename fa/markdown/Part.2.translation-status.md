@@ -1,3 +1,13 @@
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[صفحهٔ اصلی](../../README.md) · [فهرست مطالب](TOC.md) · [شروع مطالعه از جلد](00.cover.md)
+
+</div>
+
+<!-- reading-navigation:end -->
+
 # گزارش بازبینی و وضعیت ترجمهٔ بخش دوم
 
 ## اثر اصلی و اجازهٔ استفاده
@@ -37,3 +47,14 @@
 | Test Driven Development (TDD) | روشی که در آن ابتدا آزمونِ رفتار مورد انتظار نوشته می‌شود، سپس کد لازم برای گذراندن آن و بهبود ساختار کد دنبال می‌شود. |
 | string / method | string دادهٔ متنی است؛ method عملیاتی است که از طریق یک object، مانند یک string، در دسترس قرار می‌گیرد. |
 | MoSCoW Method | شیوه‌ای برای اولویت‌بندی نیازها با چهار برچسب Must have، Should have، Could have و Won't have. |
+
+
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[صفحهٔ اصلی](../../README.md) · [فهرست مطالب](TOC.md) · [شروع مطالعه از جلد](00.cover.md)
+
+</div>
+
+<!-- reading-navigation:end -->

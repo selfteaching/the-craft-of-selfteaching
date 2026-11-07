@@ -1,3 +1,13 @@
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: یاد گرفتن مهارتی تازه فقط با خواندن](Part.1.C.must.learn.sth.only.by.reading.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: درگاه ورود](Part.1.E.1.entrance.md)
+
+</div>
+
+<!-- reading-navigation:end -->
+
 <a id="开始阅读前的一些准备"></a>
 # چند آمادگی پیش از شروع خواندن
 
@@ -108,3 +118,14 @@ r = random.randrange(1, 1000)
 همچنین اگر از برنامهٔ دسکتاپ [nteract](https://nteract.io) برای مشاهدهٔ فایل‌های `.ipynb` استفاده می‌کنید، بعضی کدهایی که از functionِ `input()` استفاده می‌کنند، در nteract قابل اجرا نیستند.
 
 > **یادداشت مترجم — توضیح تکمیلی:** هشدار مربوط به nteract و توصیه‌های مربوط به رابط JupyterLab گزارش وضعیت زمان نگارش‌اند و در محیط امروز دوباره آزمایش نشده‌اند. در این ترجمه هیچ کد یا خروجی‌ای تغییر نکرده و مثال‌ها دوباره اجرا نشده‌اند.
+
+
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: یاد گرفتن مهارتی تازه فقط با خواندن](Part.1.C.must.learn.sth.only.by.reading.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: درگاه ورود](Part.1.E.1.entrance.md)
+
+</div>
+
+<!-- reading-navigation:end -->

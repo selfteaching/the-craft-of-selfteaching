@@ -1,3 +1,13 @@
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: class — پیاده‌سازی در Python](Part.3.B.2.classes-2.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: Regular Expression](Part.3.B.4.regex.md)
+
+</div>
+
+<!-- reading-navigation:end -->
+
 
 # ابزارهای function
 
@@ -577,3 +587,14 @@ print(say_hi('Hello', name = 'Jack'))
 > **یادداشت مترجم — توضیح تکمیلی:** دو بند بالا ترجمهٔ کامل نقل‌قول انگلیسیِ پایانیِ منبع‌اند و به مقالهٔ «5 reasons you need to learn to write Python decorators» در O’Reilly نسبت داده شده‌اند، نه به تجربهٔ شخصی مترجم. متن اصلیِ این فصل برای مقاله URL یا نام نویسندهٔ مقاله را ذکر نکرده است؛ انتساب و عنوان موجود حفظ شده‌اند و اطلاعات کتاب‌شناختیِ تأییدنشده‌ای به آن‌ها افزوده نشده است.
 
 چرا این‌همه آدم نمی‌توانند آن را یاد بگیرند؟ فقط به این دلیل که پیش از رسیدن به اینجا، وقتی با `*args` و `**kwargs` روبه‌رو شدند، گفتند «یک ستاره، دو ستاره، و دیگر سرگیجه!»… و بعد هم کمی بیشتر برای فهمیدنش تلاش نکردند.
+
+
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: class — پیاده‌سازی در Python](Part.3.B.2.classes-2.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: Regular Expression](Part.3.B.4.regex.md)
+
+</div>
+
+<!-- reading-navigation:end -->

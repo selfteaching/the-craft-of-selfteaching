@@ -1,3 +1,13 @@
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: فایل‌ها](Part.1.E.7.files.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: آموزش رسمی: The Python Tutorial](Part.1.G.The-Python-Tutorial-local.md)
+
+</div>
+
+<!-- reading-navigation:end -->
+
 
 <a id="如何从容应对含有过多-过早引用-的知识"></a>
 # چطور با دانشی که پر از Forward Reference است، با آرامش روبه‌رو شویم؟
@@ -304,3 +314,14 @@ https://docs.python.org/3/library/collections.html#ordereddict-objects
 > **یادداشت مترجم — توضیح تکمیلی:** این ارجاع و لحن آن از نویسنده است. صرفِ نقل این خبر، رابطهٔ علّی میان رعایت نکردن قواعد کدنویسی و خشونت را اثبات نمی‌کند.
 
 <a href='#fn1b'><small>↑ بازگشت به متن ↑</small></a>
+
+
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: فایل‌ها](Part.1.E.7.files.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: آموزش رسمی: The Python Tutorial](Part.1.G.The-Python-Tutorial-local.md)
+
+</div>
+
+<!-- reading-navigation:end -->

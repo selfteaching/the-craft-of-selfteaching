@@ -1,3 +1,13 @@
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: مقدارها و عملیات متناظر با آن‌ها](Part.1.E.2.values-and-their-operators.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: Functionها](Part.1.E.4.functions.md)
+
+</div>
+
+<!-- reading-navigation:end -->
+
 
 # Control flow
 
@@ -464,3 +474,14 @@ print(f"You have {coin_user} coins now.\nBye!")
 > * statementهای مرتبط دیگر عبارت‌اند از `continue`، `break` و `pass`.
 > * function از دید control flow، در واقع یک subprogram است.
 
+
+
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: مقدارها و عملیات متناظر با آن‌ها](Part.1.E.2.values-and-their-operators.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: Functionها](Part.1.E.4.functions.md)
+
+</div>
+
+<!-- reading-navigation:end -->

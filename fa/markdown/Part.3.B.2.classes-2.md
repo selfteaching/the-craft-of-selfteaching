@@ -1,3 +1,13 @@
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: class — Object-Oriented Programming](Part.3.B.1.classes-1.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: ابزارهای function](Part.3.B.3.decorator-iterator-generator.md)
+
+</div>
+
+<!-- reading-navigation:end -->
+
 
 # class — پیاده‌سازی در Python
 
@@ -619,3 +629,14 @@ g.population    # 所以，在很多的情况下，不把数据封装在 Class �
     <property at 0x1068f9d68>
     10000
 
+
+
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: class — Object-Oriented Programming](Part.3.B.1.classes-1.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: ابزارهای function](Part.3.B.3.decorator-iterator-generator.md)
+
+</div>
+
+<!-- reading-navigation:end -->

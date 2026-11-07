@@ -1,3 +1,13 @@
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: توهمِ نیاز ضروری](Part.3.D.indispensable-illusion.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: معاشرتِ خودآموزها](Part.3.F.social-selfteaching.md)
+
+</div>
+
+<!-- reading-navigation:end -->
+
 
 # جامع‌بودن؛ مرتبه‌ای در خودآموزی
 
@@ -207,3 +217,14 @@
 <a name='fn3'>[3]</a>: بعد از نوشتن این بند، آن را به هوئو جو (Huo Ju، 霍炬) نشان دادم. همان‌جا به من خندید و گفت: «ها! همان سال‌ها گفتم باید Vim یاد بگیرید. نکند هنوز هم یاد نگرفته‌اید؟» جوابی نداشتم، چون واقعاً یاد نگرفته بودم… بعد کمی فکر کردم و جواب دادم: «بسیار خوب، تصمیم گرفتم یک آموزش Vim بنویسم. بله.»
 
 <a href='#fn3b'><small>↑بازگشت به متن↑</small></a>
+
+
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: توهمِ نیاز ضروری](Part.3.D.indispensable-illusion.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: معاشرتِ خودآموزها](Part.3.F.social-selfteaching.md)
+
+</div>
+
+<!-- reading-navigation:end -->

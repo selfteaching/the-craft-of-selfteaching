@@ -1,3 +1,13 @@
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: functionهای دارای recursion](Part.2.D.4-recursion.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: ذخیره کردن functionها در فایل](Part.2.D.6-modules.md)
+
+</div>
+
+<!-- reading-navigation:end -->
+
 
 # مستندات function
 
@@ -222,3 +232,14 @@ Sphinx با کمک extensionها از Docstring به سبک Google و NumPy هم
 
 > * [sphinx.ext.napoleon — پشتیبانی از Docstring به سبک NumPy و Google](http://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html)
 > * [sphinx.ext.autodoc — گنجاندن مستندات از Docstringها](https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html)
+
+
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: functionهای دارای recursion](Part.2.D.4-recursion.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: ذخیره کردن functionها در فایل](Part.2.D.6-modules.md)
+
+</div>
+
+<!-- reading-navigation:end -->

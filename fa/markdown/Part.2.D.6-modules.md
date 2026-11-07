@@ -1,3 +1,13 @@
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: مستندات function](Part.2.D.5-docstrings.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: توسعه با روش Test Driven Development](Part.2.D.7-tdd.md)
+
+</div>
+
+<!-- reading-navigation:end -->
+
 
 # ذخیره کردن functionها در فایل
 
@@ -389,3 +399,14 @@ dir(mycode)
      'is_prime',
      'say_hi']
 
+
+
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: مستندات function](Part.2.D.5-docstrings.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: توسعه با روش Test Driven Development](Part.2.D.7-tdd.md)
+
+</div>
+
+<!-- reading-navigation:end -->

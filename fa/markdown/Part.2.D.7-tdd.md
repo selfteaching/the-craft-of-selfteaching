@@ -1,3 +1,13 @@
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: ذخیره کردن functionها در فایل](Part.2.D.6-modules.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: فایل‌های اجرایی Python](Part.2.D.8-main.md)
+
+</div>
+
+<!-- reading-navigation:end -->
+
 
 # توسعه با روش Test Driven Development
 
@@ -359,3 +369,14 @@ else:
 
 > * [doctest — آزمایش مثال‌های تعاملی Python](https://docs.python.org/3/library/doctest.html)
 > * [unittest — frameworkِ unit testing](https://docs.python.org/3/library/unittest.html)
+
+
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: ذخیره کردن functionها در فایل](Part.2.D.6-modules.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: فایل‌های اجرایی Python](Part.2.D.8-main.md)
+
+</div>
+
+<!-- reading-navigation:end -->

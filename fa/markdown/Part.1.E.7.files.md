@@ -1,3 +1,13 @@
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: Containerهای داده](Part.1.E.6.containers.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: چطور با دانشی که پر از Forward Reference است، با آرامش روبه‌رو شویم؟](Part.1.F.deal-with-forward-references.md)
+
+</div>
+
+<!-- reading-navigation:end -->
+
 
 # فایل‌ها
 
@@ -428,3 +438,14 @@ with open('results.txt', 'w') as result:
 > * برای حذف فایل، moduleِ `os` و `os.remove()` را به کار می‌بریم؛ بهتر است پیش از حذف، وجود فایل را بررسی کنیم…
 > * برای خواندن و نوشتن، `file.read()`، `file.write()`، `file.readline()`، `file.readlines()` و `file.writelines()` را داریم.
 > * با `with` می‌توان عملیات مرتبط را در یک block قرار داد…
+
+
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: Containerهای داده](Part.1.E.6.containers.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: چطور با دانشی که پر از Forward Reference است، با آرامش روبه‌رو شویم؟](Part.1.F.deal-with-forward-references.md)
+
+</div>
+
+<!-- reading-navigation:end -->

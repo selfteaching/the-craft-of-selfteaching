@@ -1,3 +1,13 @@
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: Functionها](Part.1.E.4.functions.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: Containerهای داده](Part.1.E.6.containers.md)
+
+</div>
+
+<!-- reading-navigation:end -->
+
 
 # Stringها
 
@@ -1086,3 +1096,14 @@ moduleِ Python برای محاسبات ریاضی پیچیده‌تر، math ا
 <a name='fn1'>[1]</a>: بنگرید به https://en.wikipedia.org/wiki/Unicode
 
 <a href='#fn1b'><small>↑ بازگشت به متن ↑</small></a>
+
+
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: Functionها](Part.1.E.4.functions.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: Containerهای داده](Part.1.E.6.containers.md)
+
+</div>
+
+<!-- reading-navigation:end -->

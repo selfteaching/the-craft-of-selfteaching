@@ -1,3 +1,13 @@
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: چطور با دانشی که پر از Forward Reference است، با آرامش روبه‌رو شویم؟](Part.1.F.deal-with-forward-references.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: دست‌وپاچلفتی بودن و صبوری](Part.2.A.clumsy-and-patience.md)
+
+</div>
+
+<!-- reading-navigation:end -->
+
 
 <a id="官方教程the-python-tutorial"></a>
 # آموزش رسمی: The Python Tutorial
@@ -285,3 +295,14 @@ make epub
 ```
 
 > **یادداشت مترجم — توضیح تکمیلی:** تعداد صفحه‌ها و کندیِ گفته‌شده، تجربهٔ نویسنده با نسخه و دستگاه آن زمان است. همچنین نصب Sphinx و blurb به‌تنهایی لزوماً برای ساخت نسخهٔ فعلی کافی نیست؛ وابستگی‌ها و روش آماده‌سازی را از [راهنمای رسمی ساخت مستندات](https://devguide.python.org/documentation/start-documenting/index.html#building-the-documentation) و فایل‌های همان نسخهٔ CPython بررسی کنید. هیچ‌یک از دستورهای این فصل در فرایند ترجمه اجرا نشده است.
+
+
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: چطور با دانشی که پر از Forward Reference است، با آرامش روبه‌رو شویم؟](Part.1.F.deal-with-forward-references.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: دست‌وپاچلفتی بودن و صبوری](Part.2.A.clumsy-and-patience.md)
+
+</div>
+
+<!-- reading-navigation:end -->

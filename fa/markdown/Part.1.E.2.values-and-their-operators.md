@@ -1,3 +1,13 @@
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: درگاه ورود](Part.1.E.1.entrance.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: Control flow](Part.1.E.3.controlflow.md)
+
+</div>
+
+<!-- reading-navigation:end -->
+
 
 # مقدارها و عملیات متناظر با آن‌ها
 
@@ -510,3 +520,14 @@ c
 
 > https://docs.python.org/3.7/library/operator.html
 
+
+
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: درگاه ورود](Part.1.E.1.entrance.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: Control flow](Part.1.E.3.controlflow.md)
+
+</div>
+
+<!-- reading-navigation:end -->

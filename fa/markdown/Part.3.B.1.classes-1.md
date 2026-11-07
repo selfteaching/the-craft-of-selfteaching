@@ -1,3 +1,13 @@
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: غلبه بر بخش‌های دشوار](Part.3.A.conquering-difficulties.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: class — پیاده‌سازی در Python](Part.3.B.2.classes-2.md)
+
+</div>
+
+<!-- reading-navigation:end -->
+
 
 # class — Object-Oriented Programming
 
@@ -107,3 +117,14 @@ class هم همین‌طور است؛ هم سازنده دارد و هم است�
 > **یادداشت مترجم — نیازمند بررسی:** تصویر بالا با نام «code-review» در منبع آمده است. متن داخل این تصویر در این نوبت به‌طور مستقل خوانده و ترجمه نشده است؛ اگر حامل مثال یا نکته‌ای فراتر از توضیح مجاور باشد، برای دسترس‌پذیری کامل به بازبینی تصویری نیاز دارد.
 
 بعد از اینکه تا حدی با مفاهیم پایه آشنا شدید، بررسی اینکه Python آن‌ها را چطور پیاده‌سازی می‌کند، دیگر چندان دشوار به نظر نمی‌رسد.
+
+
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: غلبه بر بخش‌های دشوار](Part.3.A.conquering-difficulties.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: class — پیاده‌سازی در Python](Part.3.B.2.classes-2.md)
+
+</div>
+
+<!-- reading-navigation:end -->

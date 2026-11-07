@@ -1,3 +1,13 @@
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: دربارهٔ parameterها و argumentها (بخش دوم)](Part.2.D.2-aargs.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: functionهای دارای recursion](Part.2.D.4-recursion.md)
+
+</div>
+
+<!-- reading-navigation:end -->
+
 
 # نام دیگر و function بی‌نام
 
@@ -241,3 +251,14 @@ pairs
     [(4, 'four'), (1, 'one'), (3, 'three'), (2, 'two')]
 
 > **یادداشت مترجم — توضیح تکمیلی:** در مثال آخر، key یک function می‌گیرد که معیار مرتب‌سازی هر عضو را تولید می‌کند. lambda از هر tuple، عضو دوم، یعنی واژهٔ انگلیسی، را برمی‌گرداند؛ بنابراین مرتب‌سازی بر اساس آن واژه‌هاست، نه عددهای اول. منبع: [راهنمای رسمی مرتب‌سازی Python](https://docs.python.org/3/howto/sorting.html#key-functions).
+
+
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: دربارهٔ parameterها و argumentها (بخش دوم)](Part.2.D.2-aargs.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: functionهای دارای recursion](Part.2.D.4-recursion.md)
+
+</div>
+
+<!-- reading-navigation:end -->

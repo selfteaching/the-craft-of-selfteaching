@@ -1,3 +1,13 @@
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: چرا حتماً باید توانایی خودآموزی داشته باشیم؟](Part.1.A.better.teachyourself.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: یاد گرفتن مهارتی تازه فقط با خواندن](Part.1.C.must.learn.sth.only.by.reading.md)
+
+</div>
+
+<!-- reading-navigation:end -->
+
 <a id="为什么把编程当作自学的入口"></a>
 # چرا برنامه‌نویسی را نقطهٔ ورود به خودآموزی قرار می‌دهیم؟
 
@@ -163,3 +173,14 @@ print('Hello, world!')
 > در این حوزه، شمار کسانی که خودآموزند از همه بیشتر است…
 
 هیچ‌چیز از این جمله دلگرم‌کننده‌تر نیست: **باور کنید، شما تنها نیستید.**
+
+
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: چرا حتماً باید توانایی خودآموزی داشته باشیم؟](Part.1.A.better.teachyourself.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: یاد گرفتن مهارتی تازه فقط با خواندن](Part.1.C.must.learn.sth.only.by.reading.md)
+
+</div>
+
+<!-- reading-navigation:end -->

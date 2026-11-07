@@ -1,3 +1,13 @@
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: خردکردن مسئله](Part.3.C.breaking-good-and-bad.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: جامع‌بودن؛ مرتبه‌ای در خودآموزی](Part.3.E.to-be-thorough.md)
+
+</div>
+
+<!-- reading-navigation:end -->
+
 
 # توهمِ نیاز ضروری
 
@@ -238,3 +248,14 @@ for f in files:
 > **یادداشت مترجم — توضیح تکمیلی:** comment چینیِ انتهای کد یعنی «تولید Markdown». متن چینی و مسیرهای بخش بالا، خروجی ثبت‌شدهٔ مثال‌اند؛ عمداً ترجمه یا بازنویسی نشده‌اند و لینکِ ناوبریِ ترجمه محسوب نمی‌شوند. کد در این کار اجرا نشده است.
 
 <a href='#fn1b'><small>↑بازگشت به متن↑</small></a>
+
+
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: خردکردن مسئله](Part.3.C.breaking-good-and-bad.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: جامع‌بودن؛ مرتبه‌ای در خودآموزی](Part.3.E.to-be-thorough.md)
+
+</div>
+
+<!-- reading-navigation:end -->

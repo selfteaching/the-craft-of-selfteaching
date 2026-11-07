@@ -1,3 +1,13 @@
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: چند آمادگی پیش از شروع خواندن](Part.1.D.preparation.for.reading.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: مقدارها و عملیات متناظر با آن‌ها](Part.1.E.2.values-and-their-operators.md)
+
+</div>
+
+<!-- reading-navigation:end -->
+
 
 # درگاه ورود
 
@@ -498,3 +508,14 @@ print(x)
 
 <a href='#fn1b'><small>↑بازگشت به متن↑</small></a>
 
+
+
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: چند آمادگی پیش از شروع خواندن](Part.1.D.preparation.for.reading.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: مقدارها و عملیات متناظر با آن‌ها](Part.1.E.2.values-and-their-operators.md)
+
+</div>
+
+<!-- reading-navigation:end -->

@@ -1,3 +1,13 @@
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: چرا از نوشتن function شروع کنیم؟](Part.2.C.why-start-from-writing-functions.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: دربارهٔ parameterها و argumentها (بخش دوم)](Part.2.D.2-aargs.md)
+
+</div>
+
+<!-- reading-navigation:end -->
+
 
 # دربارهٔ parameterها و argumentها (بخش اول)
 
@@ -282,3 +292,14 @@ a, b
     (1, [1, 2, 3])
 
 > **یادداشت مترجم — توضیح تکمیلی:** mutable یعنی محتوای object را می‌توان تغییر داد. کپی گرفتن وقتی مناسب است که قصد ندارید list اصلی را تغییر دهید؛ بعضی functionها عمداً ورودی را تغییر می‌دهند. همچنین copy در این مثال یک shallow copy می‌سازد: خودِ list تازه است، اما اگر عضوهای آن objectهای mutable باشند، آن عضوها همچنان مشترک‌اند. منبع: [مستندات رسمی copy](https://docs.python.org/3/library/copy.html).
+
+
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: چرا از نوشتن function شروع کنیم؟](Part.2.C.why-start-from-writing-functions.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: دربارهٔ parameterها و argumentها (بخش دوم)](Part.2.D.2-aargs.md)
+
+</div>
+
+<!-- reading-navigation:end -->

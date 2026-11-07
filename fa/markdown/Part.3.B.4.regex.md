@@ -1,3 +1,13 @@
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: ابزارهای function](Part.3.B.3.decorator-iterator-generator.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: BNF و EBNF](Part.3.B.5.bnf-ebnf-pebnf.md)
+
+</div>
+
+<!-- reading-navigation:end -->
+
 
 # Regular Expression
 
@@ -1120,3 +1130,14 @@ if __name__ == "__main__":
 
 <a href='#fn6b'><small>↑بازگشت به متن↑</small></a>
 
+
+
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: ابزارهای function](Part.3.B.3.decorator-iterator-generator.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: BNF و EBNF](Part.3.B.5.bnf-ebnf-pebnf.md)
+
+</div>
+
+<!-- reading-navigation:end -->

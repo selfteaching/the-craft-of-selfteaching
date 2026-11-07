@@ -1,3 +1,13 @@
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: Regular Expression](Part.3.B.4.regex.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: خردکردن مسئله](Part.3.C.breaking-good-and-bad.md)
+
+</div>
+
+<!-- reading-navigation:end -->
+
 
 # BNF و EBNF
 
@@ -344,3 +354,14 @@ Robert D. Cameron، از ۲۹ نوامبر تا ۱ دسامبر ۱۹۹۹
 
 <a href='#fn3b'><small>↑بازگشت به متن↑</small></a>
 
+
+
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: Regular Expression](Part.3.B.4.regex.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: خردکردن مسئله](Part.3.C.breaking-good-and-bad.md)
+
+</div>
+
+<!-- reading-navigation:end -->

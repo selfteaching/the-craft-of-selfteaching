@@ -1,3 +1,13 @@
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: Stringها](Part.1.E.5.strings.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: فایل‌ها](Part.1.E.7.files.md)
+
+</div>
+
+<!-- reading-navigation:end -->
+
 
 # Containerهای داده
 
@@ -1289,3 +1299,14 @@ for key, value in phonebook1.items():
 
 > * https://docs.python.org/3/tutorial/datastructures.html#dictionaries
 > * https://docs.python.org/3/library/stdtypes.html#typesmapping
+
+
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: Stringها](Part.1.E.5.strings.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: فایل‌ها](Part.1.E.7.files.md)
+
+</div>
+
+<!-- reading-navigation:end -->

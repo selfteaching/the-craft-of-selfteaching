@@ -1,3 +1,13 @@
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: آموزش رسمی: The Python Tutorial](Part.1.G.The-Python-Tutorial-local.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: تمرین هدفمند](Part.2.B.deliberate-practicing.md)
+
+</div>
+
+<!-- reading-navigation:end -->
+
 
 # دست‌وپاچلفتی بودن و صبوری
 
@@ -136,3 +146,14 @@ if (c = 1) {
 > زندگی طولانی است؛ چرا این‌همه هراس؟
 
 در هر حال، این موضوع تقریباً هیچ ربطی به استعداد و هوش ندارد.
+
+
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: آموزش رسمی: The Python Tutorial](Part.1.G.The-Python-Tutorial-local.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: تمرین هدفمند](Part.2.B.deliberate-practicing.md)
+
+</div>
+
+<!-- reading-navigation:end -->

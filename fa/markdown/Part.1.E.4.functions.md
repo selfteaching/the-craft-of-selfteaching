@@ -1,3 +1,13 @@
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: Control flow](Part.1.E.3.controlflow.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: Stringها](Part.1.E.5.strings.md)
+
+</div>
+
+<!-- reading-navigation:end -->
+
 
 # Functionها
 
@@ -327,3 +337,14 @@ print('a', 'b')
 
 <a href='#fn1b'><small>↑بازگشت به متن↑</small></a>
 
+
+
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: Control flow](Part.1.E.3.controlflow.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: Stringها](Part.1.E.5.strings.md)
+
+</div>
+
+<!-- reading-navigation:end -->

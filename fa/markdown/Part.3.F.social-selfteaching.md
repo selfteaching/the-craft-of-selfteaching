@@ -1,3 +1,13 @@
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: جامع‌بودن؛ مرتبه‌ای در خودآموزی](Part.3.E.to-be-thorough.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: این، عصر طلاییِ خودآموزهاست](Part.3.G.the-golden-age-and-google.md)
+
+</div>
+
+<!-- reading-navigation:end -->
+
 
 # معاشرتِ خودآموزها
 
@@ -146,3 +156,14 @@ teach_yourself(coding)
 > با اینکه لامار آموزشِ رسمی ندیده بود و بیشتر خودآموخته بود، در وقتِ آزادش روی سرگرمی‌ها و اختراع‌های گوناگون کار می‌کرد؛ از جمله چراغِ راهنماییِ بهبودیافته و قرصی که در آب حل می‌شد و نوشیدنیِ گازدار درست می‌کرد. آن نوشیدنی موفق نبود؛ خودِ لامار می‌گفت مزه‌اش مثل Alka-Seltzer است.
 
 <a href='#fn1b'><small>↑بازگشت به متن↑</small></a>
+
+
+<!-- reading-navigation:start -->
+
+<div dir="rtl" lang="fa">
+
+[بخش قبلی: جامع‌بودن؛ مرتبه‌ای در خودآموزی](Part.3.E.to-be-thorough.md) · [فهرست مطالب](TOC.md) · [بخش بعدی: این، عصر طلاییِ خودآموزهاست](Part.3.G.the-golden-age-and-google.md)
+
+</div>
+
+<!-- reading-navigation:end -->
